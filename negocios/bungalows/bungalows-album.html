@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Galería de Imágenes - Masonry 5 columnas</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #fafafa;
+      color: #333;
+      line-height: 1.4;
+    }
+
+    /* --- Imagen grande superior --- */
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 60vh;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.65);
+      display: block;
+    }
+
+    .hero h1 {
+      position: absolute;
+      color: #fff;
+      font-size: clamp(1.6rem, 4vw, 3rem);
+      text-align: center;
+      padding: 0.5rem 1rem;
+      text-shadow: 0 6px 18px rgba(0,0,0,0.6);
+    }
+
+    /* --- Contenedor Masonry --- */
+   .gallery-wrap {
+  max-width: 1800px; /* antes 1400px */
+  margin: 22px auto;
+  padding: 0 16px;
+}
+
+    .gallery {
+  column-count: 4; /* antes 5 */
+  column-gap: 16px;
+}
+
+    .gallery img {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin-bottom: 14px;
+      border-radius: 8px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+      break-inside: avoid;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .gallery img:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 28px rgba(0,0,0,0.12);
+    }
+
+    /* --- Responsive --- */
+    @media (max-width: 1200px) {
+      .gallery { column-count: 4; }
+    }
+
+    @media (max-width: 900px) {
+      .gallery { column-count: 3; }
+    }
+
+    @media (max-width: 600px) {
+      .hero { height: 40vh; }
+      .gallery { column-count: 2; }
+    }
+
+    @media (max-width: 450px) {
+      .gallery { column-count: 1; }
+      .hero h1 { font-size: 1.6rem; padding: 0 8px; }
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px 0 40px;
+      color: #666;
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Imagen grande superior -->
+  <section class="hero">
+    <img src="../../img/bungalows-de-tomayquichua/vista-fondo.webp" alt="Imagen principal">
+    <h1>Increíbles imágenes</h1>
+  </section>
+
+  <!-- Galería (masonry con 5 columnas) -->
+  <div class="gallery-wrap">
+    <section class="gallery">
+    <img src="../../img/bungalows-de-tomayquichua/foto-1.webp" alt="Foto 1" loading="lazy">
+    <img src="../../img/bungalows-de-tomayquichua/foto-2.webp" alt="Foto 2" loading="lazy">
+    <img src="../../img/bungalows-de-tomayquichua/foto-3.webp" alt="Foto 3" loading="lazy">
+    <img src="../../img/bungalows-de-tomayquichua/foto-4.webp" alt="Foto 4" loading="lazy">
+    <img src="../../img/bungalows-de-tomayquichua/foto-5.webp" alt="Foto 5" loading="lazy">
+    <img src="../../img/bungalows-de-tomayquichua/foto-6.webp" alt="Foto 6" loading="lazy">
+    <img src="../../img/bungalows-de-tomayquichua/foto-7.webp" alt="Foto 7" loading="lazy">
+    <img src="../../img/bungalows-de-tomayquichua/foto-8.webp" alt="Foto 8" loading="lazy">
+    <img src="../../img/bungalows-de-tomayquichua/foto-9.jpg" alt="Foto 9" loading="lazy">
+    <img src="../../img/bungalows-de-tomayquichua/foto-10.jpg" alt="Foto 10" loading="lazy"> 
+    <img src="../../img/bungalows-de-tomayquichua/foto-11.jpg" alt="Foto 11" loading="lazy">
+    <img src="../../img/bungalows-de-tomayquichua/foto-12.jpeg" alt="Foto 12" loading="lazy">
+    <img src="../../img/bungalows-de-tomayquichua/foto-13.jpg" alt="Foto 13" loading="lazy">
+    <img src="../../img/bungalows-de-tomayquichua/foto-14.jpg" alt="Foto 14" loading="lazy">
+    <img src="../../img/bungalows-de-tomayquichua/foto-15.jpg" alt="Foto 15" loading="lazy">
+    <img src="../../img/bungalows-de-tomayquichua/foto-16.jpeg" alt="Foto 16" loading="lazy">
+    <img src="../../img/bungalows-de-tomayquichua/foto-17.jpeg" alt="Foto 17" loading="lazy">
+    <img src="../../img/bungalows-de-tomayquichua/foto-18.jpeg" alt="Foto 18" loading="lazy">
+    <img src="../../img/bungalows-de-tomayquichua/foto-19.jpeg" alt="Foto 19" loading="lazy">
+    <img src="../../img/bungalows-de-tomayquichua/foto-20.jpeg" alt="Foto 20" loading="lazy">
+    <img src="../../img/bungalows-de-tomayquichua/foto-21.jpeg" alt="Foto 21" loading="lazy">
+    <img src="../../img/bungalows-de-tomayquichua/foto-22.jpeg" alt="Foto 22" loading="lazy">
+    <img src="../../img/bungalows-de-tomayquichua/foto-23.jpeg" alt="Foto 23" loading="lazy">
+    <img src="../../img/bungalows-de-tomayquichua/foto-24.jpeg" alt="Foto 23" loading="lazy">
+    <img src="../../img/bungalows-de-tomayquichua/foto-25.jpeg" alt="Foto 23" loading="lazy">
+    <img src="../../img/bungalows-de-tomayquichua/foto-26.jpeg" alt="Foto 23" loading="lazy">
+    <img src="../../img/bungalows-de-tomayquichua/foto-27.jpeg" alt="Foto 23" loading="lazy">
+    <img src="../../img/bungalows-de-tomayquichua/foto-28.jpg" alt="Foto 23" loading="lazy">
+    <img src="../../img/bungalows-de-tomayquichua/foto-29.jpg" alt="Foto 23" loading="lazy">
+    <img src="../../img/bungalows-de-tomayquichua/foto-30.jpeg" alt="Foto 23" loading="lazy">
+    <img src="../../img/bungalows-de-tomayquichua/foto-31.jpeg" alt="Foto 23" loading="lazy">
+    <img src="../../img/bungalows-de-tomayquichua/foto-32.jpeg" alt="Foto 23" loading="lazy">
+    <img src="../../img/bungalows-de-tomayquichua/foto-33.jpeg" alt="Foto 23" loading="lazy">
+    <img src="../../img/bungalows-de-tomayquichua/foto-34.JPG" alt="Foto 23" loading="lazy">
+    <img src="../../img/bungalows-de-tomayquichua/foto-35.jpeg" alt="Foto 23" loading="lazy">
+    <img src="../../img/bungalows-de-tomayquichua/foto-36.jpeg" alt="Foto 23" loading="lazy">
+    </section>
+  </div>
+
+  <footer>
+    ©Bungalows-Tomaquichua
+  </footer>
+
+</body>
+</html>
