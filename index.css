@@ -666,7 +666,7 @@ header a {
   font-size: 18px;
   font-weight: bold;
   color: #ffffff;
-  background: #000000;
+  background: #005801;
   border-radius: 10px;
   text-decoration: none;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
@@ -674,8 +674,8 @@ header a {
 }
 
 .btn-ver-mas:hover {
-  background: #efefef;
-  color: #000000; 
+  background: #ff6600;
+  color: #ffffff; 
   transform: scale(1.08);
   box-shadow: 0 6px 16px rgba(0,0,0,0.25);
 }
@@ -833,8 +833,8 @@ header a {
 }
 
 .academia-item img {
-  width: 220px;  
-  height: 220px;
+  width: 320px;  
+  height: 320px;
   border-radius: 50%;
   object-fit: cover;
   box-shadow: 0 8px 20px rgba(0,0,0,0.25);

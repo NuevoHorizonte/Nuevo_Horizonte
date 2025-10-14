@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     parent.addEventListener('mouseleave', () => (icon.src = originalSrc));
   });
 
+  
 const carousel = document.querySelector('.carousel');
 if (!carousel) return;
 
