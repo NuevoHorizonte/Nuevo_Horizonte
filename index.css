@@ -1,3 +1,4 @@
+/* CONFIGURACIÓN GLOBAL */
 html, body {
   margin: 0;
   padding: 0;
@@ -11,6 +12,7 @@ header a,
   text-shadow: 0 2px 4px rgba(0,0,0,0.7);
 }
 
+/* HEADER Y MENÚ DE NAVEGACIÓN */
 header {
   position: fixed;
   top: 0;
@@ -988,4 +990,15 @@ html {
 
 section[id] {
   scroll-margin-top: 90px; 
+}
+
+.site-footer {
+  background-color: #000000;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px 10px;
+  font-family: 'Young Serif', sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  border-top: 3px solid #000000;
 }

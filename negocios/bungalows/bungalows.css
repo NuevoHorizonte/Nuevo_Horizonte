@@ -251,7 +251,7 @@ cursor: default;
 
 .overlay-img {
   position: absolute;
-  bottom: 80px;
+  bottom: 10%;
   left: 50%;
   transform: translateX(-50%);
   width: 400px; 
