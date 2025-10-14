@@ -13,7 +13,6 @@
       line-height: 1.4;
     }
 
-    /* --- Imagen grande superior --- */
     .hero {
       position: relative;
       width: 100%;
@@ -41,15 +40,14 @@
       text-shadow: 0 6px 18px rgba(0,0,0,0.6);
     }
 
-    /* --- Contenedor Masonry --- */
-   .gallery-wrap {
-  max-width: 1800px; /* antes 1400px */
+  .gallery-wrap {
+  max-width: 1800px; 
   margin: 22px auto;
   padding: 0 16px;
 }
 
     .gallery {
-  column-count: 4; /* antes 5 */
+  column-count: 4; 
   column-gap: 16px;
 }
 
@@ -69,7 +67,6 @@
       box-shadow: 0 10px 28px rgba(0,0,0,0.12);
     }
 
-    /* --- Responsive --- */
     @media (max-width: 1200px) {
       .gallery { column-count: 4; }
     }
@@ -98,13 +95,11 @@
 </head>
 <body>
 
-  <!-- Imagen grande superior -->
   <section class="hero">
     <img src="../../img/bungalows-de-tomayquichua/vista-fondo.webp" alt="Imagen principal">
     <h1>Increíbles imágenes</h1>
   </section>
 
-  <!-- Galería (masonry con 5 columnas) -->
   <div class="gallery-wrap">
     <section class="gallery">
     <img src="../../img/bungalows-de-tomayquichua/foto-1.webp" alt="Foto 1" loading="lazy">

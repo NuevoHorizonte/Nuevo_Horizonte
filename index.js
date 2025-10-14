@@ -60,10 +60,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const hoverSrc = img.getAttribute("data-hover");
 
   const extraImages = [
-    "img/bungalows-de-tomayquichua/foto-3.png",
-    "img/bungalows-de-tomayquichua/foto-4.png",
-    "img/bungalows-de-tomayquichua/foto-5.png",
-    "img/bungalows-de-tomayquichua/foto-6.png",
+    "img/bungalows-de-tomayquichua/foto-2.webp",
+    "img/bungalows-de-tomayquichua/foto-3-index.png",
+    "img/bungalows-de-tomayquichua/foto-4-index.png",
+    "img/bungalows-de-tomayquichua/foto-5-index.png",
+    "img/bungalows-de-tomayquichua/foto-6-index.png",
     "img/bungalows-de-tomayquichua/foto-1.webp"
   ];
 
