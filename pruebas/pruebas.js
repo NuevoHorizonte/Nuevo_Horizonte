@@ -22,8 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
     parent.addEventListener('mouseleave', () => (icon.src = originalSrc));
   });
 
-
-
 const carousel = document.querySelector('.carousel');
 if (!carousel) return;
 
@@ -219,6 +217,53 @@ if (scrollBtn && bungalowsSection) {
       top: bungalowsSection.offsetTop - 1, 
       behavior: 'smooth'
     });
+  });
+}
+
+// --- Menu hamburguesa: toggle, accesibilidad y cierre externo ---
+const menuToggle = document.getElementById('menuToggle');
+const navLinks = document.getElementById('navLinks');
+
+if (menuToggle && navLinks) {
+  // función que abre/cierra
+  const toggleMenu = () => {
+    const opened = navLinks.classList.toggle('active');
+    menuToggle.classList.toggle('open', opened);
+    menuToggle.setAttribute('aria-expanded', opened ? 'true' : 'false');
+  };
+
+  menuToggle.addEventListener('click', (e) => {
+    e.stopPropagation(); // evitar que el click se propague al document
+    toggleMenu();
+  });
+
+  // Cerrar al hacer click fuera del menú
+  document.addEventListener('click', (e) => {
+    if (!navLinks.classList.contains('active')) return;
+    const target = e.target;
+    if (!navLinks.contains(target) && target !== menuToggle && !menuToggle.contains(target)) {
+      navLinks.classList.remove('active');
+      menuToggle.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  // Cerrar al cambiar tamaño por encima de 600px
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 600 && navLinks.classList.contains('active')) {
+      navLinks.classList.remove('active');
+      menuToggle.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  // Mejor: cerrar con Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && navLinks.classList.contains('active')) {
+      navLinks.classList.remove('active');
+      menuToggle.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+    }
   });
 }
 
