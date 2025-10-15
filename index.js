@@ -139,21 +139,12 @@ document.querySelectorAll('.servicio-item img').forEach(img => {
   img.addEventListener('mouseleave', () => img.src = original);
 });
 
-// ======= EVENTOS: OVERLAY ANIMADO Y REDIRECCIÓN =======
+// ======= EVENTOS: COLOR DE OVERLAY DINÁMICO =======
 document.addEventListener("DOMContentLoaded", () => {
-  const eventoCards = document.querySelectorAll(".evento-card");
-
-  eventoCards.forEach(card => {
-    const overlay = card.querySelector(".overlay");
+  document.querySelectorAll(".evento-card").forEach(card => {
     const color = card.dataset.color;
-    const link = card.dataset.link;
-
-    // Color dinámico del overlay
-    overlay.style.background = `${color}cc`; // cc = 80% opacidad
-
-    // Click redirige
-    card.addEventListener("click", () => {
-      window.location.href = link;
-    });
+    if (color) {
+      card.style.setProperty("--overlay-color", `${color}cc`); // cc = 80% opacidad
+    }
   });
 });

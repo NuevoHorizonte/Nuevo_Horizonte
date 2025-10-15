@@ -642,7 +642,7 @@ header a {
   font-size: 16px;
   font-weight: bold;
 }
-
+  
 .opcion:hover {
   background: #e3e3e3;
   color: #000000;
@@ -696,16 +696,16 @@ header a {
   }
 }
 
-/* ==== NUEVA SECCIÓN EVENTOS ==== */
-
+/* === SECCIÓN EVENTOS === */
 .eventos {
-  min-height: 60vh;
-  padding: 50px 40px;
+  min-height: 80vh;
+  padding: 120px 40px;
   background: #fffaf4;
   text-align: center;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
+/* Título y subtítulo */
 .eventos-header {
   margin-bottom: 70px;
   text-align: center;
@@ -740,20 +740,22 @@ header a {
   max-width: 700px;
   margin: 15px auto 0;
   line-height: 1.6;
-  font-family: 'Inter', sans-serif;
 }
 
+/* Grid principal */
 .eventos-grid {
   display: flex;
   justify-content: center;
-  align-items: stretch;
-  gap: 30px;
+  gap: 25px;
   flex-wrap: wrap;
+  max-width: 1300px;
+  margin: 0 auto;
 }
 
+/* Tarjetas */
 .evento-card {
   position: relative;
-  width: 280px;
+  width: 300px;
   height: 380px;
   border-radius: 20px;
   overflow: hidden;
@@ -769,56 +771,74 @@ header a {
   transition: transform 0.6s ease;
 }
 
-.evento-card:hover img {
-  transform: scale(1.15);
-}
-
+/* Overlay animado */
 .evento-card .overlay {
   position: absolute;
   inset: 0;
   background: rgba(0,0,0,0);
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  opacity: 0;
-  transform: translateX(-100%);
-  transition: all 0.6s ease;
+  justify-content: center;
   color: #fff;
+  transform: translateX(-100%);
+  transition: transform 0.5s ease, background 0.5s ease;
   text-align: center;
   padding: 20px;
 }
 
-.evento-card .overlay h3 {
-  font-size: 26px;
-  font-weight: 800;
-  margin-bottom: 10px;
+.evento-card .overlay img {
+  max-width: 160px;
+  margin-bottom: 15px;
+  opacity: 0;
+  transform: translateY(15px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
-.evento-card .overlay p {
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 1.3;
+.evento-card .overlay img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;      /* 🔹 Redondea el logo */
+  object-fit: cover;       /* 🔹 Evita deformaciones */
+  opacity: 0;
+  transform: translateY(15px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
-/* Hover animado de izquierda a derecha */
+
+/* Hover: animación izquierda → derecha + zoom */
+.evento-card:hover img {
+  transform: scale(1.15);
+}
+
 .evento-card:hover .overlay {
-  opacity: 1;
   transform: translateX(0);
+  background: rgba(0,0,0,0.5);
 }
 
-/* Responsive */
+.evento-card:hover .overlay img,
+.evento-card:hover .overlay p {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Color dinámico */
+.evento-card:hover .overlay {
+  background: var(--overlay-color, rgba(0,0,0,0.5));
+}
+
+/* Responsivo */
 @media (max-width: 900px) {
   .eventos-grid {
     flex-direction: column;
-    gap: 40px;
+    align-items: center;
   }
   .evento-card {
     width: 90%;
-    max-width: 400px;
-    margin: 0 auto;
+    height: 340px;
   }
 }
+
 
 .academia {
   min-height: 70vh;   
