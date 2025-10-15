@@ -696,107 +696,109 @@ header a {
   }
 }
 
+/* ==== NUEVA SECCIÓN EVENTOS ==== */
+
 .eventos {
-  min-height: 50vh;   
-  padding: 120px 60px; 
-  background: #fff3e0;
-  overflow: visible;  
-  position: relative;  
+  min-height: 60vh;
+  padding: 100px 40px;
+  background: #fffaf4;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
 }
 
-.eventos-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 40px;
-  max-width: 1200px;
-  margin: 0 auto;
-  overflow: visible;  
-}
-
-.eventos-info {
-  flex: 0 0 30%; 
-}
-
-.eventos-subtitle {
-  font-size: 14px;
-  font-weight: 500;
-  color: #ff6f00;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-  display: block;
+.eventos-header {
+  margin-bottom: 60px;
 }
 
 .eventos-title {
-  font-size: 32px;
-  font-weight: 700;
-  margin-bottom: 15px;
+  font-size: 42px;
+  font-weight: 800;
   color: #222;
-  font-family: "Poppins", sans-serif;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
 }
 
-.eventos-desc {
-  font-size: 20px;    
-  line-height: 1.6;
+.eventos-subtitle-frase {
+  font-size: 22px;
   color: #555;
-  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-family: 'Inter', sans-serif;
 }
 
-.eventos-carousel {
-  flex: 0 0 70%;
-  overflow: visible;   
-  position: relative;
-}
-
-.eventos-track {
+.eventos-grid {
   display: flex;
-  gap: 20px;
-  overflow-x: auto;
-  overflow-y: hidden;
-}
-
-.eventos-track::-webkit-scrollbar {
-  display: none;
-}
-
-.eventos-track.dragging {
-  cursor: grabbing;
+  justify-content: center;
+  align-items: stretch;
+  gap: 30px;
+  flex-wrap: wrap;
 }
 
 .evento-card {
-  min-width: 50%; 
-  border-radius: 20px;
-  overflow: hidden; 
-  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-  flex-shrink: 0;
   position: relative;
+  width: 280px;
+  height: 380px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: transform 0.4s ease;
 }
 
 .evento-card img {
   width: 100%;
-  height: 340px;      
+  height: 100%;
   object-fit: cover;
-  transition: transform 0.4s ease; 
+  transition: transform 0.6s ease;
 }
 
 .evento-card:hover img {
-  transform: scale(1.05);
+  transform: scale(1.15);
 }
 
-.evento-card h3 {
-  font-size: 15px;   
-  padding: 10px;       
-  background: #fafafa;
-  margin: 0;
+.evento-card .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: all 0.6s ease;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
 }
 
+.evento-card .overlay h3 {
+  font-size: 26px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.evento-card .overlay p {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+/* Hover animado de izquierda a derecha */
+.evento-card:hover .overlay {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Responsive */
 @media (max-width: 900px) {
-  .eventos-container {
+  .eventos-grid {
     flex-direction: column;
-    text-align: center;
+    gap: 40px;
   }
   .evento-card {
-    min-width: 70%;
+    width: 90%;
+    max-width: 400px;
+    margin: 0 auto;
   }
 }
 
