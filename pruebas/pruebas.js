@@ -1,4 +1,4 @@
-// ======= HEADER Y MENÚ =======
+// ======= GESTIÓN DEL HEADER, MENÚ Y SCROLL=======
 document.addEventListener("DOMContentLoaded", function() {
   const header = document.querySelector("header");
   const hamburger = document.querySelector(".hamburger");
@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
   updateHeader();
   window.addEventListener("scroll", updateHeader);
 
-  // === BOTÓN HAMBURGUESA ===
+// ======= HAMBURGUESA=======
   hamburger.addEventListener("click", function() {
     this.classList.toggle("active");
     nav.classList.toggle("active");
@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function() {
     this.setAttribute("aria-expanded", expanded);
   });
 
-  // === SCROLL EN MÓVIL ===
+// ======= Menú desplegable en móvil con scroll automático =======
   dropdowns.forEach(dropdown => {
     const toggle = dropdown.querySelector(".dropdown-toggle");
 
@@ -29,7 +29,6 @@ document.addEventListener("DOMContentLoaded", function() {
       if (window.innerWidth <= 900) {
         e.preventDefault();
 
-        // Detectamos a dónde debe hacer scroll
         let targetId = "";
         if (toggle.textContent.includes("Academia")) targetId = "academia";
         if (toggle.textContent.includes("Bungalows")) targetId = "bungalows";
@@ -52,8 +51,7 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
-
-/* ==== BUNGALOWS==== */
+// ======= EFECTOS EN LA IMAGEN DE LOS BUNGALOWS =======
 document.addEventListener("DOMContentLoaded", () => {
   const img = document.querySelector(".bungalows-img img");
   const originalSrc = img.getAttribute("src");
@@ -91,36 +89,36 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-
+// ======= CARRUSEL(ELIMINAR) =======
 document.addEventListener("DOMContentLoaded", () => {
   const track = document.querySelector(".eventos-track");
   if (!track) return;
 
-  // CLONAR ITEMS (más fiable que innerHTML += innerHTML)
+
   const originalItems = Array.from(track.children);
   originalItems.forEach(item => track.appendChild(item.cloneNode(true)));
 
-  // Lista de tarjetas (ahora incluye duplicados)
+
   let cards = Array.from(track.querySelectorAll(".evento-card"));
 
   // Leer gap desde CSS
   const style = getComputedStyle(track);
   const gap = parseFloat(style.gap) || 20;
 
-  // función para recalcular ancho de tarjeta (útil en resize)
+
   function getCardWidth() {
     cards = Array.from(track.querySelectorAll(".evento-card"));
     return cards[0].offsetWidth + gap;
   }
 
-  const originalCount = cards.length / 2; // cantidad original (no duplicada)
+  const originalCount = cards.length / 2;
   const cardWidthInit = getCardWidth();
   const singleSetWidth = cardWidthInit * originalCount;
 
-  // Empezar en la "mitad" para permitir desplazamiento bidireccional
+
   track.scrollLeft = singleSetWidth;
 
-  // evitar arrastre de imágenes
+
   track.querySelectorAll("img").forEach(img => img.draggable = false);
 
   // estado
@@ -150,16 +148,16 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function applyMomentum() {
-    // si la velocidad aún es apreciable, seguimos con inercia
+
     if (Math.abs(velocity) > 0.5) {
       track.scrollLeft += velocity;
-      // fricción (ajusta 0.95-0.98 para más/menos suavidad)
+
       velocity *= 0.95;
       checkLoop();
       rafId = requestAnimationFrame(applyMomentum);
     } else {
       cancelAnimationFrame(rafId);
-      // pequeño delay para no cortar la inercia de golpe
+
       setTimeout(snapToNearest, 60);
     }
   }
@@ -223,21 +221,22 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// ======= BOTÓN DE CONTACTO CON WHATSAPP ALEATORIO(ELIMINAR) =======
 document.addEventListener("DOMContentLoaded", () => {
   const contactoBtn = document.querySelector(".contacto-link");
 
   const numeros = [
-    "51905448644",
-    "51983406127", 
-    "51919283481", 
-    "51952077901",
-    "51981542652"  
+    "51960586301",
+    "51960586301", 
+    "51960586301", 
+    "51960586301",
+    "51960586301"  
   ];
 
   let usados = JSON.parse(localStorage.getItem("usadosWA")) || [];
 
   function obtenerNumero() {
-    // Filtrar disponibles
+
     let disponibles = numeros.filter(n => !usados.includes(n));
 
     if (disponibles.length === 0) {
@@ -262,6 +261,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// ======= EFECTO HOVER EN IMÁGENES DE SERVICIOS =======
 document.querySelectorAll('.servicio-item img').forEach(img => {
   const original = img.src;
   const hover = img.dataset.hover;

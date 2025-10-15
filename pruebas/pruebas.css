@@ -1,3 +1,4 @@
+/* CONFIGURACIÓN GLOBAL */
 html, body {
   margin: 0;
   padding: 0;
@@ -11,6 +12,7 @@ header a,
   text-shadow: 0 2px 4px rgba(0,0,0,0.7);
 }
 
+/* HEADER Y MENÚ DE NAVEGACIÓN */
 header {
   position: fixed;
   top: 0;
@@ -43,6 +45,7 @@ header.scrolled {
   backdrop-filter: blur(6px);
 }
 
+/*LOGO*/
 .logo-container {
   display: flex;
   align-items: center;
@@ -166,7 +169,6 @@ header a {
     transform: translateX(-50%) scaleY(1);
   }
 }
-
 
 .mega-menu a {
   font-size: 13px;
@@ -666,7 +668,7 @@ header a {
   font-size: 18px;
   font-weight: bold;
   color: #ffffff;
-  background: #000000;
+  background: #005801;
   border-radius: 10px;
   text-decoration: none;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
@@ -674,8 +676,8 @@ header a {
 }
 
 .btn-ver-mas:hover {
-  background: #efefef;
-  color: #000000; 
+  background: #ff6600;
+  color: #ffffff; 
   transform: scale(1.08);
   box-shadow: 0 6px 16px rgba(0,0,0,0.25);
 }
@@ -833,8 +835,8 @@ header a {
 }
 
 .academia-item img {
-  width: 220px;  
-  height: 220px;
+  width: 320px;  
+  height: 320px;
   border-radius: 50%;
   object-fit: cover;
   box-shadow: 0 8px 20px rgba(0,0,0,0.25);
@@ -988,4 +990,15 @@ html {
 
 section[id] {
   scroll-margin-top: 90px; 
+}
+
+.site-footer {
+  background-color: #000000;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px 10px;
+  font-family: 'Young Serif', sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  border-top: 3px solid #000000;
 }

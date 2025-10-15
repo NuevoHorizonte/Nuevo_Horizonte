@@ -89,137 +89,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// ======= CARRUSEL(ELIMINAR) =======
-document.addEventListener("DOMContentLoaded", () => {
-  const track = document.querySelector(".eventos-track");
-  if (!track) return;
-
-
-  const originalItems = Array.from(track.children);
-  originalItems.forEach(item => track.appendChild(item.cloneNode(true)));
-
-
-  let cards = Array.from(track.querySelectorAll(".evento-card"));
-
-  // Leer gap desde CSS
-  const style = getComputedStyle(track);
-  const gap = parseFloat(style.gap) || 20;
-
-
-  function getCardWidth() {
-    cards = Array.from(track.querySelectorAll(".evento-card"));
-    return cards[0].offsetWidth + gap;
-  }
-
-  const originalCount = cards.length / 2;
-  const cardWidthInit = getCardWidth();
-  const singleSetWidth = cardWidthInit * originalCount;
-
-
-  track.scrollLeft = singleSetWidth;
-
-
-  track.querySelectorAll("img").forEach(img => img.draggable = false);
-
-  // estado
-  let isDragging = false;
-  let startX = 0;
-  let startScroll = 0;
-  let velocity = 0;
-  let lastScroll = track.scrollLeft;
-  let rafId = null;
-
-  function checkLoop() {
-    const half = track.scrollWidth / 2;
-    if (track.scrollLeft >= half) track.scrollLeft -= half;
-    if (track.scrollLeft < 0) track.scrollLeft += half;
-  }
-
-  function snapToNearest() {
-    const cw = getCardWidth();
-    const remainder = track.scrollLeft % cw;
-    let target;
-    if (remainder > cw / 2) {
-      target = track.scrollLeft + (cw - remainder);
-    } else {
-      target = track.scrollLeft - remainder;
-    }
-    track.scrollTo({ left: target, behavior: "smooth" });
-  }
-
-  function applyMomentum() {
-
-    if (Math.abs(velocity) > 0.5) {
-      track.scrollLeft += velocity;
-
-      velocity *= 0.95;
-      checkLoop();
-      rafId = requestAnimationFrame(applyMomentum);
-    } else {
-      cancelAnimationFrame(rafId);
-
-      setTimeout(snapToNearest, 60);
-    }
-  }
-
-  // MOUSE
-  track.addEventListener("mousedown", (e) => {
-    isDragging = true;
-    startX = e.pageX;
-    startScroll = track.scrollLeft;
-    velocity = 0;
-    lastScroll = track.scrollLeft;
-    cancelAnimationFrame(rafId);
-    track.classList.add("dragging");
-  });
-
-  track.addEventListener("mousemove", (e) => {
-    if (!isDragging) return;
-    const dx = e.pageX - startX;
-    track.scrollLeft = startScroll - dx;
-    // velocidad medida por cambio de scroll entre frames
-    velocity = track.scrollLeft - lastScroll;
-    lastScroll = track.scrollLeft;
-    checkLoop();
-  });
-
-  ["mouseup", "mouseleave"].forEach(ev => {
-    track.addEventListener(ev, () => {
-      if (!isDragging) return;
-      isDragging = false;
-      track.classList.remove("dragging");
-      applyMomentum();
-    });
-  });
-
-
-  track.addEventListener("touchstart", (e) => {
-    isDragging = true;
-    startX = e.touches[0].pageX;
-    startScroll = track.scrollLeft;
-    velocity = 0;
-    lastScroll = track.scrollLeft;
-    cancelAnimationFrame(rafId);
-  }, { passive: true });
-
-  track.addEventListener("touchmove", (e) => {
-    if (!isDragging) return;
-    const dx = e.touches[0].pageX - startX;
-    track.scrollLeft = startScroll - dx;
-    velocity = track.scrollLeft - lastScroll;
-    lastScroll = track.scrollLeft;
-    checkLoop();
-  }, { passive: true });
-
-  track.addEventListener("touchend", () => {
-    if (!isDragging) return;
-    isDragging = false;
-    applyMomentum();
-  });
-  window.addEventListener("resize", () => {
-    getCardWidth();
-  });
-});
 
 // ======= BOTÓN DE CONTACTO CON WHATSAPP ALEATORIO(ELIMINAR) =======
 document.addEventListener("DOMContentLoaded", () => {
@@ -268,4 +137,23 @@ document.querySelectorAll('.servicio-item img').forEach(img => {
 
   img.addEventListener('mouseenter', () => img.src = hover);
   img.addEventListener('mouseleave', () => img.src = original);
+});
+
+// ======= EVENTOS: OVERLAY ANIMADO Y REDIRECCIÓN =======
+document.addEventListener("DOMContentLoaded", () => {
+  const eventoCards = document.querySelectorAll(".evento-card");
+
+  eventoCards.forEach(card => {
+    const overlay = card.querySelector(".overlay");
+    const color = card.dataset.color;
+    const link = card.dataset.link;
+
+    // Color dinámico del overlay
+    overlay.style.background = `${color}cc`; // cc = 80% opacidad
+
+    // Click redirige
+    card.addEventListener("click", () => {
+      window.location.href = link;
+    });
+  });
 });
