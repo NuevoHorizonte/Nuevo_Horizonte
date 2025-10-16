@@ -712,11 +712,6 @@ header a {
 font-family: 'Rangile', sans-serif;
 }
 
-
-
-
-
-
 .eventos-subtitle {
   display: block;
   font-size: 26px;         /* 🔹 Más grande */
@@ -727,7 +722,6 @@ font-family: 'Rangile', sans-serif;
   margin-bottom: 18px;
 font-family: 'Chekharda', sans-serif;
 }
-
 
 .eventos-title {
   font-size: 46px;
@@ -763,7 +757,7 @@ font-family: 'Chekharda', sans-serif;
 .eventos-grid {
   display: flex;
   justify-content: center;
-  gap: 25px;
+  gap: 33px;
   flex-wrap: wrap;
   max-width: 1300px;
   margin: 0 auto;
@@ -821,7 +815,6 @@ font-family: 'Chekharda', sans-serif;
   transform: translateY(15px);
   transition: opacity 0.4s ease, transform 0.4s ease;
 }
-
 
 /* Hover: animación izquierda → derecha + zoom */
 .evento-card:hover img {
