@@ -429,6 +429,8 @@ header a {
     }
   }
 
+
+  
   .servicios {
     min-height: 80vh;   
     text-align: center;
@@ -837,70 +839,77 @@ font-family: 'Chekharda', sans-serif;
   background: var(--overlay-color, rgba(0,0,0,0.5));
 }
 
-/* Responsivo */
-@media (max-width: 900px) {
-  .eventos-grid {
-    flex-direction: column;
-    align-items: center;
+/* VERSIÓN PARA CELULAR */
+.mobile-version {
+  display: none;
+}
+
+/* 📱 Versión móvil simplificada (355px aprox) */
+@media (max-width: 400px) {
+  .desktop-version {
+    display: none !important;
   }
-  .evento-card {
-    width: 90%;
-    height: 340px;
+
+  .mobile-version {
+    display: block;
+    padding: 30px 20px 60px;
+    background: #ffebeb;
+    text-align: center;
+  }
+
+  /* Títulos */
+  .mobile-version .eventos-subtitle {
+    font-size: 22px;
+    color: #ff0000;
+    letter-spacing: 3px;
+    font-family: 'Chekharda', sans-serif;
+  }
+
+  .mobile-version .eventos-title {
+    font-size: 32px;
+    font-weight: 800;
+    background: linear-gradient(90deg, #ff6600, #43a047);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 25px;
+  }
+
+  /* 📷 Cuadrícula simple para imágenes */
+  .eventos-grid-simple {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 🔹 Dos columnas */
+    gap: 10px;
+    justify-items: center;
+  }
+
+  .eventos-grid-simple img {
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+    height: 150px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
   }
 }
 
-/* 📱 Versión móvil (para pantallas pequeñas tipo 355px) */
-@media (max-width: 400px) {
-  .eventos {
-    padding: 40px 15px 60px 15px; /* 🔹 menos espacio horizontal */
-  }
+.eventos-grid-simple a {
+  display: block;
+  width: 100%;
+}
 
-  .eventos-header {
-    margin-bottom: 40px;
-  }
+.eventos-grid-simple a img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  height: 150px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
 
-  .eventos-subtitle {
-    font-size: 20px;
-    letter-spacing: 2px;
-    margin-bottom: 10px;
-  }
-
-  .eventos-title {
-    font-size: 32px;
-    line-height: 1.2;
-  }
-
-  .eventos-subtitle-frase {
-    font-size: 16px;
-    max-width: 90%;
-    line-height: 1.4;
-  }
-
-  /* 🔹 Ajuste de tarjetas */
-  .evento-card {
-    width: 100%;
-    max-width: 320px;  /* Se adapta al ancho de 355px con margen */
-    height: 300px;     /* Más bajo para que no se vea tan largo */
-  }
-
-  .evento-card img {
-    object-fit: cover;
-  }
-
-  .evento-card .overlay img {
-    width: 100px;
-    height: 100px;
-    margin-bottom: 10px;
-  }
-
-  .evento-card .overlay p {
-    font-size: 14px;
-  }
-
-  /* 🔹 Ajuste del grid */
-  .eventos-grid {
-    gap: 18px;
-  }
+/* 🔹 Efecto sutil al tocar (hover o tap) */
+.eventos-grid-simple a:active img,
+.eventos-grid-simple a:hover img {
+  transform: scale(1.03);
 }
 
 .academia {
