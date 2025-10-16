@@ -433,7 +433,7 @@ header a {
     min-height: 80vh;   
     text-align: center;
     padding: 6rem 2rem; 
-    background-color: #f9f9f9; 
+    background-color: #ffffff; 
   }
 
   .servicios-title {
@@ -515,7 +515,8 @@ header a {
   display: flex;
   flex-direction: column;
   justify-content: center; 
-  align-items: center;     
+  align-items: center;  
+  background-color: #f0ffeb;    
 }
 
 .bungalows-logo {
@@ -699,7 +700,7 @@ header a {
 .eventos {
   min-height: 80vh;
   padding: 120px 40px;
-  background: #ffffff;
+  background: #ffebeb;
   text-align: center;
   font-family: 'Inter', sans-serif;
 }
@@ -855,7 +856,7 @@ header a {
 .academia {
   min-height: 70vh;   
   padding: 120px 40px; 
-  background: #ffffff;
+  background: #e1f1ff;
   text-align: center;
 }
 
@@ -913,7 +914,7 @@ header a {
 .canchas {
   min-height: 70vh;   
   padding: 100px 40px;
-  background: #ffffff;
+  background: #e8ffe3;
   text-align: center;
 }
 
@@ -972,7 +973,7 @@ header a {
 .importaciones {
   min-height: 70vh;  
   padding: 100px 40px;
-  background: #ffffff;
+  background: #f3f3f3;
   text-align: center;
 }
 
