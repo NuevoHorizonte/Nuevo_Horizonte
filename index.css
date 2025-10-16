@@ -698,8 +698,7 @@ header a {
 
 /* === SECCIÓN EVENTOS === */
 .eventos {
-  min-height: 80vh;
-  padding: 120px 40px;
+  padding: 40px 40px 100px 20px; /* 🔹 Arriba 40px, abajo 100px */
   background: #ffebeb;
   text-align: center;
   font-family: 'Inter', sans-serif;
@@ -710,17 +709,18 @@ header a {
   margin-bottom: 70px;
   text-align: center;
   position: relative;
+font-family: 'Rangile', sans-serif;
 }
 
 .eventos-subtitle {
   display: block;
   font-size: 26px;         /* 🔹 Más grande */
   font-weight: 800;        /* 🔹 Bien marcado */
-  color: #FFD700;          /* 🔹 Amarillo brillante */
+  color: #ff0000;          /* 🔹 Amarillo brillante */
   text-transform: uppercase;
   letter-spacing: 4px;
   margin-bottom: 18px;
-  font-family: 'Poppins', sans-serif;
+font-family: 'Chekharda', sans-serif;
 }
 
 
@@ -747,7 +747,7 @@ header a {
 
 .eventos-subtitle-frase {
   font-size: 20px;
-  color: #444;
+  color: #000000;
   font-weight: 500;
   max-width: 700px;
   margin: 15px auto 0;
