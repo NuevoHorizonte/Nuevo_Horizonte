@@ -849,6 +849,60 @@ font-family: 'Chekharda', sans-serif;
   }
 }
 
+/* 📱 Versión móvil (para pantallas pequeñas tipo 355px) */
+@media (max-width: 400px) {
+  .eventos {
+    padding: 40px 15px 60px 15px; /* 🔹 menos espacio horizontal */
+  }
+
+  .eventos-header {
+    margin-bottom: 40px;
+  }
+
+  .eventos-subtitle {
+    font-size: 20px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+  }
+
+  .eventos-title {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+
+  .eventos-subtitle-frase {
+    font-size: 16px;
+    max-width: 90%;
+    line-height: 1.4;
+  }
+
+  /* 🔹 Ajuste de tarjetas */
+  .evento-card {
+    width: 100%;
+    max-width: 320px;  /* Se adapta al ancho de 355px con margen */
+    height: 300px;     /* Más bajo para que no se vea tan largo */
+  }
+
+  .evento-card img {
+    object-fit: cover;
+  }
+
+  .evento-card .overlay img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+  }
+
+  .evento-card .overlay p {
+    font-size: 14px;
+  }
+
+  /* 🔹 Ajuste del grid */
+  .eventos-grid {
+    gap: 18px;
+  }
+}
+
 .academia {
   min-height: 70vh;   
   padding: 120px 40px; 
