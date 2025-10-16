@@ -642,7 +642,7 @@ header a {
   font-size: 16px;
   font-weight: bold;
 }
-  
+
 .opcion:hover {
   background: #e3e3e3;
   color: #000000;
@@ -660,7 +660,6 @@ header a {
   display: flex;
   justify-content: center;
 }
-
 
 .btn-ver-mas {
   display: inline-block;
@@ -700,7 +699,7 @@ header a {
 .eventos {
   min-height: 80vh;
   padding: 120px 40px;
-  background: #fffaf4;
+  background: #ffffff;
   text-align: center;
   font-family: 'Inter', sans-serif;
 }
@@ -711,6 +710,18 @@ header a {
   text-align: center;
   position: relative;
 }
+
+.eventos-subtitle {
+  display: block;
+  font-size: 26px;         /* 🔹 Más grande */
+  font-weight: 800;        /* 🔹 Bien marcado */
+  color: #FFD700;          /* 🔹 Amarillo brillante */
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin-bottom: 18px;
+  font-family: 'Poppins', sans-serif;
+}
+
 
 .eventos-title {
   font-size: 46px;
@@ -840,10 +851,11 @@ header a {
 }
 
 
+
 .academia {
   min-height: 70vh;   
   padding: 120px 40px; 
-  background: #dafaff;
+  background: #ffffff;
   text-align: center;
 }
 
@@ -901,7 +913,7 @@ header a {
 .canchas {
   min-height: 70vh;   
   padding: 100px 40px;
-  background: #f8f8f8;
+  background: #ffffff;
   text-align: center;
 }
 
