@@ -46,40 +46,37 @@ header.scrolled {
   backdrop-filter: blur(6px);
 }
 
-/* === 📱 HEADER PARA MÓVIL (≤400px) === */
+/* === Version movil === */
 @media (max-width: 400px) {
 
-  /* 🔹 HEADER general */
   header {
-    position: static; /* ya no se queda fijo al hacer scroll */
-    background-color: rgba(0, 0, 0, 0.9);
-    backdrop-filter: blur(6px);
-    padding: 10px 15px;
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 65px;
+    padding: 8px 12px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 65px;
-    transition: none;
-    z-index: 10000;
+    background: transparent !important;    /* transparente real */
+    backdrop-filter: none !important;
+    z-index: 9999;                         /* encima del hero */
+    transition: none !important;
   }
 
-  header::before {
-    display: none;
-  }
+  header::before { display: none !important; }
 
-  /* 🔹 Ocultar el menú (solo logo y contacto quedan visibles) */
   .nav-container,
   .mega-menu,
-  .dropdown {
-    display: none !important;
-  }
+  .dropdown { display: none !important; }
 
-  /* 🔹 Logo más pequeño y con imagen diferente */
   .logo-container img {
-    content: url("img/index/logo-nuevo-horizonte-celular.svg"); /* ✅ Logo especial para móvil */
-    height: 45px;
+    content: url("img/index/logo-nuevo-horizonte-celular.svg");
+    height: 44px;
     width: auto;
-    transition: none !important; /* 🔹 Quita toda animación */
+    display: block;
+    margin: 0;
   }
 
   /* 🔹 CONTACTO compacto */
@@ -99,18 +96,25 @@ header.scrolled {
     box-sizing: border-box;
     transition: none !important; /* ✅ sin animación */
   }
-
-  /* 🔹 Quitar padding superior del body (ya no hay header fijo) */
+  
   body {
-    padding-top: 0;
+    margin: 0;
+    padding-top: 0 !important;
   }
 
-  /* 🔹 Quitar cualquier transición general en header */
-  header {
-    transition: none !important;
+  .hero {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    position: relative; 
+  }
+
+  .hero picture,
+  .hero img {
+    display: block;
+    width: 100%;
+    height: auto;
   }
 }
-
 
 /*LOGO*/
 .logo-container {
