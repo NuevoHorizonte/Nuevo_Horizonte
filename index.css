@@ -308,7 +308,7 @@ header a {
   margin: 0 0 20px;
   color: #ffffff;
   text-shadow: 0 2px 6px rgba(0,0,0,0.6);
-  line-height: 0.3;
+  line-height: 1.1;
   margin-bottom: 50px;
 }
 
@@ -629,6 +629,8 @@ header a {
       font-size: 0.9rem;
     }
   }
+
+
 
 .bungalows {
   min-height: 70vh;   
