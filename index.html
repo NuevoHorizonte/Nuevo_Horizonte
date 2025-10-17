@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="index.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="icon" href="img/logos/nuevo-horizonte-favicom.svg" type="image/svg+xml">
+  <link rel="icon" href="img/index/nuevo-horizonte-favicom.svg" type="image/svg+xml">
   <link href="https://fonts.cdnfonts.com/css/asket-condensed" rel="stylesheet">
   <link href="https://fonts.cdnfonts.com/css/take-me-on" rel="stylesheet">
   <link href="https://fonts.cdnfonts.com/css/chekharda" rel="stylesheet">
@@ -18,11 +18,11 @@
 <body>
 
 <!-- Menú de navegación y logo -->
- <header class="main-header">
+<header class="main-header">
   <div class="logo-container">
     <a href="index.html">
       <img src="img/index/logo-nuevo-horizonte-completo-horizontal.svg"
-           alt="Logo Nuevo Horizonte" class="logo-img">
+          alt="Logo Nuevo Horizonte" class="logo-img">
     </a>
   </div>
 
@@ -86,30 +86,33 @@
       <a href="datos/nosotros.html" class="contacto-link">CONTACTO</a>
     </div>
   </header>
-  
 
 <!-- Sección de la portada -->
-  <section class="hero">
-    <picture>
-      <source srcset="img/index/index-fondo-mobile.webp" media="(max-width: 600px)">
-      <source srcset="img/index/index-fondo-tablet.webp" media="(max-width: 900px)">
-      <img src="img/index/fondo-principal-pc.webp" alt="Fondo principal" class="hero-bg">
-    </picture>
-    <div class="hero-content">
-      <span class="hero-subtitle">VENTA DE PRODUCTOS Y SERVICIOS</span>
-      <h1 class="hero-title">
-        <span class="line-group">
-          TU FUTURO,<br class="mobile-hide">
-          LA META QUE SEGUIMOS
-        </span>
-        <span class="line-group second">
-          TUS SUEÑOS,<br>
-          LA RAZÓN DE NUESTRO ESFUERZO
-        </span>
-      </h1>
-      <a href="datos/nosotros.html" class="hero-btn">NOSOTROS</a>
-    </div>
-  </section>
+ <section class="hero">
+  <picture>
+    <!-- 📱 Imagen vertical para móvil -->
+    <source srcset="img/index/fondo-principal-355px.png" media="(max-width: 400px)">
+    <!-- 📱 Imagen horizontal para tablets -->
+    <source srcset="img/index/index-fondo-tablet.webp" media="(max-width: 900px)">
+    <!-- 💻 Imagen grande para PC -->
+    <img src="img/index/fondo-principal-pc.webp" alt="Fondo principal" class="hero-bg">
+  </picture>
+
+ <div class="hero-content">
+    <span class="hero-subtitle">VENTA DE PRODUCTOS Y SERVICIOS</span>
+    <h1 class="hero-title">
+      <span class="line-group">
+        TU FUTURO,<br class="mobile-hide">
+        LA META QUE SEGUIMOS
+      </span>
+      <span class="line-group second">
+        TUS SUEÑOS,<br>
+        LA RAZÓN DE NUESTRO ESFUERZO
+      </span>
+    </h1>
+    <a href="datos/nosotros.html" class="hero-btn">NOSOTROS</a>
+  </div>
+</section>
 
 <!-- Menu de servicios -->
 <section class="servicios">
