@@ -12,7 +12,7 @@ header a,
   text-shadow: 0 2px 4px rgba(0,0,0,0.7);
 }
 
-/* HEADER Y MENÚ DE NAVEGACIÓN */
+/* === 🖥️ HEADER PARA PC === */
 header {
   position: fixed;
   top: 0;
@@ -39,11 +39,69 @@ header::before {
   z-index: -1;
 }
 
+/* 🔹 Efecto visual al hacer scroll o hover */
 header:hover,
 header.scrolled {
   background-color: rgba(15, 15, 15, 0.9);
   backdrop-filter: blur(6px);
 }
+
+/* === 📱 HEADER PARA MÓVIL (≤400px) === */
+@media (max-width: 400px) {
+  header {
+    position: static; /* 🔹 ya no se queda fijo al hacer scroll */
+    background-color: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(6px);
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 65px;
+    transition: none;
+    z-index: 10000;
+  }
+
+  header::before {
+    display: none;
+  }
+
+  /* Ocultar el menú */
+  .nav-container,
+  .mega-menu,
+  .dropdown {
+    display: none !important;
+  }
+
+  /* Logo más pequeño */
+  .logo-container img {
+    height: 45px;
+    width: auto;
+  }
+
+/* 🔹 CONTACTO en móvil (versión compacta) */
+.contacto-link {
+  display: inline-block;
+  background: #ff6600;
+  color: #fff;
+  padding: 1px 3px;       /* 🔸 menos espacio alrededor */
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 10px;         /* 🔸 más legible pero pequeño */
+  text-decoration: none;
+  line-height: 1;          /* 🔸 mantiene compacto el texto */
+  position: relative;
+  top: -15px;              /* 🔸 lo sube un poco */
+  height: auto;
+  min-height: unset;       /* 🔸 elimina restricciones de altura */
+  box-sizing: border-box;  /* 🔸 respeta el padding reducido */
+}
+
+  /* Quitar padding superior del body (ya no hay header fijo) */
+  body {
+    padding-top: 0;
+  }
+}
+
 
 /*LOGO*/
 .logo-container {

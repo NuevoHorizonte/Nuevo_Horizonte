@@ -149,3 +149,14 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// ======= evitar el scroll en movil =======
+window.addEventListener("scroll", function() {
+  const header = document.querySelector("header");
+  if (window.innerWidth > 400) { // Solo en PC
+    if (window.scrollY > 50) {
+      header.classList.add("scrolled");
+    } else {
+      header.classList.remove("scrolled");
+    }
+  }
+});
