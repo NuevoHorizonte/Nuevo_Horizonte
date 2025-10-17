@@ -72,7 +72,7 @@ header.scrolled {
   .dropdown { display: none !important; }
 
   .logo-container img {
-    content: url("img/index/logo-nuevo-horizonte-celular.svg");
+    content: url("img/index/logo-nuevo-horizonte-completo-horizontal.svg");
     height: 44px;
     width: auto;
     display: block;
@@ -96,7 +96,7 @@ header.scrolled {
     box-sizing: border-box;
     transition: none !important; /* ✅ sin animación */
   }
-  
+
   body {
     margin: 0;
     padding-top: 0 !important;
