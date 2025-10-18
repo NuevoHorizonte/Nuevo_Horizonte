@@ -407,7 +407,7 @@ header a {
     height: 120%; /* un poquito más alto para cubrir posibles huecos */
     object-fit: cover;
     object-position: center top;
-    clip-path: inset(0 0 30% 0); /* 🔹 corta 20% desde abajo */
+    clip-path: inset(0 0 0% 0); /* 🔹 corta 20% desde abajo */
   }
 
   .hero-content {
@@ -664,6 +664,12 @@ header a {
       font-size: 0.9rem;
     }
   }
+  
+  @media (max-width: 400px) {
+  .servicios {
+    display: none !important; /* 🔹 oculta toda la sección */
+  }
+}
 
 /* === SECCIÓN BUNGALOWS === */
 .bungalows {
