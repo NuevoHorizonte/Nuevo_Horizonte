@@ -359,6 +359,21 @@ header a {
   transform: scale(1.05);
 }
 
+/* 🌅 Imagen libre dentro del Hero (solo móvil 355px) */
+.hero-free-img {
+  position: absolute;
+  z-index: 5;
+  cursor: grab;
+  opacity: 0;
+  visibility: hidden;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+
+  /* Valores por defecto (no visibles) */
+  width: 100px;
+  bottom: 20px;
+  right: 40px;
+}
+
 /* ============================= */
 /* ✨ Animaciones */
 /* ============================= */
@@ -376,6 +391,17 @@ header a {
   }
 }
 
+@keyframes floatDownUp {
+  0% {
+    transform: translateX(-50%) scale(0.3) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) scale(0.3) translateY(8px);
+  }
+  100% {
+    transform: translateX(-50%) scale(0.3) translateY(0);
+  }
+}
 
 @media (max-width: 900px) {
   .hero-title {
@@ -437,7 +463,20 @@ header a {
     padding: 10px 26px;
     border-radius: 30px;
   }
+
+   /* ✅ AQUÍ VA TU IMAGEN LIBRE SOLO EN MÓVIL */
+  .hero-free-img {
+    opacity: 1;
+    visibility: visible;
+    width: 55px;          /* 🔹 antes era 90px, ahora más pequeña */
+    height: auto;         /* se ajusta proporcionalmente */
+    bottom: -80px;         /* 🔹 posición desde abajo */
+    left: 50%;
+    transform: translateX(-50%) scale(0.3);
+     animation: floatDownUp 0.7s ease-in-out infinite;
+  }
 }
+
 
   .contacto-link {
     background: transparent;
@@ -462,6 +501,7 @@ header a {
       border-top: none; 
     }
   }
+
 
   .hamburger {
     display: none;
@@ -865,6 +905,7 @@ header a {
     margin-top: 80px; 
   }
 }
+
 
 /* === SECCIÓN EVENTOS === */
 .eventos {
