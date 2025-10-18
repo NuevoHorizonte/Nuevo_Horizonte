@@ -391,6 +391,17 @@ header a {
   }
 }
 
+@keyframes floatDownUp {
+  0% {
+    transform: translateX(-50%) scale(0.3) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) scale(0.3) translateY(8px);
+  }
+  100% {
+    transform: translateX(-50%) scale(0.3) translateY(0);
+  }
+}
 
 @media (max-width: 900px) {
   .hero-title {
@@ -462,6 +473,7 @@ header a {
     bottom: -80px;         /* 🔹 posición desde abajo */
     left: 50%;
     transform: translateX(-50%) scale(0.3);
+     animation: floatDownUp 1s ease-in-out infinite;
   }
 }
 
