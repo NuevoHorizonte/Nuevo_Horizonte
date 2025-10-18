@@ -407,7 +407,7 @@ header a {
     height: 120%; /* un poquito más alto para cubrir posibles huecos */
     object-fit: cover;
     object-position: center top;
-    clip-path: inset(0 0 30% 0); /* 🔹 corta 20% desde abajo */
+    clip-path: inset(0 0 0% 0); /* 🔹 corta 20% desde abajo */
   }
 
   .hero-content {
@@ -664,6 +664,12 @@ header a {
       font-size: 0.9rem;
     }
   }
+  
+  @media (max-width: 400px) {
+  .servicios {
+    display: none !important; /* 🔹 oculta toda la sección */
+  }
+}
 
 /* === SECCIÓN BUNGALOWS === */
 .bungalows {
@@ -853,15 +859,21 @@ header a {
   }
 }
 
+@media(max-width: 300px) {
+  .bungalows-logo img {
+    max-width: 1500px;
+    margin-top: 80px; 
+  }
+}
+
 /* === SECCIÓN EVENTOS === */
 .eventos {
-  padding: 40px 40px 100px 20px; /* 🔹 Arriba 40px, abajo 100px */
+  padding: 40px 40px 100px 20px; 
   background: #ffebeb;
   text-align: center;
   font-family: 'Inter', sans-serif;
 }
 
-/* Título y subtítulo */
 .eventos-header {
   margin-bottom: 70px;
   text-align: center;
@@ -871,9 +883,9 @@ font-family: 'Rangile', sans-serif;
 
 .eventos-subtitle {
   display: block;
-  font-size: 26px;         /* 🔹 Más grande */
-  font-weight: 800;        /* 🔹 Bien marcado */
-  color: #ff0000;          /* 🔹 Amarillo brillante */
+  font-size: 26px;        
+  font-weight: 800;       
+  color: #ff0000;         
   text-transform: uppercase;
   letter-spacing: 4px;
   margin-bottom: 18px;

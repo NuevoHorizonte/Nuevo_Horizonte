@@ -160,3 +160,16 @@ window.addEventListener("scroll", function() {
     }
   }
 });
+
+// ====== BOTÓN DE SCROLL (solo en móvil) ======
+document.addEventListener("DOMContentLoaded", () => {
+  const scrollBtn = document.querySelector(".hero-free-img");
+  const nextSection = document.querySelector(".bungalows"); // 👈 cambia este selector si tu siguiente sección tiene otro nombre
+
+  if (scrollBtn && nextSection) {
+    scrollBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      nextSection.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  }
+}); 
