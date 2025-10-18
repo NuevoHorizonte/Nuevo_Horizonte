@@ -907,11 +907,10 @@ header a {
 }
 
 @media (max-width: 400px) {
-  /* === SECCIÓN BUNGALOWS SIMPLIFICADA === */
   .bungalows {
-  position: relative; /* 👈 agrega esto */
-     padding: 60px 15px 180px; /* ⬅️ aumenta el padding-bottom para más espacio */
-    background: #ffffff;
+  position: relative; 
+     padding: 60px 15px 180px; 
+    background: #f0ffeb;
   }
 
   .bungalows-container {
@@ -921,13 +920,12 @@ header a {
     gap: 20px;
   }
 
-  /* Logo */
   .bungalows-logo {
-    position: absolute;  /* 👈 te permite moverlo libremente */
-    top: -100px;           /* distancia desde arriba */
-    left: 50%;           /* centrado horizontal */
-    transform: translateX(-50%); /* lo centra bien */
-    width: 120px;        /* puedes ajustar el tamaño */
+    position: absolute; 
+    top: -100px;          
+    left: 50%;          
+    transform: translateX(-50%); 
+    width: 120px;       
     z-index: 3;
   }
 
@@ -938,23 +936,23 @@ header a {
     height: auto;
   }
 
-  /* Imagen fija (sin efectos de cambio ni zoom) */
+ 
   .bungalows-img {
   position: relative;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 300px; /* 🔹 evita que el contenedor colapse */
+  min-height: 300px;
 }
   
 .bungalows-img img {
-  position: relative; /* 🔹 ya no absolute */
+  position: relative; 
   width: 90%;
   max-width: 330px;
   border-radius: 14px;
-  top: 0; /* lo manejamos con margin-top en lugar de top */
-  margin-top: -130px; /* 🔹 súbelo o bájalo manualmente */
+  top: 0; 
+  margin-top: -130px; 
   height: auto;
   object-fit: cover;
   box-shadow: 0 4px 10px rgba(0,0,0,0.25);
@@ -965,11 +963,11 @@ header a {
   z-index: 2;
 }
 
-  /* Opciones */
+
   .bungalows-opciones {
-   position: absolute;   /* permite moverlo libremente */
-  top: 410px;           /* 🔹 ajusta para subir o bajar */
-  left: 70%;            /* centrado horizontal */
+   position: absolute;  
+  top: 410px;          
+  left: 70%;          
   transform: translateX(-50%);
   display: flex;
   justify-content: center;
@@ -987,25 +985,24 @@ header a {
   }
 
   .bungalows-opciones .opcion img {
-     width: 60px;          /* puedes hacerlo más grande o pequeño */
+     width: 60px;         
   height: 60px;
   margin-bottom: 6px;
   }
 
-  /* Quitar los números "1" y "2" en móvil */
 .bungalows-opciones .opcion .numero {
   display: none !important;
 }
 
  .bungalows-boton {
-    position: absolute;    /* 👈 permite moverlo libremente */
-    bottom: 15px;          /* 🔹 controla qué tan abajo va (ajusta este valor) */
+    position: absolute;    
+    bottom: 15px;        
     left: 50%;
     transform: translateX(-50%);
     z-index: 4;
   }
 
-  /* Botón */
+
   .bungalows-boton .btn-ver-mas {
     display: inline-block;
     margin-top: 20px;
@@ -1024,25 +1021,24 @@ header a {
     transform: scale(1.05);
   }
 
-  /* Eliminar interacciones JS/hover de escritorio */
   .bungalows-img img:hover,
   .bungalows-img img:active {
     transform: none !important;
   }
 
-    /* ✨ Frase "Descansa, Desconecta y Disfruta" */
+  
  .bungalows-frase {
   position: absolute;  
-  top: 265px;             /* 🔹 muévela a donde quieras */
-  left: 5%;              /* centrado horizontal */
+  top: 265px;        
+  left: 5%;             
   transform: translateX(-50%);
-  font-size: 12px;        /* 🔹 tamaño más pequeño */
+  font-size: 12px;       
   font-weight: 500;
   color: #333;
   text-align: center;
   letter-spacing: 0.5px;
-  z-index: 5;             /* 🔹 más alto que la imagen */
-  width: 90%;             /* 🔹 para que no se corte el texto */
+  z-index: 5;             
+  width: 90%;           
 }
 }
 
@@ -1103,7 +1099,6 @@ font-family: 'Chekharda', sans-serif;
   line-height: 1.6;
 }
 
-/* Grid principal */
 .eventos-grid {
   display: flex;
   justify-content: center;
@@ -1113,7 +1108,6 @@ font-family: 'Chekharda', sans-serif;
   margin: 0 auto;
 }
 
-/* Tarjetas */
 .evento-card {
   position: relative;
   width: 300px;
@@ -1132,7 +1126,6 @@ font-family: 'Chekharda', sans-serif;
   transition: transform 0.6s ease;
 }
 
-/* Overlay animado */
 .evento-card .overlay {
   position: absolute;
   inset: 0;
@@ -1159,14 +1152,13 @@ font-family: 'Chekharda', sans-serif;
 .evento-card .overlay img {
   width: 140px;
   height: 140px;
-  border-radius: 50%;      /* 🔹 Redondea el logo */
-  object-fit: cover;       /* 🔹 Evita deformaciones */
+  border-radius: 50%;    
+  object-fit: cover;       
   opacity: 0;
   transform: translateY(15px);
   transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
-/* Hover: animación izquierda → derecha + zoom */
 .evento-card:hover img {
   transform: scale(1.15);
 }
@@ -1182,12 +1174,10 @@ font-family: 'Chekharda', sans-serif;
   transform: translateY(0);
 }
 
-/* Color dinámico */
 .evento-card:hover .overlay {
   background: var(--overlay-color, rgba(0,0,0,0.5));
 }
 
-/* VERSIÓN PARA CELULAR */
 .mobile-version {
   display: none;
 }
@@ -1205,7 +1195,6 @@ font-family: 'Chekharda', sans-serif;
     text-align: center;
   }
 
-  /* Títulos */
   .mobile-version .eventos-subtitle {
     font-size: 22px;
     color: #ff0000;
@@ -1223,7 +1212,6 @@ font-family: 'Chekharda', sans-serif;
     margin-bottom: 25px;
   }
 
-  /* 📷 Cuadrícula simple para imágenes */
   .eventos-grid-simple {
     display: grid;
     grid-template-columns: 1fr 1fr; /* 🔹 Dos columnas */
@@ -1254,69 +1242,121 @@ font-family: 'Chekharda', sans-serif;
   transition: transform 0.3s ease;
 }
 
-/* 🔹 Efecto sutil al tocar (hover o tap) */
 .eventos-grid-simple a:active img,
 .eventos-grid-simple a:hover img {
   transform: scale(1.03);
 }
 
+/* === SECCIÓN ACADEMIA DE DEPORTES === */
 .academia {
-  min-height: 70vh;   
-  padding: 120px 40px; 
-  background: #e1f1ff;
+  position: relative;
+  background: linear-gradient(180deg, #e3fffb 0%, #e3fffb 100%);
+  padding: 100px 20px;
   text-align: center;
 }
 
+.academia-titulo {
+  font-size: 28px;
+  font-weight: 800;
+  color: #2d2d2d;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 25px;
+  font-family: "Poppins", sans-serif;
+}
+
+
 .academia-logo img {
-  max-width: 320px;
-  margin: -20px auto 60px;
-  display: block;
+  width: 160px;
+  height: auto;
+  margin-bottom: 50px;
   transition: transform 0.3s ease;
-  cursor: pointer;
 }
 
 .academia-logo img:hover {
-  transform: scale(1.12); 
+  transform: scale(1.05);
 }
 
+
+  /* === ACADEMIA EN PANTALLAS GRANDES === */
 .academia-grid {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 80px; 
-  flex-wrap: wrap;
+  display: flex; /* 👈 cambiamos a flex para más control */
+  justify-content: center; /* centra los círculos */
+  align-items: center;
+  flex-wrap: nowrap; /* 👈 evita que bajen a otra línea */
+  gap: 80px; /* 🔹 aumenta el espacio entre círculos */
+  margin-top: 40px;
 }
 
+
+/* Cada tarjeta circular */
 .academia-item {
   display: flex;
-  flex-direction: column;  
-  align-items: center;     
-  text-align: center;     
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.academia-item:hover {
+  transform: translateY(-8px);
+}
+
+/* Círculo */
 .academia-item img {
-  width: 320px;  
-  height: 320px;
+  width: 350px;
+  height: 350px;
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-  transition: transform 0.3s ease;
-  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
 }
 
 .academia-item img:hover {
-  transform: scale(1.12);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+  transform: scale(1.05);
 }
 
+/* Texto */
 .academia-item span {
-  display: block;         
-  margin-top: 20px;
-  font-size: 22px;
-  font-weight: 700;
-  color: #111;
-  font-family: 'Inter', sans-serif;
-  text-align: center;      
+  font-weight: 600;
+  font-size: 16px;
+  color: #333;
+  letter-spacing: 0.5px;
 }
+
+/* === Versión móvil === */
+@media (max-width: 400px) {
+  .academia {
+    padding: 70px 10px 100px;
+  }
+
+  .academia-titulo {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .academia-logo img {
+    width: 120px;
+    margin-bottom: 35px;
+  }
+
+  .academia-grid {
+    grid-template-columns: repeat(2, 1fr); /* 🔹 Dos columnas */
+    gap: 25px;
+  }
+
+  .academia-item img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .academia-item span {
+    font-size: 14px;
+  }
+}
+
 
 .canchas {
   min-height: 70vh;   

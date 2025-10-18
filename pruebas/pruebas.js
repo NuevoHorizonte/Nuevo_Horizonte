@@ -54,39 +54,51 @@ document.addEventListener("DOMContentLoaded", function() {
 // ======= EFECTOS EN LA IMAGEN DE LOS BUNGALOWS =======
 document.addEventListener("DOMContentLoaded", () => {
   const img = document.querySelector(".bungalows-img img");
-  const originalSrc = img.getAttribute("src");
-  const hoverSrc = img.getAttribute("data-hover");
+  if (!img) return; // seguridad
 
-  const extraImages = [
-    "img/bungalows-de-tomayquichua/foto-2.webp",
-    "img/bungalows-de-tomayquichua/foto-3-index.png",
-    "img/bungalows-de-tomayquichua/foto-4-index.png",
-    "img/bungalows-de-tomayquichua/foto-5-index.png",
-    "img/bungalows-de-tomayquichua/foto-6-index.png",
-    "img/bungalows-de-tomayquichua/foto-1.webp"
-  ];
+  // 👉 Solo aplicar efectos si NO es móvil (más de 400px)
+  if (window.innerWidth > 400) {
+    const originalSrc = img.getAttribute("src");
+    const hoverSrc = img.getAttribute("data-hover");
 
-  let currentIndex = 0;
-  img.addEventListener("mouseenter", () => {
-    img.setAttribute("src", hoverSrc);
-    img.style.transform = "translate(-100px, -40px) scale(1.05)"; // 👈 zoom suave
-    currentIndex = 0;
-  });
+    const extraImages = [
+      "img/bungalows-de-tomayquichua/foto-2.webp",
+      "img/bungalows-de-tomayquichua/foto-3-index.png",
+      "img/bungalows-de-tomayquichua/foto-4-index.png",
+      "img/bungalows-de-tomayquichua/foto-5-index.png",
+      "img/bungalows-de-tomayquichua/foto-6-index.png",
+      "img/bungalows-de-tomayquichua/foto-1.webp"
+    ];
 
-  img.addEventListener("mouseleave", () => {
-    img.setAttribute("src", originalSrc);
-    img.style.transform = "translate(-100px, -40px) scale(1)";
-    currentIndex = 0;
-  });
+    let currentIndex = 0;
 
-  img.addEventListener("click", () => {
-    if (currentIndex < extraImages.length) {
-      img.setAttribute("src", extraImages[currentIndex]);
-      currentIndex++;
-    } else {
+    img.addEventListener("mouseenter", () => {
+      img.setAttribute("src", hoverSrc);
+      img.style.transform = "translate(-100px, -40px) scale(1.05)";
       currentIndex = 0;
-    }
-  });
+    });
+
+    img.addEventListener("mouseleave", () => {
+      img.setAttribute("src", originalSrc);
+      img.style.transform = "translate(-100px, -40px) scale(1)";
+      currentIndex = 0;
+    });
+
+    img.addEventListener("click", () => {
+      if (currentIndex < extraImages.length) {
+        img.setAttribute("src", extraImages[currentIndex]);
+        currentIndex++;
+      } else {
+        currentIndex = 0;
+      }
+    });
+  } else {
+    // ✅ En móvil: resetear cualquier efecto y dejar la imagen estática
+    img.style.transform = "none";
+    img.style.transition = "none";
+    img.removeAttribute("data-hover");
+  }
+
 });
 
 
@@ -173,3 +185,36 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 }); 
+
+document.addEventListener("DOMContentLoaded", () => {
+  const img = document.querySelector(".bungalows-img img");
+
+  // Solo habilitar en pantallas pequeñas
+  if (window.innerWidth <= 400 && img) {
+    let isDragging = false;
+    let startX, startY, initialX = 0, initialY = 0;
+
+    img.addEventListener("touchstart", (e) => {
+      isDragging = true;
+      const touch = e.touches[0];
+      startX = touch.clientX - initialX;
+      startY = touch.clientY - initialY;
+      img.style.transition = "none";
+    });
+
+    img.addEventListener("touchmove", (e) => {
+      if (!isDragging) return;
+      const touch = e.touches[0];
+      const x = touch.clientX - startX;
+      const y = touch.clientY - startY;
+      img.style.transform = `translate(${x}px, ${y}px)`;
+      initialX = x;
+      initialY = y;
+    });
+
+    img.addEventListener("touchend", () => {
+      isDragging = false;
+      img.style.transition = "transform 0.2s ease";
+    });
+  }
+});

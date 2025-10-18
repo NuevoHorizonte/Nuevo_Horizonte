@@ -473,7 +473,7 @@ header a {
     bottom: -80px;         /* 🔹 posición desde abajo */
     left: 50%;
     transform: translateX(-50%) scale(0.3);
-     animation: floatDownUp 0.7s ease-in-out infinite;
+     animation: floatDownUp 0.3s ease-in-out infinite;
   }
 }
 
@@ -906,6 +906,145 @@ header a {
   }
 }
 
+@media (max-width: 400px) {
+  /* === SECCIÓN BUNGALOWS SIMPLIFICADA === */
+  .bungalows {
+  position: relative; /* 👈 agrega esto */
+     padding: 60px 15px 180px; /* ⬅️ aumenta el padding-bottom para más espacio */
+    background: #f0ffeb;
+  }
+
+  .bungalows-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  /* Logo */
+  .bungalows-logo {
+    position: absolute;  /* 👈 te permite moverlo libremente */
+    top: -100px;           /* distancia desde arriba */
+    left: 50%;           /* centrado horizontal */
+    transform: translateX(-50%); /* lo centra bien */
+    width: 120px;        /* puedes ajustar el tamaño */
+    z-index: 3;
+  }
+
+  .bungalows-logo img {
+    width: 100px;
+    max-width: 70%;
+    margin-bottom: 10px;
+    height: auto;
+  }
+
+  /* Imagen fija (sin efectos de cambio ni zoom) */
+  .bungalows-img {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px; /* 🔹 evita que el contenedor colapse */
+}
+  
+.bungalows-img img {
+  position: relative; /* 🔹 ya no absolute */
+  width: 90%;
+  max-width: 330px;
+  border-radius: 14px;
+  top: 0; /* lo manejamos con margin-top en lugar de top */
+  margin-top: -130px; /* 🔹 súbelo o bájalo manualmente */
+  height: auto;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+  transition: none !important;
+  animation: none !important;
+  transform: none !important;
+  cursor: grab;
+  z-index: 2;
+}
+
+  /* Opciones */
+  .bungalows-opciones {
+   position: absolute;   /* permite moverlo libremente */
+  top: 410px;           /* 🔹 ajusta para subir o bajar */
+  left: 70%;            /* centrado horizontal */
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  z-index: 4;
+  }
+
+  .bungalows-opciones .opcion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 600;
+    color: #222;
+  }
+
+  .bungalows-opciones .opcion img {
+     width: 60px;          /* puedes hacerlo más grande o pequeño */
+  height: 60px;
+  margin-bottom: 6px;
+  }
+
+  /* Quitar los números "1" y "2" en móvil */
+.bungalows-opciones .opcion .numero {
+  display: none !important;
+}
+
+ .bungalows-boton {
+    position: absolute;    /* 👈 permite moverlo libremente */
+    bottom: 15px;          /* 🔹 controla qué tan abajo va (ajusta este valor) */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 4;
+  }
+
+  /* Botón */
+  .bungalows-boton .btn-ver-mas {
+    display: inline-block;
+    margin-top: 20px;
+    background: #000;
+    color: #fff;
+    padding: 10px 28px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .bungalows-boton .btn-ver-mas:hover {
+    background: #444;
+    transform: scale(1.05);
+  }
+
+  /* Eliminar interacciones JS/hover de escritorio */
+  .bungalows-img img:hover,
+  .bungalows-img img:active {
+    transform: none !important;
+  }
+
+    /* ✨ Frase "Descansa, Desconecta y Disfruta" */
+ .bungalows-frase {
+  position: absolute;  
+  top: 265px;             /* 🔹 muévela a donde quieras */
+  left: 5%;              /* centrado horizontal */
+  transform: translateX(-50%);
+  font-size: 12px;        /* 🔹 tamaño más pequeño */
+  font-weight: 500;
+  color: #333;
+  text-align: center;
+  letter-spacing: 0.5px;
+  z-index: 5;             /* 🔹 más alto que la imagen */
+  width: 90%;             /* 🔹 para que no se corte el texto */
+}
+}
 
 /* === SECCIÓN EVENTOS === */
 .eventos {
@@ -921,6 +1060,7 @@ header a {
   position: relative;
 font-family: 'Rangile', sans-serif;
 }
+
 
 .eventos-subtitle {
   display: block;
