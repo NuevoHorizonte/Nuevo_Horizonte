@@ -72,7 +72,7 @@ header.scrolled {
   .dropdown { display: none !important; }
 
   .logo-container img {
-    content: url("img/index/logo-nuevo-horizonte-celular.svg");
+    content: url("img/index/logo-nuevo-horizonte-completo-horizontal.svg");
     height: 44px;
     width: auto;
     display: block;
@@ -366,17 +366,17 @@ header a {
     overflow: hidden;
   }
 
-  .hero picture,
-  .hero img.hero-bg {
+   .hero img.hero-bg {
     width: 100%;
-    height: 100%;
+    height: 120%; /* un poquito más alto para cubrir posibles huecos */
     object-fit: cover;
     object-position: center top;
+    clip-path: inset(0 0 30% 0); /* 🔹 corta 20% desde abajo */
   }
 
   .hero-content {
     position: absolute;
-    top: 52%;
+    top: 38%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 90%;
@@ -402,7 +402,6 @@ header a {
     border-radius: 30px;
   }
 }
-
 
   .contacto-link {
     background: transparent;
