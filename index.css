@@ -1358,64 +1358,90 @@ font-family: 'Chekharda', sans-serif;
 }
 
 
+/* ======= CANCHAS DEPORTIVAS ======= */
 .canchas {
-  min-height: 70vh;   
-  padding: 100px 40px;
-  background: #e8ffe3;
   text-align: center;
+  padding: 60px 20px;
+  background-color: #edfde5;
 }
 
 .canchas-title {
-  font-size: 40px;
+  font-size: 2rem;
   font-weight: 700;
-  margin-bottom: 60px;
-  font-family: 'Poppins', sans-serif;
+  color: #222;
+  margin-bottom: 40px;
 }
 
 .canchas-grid {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap; 
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  justify-items: center;
 }
 
 .canchas-item {
   position: relative;
-  width: 320px;   
-  height: auto;  
-  border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 8px 18px rgba(0,0,0,0.25);
+  border-radius: 12px;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  max-width: 380px;
   transition: transform 0.3s ease;
 }
 
 .canchas-item img {
-  width: 100%;  
-  height: auto;  
+  width: 100%;
+  height: auto;
   display: block;
+  transition: transform 0.4s ease;
+  border-radius: 12px;
 }
 
-.canchas-item:hover {
-  transform: scale(1.05);
-}
-
+/* 👇 Overlay inicialmente invisible */
 .canchas-item .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.45);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6); /* fondo oscuro translúcido */
   color: #fff;
-  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.4s ease;
+  border-radius: 12px;
+}
+
+.canchas-item .overlay span {
+  font-size: 1.2rem;
   font-weight: 600;
   text-transform: uppercase;
-  transition: background 0.3s ease;
+  letter-spacing: 0.5px;
+}
+
+/* 👇 Al pasar el mouse: aparece overlay + zoom imagen */
+.canchas-item:hover img {
+  transform: scale(1.08);
 }
 
 .canchas-item:hover .overlay {
-  background: rgba(0,0,0,0.6);
+  opacity: 1;
+  transform: translateY(0);
 }
+
+/* ======= Versión móvil ======= */
+@media (max-width: 600px) {
+  .canchas-item .overlay {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.4);
+    transform: translateY(0);
+  }
+  .canchas-item .overlay span {
+    font-size: 1rem;
+  }
+}
+
 
 .importaciones {
   min-height: 70vh;  
