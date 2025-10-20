@@ -1356,90 +1356,70 @@ font-family: 'Chekharda', sans-serif;
     font-size: 14px;
   }
 }
-
-
-/* ======= CANCHAS DEPORTIVAS ======= */
 .canchas {
-  text-align: center;
+  min-height: 70vh;   
   padding: 60px 20px;
-  background-color: #edfde5;
+  background-color: #fff;
+  text-align: center;
 }
 
 .canchas-title {
-  font-size: 2rem;
+  font-size: 40px;
   font-weight: 700;
-  color: #222;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
+  font-family: 'Poppins', sans-serif;
 }
 
 .canchas-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
-  justify-items: center;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap; 
 }
 
 .canchas-item {
   position: relative;
+  width: 320px;   
+  height: auto;  
+  border-radius: 16px;
   overflow: hidden;
-  border-radius: 12px;
-  cursor: pointer;
-  display: block;
-  width: 100%;
-  max-width: 380px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.25);
   transition: transform 0.3s ease;
 }
 
 .canchas-item img {
-  width: 100%;
-  height: auto;
+  width: 100%;  
+  height: auto;  
   display: block;
-  transition: transform 0.4s ease;
-  border-radius: 12px;
 }
 
-/* 👇 Overlay inicialmente invisible */
+.canchas-item:hover {
+  transform: scale(1.05);
+}
+
+/* --- Overlay inicialmente oculto --- */
 .canchas-item .overlay {
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.6); /* fondo oscuro translúcido */
-  color: #fff;
+  background: rgba(0, 0, 0, 0.45);
   display: flex;
-  align-items: center;
   justify-content: center;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.4s ease;
-  border-radius: 12px;
-}
-
-.canchas-item .overlay span {
-  font-size: 1.2rem;
+  align-items: center;
+  color: #fff;
+  font-size: 20px;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  opacity: 0;              /* 👈 Oculto al inicio */
+  transition: opacity 0.3s ease; /* 👈 Animación suave */
 }
 
-/* 👇 Al pasar el mouse: aparece overlay + zoom imagen */
-.canchas-item:hover img {
-  transform: scale(1.08);
+/* --- Al pasar el mouse: aparece --- */
+.canchas-item:hover .overlay {
+  opacity: 1;
 }
 
 .canchas-item:hover .overlay {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* ======= Versión móvil ======= */
-@media (max-width: 600px) {
-  .canchas-item .overlay {
-    opacity: 1;
-    background-color: rgba(0, 0, 0, 0.4);
-    transform: translateY(0);
-  }
-  .canchas-item .overlay span {
-    font-size: 1rem;
-  }
+  background: rgba(0,0,0,0.6);
 }
 
 
