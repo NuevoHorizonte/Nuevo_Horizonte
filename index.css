@@ -1422,6 +1422,25 @@ font-family: 'Chekharda', sans-serif;
   background: rgba(0,0,0,0.6);
 }
 
+/* ======= Overlay con logo y dirección ======= */
+.canchas-item .overlay {
+  flex-direction: column; /* 👈 para apilar logo, nombre y dirección */
+  gap: 8px; /* pequeña separación entre elementos */
+  text-align: center;
+}
+
+.overlay-logo {
+  width: 20px; /* tamaño del logo */
+  height: auto;
+  opacity: 0.9;
+}
+
+.overlay-direccion {
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0;
+  opacity: 0.9;
+}
 
 .importaciones {
   min-height: 70vh;  
