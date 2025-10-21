@@ -200,7 +200,7 @@ body, html {
 /* =============================== */
 /* 📱 MODO MÓVIL (355px)          */
 /* =============================== */
-@media (max-width: 356px) {
+@media (max-width: 400px) {
 
   .hero {
     position: relative;
