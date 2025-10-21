@@ -230,41 +230,27 @@ body, html {
     z-index: 20;
   }
 
-  .hamburger {
-    font-size: 2rem;
-    color: white;
-    cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 8px 14px;
-    border-radius: 8px;
-    transition: background 0.3s;
-  }
+ .menu {
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: 10px;
+  background-color: rgba(255, 255, 255, 0.95);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 180px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  z-index: 9999; /* 👈 asegúrate de que esté encima de todo */
+}
 
-  .hamburger:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-  }
+.menu.active {
+  display: block; /* se muestra al hacer clic */
+}
 
-  .menu {
-    display: none;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    background-color: rgba(255, 255, 255, 0.95);
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    width: 180px;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    z-index: 25; /* 👈 menú encima de la imagen */
-  }
-
-  .menu.active {
-    display: block;
-  }
-
-  .menu li a {
+.menu li a {
     display: block;
     padding: 12px 16px;
     text-decoration: none;
@@ -272,17 +258,16 @@ body, html {
     font-weight: bold;
     text-align: right;
     transition: background 0.3s, color 0.3s;
-  }
+    }
 
-  .menu li a:hover {
+.menu li a:hover {
     background-color: black;
     color: white;
-  }
+}
 
-  /* --- BOTÓN MÓVIL "CELEBRA TU EVENTO" --- */
-  .hero-btn-mobile {
+.hero-btn-mobile {
     position: absolute;
-    bottom: 150px; /* 🔹 súbelo más (prueba 100–150px según tu gusto) */
+    bottom: 150px;
     left: 50%;
     transform: translateX(-50%);
     display: inline-block;
@@ -297,7 +282,7 @@ body, html {
     text-transform: uppercase;
     transition: all 0.3s ease;
     z-index: 30; 
-  }
+}
 }
 
 
