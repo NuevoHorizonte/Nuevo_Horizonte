@@ -1,0 +1,154 @@
+/* Estilos generales */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+}
+
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+}
+
+/* --- NAVBAR --- */
+.navbar {
+    position: absolute;
+    top: 60px;
+    right: 0; /* antes 40px */
+    display: flex;
+    align-items: stretch;
+    border-radius: 0;
+    overflow: hidden;
+    z-index: 10;
+}
+
+/* --- MENU BLANCO --- */
+.menu {
+    background-color: white;
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    margin: 0;
+}
+
+.menu li a {
+    display: block;
+    padding: 20px 22px 14px 22px; /* arriba | derecha | abajo | izquierda */
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.menu li a:hover {
+    background-color: #f0f0f0;
+}
+
+.telefono {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%; 
+}
+
+.whatsapp-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    height: 100%; /* que ocupe toda la altura del bloque */
+    padding: 16px 22px; /* mismo padding que los <a> del menú */
+    transition: color 0.3s, background 0.3s;
+}
+
+.whatsapp-link:hover {
+    color: #ffffff; /* color verde de WhatsApp */
+}
+
+.logo-img {
+    width: 28px; /* tamaño más balanceado */
+    height: auto;
+    margin-right: 10px; /* separa la imagen del número */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.2);
+}
+
+.logo-negocio {
+    position: absolute; /* lo hace flotar dentro del hero */
+    top: 40px;          /* distancia desde arriba */
+    left: 40px;         /* distancia desde el borde izquierdo */
+    z-index: 15;        /* encima de la imagen, pero debajo del menú */
+    cursor: move;       /* (opcional) da sensación de que se puede mover */
+}
+
+.img-logo-negocio {
+    width: 120px;       /* tamaño inicial del logo */
+    height: auto;
+    user-select: none;  /* evita que se seleccione al hacer clic */
+}
+
+/* --- HERO CONTENT (texto sobre la imagen) --- */
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 180px;          /* 🔹 antes 80px → lo empuja más a la derecha */
+    transform: translateY(-50%);
+    color: white;
+    z-index: 12;
+    max-width: 600px;
+}
+
+
+
+.hero-title {
+    font-size: 3rem;
+    line-height: 1.6;
+    margin: 0 0 20px 0;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-style: italic;   /* 🔹 convierte el texto en itálico */
+}
+
+.hero-title strong {
+    font-weight: 700;
+    font-style: italic;   /* 🔹 mantiene la negrita pero también en itálica */
+}
+
+.hero-btn {
+    display: inline-block;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    padding: 12px 28px;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.hero-btn:hover {
+    background-color: black;
+    color: white;
+}
