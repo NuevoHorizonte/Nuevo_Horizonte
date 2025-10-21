@@ -1,4 +1,4 @@
-/* Estilos generales */
+
 body, html {
     margin: 0;
     padding: 0;
@@ -19,11 +19,10 @@ body, html {
     object-fit: contain; 
 }
 
-/* --- NAVBAR --- */
 .navbar {
     position: absolute;
     top: 60px;
-    right: 0; /* antes 40px */
+    right: 0; 
     display: flex;
     align-items: stretch;
     border-radius: 0;
@@ -31,7 +30,6 @@ body, html {
     z-index: 10;
 }
 
-/* --- MENU BLANCO --- */
 .menu {
     background-color: white;
     list-style: none;
@@ -46,15 +44,17 @@ body, html {
 
 .menu li a {
     display: block;
-    padding: 16px 22px;
+    padding: 20px 22px 14px 22px; 
     text-decoration: none;
     color: black;
     font-weight: bold;
-    transition: background 0.3s;
+   transition: background 0.3s, color 0.3s, transform 0.2s;
 }
 
 .menu li a:hover {
-    background-color: #f0f0f0;
+    background-color: black;
+    color: white;
+    transform: scale(1.05); /* leve “zoom” del texto */
 }
 
 .telefono {
@@ -62,10 +62,22 @@ body, html {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%; /* para heredar altura si el navbar lo permite */
+    height: 100%; 
 }
 
-/* Aseguramos que el bloque negro tenga igual altura que los botones del menú */
+/* Imagen normal */
+.telefono-img {
+    width: 28px;
+    height: auto;
+    margin-right: 10px;
+    transition: opacity 0.3s ease; /* suave transición */
+}
+
+/* Imagen alternativa cuando el mouse está encima */
+.whatsapp-link:hover .telefono-img {
+    content: url('../../../img/recreo-campestre/telf-cabeza-2.svg'); /* cambia la imagen */
+}
+
 .whatsapp-link {
     display: flex;
     align-items: center;
@@ -73,19 +85,19 @@ body, html {
     color: white;
     font-weight: bold;
     font-size: 16px;
-    height: 100%; /* que ocupe toda la altura del bloque */
-    padding: 16px 22px; /* mismo padding que los <a> del menú */
+    height: 100%; 
+    padding: 16px 22px;
     transition: color 0.3s, background 0.3s;
 }
 
 .whatsapp-link:hover {
-    color: #ffffff; /* color verde de WhatsApp */
+    color: #ffffff; 
 }
 
 .logo-img {
-    width: 28px; /* tamaño más balanceado */
+    width: 28px; 
     height: auto;
-    margin-right: 10px; /* separa la imagen del número */
+    margin-right: 10px;
 }
 
 .overlay {
@@ -95,4 +107,92 @@ body, html {
     width: 100%;
     height: 100%;
     background-color: rgba(0,0,0,0.2);
+}
+
+/* --- ANIMACIÓN DEL LOGO --- */
+.logo-negocio {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    z-index: 15;
+    cursor: pointer;
+    transition: transform 0.3s ease; /* suaviza la animación */
+}
+
+.logo-negocio:hover {
+    transform: scale(1.15); /* “infla” el logo un poco */
+}
+
+.img-logo-negocio {
+    width: 120px;       /* tamaño inicial del logo */
+    height: auto;
+    user-select: none;  /* evita que se seleccione al hacer clic */
+}
+
+/* --- HERO CONTENT (texto sobre la imagen) --- */
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 180px;          /* 🔹 antes 80px → lo empuja más a la derecha */
+    transform: translateY(-50%);
+    color: white;
+    z-index: 12;
+    max-width: 600px;
+}
+
+
+
+.hero-title {
+    font-size: 3rem;
+    line-height: 1.6;
+    margin: 0 0 20px 0;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-style: italic;   /* 🔹 convierte el texto en itálico */
+}
+
+.hero-title strong {
+    font-weight: 700;
+    font-style: italic;   /* 🔹 mantiene la negrita pero también en itálica */
+}
+
+.hero-btn {
+    display: inline-block;
+    position: relative;
+    padding: 14px 36px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: black;
+    background-color: white;
+    border: 2px solid white;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 30px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+/* Efecto hover elegante */
+.hero-btn:hover {
+    background-color: black;
+    color: white;
+    transform: translateY(-3px); /* pequeño levantamiento */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+/* Brillo animado */
+.hero-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: skewX(-25deg);
+    transition: left 0.5s ease;
+}
+
+.hero-btn:hover::before {
+    left: 200%;
 }
