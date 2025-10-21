@@ -296,7 +296,7 @@ body, html {
     border: 2px solid white;
     text-transform: uppercase;
     transition: all 0.3s ease;
-    z-index: 30; /* 👈 asegura que el botón esté encima */
+    z-index: 30; 
   }
 }
 
