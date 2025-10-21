@@ -1,4 +1,4 @@
-/* Estilos generales */
+
 body, html {
     margin: 0;
     padding: 0;
@@ -19,11 +19,10 @@ body, html {
     object-fit: contain; 
 }
 
-/* --- NAVBAR --- */
 .navbar {
     position: absolute;
     top: 60px;
-    right: 0; /* antes 40px */
+    right: 0; 
     display: flex;
     align-items: stretch;
     border-radius: 0;
@@ -31,7 +30,6 @@ body, html {
     z-index: 10;
 }
 
-/* --- MENU BLANCO --- */
 .menu {
     background-color: white;
     list-style: none;
@@ -46,7 +44,7 @@ body, html {
 
 .menu li a {
     display: block;
-    padding: 20px 22px 14px 22px; /* arriba | derecha | abajo | izquierda */
+    padding: 20px 22px 14px 22px; 
     text-decoration: none;
     color: black;
     font-weight: bold;
@@ -65,6 +63,19 @@ body, html {
     height: 100%; 
 }
 
+/* Imagen normal */
+.telefono-img {
+    width: 28px;
+    height: auto;
+    margin-right: 10px;
+    transition: opacity 0.3s ease; /* suave transición */
+}
+
+/* Imagen alternativa cuando el mouse está encima */
+.whatsapp-link:hover .telefono-img {
+    content: url('../../../img/recreo-campestre/telf-cabeza-2.svg'); /* cambia la imagen */
+}
+
 .whatsapp-link {
     display: flex;
     align-items: center;
@@ -72,19 +83,19 @@ body, html {
     color: white;
     font-weight: bold;
     font-size: 16px;
-    height: 100%; /* que ocupe toda la altura del bloque */
-    padding: 16px 22px; /* mismo padding que los <a> del menú */
+    height: 100%; 
+    padding: 16px 22px;
     transition: color 0.3s, background 0.3s;
 }
 
 .whatsapp-link:hover {
-    color: #ffffff; /* color verde de WhatsApp */
+    color: #ffffff; 
 }
 
 .logo-img {
-    width: 28px; /* tamaño más balanceado */
+    width: 28px; 
     height: auto;
-    margin-right: 10px; /* separa la imagen del número */
+    margin-right: 10px;
 }
 
 .overlay {
@@ -96,12 +107,18 @@ body, html {
     background-color: rgba(0,0,0,0.2);
 }
 
+/* --- ANIMACIÓN DEL LOGO --- */
 .logo-negocio {
-    position: absolute; /* lo hace flotar dentro del hero */
-    top: 40px;          /* distancia desde arriba */
-    left: 40px;         /* distancia desde el borde izquierdo */
-    z-index: 15;        /* encima de la imagen, pero debajo del menú */
-    cursor: move;       /* (opcional) da sensación de que se puede mover */
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    z-index: 15;
+    cursor: pointer;
+    transition: transform 0.3s ease; /* suaviza la animación */
+}
+
+.logo-negocio:hover {
+    transform: scale(1.15); /* “infla” el logo un poco */
 }
 
 .img-logo-negocio {
