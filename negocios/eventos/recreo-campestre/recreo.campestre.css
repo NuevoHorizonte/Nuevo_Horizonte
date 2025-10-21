@@ -281,4 +281,26 @@ body, html {
   .menu.active {
     display: block;
   }
+
+  /* --- BOTÓN MÓVIL "CELEBRA TU EVENTO" --- */
+.hero-btn-mobile {
+  position: absolute;
+  bottom: 50px;     /* 🔹 distancia desde la parte inferior */
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-block;
+  background-color: white;
+  color: black;
+  text-decoration: none;
+  padding: 12px 28px;
+  font-weight: bold;
+  font-size: 0.95rem;
+  border-radius: 30px;
+  border: 2px solid white;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  z-index: 30;
 }
+}
+
+
