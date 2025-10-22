@@ -474,3 +474,65 @@ body, html {
     transform: scale(1.01);
     transition: transform 0.3s ease, background 0.3s ease;
 }
+
+
+/* =======================================================
+   SECCIÓN DE ÍCONOS
+   ======================================================= */
+.servicios-iconos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  padding: 80px 40px;
+  background-color: white;
+  text-align: center;
+}
+
+.icono {
+  transition: transform 0.3s ease;
+}
+
+.icono img {
+  width: 120px;
+  height: 120px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  user-select: none;
+}
+
+.icono p {
+  margin-top: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Animación suave */
+.icono:hover {
+  transform: translateY(-6px);
+}
+
+.icono:hover img {
+  transform: scale(1.1);
+}
+
+/* 🔹 Responsivo */
+@media (max-width: 900px) {
+  .servicios-iconos {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+
+@media (max-width: 500px) {
+  .servicios-iconos {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .icono img {
+    width: 80px;
+    height: 80px;
+  }
+}
