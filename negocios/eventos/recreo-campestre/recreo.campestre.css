@@ -678,11 +678,28 @@ body, html {
     flex: 0 0 calc((100% / 2) - 15px); /* 2 imágenes visibles */
     height: 360px;
   }
+   .carrusel-dots {
+    bottom: 15px;
+    gap: 12px;
+  }
+  .dot {
+    width: 14px;
+    height: 14px;
+  }
 }
 
 @media (max-width: 400px) {
   .carrusel-track img {
     flex: 0 0 100%; /* 1 imagen visible */
     height: 340px;
+  }
+    .carrusel-dots {
+    bottom: 12px;
+    gap: 8px;
+  }
+
+  .dot {
+    width: 12px;
+    height: 12px;
   }
 }
