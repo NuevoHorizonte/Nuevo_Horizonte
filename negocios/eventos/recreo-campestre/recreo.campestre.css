@@ -934,3 +934,223 @@ body, html {
   }
 }
 
+/* ============================
+   SECCIÓN: RAZONES / POR QUÉ ESCOGERNOS
+   ============================ */
+.razones-seccion {
+  padding: 100px 60px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.razones-titulo {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 60px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* 🔹 Contenedor de las tres tarjetas */
+.razones-contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* 🔹 Estilo de cada tarjeta */
+.razon-card {
+  background-color: #f8f8f8;
+  width: 320px;
+  height: 460px; /* 🔧 Más alta que ancha */
+  padding: 30px 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.razon-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+}
+
+.razon-subtitulo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.razon-texto {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+/* ============================
+   RESPONSIVE
+   ============================ */
+@media (max-width: 800px) {
+  .razones-contenedor {
+    gap: 25px;
+  }
+
+  .razon-card {
+    width: 280px;
+    height: 420px;
+  }
+}
+
+@media (max-width: 500px) {
+  .razones-seccion {
+    padding: 60px 20px;
+  }
+
+  .razones-titulo {
+    font-size: 1.8rem;
+    margin-bottom: 40px;
+  }
+
+  .razones-contenedor {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .razon-card {
+    width: 90%;
+    height: auto;
+  }
+}
+
+/* ============================
+   FOOTER
+   ============================ */
+.footer {
+  background-color: #222;
+  color: #eee;
+  padding: 80px 60px 40px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-contenido {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 50px;
+  margin-bottom: 40px;
+}
+
+.footer-col {
+  flex: 1;
+  min-width: 220px;
+}
+
+.footer-titulo {
+  font-size: 1.3rem;
+  color: #fff;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.footer-texto {
+  font-size: 0.95rem;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.footer-lista {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-lista li {
+  margin-bottom: 10px;
+  color: #ccc;
+}
+
+.footer-lista a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-lista a:hover {
+  color: #fff;
+}
+
+.footer-link {
+  color: #58a6ff;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+/* 🔹 Redes Sociales */
+.footer-redes a {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.footer-redes img {
+  width: 28px;
+  height: 28px;
+  filter: invert(100%);
+  opacity: 0.8;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.footer-redes img:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* 🔹 Línea inferior */
+.footer-copy {
+  border-top: 1px solid #444;
+  padding-top: 20px;
+  font-size: 0.9rem;
+  color: #aaa;
+  text-align: center;
+}
+
+/* ============================
+   RESPONSIVE
+   ============================ */
+@media (max-width: 800px) {
+  .footer {
+    padding: 60px 30px 30px;
+  }
+
+  .footer-contenido {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .footer-redes a {
+    margin: 0 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  .footer-titulo {
+    font-size: 1.1rem;
+  }
+
+  .footer-texto,
+  .footer-lista li {
+    font-size: 0.9rem;
+  }
+
+  .footer-copy {
+    font-size: 0.8rem;
+  }
+}
