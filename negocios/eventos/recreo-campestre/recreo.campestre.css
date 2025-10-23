@@ -806,7 +806,7 @@ body, html {
   border-radius: 10px;
 }
 
-/* Imagen del mapa */
+
 .ubicacion-mapa {
   width: 100%;
   height: 100%;
@@ -814,7 +814,7 @@ body, html {
   display: block;
 }
 
-/* Overlay oscuro */
+
 .ubicacion-overlay {
   position: absolute;
   top: 0;
@@ -830,7 +830,7 @@ body, html {
   transition: background 0.4s ease, opacity 0.4s ease;
 }
 
-/* Imagen central */
+
 .overlay-icono {
   width: 80px;
   height: 80px;
@@ -840,7 +840,6 @@ body, html {
   user-select: none;
 }
 
-/* Texto de dirección */
 .overlay-texto {
   color: white;
   font-size: 1.2rem;
@@ -852,9 +851,8 @@ body, html {
   margin-top: 20px;
 }
 
-/* --- Efecto al pasar el mouse --- */
 .ubicacion-mapa-container:hover .ubicacion-overlay {
-  background-color: rgba(0, 0, 0, 0.55); /* negro translúcido */
+  background-color: rgba(0, 0, 0, 0.55); 
   opacity: 1;
 }
 
@@ -868,6 +866,7 @@ body, html {
   transform: translateY(0);
 }
 
+
 @media (max-width: 400px) {
   .ubicacion-seccion {
     padding: 40px 20px;
@@ -875,7 +874,7 @@ body, html {
 
   .ubicacion-titulo {
     font-size: 1.4rem;
-    margin-left: 10px; /* mantiene alineación a la izquierda */
+    margin-left: 10px; 
     margin-bottom: 25px;
   }
 
@@ -886,7 +885,6 @@ body, html {
     gap: 25px;
   }
 
-  /* 🔹 Contenedor del mapa adaptado */
   .ubicacion-mapa-container {
     width: 100%;
     height: 300px;
