@@ -40,8 +40,6 @@ setInterval(() => {
   updateCarousel();
 }, 3000);
 
-// 🔹 Recalcular si cambia el tamaño de la ventana (responsivo)
 window.addEventListener('resize', updateCarousel);
 
-// 🔹 Inicializa en carga
 updateCarousel();

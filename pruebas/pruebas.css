@@ -541,7 +541,7 @@ body, html {
   
 }
 
-@media (max-width: 700px) {
+@media (max-width: 600px) {
   .servicios-iconos {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 columnas */
@@ -673,10 +673,34 @@ body, html {
 
 
 /* 🔹 Adaptación responsive */
+@media (max-width: 600px) {
+  .carrusel-track img {
+    flex: 0 0 calc((100% / 2) - 15px); /* 2 imágenes visibles */
+    height: 360px;
+  }
+   .carrusel-dots {
+    bottom: 15px;
+    gap: 12px;
+  }
+  .dot {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+
 @media (max-width: 500px) {
   .carrusel-track img {
     flex: 0 0 calc((100% / 2) - 15px); /* 2 imágenes visibles */
     height: 360px;
+  }
+   .carrusel-dots {
+    bottom: 15px;
+    gap: 12px;
+  }
+  .dot {
+    width: 14px;
+    height: 14px;
   }
 }
 
@@ -684,5 +708,143 @@ body, html {
   .carrusel-track img {
     flex: 0 0 100%; /* 1 imagen visible */
     height: 340px;
+  }
+    .carrusel-dots {
+    bottom: 12px;
+    gap: 8px;
+  }
+
+  .dot {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+/* ===========================
+   SECCIÓN UBICACIÓN
+   =========================== */
+.ubicacion-seccion {
+  padding: 80px 40px;
+  background-color: #f8f8f8;
+  position: relative; /* 🔹 para poder mover los elementos dentro si quieres */
+}
+
+.ubicacion-titulo {
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #222;
+  text-align: left;
+  margin-bottom: 40px;
+  margin-left: 150px; /* 🔹 Mueve el título manualmente hacia la derecha */
+}
+
+/* Contenedor general */
+.ubicacion-contenido {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+
+  /* 🔹 Aquí controlas la posición general */
+  margin-left: 150px;  /* 🔧 Mueve todo hacia la derecha */
+  margin-top: 20px;    /* 🔧 Mueve hacia abajo si quieres */
+}
+
+/* 🔹 Imagen grande del mapa */
+.ubicacion-mapa-link {
+  display: block;
+  flex-shrink: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 🔹 Ajuste manual del tamaño del mapa */
+.ubicacion-mapa {
+  width: 700px;     
+  height: 550px;    
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+}
+
+/* 🔹 Hover suave */
+.ubicacion-mapa-link:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* 🔹 Imágenes verticales al costado */
+.ubicacion-imagenes-laterales {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  /* 🔹 Control manual del espaciado lateral */
+  margin-left: 30px;  /* 🔧 distancia del mapa */
+  margin-top: 10px;   /* 🔧 puedes moverlo más arriba o abajo */
+}
+
+.img-lateral {
+  width: 500px;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.img-lateral:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* ===========================
+   RESPONSIVE
+   =========================== */
+@media (max-width: 800px) {
+  .ubicacion-contenido {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0; /* 🔹 centrado automático en pantallas pequeñas */
+  }
+
+  .ubicacion-mapa {
+    width: 100%;
+    height: 50vh;
+  }
+
+  .ubicacion-imagenes-laterales {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-left: 0;
+  }
+
+  .img-lateral {
+    width: 45%;
+    height: 120px;
+  }
+}
+
+@media (max-width: 500px) {
+  .ubicacion-seccion {
+    padding: 50px 20px;
+  }
+
+  .ubicacion-titulo {
+    font-size: 1.6rem;
+    margin-left: 20px; /* 🔹 título ligeramente movido */
+  }
+
+  .ubicacion-mapa {
+    height: 45vh;
+  }
+
+  .ubicacion-imagenes-laterales {
+    gap: 12px;
+  }
+
+  .img-lateral {
+    width: 100%;
+    height: 120px;
   }
 }

@@ -719,3 +719,218 @@ body, html {
     height: 12px;
   }
 }
+
+/* ===========================
+   SECCIÓN UBICACIÓN
+   =========================== */
+.ubicacion-seccion {
+  padding: 80px 40px;
+  background-color: #f8f8f8;
+  position: relative; /* 🔹 para poder mover los elementos dentro si quieres */
+}
+
+.ubicacion-titulo {
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #222;
+  text-align: left;
+  margin-bottom: 40px;
+  margin-left: 150px; /* 🔹 Mueve el título manualmente hacia la derecha */
+}
+
+/* Contenedor general */
+.ubicacion-contenido {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+
+  /* 🔹 Aquí controlas la posición general */
+  margin-left: 150px;  /* 🔧 Mueve todo hacia la derecha */
+  margin-top: 20px;    /* 🔧 Mueve hacia abajo si quieres */
+}
+
+/* 🔹 Imagen grande del mapa */
+.ubicacion-mapa-link {
+  display: block;
+  flex-shrink: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 🔹 Ajuste manual del tamaño del mapa */
+.ubicacion-mapa {
+  width: 700px;     
+  height: 550px;    
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+}
+
+/* 🔹 Hover suave */
+.ubicacion-mapa-link:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* 🔹 Imágenes verticales al costado */
+.ubicacion-imagenes-laterales {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  /* 🔹 Control manual del espaciado lateral */
+  margin-left: 30px;  /* 🔧 distancia del mapa */
+  margin-top: 10px;   /* 🔧 puedes moverlo más arriba o abajo */
+}
+
+.img-lateral {
+  width: 500px;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.img-lateral:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Contenedor del mapa con overlay */
+.ubicacion-mapa-container {
+  position: relative;
+  width: 700px;
+  height: 550px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+/* Imagen del mapa */
+.ubicacion-mapa {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Overlay oscuro */
+.ubicacion-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0); /* invisible por defecto */
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.4s ease, opacity 0.4s ease;
+}
+
+/* Imagen central */
+.overlay-icono {
+  width: 80px;
+  height: 80px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  user-select: none;
+}
+
+/* Texto de dirección */
+.overlay-texto {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  margin-top: 20px;
+}
+
+/* --- Efecto al pasar el mouse --- */
+.ubicacion-mapa-container:hover .ubicacion-overlay {
+  background-color: rgba(0, 0, 0, 0.55); /* negro translúcido */
+  opacity: 1;
+}
+
+.ubicacion-mapa-container:hover .overlay-icono {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.ubicacion-mapa-container:hover .overlay-texto {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 400px) {
+  .ubicacion-seccion {
+    padding: 40px 20px;
+  }
+
+  .ubicacion-titulo {
+    font-size: 1.4rem;
+    margin-left: 10px; /* mantiene alineación a la izquierda */
+    margin-bottom: 25px;
+  }
+
+  .ubicacion-contenido {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+    gap: 25px;
+  }
+
+  /* 🔹 Contenedor del mapa adaptado */
+  .ubicacion-mapa-container {
+    width: 100%;
+    height: 300px;
+    border-radius: 8px;
+  }
+
+  .ubicacion-mapa {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* 🔹 Overlay ajustado */
+  .ubicacion-overlay {
+    background-color: rgba(0, 0, 0, 0.4);
+    opacity: 1; /* visible por defecto, ya que no hay hover en móvil */
+  }
+
+  .overlay-icono {
+    width: 50px;
+    height: 50px;
+    opacity: 1;
+    transform: none;
+  }
+
+  .overlay-texto {
+    font-size: 1rem;
+    margin-top: 12px;
+    opacity: 1;
+    transform: none;
+  }
+
+  /* 🔹 Imágenes laterales pasan debajo del mapa */
+  .ubicacion-imagenes-laterales {
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    gap: 15px;
+  }
+
+  .img-lateral {
+    width: 100%;
+    height: 120px;
+    border-radius: 8px;
+  }
+}
+
