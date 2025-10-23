@@ -649,7 +649,6 @@ body, html {
   transform: scale(1.03);
 }
 
-/* 🔹 Dots (indicadores) */
 .carrusel-dots {
   position: absolute;
   bottom: 20px;
@@ -664,22 +663,24 @@ body, html {
   height: 12px;
   border-radius: 50%;
   background-color: #bbb;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .dot.active {
   background-color: #333;
+  transform: scale(1.2);
 }
 
+
 /* 🔹 Adaptación responsive */
-@media (max-width: 900px) {
+@media (max-width: 500px) {
   .carrusel-track img {
     flex: 0 0 calc((100% / 2) - 15px); /* 2 imágenes visibles */
     height: 360px;
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 400px) {
   .carrusel-track img {
     flex: 0 0 100%; /* 1 imagen visible */
     height: 340px;

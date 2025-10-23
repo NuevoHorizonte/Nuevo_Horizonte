@@ -15,15 +15,16 @@ const visibleImages = 3;
 let index = 0;
 
 function updateCarousel() {
-  const slideWidth = track.querySelector('img').offsetWidth + 25; // considera el gap
+  const slideWidth = track.querySelector('img').offsetWidth + 25; // espacio incluido
   track.style.transform = `translateX(-${index * slideWidth}px)`;
 
-  // 🔹 Calcula qué grupo de 3 está visible actualmente
-  const group = Math.floor(index / visibleImages);
+  // 🔹 Limpia todos los dots
+  dots.forEach(dot => dot.classList.remove('active'));
 
-  dots.forEach((dot, i) => {
-    dot.classList.toggle('active', i === group);
-  });
+  // 🔹 Activa los dots que corresponden a las imágenes visibles
+  for (let i = index; i < index + visibleImages; i++) {
+    if (dots[i]) dots[i].classList.add('active');
+  }
 }
 
 setInterval(() => {
