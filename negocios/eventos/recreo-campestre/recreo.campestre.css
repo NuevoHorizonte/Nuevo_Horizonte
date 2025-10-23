@@ -617,3 +617,71 @@ body, html {
     margin-bottom: 25px;
   }
 }
+
+/* =======================================================
+   CARRUSEL AUTOMÁTICO (3 imágenes visibles tipo póster)
+   ======================================================= */
+.carrusel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 70px 0;
+  background-color: #fafafa;
+}
+
+.carrusel-track {
+  display: flex;
+  gap: 25px; /* 🔹 espacio entre las imágenes */
+  transition: transform 0.9s ease-in-out;
+  padding: 0 30px; /* margen lateral dentro del carrusel */
+}
+
+.carrusel-track img {
+  flex: 0 0 calc((100% / 3) - 20px); /* 🔹 3 imágenes visibles con separación */
+  height: 420px; /* 🔹 más alto que ancho (aspecto rectangular) */
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+  transition: transform 0.4s ease;
+}
+
+.carrusel-track img:hover {
+  transform: scale(1.03);
+}
+
+/* 🔹 Dots (indicadores) */
+.carrusel-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #bbb;
+  transition: background 0.3s ease;
+}
+
+.dot.active {
+  background-color: #333;
+}
+
+/* 🔹 Adaptación responsive */
+@media (max-width: 900px) {
+  .carrusel-track img {
+    flex: 0 0 calc((100% / 2) - 15px); /* 2 imágenes visibles */
+    height: 360px;
+  }
+}
+
+@media (max-width: 600px) {
+  .carrusel-track img {
+    flex: 0 0 100%; /* 1 imagen visible */
+    height: 340px;
+  }
+}

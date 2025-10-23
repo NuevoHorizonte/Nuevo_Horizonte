@@ -493,8 +493,8 @@ body, html {
 }
 
 .icono img {
-  width: 120px;
-  height: 120px;
+  width: 160px;
+  height: 160px;
   transition: transform 0.3s ease, opacity 0.3s ease;
   user-select: none;
 }
@@ -517,22 +517,103 @@ body, html {
   transform: scale(1.1);
 }
 
-/* 🔹 Responsivo */
-@media (max-width: 900px) {
-  .servicios-iconos {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-  }
+.servicios-titulo {
+  grid-column: 1 / -1;        /* hace que ocupe todo el ancho de la cuadrícula */
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
 }
 
-@media (max-width: 500px) {
+/* Pequeño subrayado decorativo */
+.servicios-titulo::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background-color: black;
+  margin: 12px auto 0;
+  border-radius: 2px;
+  
+}
+
+@media (max-width: 600px) {
   .servicios-iconos {
-    grid-template-columns: 1fr;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    gap: 30px;
+    justify-items: center;  /* centra cada ícono horizontalmente */
+    align-items: center;
+    justify-content: center; /* centra la última fila si hay menos de 3 */
+    padding: 60px 20px;
   }
 
   .icono img {
-    width: 80px;
-    height: 80px;
+    width: 110px; /* tamaño más pequeño para móviles */
+    height: 110px;
+  }
+
+  .icono p {
+    font-size: 0.9rem;
+  }
+}
+
+ .servicios-titulo {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+  }
+@media (max-width: 500px) {
+  .servicios-iconos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* ✅ dos columnas */
+    gap: 25px 30px; /* espacio entre filas y columnas */
+    justify-content: center; /* centra la cuadrícula en la pantalla */
+    justify-items: center;   /* centra cada ícono dentro de su celda */
+    align-items: center;
+    padding: 50px 20px;
+  }
+
+  .icono img {
+    width: 100px; /* ajusta el tamaño de los íconos */
+    height: 100px;
+  }
+
+  .icono p {
+    font-size: 0.9rem;
+  }
+    .servicios-titulo {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+  }
+
+}
+
+@media (max-width: 400px) {
+  .servicios-iconos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 🔹 dos columnas */
+    gap: 20px 25px; /* espacio entre filas y columnas */
+    justify-content: center;  /* centra la cuadrícula */
+    justify-items: center;    /* centra los íconos dentro */
+    align-items: center;
+    padding: 40px 15px;
+  }
+
+  .icono img {
+    width: 90px;  /* tamaño adecuado para móviles muy pequeños */
+    height: 90px;
+  }
+
+  .icono p {
+    font-size: 0.85rem;
+  }
+
+    .servicios-titulo {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
   }
 }
