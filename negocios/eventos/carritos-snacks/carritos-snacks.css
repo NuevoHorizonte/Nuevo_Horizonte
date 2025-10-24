@@ -3,8 +3,13 @@ body {
   font-family: "Poppins", sans-serif;
   background-color: #fff7fb;
   color: #333;
-}
 
+  /* 🔹 Fondo con patrón repetido */
+  background-image: url("../../../img/carritos-snacks-jjr/img-fondo.png");
+  background-repeat: repeat;         /* se repite en ambas direcciones */
+  background-size: 400px;             /* o usa "contain" o "100px" si quieres controlarlo */
+  background-position: top left;     /* punto de inicio del patrón */
+}
 header {
   display: flex;
   align-items: center;
@@ -17,7 +22,6 @@ header {
   flex-wrap: nowrap;
 }
 
-/* LOGO */
 .logo {
   display: flex;
   align-items: center;
@@ -46,16 +50,14 @@ header {
   user-select: none;        
 }
 
-/* MENU */
 .menu {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 60px;
-  flex: 1; /* ✅ permite que se adapte entre logo y decoración */
   transition: transform 0.3s ease;
-  /* 🔹 Mueve todo el menú a la derecha */
-  margin-left: 400px; /* puedes ajustar el número */
+  margin-left: -200px; /* ✅ controlas manualmente el desplazamiento */
+  transform: translateX(-200px); /* 🔥 esta es la forma más segura */
 }
 
 .menu-item {
@@ -150,4 +152,279 @@ header {
   margin-top: -1px; 
 }
 
+/* 📱 Ajuste para móviles (hasta 400px) */ 
+@media (max-width: 600px) {
 
+  body {
+    background-size: 220px;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 10px;
+    position: relative;
+  }
+
+  /* 🧁 logo */
+  .logo {
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .logo img {
+    width: 95px;
+  }
+
+  /* 🍫 decoración esquina */
+  .decorado-chocolate {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 120px;
+    height: auto;
+    pointer-events: none;
+  }
+
+  /* 🍬 cinta derretida */
+  .cinta-derretida {
+    height: 90px;
+    background-size: auto 100%;
+    background-position: center top;
+  }
+
+    .menu {
+    display: none;
+  }
+}
+
+
+@media (max-width: 1600px) {
+  .menu {
+    margin-left: 350px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .menu {
+    margin-left: 300px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .menu {
+    margin-left: 250px;
+  }
+}
+
+
+/* ===============================
+   SECCIÓN CARRUSEL
+================================ */
+.carrusel {
+  text-align: center;
+  padding: 60px 20px;
+  margin-top: -90px; /* 🔥 Sube toda la sección */
+}
+
+.titulo-carrusel {
+  font-family: 'Domyniq Crush', sans-serif;
+  font-size: 2.8rem;
+  color: #2f0052;
+  margin-bottom: 50px;
+}
+
+
+.contenedor-carrusel {
+  position: relative;
+  overflow: hidden;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Cada slide */
+.slide {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1px; /* 🔥 mucho más juntos */
+  transition: opacity 1s ease;
+  height: 450px; /* tamaño fijo uniforme */
+  border-radius: 15px;
+}
+
+.slide.activo {
+  opacity: 1;
+  position: relative;
+}
+
+
+.imagen-carrusel {
+  width: 480px;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.texto-carrusel {
+  background-color: #ee70ae;
+  color: white;
+  padding: 25px;
+  width: 440px;
+  height: 100%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 0 40px 40px 0;
+}
+
+
+.texto-carrusel h3 {
+  font-family: 'Domyniq Crush', sans-serif;
+  font-size: 1.9rem;
+  margin-bottom: 15px;
+}
+
+.texto-carrusel p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* 🔘 Indicadores */
+.indicadores {
+  margin-top: 30px;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  margin: 0 6px;
+  background-color: #ccc;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.dot.activo {
+  background-color: #ee70ae;
+}
+
+/* 📱 Responsive */
+@media (max-width: 800px) {
+  .slide {
+    flex-direction: column;
+    height: auto;
+    gap: 15px;
+  }
+
+  .imagen-carrusel {
+    width: 90%;
+    height: auto;
+  }
+
+  .texto-carrusel {
+    width: 90%;
+    height: auto;
+    text-align: center;
+  }
+}
+
+/* ===============================
+   SECCIÓN PRODUCTOS
+================================ */
+.productos {
+  text-align: center;
+  padding: 80px 20px;
+  position: relative;
+  z-index: 1;
+  margin-top: -60px; /* 🔥 sube toda la sección */
+}
+
+.titulo-productos {
+  font-family: 'Domyniq Crush', sans-serif;
+  font-size: 3rem;
+  color: #2f0052;
+  margin-bottom: 50px;
+}
+
+/* Fondo rosado decorativo */
+.fondo-rosado {
+  background-color: rgba(238, 112, 174, 0.25); /* 💗 suave, semitransparente */
+  border-radius: 30px;
+  padding: 50px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+/* Cuadrícula */
+.grid-productos {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 6 columnas */
+  gap: 40px;
+  justify-items: center;
+}
+
+/* Cada producto */
+.producto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.producto img {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 50%; /* 🔥 círculo perfecto */
+  border: 4px solid #ee70ae;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #fff;
+}
+
+.producto img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(238, 112, 174, 0.4);
+}
+
+.producto p {
+  margin-top: 12px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: #3a003f;
+  font-size: 1rem;
+}
+
+/* 📱 Responsive */
+@media (max-width: 1100px) {
+  .grid-productos {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 800px) {
+  .grid-productos {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .grid-productos {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  .producto img {
+    width: 100px;
+    height: 100px;
+  }
+}

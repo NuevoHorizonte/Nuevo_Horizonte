@@ -1,1154 +1,337 @@
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #fff7fb;
+  color: #333;
 
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: 'Arial', sans-serif;
+  /* 🔹 Fondo con patrón repetido */
+  background-image: url("../../../img/carritos-snacks-jjr/img-fondo.png");
+  background-repeat: repeat;         /* se repite en ambas direcciones */
+  background-size: 400px;             /* o usa "contain" o "100px" si quieres controlarlo */
+  background-position: top left;     /* punto de inicio del patrón */
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ee70ae;
+  color: white;
+  padding: 20px 40px;
+  position: relative;
+  box-shadow: none;
+  flex-wrap: nowrap;
 }
 
-
-.hero {
-    position: relative;
-    width: 100%;
-    height: 80vh;
-    overflow: hidden;
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
 }
 
-.hero-img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain; 
+.logo img {
+  width: 120px;
+  height: auto;
+  transition: transform 0.3s ease; 
+  cursor: pointer; 
 }
 
-.navbar {
-    position: absolute;
-    top: 60px;
-    right: 0; 
-    display: flex;
-    align-items: stretch;
-    border-radius: 0;
-    overflow: hidden;
-    z-index: 10;
+.logo img:hover {
+  transform: scale(1.1); 
+}
+
+.decorado-chocolate {
+  position: absolute;       
+  top: 0;                   
+  right: 0;                 
+  width: 150px;             
+  height: auto;
+  pointer-events: none;    
+  user-select: none;        
 }
 
 .menu {
-    background-color: white;
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  transition: transform 0.3s ease;
+  margin-left: -200px; /* ✅ controlas manualmente el desplazamiento */
+  transform: translateX(-200px); /* 🔥 esta es la forma más segura */
 }
 
-.menu li {
-    margin: 0;
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-weight: 680;
+  font-size: 1.8rem;
+  font-family: 'Domyniq Crush', sans-serif;
+  transition: transform 0.25s ease, color 0.3s ease;
+  cursor: pointer;
 }
 
-.menu li a {
-    display: block;
-    padding: 20px 22px 14px 22px; 
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-   transition: background 0.3s, color 0.3s, transform 0.2s;
+.menu-item:hover {
+  transform: scale(1.12);
+  color: #2f0052;
 }
 
-.menu li a:hover {
-    background-color: black;
-    color: white;
-    transform: scale(1.05); /* leve “zoom” del texto */
+.menu-item:nth-child(1) {
+  position: relative;
+  left: 10px; /* mueve solo el primer ítem */
 }
 
-.telefono {
-    background-color: black;
-    display: flex;
+.menu-item:nth-child(2) {
+  position: relative;
+  left: 30px; /* mueve solo el segundo */
+}
+
+.menu-item:nth-child(3) {
+  position: relative;
+  left: 50px; /* mueve el tercero */
+}
+
+
+/* Imágenes de los iconos del menú */
+.menu-item img {
+  width: 50px;
+  height: auto;
+  vertical-align: middle;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+  cursor: pointer;
+}
+
+.menu-item:hover img {
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-weight: 680;
+  font-size: 1.8rem;
+  font-family: 'Domyniq Crush', sans-serif;
+  transition: transform 0.25s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+.menu-item.hovered {
+  transform: scale(1.1);
+  color: #250036; 
+}
+
+/* ícono */
+.menu-item img {
+  width: 50px;
+  height: auto;
+  vertical-align: middle;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.menu-item.hovered img {
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+
+.cinta-derretida {
+   top: -1px; 
+  position: relative;
+  width: 100%;
+  height: 200px; 
+   margin-top: 0; 
+  background-image: url("../../../img/carritos-snacks-jjr/cinta-derretida.svg"); 
+  background-repeat: repeat-x;
+  background-position: top center;
+  background-size: auto 100%; 
+  margin-top: -1px; 
+}
+
+/* 📱 Ajuste para móviles (hasta 400px) */ 
+@media (max-width: 600px) {
+
+  body {
+    background-size: 220px;
+  }
+
+  header {
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100%; 
-}
+    padding: 10px 10px;
+    position: relative;
+  }
 
-/* Imagen normal */
-.telefono-img {
-    width: 28px;
+  /* 🧁 logo */
+  .logo {
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .logo img {
+    width: 95px;
+  }
+
+  /* 🍫 decoración esquina */
+  .decorado-chocolate {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 120px;
     height: auto;
-    margin-right: 10px;
-    transition: opacity 0.3s ease; /* suave transición */
-}
-
-/* Imagen alternativa cuando el mouse está encima */
-.whatsapp-link:hover .telefono-img {
-    content: url('../../../img/recreo-campestre/telf-cabeza-2.svg'); /* cambia la imagen */
-}
-
-.whatsapp-link {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    font-size: 16px;
-    height: 100%; 
-    padding: 16px 22px;
-    transition: color 0.3s, background 0.3s;
-}
-
-.whatsapp-link:hover {
-    color: #ffffff; 
-}
-
-.logo-img {
-    width: 28px; 
-    height: auto;
-    margin-right: 10px;
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.2);
-}
-
-/* --- ANIMACIÓN DEL LOGO --- */
-.logo-negocio {
-    position: absolute;
-    top: 40px;
-    left: 40px;
-    z-index: 15;
-    cursor: pointer;
-    transition: transform 0.3s ease; /* suaviza la animación */
-}
-
-.logo-negocio:hover {
-    transform: scale(1.15); /* “infla” el logo un poco */
-}
-
-.img-logo-negocio {
-    width: 120px;       /* tamaño inicial del logo */
-    height: auto;
-    user-select: none;  /* evita que se seleccione al hacer clic */
-}
-
-/* --- HERO CONTENT (texto sobre la imagen) --- */
-.hero-content {
-    position: absolute;
-    top: 50%;
-    left: 180px;          /* 🔹 antes 80px → lo empuja más a la derecha */
-    transform: translateY(-50%);
-    color: white;
-    z-index: 12;
-    max-width: 600px;
-}
-
-
-
-.hero-title {
-    font-size: 3rem;
-    line-height: 1.6;
-    margin: 0 0 20px 0;
-    font-weight: 300;
-    text-transform: uppercase;
-    font-style: italic;   /* 🔹 convierte el texto en itálico */
-}
-
-.hero-title strong {
-    font-weight: 700;
-    font-style: italic;   /* 🔹 mantiene la negrita pero también en itálica */
-}
-
-.hero-btn {
-    display: inline-block;
-    position: relative;
-    padding: 14px 36px;
-    font-weight: bold;
-    font-size: 1.1rem;
-    color: black;
-    background-color: white;
-    border: 2px solid white;
-    text-decoration: none;
-    text-transform: uppercase;
-    border-radius: 30px;
-    overflow: hidden;
-    transition: all 0.3s ease;
-}
-
-/* Efecto hover elegante */
-.hero-btn:hover {
-    background-color: black;
-    color: white;
-    transform: translateY(-3px); /* pequeño levantamiento */
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-}
-
-/* Brillo animado */
-.hero-btn::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.3);
-    transform: skewX(-25deg);
-    transition: left 0.5s ease;
-}
-
-.hero-btn:hover::before {
-    left: 200%;
-}
-
-@media (max-width: 600px) {
-
-  .hero {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
+    pointer-events: none;
   }
 
-  .hero-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    content: url('../../../img/recreo-campestre/hero-fondo-600px.png');
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1; 
-  }
-
-  .logo-negocio,
-  .hero-content,
-  .telefono {
-    display: none;
-  }
-
-  .navbar {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    z-index: 20;
-  }
-
- .menu {
-  display: none;
-  position: absolute;
-  top: 60px;
-  right: 10px;
-  background-color: rgba(255, 255, 255, 0.95);
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  width: 180px;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  z-index: 9999; /* 👈 asegúrate de que esté encima de todo */
-}
-
-.menu.active {
-  display: block; /* se muestra al hacer clic */
-}
-
-.menu li a {
-    display: block;
-    padding: 12px 16px;
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-    text-align: right;
-    transition: background 0.3s, color 0.3s;
-    }
-
-.menu li a:hover {
-    background-color: black;
-    color: white;
-}
-
-.hero-btn-mobile {
-    position: absolute;
-    bottom: 150px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: inline-block;
-    background-color: white;
-    color: black;
-    text-decoration: none;
-    padding: 12px 28px;
-    font-weight: bold;
-    font-size: 0.95rem;
-    border-radius: 30px;
-    border: 2px solid white;
-    text-transform: uppercase;
-    transition: all 0.3s ease;
-    z-index: 30; 
-}
-}
-
-
-@media (max-width: 500px) {
-
-  .hero {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-  }
-
-  .hero-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    content: url('../../../img/recreo-campestre/hero-fondo-500px.png');
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1; /* 👈 asegura que quede detrás */
-  }
-
-  .logo-negocio,
-  .hero-content,
-  .telefono {
-    display: none;
-  }
-
-  .navbar {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    z-index: 20;
-  }
-
- .menu {
-  display: none;
-  position: absolute;
-  top: 60px;
-  right: 10px;
-  background-color: rgba(255, 255, 255, 0.95);
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  width: 180px;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  z-index: 9999; /* 👈 asegúrate de que esté encima de todo */
-}
-
-.menu.active {
-  display: block; /* se muestra al hacer clic */
-}
-
-.menu li a {
-    display: block;
-    padding: 12px 16px;
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-    text-align: right;
-    transition: background 0.3s, color 0.3s;
-    }
-
-.menu li a:hover {
-    background-color: black;
-    color: white;
-}
-
-.hero-btn-mobile {
-    position: absolute;
-    bottom: 150px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: inline-block;
-    background-color: white;
-    color: black;
-    text-decoration: none;
-    padding: 12px 28px;
-    font-weight: bold;
-    font-size: 0.95rem;
-    border-radius: 30px;
-    border: 2px solid white;
-    text-transform: uppercase;
-    transition: all 0.3s ease;
-    z-index: 30; 
-}
-}
-
-@media (max-width: 400px) {
-
-  .hero {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-  }
-
-  .hero-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    content: url('../../../img/recreo-campestre/hero-fondo-400px.png');
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1; /* 👈 asegura que quede detrás */
-  }
-
-  .logo-negocio,
-  .hero-content,
-  .telefono {
-    display: none;
-  }
-
-  .navbar {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    z-index: 20;
-  }
-
- .menu {
-  display: none;
-  position: absolute;
-  top: 60px;
-  right: 10px;
-  background-color: rgba(255, 255, 255, 0.95);
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  width: 180px;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  z-index: 9999; /* 👈 asegúrate de que esté encima de todo */
-}
-
-.menu.active {
-  display: block; /* se muestra al hacer clic */
-}
-
-.menu li a {
-    display: block;
-    padding: 12px 16px;
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-    text-align: right;
-    transition: background 0.3s, color 0.3s;
-    }
-
-.menu li a:hover {
-    background-color: black;
-    color: white;
-}
-
-.hero-btn-mobile {
-    position: absolute;
-    bottom: 150px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: inline-block;
-    background-color: white;
-    color: black;
-    text-decoration: none;
-    padding: 12px 28px;
-    font-weight: bold;
-    font-size: 0.95rem;
-    border-radius: 30px;
-    border: 2px solid white;
-    text-transform: uppercase;
-    transition: all 0.3s ease;
-    z-index: 30; 
-}
-}
-
-.eventos-seccion
-{
-    padding: 60px 20px;
-    text-align: center;
-    background-color: #f9f9f9;
-}
-
-.eventos-seccion:hover {
-    background-color: #e0e0e0;
-    transform: scale(1.01);
-    transition: transform 0.3s ease, background 0.3s ease;
-}
-
-
-/* =======================================================
-   SECCIÓN DE ÍCONOS
-   ======================================================= */
-.servicios-iconos {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 40px;
-  padding: 80px 40px;
-  background-color: white;
-  text-align: center;
-}
-
-.icono {
-  transition: transform 0.3s ease;
-}
-
-.icono img {
-  width: 160px;
-  height: 160px;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-  user-select: none;
-}
-
-.icono p {
-  margin-top: 12px;
-  font-size: 1rem;
-  font-weight: bold;
-  color: #333;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-/* Animación suave */
-.icono:hover {
-  transform: translateY(-6px);
-}
-
-.icono:hover img {
-  transform: scale(1.1);
-}
-
-.servicios-titulo {
-  grid-column: 1 / -1;        /* hace que ocupe todo el ancho de la cuadrícula */
-  text-align: center;
-  font-size: 2rem;
-  font-weight: bold;
-  color: #222;
-  margin-bottom: 40px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  position: relative;
-}
-
-/* Pequeño subrayado decorativo */
-.servicios-titulo::after {
-  content: "";
-  display: block;
-  width: 80px;
-  height: 3px;
-  background-color: black;
-  margin: 12px auto 0;
-  border-radius: 2px;
-  
-}
-
-@media (max-width: 600px) {
-  .servicios-iconos {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
-    gap: 30px;
-    justify-items: center;  /* centra cada ícono horizontalmente */
-    align-items: center;
-    justify-content: center; /* centra la última fila si hay menos de 3 */
-    padding: 60px 20px;
-  }
-
-  .icono img {
-    width: 110px; /* tamaño más pequeño para móviles */
-    height: 110px;
-  }
-
-  .icono p {
-    font-size: 0.9rem;
-  }
-}
-
- .servicios-titulo {
-    font-size: 1.5rem;
-    margin-bottom: 30px;
-  }
-@media (max-width: 500px) {
-  .servicios-iconos {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* ✅ dos columnas */
-    gap: 25px 30px; /* espacio entre filas y columnas */
-    justify-content: center; /* centra la cuadrícula en la pantalla */
-    justify-items: center;   /* centra cada ícono dentro de su celda */
-    align-items: center;
-    padding: 50px 20px;
-  }
-
-  .icono img {
-    width: 100px; /* ajusta el tamaño de los íconos */
-    height: 100px;
-  }
-
-  .icono p {
-    font-size: 0.9rem;
-  }
-    .servicios-titulo {
-    font-size: 1.2rem;
-    margin-bottom: 25px;
-  }
-
-}
-
-@media (max-width: 400px) {
-  .servicios-iconos {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 🔹 dos columnas */
-    gap: 20px 25px; /* espacio entre filas y columnas */
-    justify-content: center;  /* centra la cuadrícula */
-    justify-items: center;    /* centra los íconos dentro */
-    align-items: center;
-    padding: 40px 15px;
-  }
-
-  .icono img {
-    width: 90px;  /* tamaño adecuado para móviles muy pequeños */
+  /* 🍬 cinta derretida */
+  .cinta-derretida {
     height: 90px;
+    background-size: auto 100%;
+    background-position: center top;
   }
 
-  .icono p {
-    font-size: 0.85rem;
-  }
-
-    .servicios-titulo {
-    font-size: 1.2rem;
-    margin-bottom: 25px;
+    .menu {
+    display: none;
   }
 }
 
-/* =======================================================
-   CARRUSEL AUTOMÁTICO (3 imágenes visibles tipo póster)
-   ======================================================= */
+
+@media (max-width: 1600px) {
+  .menu {
+    margin-left: 350px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .menu {
+    margin-left: 300px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .menu {
+    margin-left: 250px;
+  }
+}
+
+
+/* ===============================
+   SECCIÓN CARRUSEL
+================================ */
 .carrusel {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.titulo-carrusel {
+  font-family: 'Domyniq Crush', sans-serif;
+  font-size: 2.8rem;
+  color: #2f0052;
+  margin-bottom: 50px;
+}
+
+
+.contenedor-carrusel {
   position: relative;
-  width: 100%;
   overflow: hidden;
-  padding: 70px 0;
-  background-color: #fafafa;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-.carrusel-track {
-  display: flex;
-  gap: 25px; /* 🔹 espacio entre las imágenes */
-  transition: transform 0.9s ease-in-out;
-  padding: 0 30px; /* margen lateral dentro del carrusel */
-}
-
-.carrusel-track img {
-  flex: 0 0 calc((100% / 3) - 20px); /* 🔹 3 imágenes visibles con separación */
-  height: 420px; /* 🔹 más alto que ancho (aspecto rectangular) */
-  object-fit: cover;
-  border-radius: 14px;
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
-  transition: transform 0.4s ease;
-}
-
-.carrusel-track img:hover {
-  transform: scale(1.03);
-}
-
-.carrusel-dots {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 10px;
-}
-
-.dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: #bbb;
-  transition: background 0.3s ease, transform 0.3s ease;
-}
-
-.dot.active {
-  background-color: #333;
-  transform: scale(1.2);
-}
-
-
-/* 🔹 Adaptación responsive */
-@media (max-width: 600px) {
-  .carrusel-track img {
-    flex: 0 0 calc((100% / 2) - 15px); /* 2 imágenes visibles */
-    height: 360px;
-  }
-   .carrusel-dots {
-    bottom: 15px;
-    gap: 12px;
-  }
-  .dot {
-    width: 14px;
-    height: 14px;
-  }
-}
-
-
-@media (max-width: 500px) {
-  .carrusel-track img {
-    flex: 0 0 calc((100% / 2) - 15px); /* 2 imágenes visibles */
-    height: 360px;
-  }
-   .carrusel-dots {
-    bottom: 15px;
-    gap: 12px;
-  }
-  .dot {
-    width: 14px;
-    height: 14px;
-  }
-}
-
-@media (max-width: 400px) {
-  .carrusel-track img {
-    flex: 0 0 100%; /* 1 imagen visible */
-    height: 340px;
-  }
-    .carrusel-dots {
-    bottom: 12px;
-    gap: 8px;
-  }
-
-  .dot {
-    width: 12px;
-    height: 12px;
-  }
-}
-
-/* ===========================
-   SECCIÓN UBICACIÓN
-   =========================== */
-.ubicacion-seccion {
-  padding: 80px 40px;
-  background-color: #f8f8f8;
-  position: relative; /* 🔹 para poder mover los elementos dentro si quieres */
-}
-
-.ubicacion-titulo {
-  font-size: 2rem;
-  font-weight: bold;
-  letter-spacing: 1px;
-  color: #222;
-  text-align: left;
-  margin-bottom: 40px;
-  margin-left: 150px; /* 🔹 Mueve el título manualmente hacia la derecha */
-}
-
-/* Contenedor general */
-.ubicacion-contenido {
-  display: flex;
-  align-items: flex-start;
-  gap: 40px;
-  flex-wrap: wrap;
-
-  /* 🔹 Aquí controlas la posición general */
-  margin-left: 150px;  /* 🔧 Mueve todo hacia la derecha */
-  margin-top: 20px;    /* 🔧 Mueve hacia abajo si quieres */
-}
-
-/* 🔹 Imagen grande del mapa */
-.ubicacion-mapa-link {
-  display: block;
-  flex-shrink: 0;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* 🔹 Ajuste manual del tamaño del mapa */
-.ubicacion-mapa {
-  width: 700px;     
-  height: 550px;    
-  object-fit: cover;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.25);
-}
-
-/* 🔹 Hover suave */
-.ubicacion-mapa-link:hover {
-  transform: scale(1.02);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-}
-
-/* 🔹 Imágenes verticales al costado */
-.ubicacion-imagenes-laterales {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-
-  /* 🔹 Control manual del espaciado lateral */
-  margin-left: 30px;  /* 🔧 distancia del mapa */
-  margin-top: 10px;   /* 🔧 puedes moverlo más arriba o abajo */
-}
-
-.img-lateral {
-  width: 500px;
-  height: 170px;
-  object-fit: cover;
-  border-radius: 10px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.img-lateral:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-}
-
-/* Contenedor del mapa con overlay */
-.ubicacion-mapa-container {
-  position: relative;
-  width: 700px;
-  height: 550px;
-  overflow: hidden;
-  border-radius: 10px;
-}
-
-
-.ubicacion-mapa {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-
-.ubicacion-overlay {
+/* Cada slide */
+.slide {
+  opacity: 0;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1px; /* 🔥 mucho más juntos */
+  transition: opacity 1s ease;
+  height: 450px; /* tamaño fijo uniforme */
+  border-radius: 15px;
+}
+
+.slide.activo {
+  opacity: 1;
+  position: relative;
+}
+
+
+.imagen-carrusel {
+  width: 480px;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0); /* invisible por defecto */
-  opacity: 0;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.texto-carrusel {
+  background-color: #ee70ae;
+  color: white;
+  padding: 25px;
+  width: 440px;
+  height: 100%;
+  text-align: left;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  transition: background 0.4s ease, opacity 0.4s ease;
+  border-radius: 0 40px 40px 0;
 }
 
 
-.overlay-icono {
-  width: 80px;
-  height: 80px;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.4s ease, transform 0.4s ease;
-  user-select: none;
-}
-
-.overlay-texto {
-  color: white;
-  font-size: 1.2rem;
-  font-weight: bold;
-  text-align: center;
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.4s ease, transform 0.4s ease;
-  margin-top: 20px;
-}
-
-.ubicacion-mapa-container:hover .ubicacion-overlay {
-  background-color: rgba(0, 0, 0, 0.55); 
-  opacity: 1;
-}
-
-.ubicacion-mapa-container:hover .overlay-icono {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.ubicacion-mapa-container:hover .overlay-texto {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-
-@media (max-width: 400px) {
-  .ubicacion-seccion {
-    padding: 40px 20px;
-  }
-
-  .ubicacion-titulo {
-    font-size: 1.4rem;
-    margin-left: 10px; 
-    margin-bottom: 25px;
-  }
-
-  .ubicacion-contenido {
-    flex-direction: column;
-    align-items: center;
-    margin-left: 0;
-    gap: 25px;
-  }
-
-  .ubicacion-mapa-container {
-    width: 100%;
-    height: 300px;
-    border-radius: 8px;
-  }
-
-  .ubicacion-mapa {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  /* 🔹 Overlay ajustado */
-  .ubicacion-overlay {
-    background-color: rgba(0, 0, 0, 0.4);
-    opacity: 1; /* visible por defecto, ya que no hay hover en móvil */
-  }
-
-  .overlay-icono {
-    width: 50px;
-    height: 50px;
-    opacity: 1;
-    transform: none;
-  }
-
-  .overlay-texto {
-    font-size: 1rem;
-    margin-top: 12px;
-    opacity: 1;
-    transform: none;
-  }
-
-  /* 🔹 Imágenes laterales pasan debajo del mapa */
-  .ubicacion-imagenes-laterales {
-    flex-direction: column;
-    align-items: center;
-    margin: 0;
-    gap: 15px;
-  }
-
-  .img-lateral {
-    width: 100%;
-    height: 120px;
-    border-radius: 8px;
-  }
-}
-
-/* ============================
-   SECCIÓN: RAZONES / POR QUÉ ESCOGERNOS
-   ============================ */
-.razones-seccion {
-  padding: 100px 60px;
-  background-color: #fff;
-  text-align: center;
-}
-
-.razones-titulo {
-  font-size: 2.2rem;
-  font-weight: bold;
-  color: #222;
-  margin-bottom: 60px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-
-/* 🔹 Contenedor de las tres tarjetas */
-.razones-contenedor {
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-  gap: 40px;
-  flex-wrap: wrap;
-}
-
-/* 🔹 Estilo de cada tarjeta */
-.razon-card {
-  background-color: #f8f8f8;
-  width: 320px;
-  height: 460px; /* 🔧 Más alta que ancha */
-  padding: 30px 25px;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.razon-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
-}
-
-.razon-subtitulo {
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: #333;
+.texto-carrusel h3 {
+  font-family: 'Domyniq Crush', sans-serif;
+  font-size: 1.9rem;
   margin-bottom: 15px;
 }
 
-.razon-texto {
+.texto-carrusel p {
   font-size: 1rem;
-  color: #555;
-  line-height: 1.6;
-  text-align: justify;
+  line-height: 1.5;
 }
 
-/* ============================
-   RESPONSIVE
-   ============================ */
+/* 🔘 Indicadores */
+.indicadores {
+  margin-top: 30px;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  margin: 0 6px;
+  background-color: #ccc;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.dot.activo {
+  background-color: #ee70ae;
+}
+
+/* 📱 Responsive */
 @media (max-width: 800px) {
-  .razones-contenedor {
-    gap: 25px;
-  }
-
-  .razon-card {
-    width: 280px;
-    height: 420px;
-  }
-}
-
-@media (max-width: 500px) {
-  .razones-seccion {
-    padding: 60px 20px;
-  }
-
-  .razones-titulo {
-    font-size: 1.8rem;
-    margin-bottom: 40px;
-  }
-
-  .razones-contenedor {
+  .slide {
     flex-direction: column;
-    align-items: center;
+    height: auto;
+    gap: 15px;
   }
 
-  .razon-card {
+  .imagen-carrusel {
     width: 90%;
     height: auto;
   }
-}
 
-/* ============================
-   FOOTER
-   ============================ */
-.footer {
-  background-color: #222;
-  color: #eee;
-  padding: 80px 60px 40px;
-  font-family: 'Poppins', sans-serif;
-}
-
-.footer-contenido {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 50px;
-  margin-bottom: 40px;
-}
-
-.footer-col {
-  flex: 1;
-  min-width: 220px;
-}
-
-.footer-titulo {
-  font-size: 1.3rem;
-  color: #fff;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.footer-texto {
-  font-size: 0.95rem;
-  color: #ccc;
-  line-height: 1.6;
-}
-
-.footer-lista {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-lista li {
-  margin-bottom: 10px;
-  color: #ccc;
-}
-
-.footer-lista a {
-  color: #ccc;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.footer-lista a:hover {
-  color: #fff;
-}
-
-.footer-link {
-  color: #58a6ff;
-  text-decoration: none;
-}
-
-.footer-link:hover {
-  text-decoration: underline;
-}
-
-/* 🔹 Redes Sociales */
-.footer-redes a {
-  display: inline-block;
-  margin-right: 15px;
-}
-
-.footer-redes img {
-  width: 28px;
-  height: 28px;
-  filter: invert(100%);
-  opacity: 0.8;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.footer-redes img:hover {
-  opacity: 1;
-  transform: scale(1.1);
-}
-
-/* 🔹 Línea inferior */
-.footer-copy {
-  border-top: 1px solid #444;
-  padding-top: 20px;
-  font-size: 0.9rem;
-  color: #aaa;
-  text-align: center;
-}
-
-/* ============================
-   RESPONSIVE
-   ============================ */
-@media (max-width: 800px) {
-  .footer {
-    padding: 60px 30px 30px;
-  }
-
-  .footer-contenido {
-    flex-direction: column;
-    align-items: center;
+  .texto-carrusel {
+    width: 90%;
+    height: auto;
     text-align: center;
-    gap: 40px;
-  }
-
-  .footer-redes a {
-    margin: 0 10px;
-  }
-}
-
-@media (max-width: 400px) {
-  .footer-titulo {
-    font-size: 1.1rem;
-  }
-
-  .footer-texto,
-  .footer-lista li {
-    font-size: 0.9rem;
-  }
-
-  .footer-copy {
-    font-size: 0.8rem;
   }
 }
