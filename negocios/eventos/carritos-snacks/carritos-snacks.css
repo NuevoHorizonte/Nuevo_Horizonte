@@ -1,0 +1,153 @@
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #fff7fb;
+  color: #333;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ee70ae;
+  color: white;
+  padding: 20px 40px;
+  position: relative;
+  box-shadow: none;
+  flex-wrap: nowrap;
+}
+
+/* LOGO */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.logo img {
+  width: 120px;
+  height: auto;
+  transition: transform 0.3s ease; 
+  cursor: pointer; 
+}
+
+.logo img:hover {
+  transform: scale(1.1); 
+}
+
+.decorado-chocolate {
+  position: absolute;       
+  top: 0;                   
+  right: 0;                 
+  width: 150px;             
+  height: auto;
+  pointer-events: none;    
+  user-select: none;        
+}
+
+/* MENU */
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  flex: 1; /* ✅ permite que se adapte entre logo y decoración */
+  transition: transform 0.3s ease;
+  /* 🔹 Mueve todo el menú a la derecha */
+  margin-left: 400px; /* puedes ajustar el número */
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-weight: 680;
+  font-size: 1.8rem;
+  font-family: 'Domyniq Crush', sans-serif;
+  transition: transform 0.25s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+.menu-item:hover {
+  transform: scale(1.12);
+  color: #2f0052;
+}
+
+.menu-item:nth-child(1) {
+  position: relative;
+  left: 10px; /* mueve solo el primer ítem */
+}
+
+.menu-item:nth-child(2) {
+  position: relative;
+  left: 30px; /* mueve solo el segundo */
+}
+
+.menu-item:nth-child(3) {
+  position: relative;
+  left: 50px; /* mueve el tercero */
+}
+
+
+/* Imágenes de los iconos del menú */
+.menu-item img {
+  width: 50px;
+  height: auto;
+  vertical-align: middle;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+  cursor: pointer;
+}
+
+.menu-item:hover img {
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-weight: 680;
+  font-size: 1.8rem;
+  font-family: 'Domyniq Crush', sans-serif;
+  transition: transform 0.25s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+.menu-item.hovered {
+  transform: scale(1.1);
+  color: #250036; 
+}
+
+/* ícono */
+.menu-item img {
+  width: 50px;
+  height: auto;
+  vertical-align: middle;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.menu-item.hovered img {
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+
+.cinta-derretida {
+   top: -1px; 
+  position: relative;
+  width: 100%;
+  height: 200px; 
+   margin-top: 0; 
+  background-image: url("../../../img/carritos-snacks-jjr/cinta-derretida.svg"); 
+  background-repeat: repeat-x;
+  background-position: top center;
+  background-size: auto 100%; 
+  margin-top: -1px; 
+}
+
+
