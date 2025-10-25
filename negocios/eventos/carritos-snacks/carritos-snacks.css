@@ -716,12 +716,6 @@ header {
     text-align: center;
   }
 
-  .mobile-version .eventos-subtitle {
-    font-size: 22px;
-    color: #ff0000;
-    letter-spacing: 3px;
-  }
-
   .mobile-version .eventos-title {
     font-size: 32px;
     font-weight: 800;
