@@ -296,8 +296,10 @@ header {
 }
 
 .texto-carrusel p {
-  font-size: 1rem;
+  font-size: 1.5rem;
   line-height: 1.5;
+  font-family: 'Faith Hope', sans-serif;
+  color: rgb(0, 0, 0);
 }
 
 
@@ -344,7 +346,7 @@ header {
 ================================ */
 .productos {
   text-align: center;
-  padding: 80px 20px;
+  padding: 120px 20px;
   position: relative;
   z-index: 1;
   margin-top: -100px; 
@@ -352,26 +354,27 @@ header {
 
 .titulo-productos {
   font-family: 'Funkie Retro', sans-serif;
-  font-size: 3rem;
+  font-size: 3.4rem;
   color: #2f0052;
   margin-bottom: 50px;
 }
 
 
 .fondo-rosado {
-  background-color: rgba(238, 112, 174, 0.25); 
-  border-radius: 30px;
-  padding: 50px 20px;
-  max-width: 1200px;
+  background-color: rgba(238, 112, 174, 0.35); /* 🔹 más visible */
+  border-radius: 40px; /* 🔹 bordes más redondeados */
+  padding: 80px 40px; /* 🔹 más espacio interno */
+  max-width: 1300px; /* 🔹 más ancho */
   margin: 0 auto;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
 }
 
 
+/* 🔹 Cuadrícula más amplia */
 .grid-productos {
   display: grid;
-  grid-template-columns: repeat(5, 1fr); /* 6 columnas */
-  gap: 40px;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 60px; /* 🔹 más espacio entre elementos */
   justify-items: center;
 }
 
@@ -383,12 +386,13 @@ header {
   text-align: center;
 }
 
+/* 🔹 Productos más grandes */
 .producto img {
-  width: 130px;
-  height: 130px;
+  width: 160px;  /* 🔹 antes 130px */
+  height: 160px; /* 🔹 antes 130px */
   object-fit: cover;
-  border-radius: 50%; 
-  border: 4px solid #ee70ae;
+  border-radius: 50%;
+  border: 5px solid #ee70ae;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   background-color: #fff;
 }
@@ -399,11 +403,11 @@ header {
 }
 
 .producto p {
-  margin-top: 12px;
+  margin-top: 15px;
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
   color: #3a003f;
-  font-size: 1rem;
+  font-size: 1.15rem; /* 🔹 texto un poco más grande */
 }
 
 
@@ -540,7 +544,7 @@ header {
 .eventos-title {
   font-size: 46px;
   font-weight: 800;
-  background: linear-gradient(90deg, #ff6600, #43a047);
+  background: linear-gradient(90deg, #53045d, #e13adb);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -718,7 +722,7 @@ header {
 ================================ */
 .footer {
   background-color: #ee70ae;
-  color: white;
+  color: rgb(0, 0, 0);
   padding: 60px 20px 30px;
   text-align: center;
   font-family: 'Poppins', sans-serif;
@@ -751,7 +755,7 @@ header {
 .footer-contacto h4 {
   font-size: 1.6rem;
   margin-bottom: 15px;
-  color: #fff;
+  color: #000000;
 }
 
 .footer-enlaces ul {
