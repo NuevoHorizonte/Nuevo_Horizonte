@@ -1,3 +1,6 @@
+// ==========================
+//  CAMBIO DE IMÁGENES EN LA CABEZA
+// ==========================
 document.addEventListener("DOMContentLoaded", () => {
   const menuItems = document.querySelectorAll(".menu-item");
 
@@ -8,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     item.addEventListener("mouseenter", () => {
       img.setAttribute("src", altSrc);
-      item.classList.add("hovered"); // activa clase para animar texto
+      item.classList.add("hovered"); // cambia color del texto
     });
 
     item.addEventListener("mouseleave", () => {
@@ -19,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // ==========================
-// 🎠 CARRUSEL AUTOMÁTICO
+//  CARRUSEL AUTOMÁTICO
 // ==========================
 document.addEventListener("DOMContentLoaded", () => {
   const slides = document.querySelectorAll(".slide");
@@ -38,8 +41,14 @@ document.addEventListener("DOMContentLoaded", () => {
     mostrarSlide(indice);
   }
 
-  // 🕒 cambia automáticamente cada 5 segundos
-  setInterval(siguienteSlide, 3000);
+  // Control manual (opcional)
+  dots.forEach((dot, i) => {
+    dot.addEventListener("click", () => {
+      indice = i;
+      mostrarSlide(indice);
+    });
+  });
 
-  // 🚫 Sin clics ni interacción del usuario
+  // Cambio automático cada 3 segundos
+  setInterval(siguienteSlide, 3000);
 });
