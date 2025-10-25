@@ -418,18 +418,72 @@ header {
 @media (max-width: 800px) {
   .grid-productos {
     grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (max-width: 500px) {
-  .grid-productos {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
+    gap: 40px;
   }
 
   .producto img {
-    width: 100px;
-    height: 100px;
+    width: 130px;
+    height: 130px;
+  }
+
+  .producto p {
+    font-size: 1rem;
+  }
+
+  .fondo-rosado {
+    padding: 60px 25px;
+  }
+}
+
+/* 🔹 Versión optimizada para pantallas muy pequeñas (≤ 400px) */
+@media (max-width: 400px) {
+  .productos {
+    padding: 80px 10px;
+  }
+
+  .titulo-productos {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+  }
+
+  .fondo-rosado {
+    border-radius: 25px;
+    padding: 50px 15px;
+  }
+
+  .grid-productos {
+    grid-template-columns: 1fr 1fr; /* ✅ dos columnas seguras */
+    gap: 20px;
+  }
+
+  .producto img {
+    width: 110px;
+    height: 110px;
+  }
+
+  .producto p {
+    font-size: 0.9rem;
+  }
+}
+
+/* 🔹 Ajuste extra para celulares muy pequeños (≤ 340px, opcional) */
+@media (max-width: 340px) {
+  .grid-productos {
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+
+  .producto img {
+    width: 95px;
+    height: 95px;
+  }
+
+  .producto p {
+    font-size: 0.85rem;
+  }
+
+  .fondo-rosado {
+    padding: 40px 10px;
   }
 }
 
