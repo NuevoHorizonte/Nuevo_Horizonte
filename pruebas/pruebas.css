@@ -57,6 +57,7 @@ header {
   transition: transform 0.3s ease;
   margin-left: -200px; 
   transform: translateX(-200px); 
+  font-family: 'Funkie Retro', sans-serif;
 }
 
 .menu-item {
@@ -67,7 +68,6 @@ header {
   color: rgb(0, 0, 0);
   font-weight: 680;
   font-size: 1.8rem;
-  font-family: 'Domyniq Crush', sans-serif;
   transition: transform 0.25s ease, color 0.3s ease;
   cursor: pointer;
 }
@@ -118,14 +118,13 @@ header {
   color: rgb(0, 0, 0);
   font-weight: 680;
   font-size: 1.8rem;
-  font-family: 'Domyniq Crush', sans-serif;
   transition: transform 0.25s ease, color 0.3s ease;
   cursor: pointer;
 }
 
 .menu-item.hovered {
   transform: scale(1.1);
-  color: #250036; 
+  color: #690074; 
 }
 
 
@@ -219,16 +218,16 @@ header {
 
 
 /* ===============================
-   SECCIÓN CARRUSEL
+  SECCIÓN CARRUSEL
 ================================ */
 .carrusel {
   text-align: center;
   padding: 60px 20px;
-  margin-top: -90px; 
+  margin-top: -100px; 
 }
 
 .titulo-carrusel {
-  font-family: 'Domyniq Crush', sans-serif;
+  font-family: 'Funkie Retro', sans-serif;
   font-size: 2.8rem;
   color: #2f0052;
   margin-bottom: 50px;
@@ -255,8 +254,8 @@ header {
   gap: 1px; 
   transition: opacity 1s ease;
   height: 450px;
-  border-radius: 20px;       /* 🔹 Borde redondeado */
-  overflow: hidden;          /* 🔹 Oculta el exceso visual */
+  border-radius: 20px;      
+  overflow: hidden;          
   background-color: #fff;  
 }
 
@@ -271,7 +270,7 @@ header {
   width: 480px;
   height: 100%;
   object-fit: cover;
-  border-radius: 20px 0 0 20px; /* 🔹 solo redondea las esquinas izquierdas */
+  border-radius: 20px 0 0 20px; 
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
@@ -285,12 +284,12 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border-radius: 0 20px 20px 0; /* ✅ más moderado */
+  border-radius: 0 20px 20px 0;
 }
 
 
 .texto-carrusel h3 {
-  font-family: 'Domyniq Crush', sans-serif;
+  font-family: 'Funkie Retro', sans-serif;
   font-size: 1.9rem;
   margin-bottom: 15px;
 }
@@ -309,14 +308,14 @@ header {
   height: 12px;
   width: 12px;
   margin: 0 6px;
-  background-color: #000000;
+  background-color: #dc85af;
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.3s ease;
 }
 
 .dot.activo {
-  background-color: #ee70ae;
+  background-color: #000000;
 }
 
 
@@ -340,7 +339,7 @@ header {
 }
 
 /* ===============================
-   SECCIÓN PRODUCTOS
+  SECCIÓN PRODUCTOS
 ================================ */
 .productos {
   text-align: center;
@@ -351,7 +350,7 @@ header {
 }
 
 .titulo-productos {
-  font-family: 'Domyniq Crush', sans-serif;
+  font-family: 'Funkie Retro', sans-serif;
   font-size: 3rem;
   color: #2f0052;
   margin-bottom: 50px;
@@ -443,10 +442,11 @@ header {
 .razones-titulo {
   font-size: 2.2rem;
   font-weight: bold;
-  color: #222;
+  color: #3a003f;
   margin-bottom: 60px;
   text-transform: uppercase;
   letter-spacing: 2px;
+  font-family: 'Funkie Retro', sans-serif;
 }
 
 /* 🔹 Contenedor de las tres tarjetas */
@@ -460,12 +460,12 @@ header {
 
 /* 🔹 Estilo de cada tarjeta */
 .razon-card {
-  background-color: #f8f8f8;
+  background-color: #ffffff;
   width: 320px;
   height: 460px; /* 🔧 Más alta que ancha */
   padding: 30px 25px;
   border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -520,5 +520,333 @@ header {
   .razon-card {
     width: 90%;
     height: auto;
+  }
+}
+
+/* === SECCIÓN EVENTOS === */
+.eventos {
+  padding: 40px 40px 100px 20px; 
+  text-align: center;
+  margin-top: -100px; 
+}
+
+.eventos-header {
+  margin-bottom: 70px;
+  text-align: center;
+  position: relative;
+}
+
+.eventos-title {
+  font-size: 46px;
+  font-weight: 800;
+  background: linear-gradient(90deg, #ff6600, #43a047);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.eventos-title::after {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 4px;
+  background: linear-gradient(90deg,#2f0052);
+  margin: 15px auto 0;
+  border-radius: 2px;
+}
+
+.eventos-subtitle-frase {
+  font-size: 20px;
+  color: #000000;
+  font-weight: 500;
+  max-width: 700px;
+  margin: 15px auto 0;
+  line-height: 1.6;
+}
+
+.eventos-grid {
+  display: flex;
+  justify-content: center;
+  gap: 33px;
+  flex-wrap: wrap;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.evento-card {
+  position: relative;
+  width: 300px;
+  height: 380px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: transform 0.4s ease;
+}
+
+.evento-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.evento-card .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  transform: translateX(-100%);
+  transition: transform 0.5s ease, background 0.5s ease;
+  text-align: center;
+  padding: 20px;
+}
+
+.evento-card .overlay img {
+  max-width: 160px;
+  margin-bottom: 15px;
+  opacity: 0;
+  transform: translateY(15px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.evento-card .overlay img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;    
+  object-fit: cover;       
+  opacity: 0;
+  transform: translateY(15px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.evento-card:hover img {
+  transform: scale(1.15);
+}
+
+.evento-card:hover .overlay {
+  transform: translateX(0);
+  background: rgba(0,0,0,0.5);
+}
+
+.evento-card:hover .overlay img,
+.evento-card:hover .overlay p {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.evento-card:hover .overlay {
+  background: var(--overlay-color, rgba(0,0,0,0.5));
+}
+
+.mobile-version {
+  display: none;
+}
+
+/* 📱 Versión móvil simplificada (355px aprox) */
+@media (max-width: 400px) {
+  .desktop-version {
+    display: none !important;
+  }
+
+  .mobile-version {
+    display: block;
+    padding: 30px 20px 60px;
+    text-align: center;
+  }
+
+  .mobile-version .eventos-subtitle {
+    font-size: 22px;
+    color: #ff0000;
+    letter-spacing: 3px;
+  }
+
+  .mobile-version .eventos-title {
+    font-size: 32px;
+    font-weight: 800;
+    background: linear-gradient(90deg, #2f0052);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 25px;
+  }
+
+  .eventos-grid-simple {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 🔹 Dos columnas */
+    gap: 10px;
+    justify-items: center;
+  }
+
+  .eventos-grid-simple img {
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+    height: 150px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  }
+}
+
+.eventos-grid-simple a {
+  display: block;
+  width: 100%;
+}
+
+.eventos-grid-simple a img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  height: 150px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.eventos-grid-simple a:active img,
+.eventos-grid-simple a:hover img {
+  transform: scale(1.03);
+}
+
+/* ===============================
+   PIE DE PÁGINA
+================================ */
+.footer {
+  background-color: #ee70ae;
+  color: white;
+  padding: 60px 20px 30px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  margin-top: -60px;
+}
+
+.footer-contenedor {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-logo img {
+  width: 130px;
+  margin-bottom: 15px;
+}
+
+.footer-logo p {
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 250px;
+  margin: 0 auto;
+}
+
+.footer-enlaces h4,
+.footer-contacto h4 {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.footer-enlaces ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-enlaces li {
+  margin: 8px 0;
+}
+
+.footer-enlaces a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-enlaces a:hover {
+  color: #2f0052;
+}
+
+.footer-contacto p {
+  margin: 6px 0;
+  font-size: 0.95rem;
+}
+
+.footer-redes {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.footer-redes img {
+  width: 28px;
+  height: 28 px;
+  transition: transform 0.3s ease;
+}
+
+.footer-redes img:hover {
+  transform: scale(1.15);
+}
+
+.footer-derechos {
+  margin-top: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  padding-top: 15px;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+/* 📱 Responsive */
+@media (max-width: 700px) {
+  .footer-contenedor {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-logo p {
+    max-width: 100%;
+  }
+}
+
+/* ==========================
+   Ícono flotante de WhatsApp (versión imagen pura)
+========================== */
+.whatsapp-float {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 9999;
+  display: inline-block;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.whatsapp-float img {
+  width: 120px; /* ajusta según tamaño real de tu imagen */
+  height: auto;
+  cursor: pointer;
+  user-select: none;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.15);
+  filter: brightness(1.1);
+}
+
+/* Versión móvil (ligeramente más pequeña) */
+@media (max-width: 600px) {
+  .whatsapp-float img {
+    width: 100px;
+  }
+
+  .whatsapp-float {
+    bottom: 18px;
+    right: 18px;
   }
 }

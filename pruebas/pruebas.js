@@ -52,3 +52,23 @@ document.addEventListener("DOMContentLoaded", () => {
   // Cambio automático cada 3 segundos
   setInterval(siguienteSlide, 3000);
 });
+
+
+// ======= EFECTO HOVER EN IMÁGENES DE SERVICIOS =======
+document.querySelectorAll('.servicio-item img').forEach(img => {
+  const original = img.src;
+  const hover = img.dataset.hover;
+
+  img.addEventListener('mouseenter', () => img.src = hover);
+  img.addEventListener('mouseleave', () => img.src = original);
+});
+
+// ======= EVENTOS: COLOR DE OVERLAY DINÁMICO =======
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".evento-card").forEach(card => {
+    const color = card.dataset.color;
+    if (color) {
+      card.style.setProperty("--overlay-color", `${color}cc`); // cc = 80% opacidad
+    }
+  });
+});

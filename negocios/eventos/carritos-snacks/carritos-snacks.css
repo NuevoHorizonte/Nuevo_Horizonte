@@ -57,6 +57,7 @@ header {
   transition: transform 0.3s ease;
   margin-left: -200px; 
   transform: translateX(-200px); 
+  font-family: 'Funkie Retro', sans-serif;
 }
 
 .menu-item {
@@ -67,7 +68,6 @@ header {
   color: rgb(0, 0, 0);
   font-weight: 680;
   font-size: 1.8rem;
-  font-family: 'Domyniq Crush', sans-serif;
   transition: transform 0.25s ease, color 0.3s ease;
   cursor: pointer;
 }
@@ -118,14 +118,13 @@ header {
   color: rgb(0, 0, 0);
   font-weight: 680;
   font-size: 1.8rem;
-  font-family: 'Domyniq Crush', sans-serif;
   transition: transform 0.25s ease, color 0.3s ease;
   cursor: pointer;
 }
 
 .menu-item.hovered {
   transform: scale(1.1);
-  color: #250036; 
+  color: #690074; 
 }
 
 
@@ -219,7 +218,7 @@ header {
 
 
 /* ===============================
-   SECCIÓN CARRUSEL
+  SECCIÓN CARRUSEL
 ================================ */
 .carrusel {
   text-align: center;
@@ -228,7 +227,7 @@ header {
 }
 
 .titulo-carrusel {
-  font-family: 'Domyniq Crush', sans-serif;
+  font-family: 'Funkie Retro', sans-serif;
   font-size: 2.8rem;
   color: #2f0052;
   margin-bottom: 50px;
@@ -255,8 +254,8 @@ header {
   gap: 1px; 
   transition: opacity 1s ease;
   height: 450px;
-  border-radius: 20px;       /* 🔹 Borde redondeado */
-  overflow: hidden;          /* 🔹 Oculta el exceso visual */
+  border-radius: 20px;      
+  overflow: hidden;          
   background-color: #fff;  
 }
 
@@ -271,7 +270,7 @@ header {
   width: 480px;
   height: 100%;
   object-fit: cover;
-  border-radius: 20px 0 0 20px; /* 🔹 solo redondea las esquinas izquierdas */
+  border-radius: 20px 0 0 20px; 
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
@@ -285,12 +284,12 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border-radius: 0 20px 20px 0; /* ✅ más moderado */
+  border-radius: 0 20px 20px 0;
 }
 
 
 .texto-carrusel h3 {
-  font-family: 'Domyniq Crush', sans-serif;
+  font-family: 'Funkie Retro', sans-serif;
   font-size: 1.9rem;
   margin-bottom: 15px;
 }
@@ -309,14 +308,14 @@ header {
   height: 12px;
   width: 12px;
   margin: 0 6px;
-  background-color: #000000;
+  background-color: #dc85af;
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.3s ease;
 }
 
 .dot.activo {
-  background-color: #ee70ae;
+  background-color: #000000;
 }
 
 
@@ -340,7 +339,7 @@ header {
 }
 
 /* ===============================
-   SECCIÓN PRODUCTOS
+  SECCIÓN PRODUCTOS
 ================================ */
 .productos {
   text-align: center;
@@ -351,7 +350,7 @@ header {
 }
 
 .titulo-productos {
-  font-family: 'Domyniq Crush', sans-serif;
+  font-family: 'Funkie Retro', sans-serif;
   font-size: 3rem;
   color: #2f0052;
   margin-bottom: 50px;
@@ -447,7 +446,7 @@ header {
   margin-bottom: 60px;
   text-transform: uppercase;
   letter-spacing: 2px;
-  font-family: 'Domyniq Crush', sans-serif;
+  font-family: 'Funkie Retro', sans-serif;
 }
 
 /* 🔹 Contenedor de las tres tarjetas */
@@ -528,7 +527,6 @@ header {
 .eventos {
   padding: 40px 40px 100px 20px; 
   text-align: center;
-  font-family: 'Domyniq Crush', sans-serif;
   margin-top: -100px; 
 }
 
@@ -536,18 +534,6 @@ header {
   margin-bottom: 70px;
   text-align: center;
   position: relative;
-  font-family: 'Domyniq Crush', sans-serif;
-}
-
-.eventos-subtitle {
-  display: block;
-  font-size: 26px;        
-  font-weight: 800;       
-  color: #ff0000;         
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  margin-bottom: 18px;
-font-family: 'Chekharda', sans-serif;
 }
 
 .eventos-title {
@@ -559,7 +545,6 @@ font-family: 'Chekharda', sans-serif;
   -webkit-text-fill-color: transparent;
   letter-spacing: 2px;
   margin-bottom: 15px;
-  font-family: 'Domyniq Crush', sans-serif;
 }
 
 .eventos-title::after {
@@ -680,7 +665,6 @@ font-family: 'Chekharda', sans-serif;
     font-size: 22px;
     color: #ff0000;
     letter-spacing: 3px;
-    font-family: 'Chekharda', sans-serif;
   }
 
   .mobile-version .eventos-title {
@@ -764,7 +748,6 @@ font-family: 'Chekharda', sans-serif;
 
 .footer-enlaces h4,
 .footer-contacto h4 {
-  font-family: 'Domyniq Crush', sans-serif;
   font-size: 1.6rem;
   margin-bottom: 15px;
   color: #fff;
@@ -803,7 +786,7 @@ font-family: 'Chekharda', sans-serif;
 
 .footer-redes img {
   width: 28px;
-  height: 28px;
+  height: 28 px;
   transition: transform 0.3s ease;
 }
 
@@ -829,5 +812,41 @@ font-family: 'Chekharda', sans-serif;
 
   .footer-logo p {
     max-width: 100%;
+  }
+}
+
+/* ==========================
+   Ícono flotante de WhatsApp (versión imagen pura)
+========================== */
+.whatsapp-float {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 9999;
+  display: inline-block;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.whatsapp-float img {
+  width: 120px; /* ajusta según tamaño real de tu imagen */
+  height: auto;
+  cursor: pointer;
+  user-select: none;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.15);
+  filter: brightness(1.1);
+}
+
+/* Versión móvil (ligeramente más pequeña) */
+@media (max-width: 600px) {
+  .whatsapp-float img {
+    width: 100px;
+  }
+
+  .whatsapp-float {
+    bottom: 18px;
+    right: 18px;
   }
 }
