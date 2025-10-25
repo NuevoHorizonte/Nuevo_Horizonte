@@ -361,20 +361,19 @@ header {
 
 
 .fondo-rosado {
-  background-color: rgba(238, 112, 174, 0.35); /* 🔹 más visible */
-  border-radius: 40px; /* 🔹 bordes más redondeados */
-  padding: 80px 40px; /* 🔹 más espacio interno */
-  max-width: 1300px; /* 🔹 más ancho */
+  background-color: rgba(238, 112, 174, 0.35); 
+  border-radius: 40px; 
+  padding: 80px 40px; 
   margin: 0 auto;
   box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
 }
 
 
-/* 🔹 Cuadrícula más amplia */
+
 .grid-productos {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 60px; /* 🔹 más espacio entre elementos */
+  gap: 60px; 
   justify-items: center;
 }
 
@@ -386,10 +385,9 @@ header {
   text-align: center;
 }
 
-/* 🔹 Productos más grandes */
 .producto img {
-  width: 160px;  /* 🔹 antes 130px */
-  height: 160px; /* 🔹 antes 130px */
+  width: 160px;  
+  height: 160px;
   object-fit: cover;
   border-radius: 50%;
   border: 5px solid #ee70ae;
@@ -407,7 +405,7 @@ header {
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
   color: #3a003f;
-  font-size: 1.15rem; /* 🔹 texto un poco más grande */
+  font-size: 1.15rem; 
 }
 
 
@@ -454,7 +452,6 @@ header {
   font-family: 'Funkie Retro', sans-serif;
 }
 
-/* 🔹 Contenedor de las tres tarjetas */
 .razones-contenedor {
   display: flex;
   justify-content: center;
@@ -463,11 +460,11 @@ header {
   flex-wrap: wrap;
 }
 
-/* 🔹 Estilo de cada tarjeta */
+
 .razon-card {
   background-color: #ffffff;
   width: 320px;
-  height: 460px; /* 🔧 Más alta que ancha */
+  height: 460px; 
   padding: 30px 25px;
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
@@ -654,7 +651,6 @@ header {
   display: none;
 }
 
-/* 📱 Versión móvil simplificada (355px aprox) */
 @media (max-width: 400px) {
   .desktop-version {
     display: none !important;
@@ -718,7 +714,7 @@ header {
 }
 
 /* ===============================
-   PIE DE PÁGINA
+  PIE DE PÁGINA
 ================================ */
 .footer {
   background-color: #ee70ae;
@@ -821,7 +817,7 @@ header {
 }
 
 /* ==========================
-   Ícono flotante de WhatsApp (versión imagen pura)
+  Ícono flotante de WhatsApp
 ========================== */
 .whatsapp-float {
   position: fixed;
@@ -833,7 +829,7 @@ header {
 }
 
 .whatsapp-float img {
-  width: 120px; /* ajusta según tamaño real de tu imagen */
+  width: 120px; 
   height: auto;
   cursor: pointer;
   user-select: none;
@@ -844,7 +840,6 @@ header {
   filter: brightness(1.1);
 }
 
-/* Versión móvil (ligeramente más pequeña) */
 @media (max-width: 600px) {
   .whatsapp-float img {
     width: 100px;
