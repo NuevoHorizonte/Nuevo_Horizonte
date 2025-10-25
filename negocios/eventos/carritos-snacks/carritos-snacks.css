@@ -533,15 +533,19 @@ header {
 .razon-subtitulo {
   font-size: 1.4rem;
   font-weight: 700;
-  color: #333;
+  color: #000000;
   margin-bottom: 15px;
+font-family: 'Ikka Rounded', sans-serif;
+
 }
 
 .razon-texto {
   font-size: 1rem;
-  color: #555;
+  color: #000000;
   line-height: 1.6;
   text-align: justify;
+font-family: 'Basaliation', sans-serif;
+
 }
 
 /* ============================
