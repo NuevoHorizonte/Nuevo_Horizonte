@@ -72,16 +72,3 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
-
-// ==========================
-//  PRELOADER
-// ==========================
-window.addEventListener("load", () => {
-  const preloader = document.getElementById("preloader");
-  preloader.classList.add("oculto");
-
-  // lo elimina del DOM después de la animación
-  setTimeout(() => {
-    preloader.style.display = "none";
-  }, 600);
-});
