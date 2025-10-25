@@ -567,7 +567,7 @@ font-family: 'Chekharda', sans-serif;
   display: block;
   width: 120px;
   height: 4px;
-  background: linear-gradient(90deg, #ff6600, #43a047);
+  background: linear-gradient(90deg,#2f0052);
   margin: 15px auto 0;
   border-radius: 2px;
 }
@@ -686,7 +686,7 @@ font-family: 'Chekharda', sans-serif;
   .mobile-version .eventos-title {
     font-size: 32px;
     font-weight: 800;
-    background: linear-gradient(90deg, #ff6600, #43a047);
+    background: linear-gradient(90deg, #2f0052);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
