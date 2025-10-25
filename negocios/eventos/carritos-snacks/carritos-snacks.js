@@ -22,11 +22,12 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // ==========================
-//  CARRUSEL AUTOMÁTICO
+//  CARRUSEL AUTOMÁTICO + CLIC MANUAL
 // ==========================
 document.addEventListener("DOMContentLoaded", () => {
   const slides = document.querySelectorAll(".slide");
   const dots = document.querySelectorAll(".dot");
+  const contenedorCarrusel = document.querySelector(".contenedor-carrusel");
   let indice = 0;
 
   function mostrarSlide(n) {
@@ -41,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
     mostrarSlide(indice);
   }
 
-  // Control manual (opcional)
+  // Cambio con los dots (manual)
   dots.forEach((dot, i) => {
     dot.addEventListener("click", () => {
       indice = i;
@@ -50,7 +51,14 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Cambio automático cada 3 segundos
-  setInterval(siguienteSlide, 3000);
+  let intervalo = setInterval(siguienteSlide, 6000);
+
+  // ✅ Cambio con clic en cualquier parte del carrusel
+  contenedorCarrusel.addEventListener("click", () => {
+    siguienteSlide();
+    clearInterval(intervalo); // pausa el auto si clickea
+    intervalo = setInterval(siguienteSlide, 3000); // reinicia luego
+  });
 });
 
 
