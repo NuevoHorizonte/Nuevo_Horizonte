@@ -548,12 +548,13 @@ font-family: 'Basaliation', sans-serif;
 
 }
 
-.razon-card {
-  background-color: #fff;
-  border-radius: 20px;
-  padding: 25px;
-  text-align: center;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+.razon-imagen {
+  width: 120px;         /* Ajusta según tu diseño */
+  height: auto;
+  margin-top: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .razon-card .razon-imagen {
