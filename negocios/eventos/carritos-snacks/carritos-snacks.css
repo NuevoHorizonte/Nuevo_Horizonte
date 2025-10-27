@@ -497,7 +497,7 @@ header {
 }
 
 .razones-titulo {
-  font-size: 2.2rem;
+  font-size: 2.8rem;
   font-weight: bold;
   color: #3a003f;
   margin-bottom: 60px;
@@ -605,6 +605,7 @@ font-family: 'Basaliation', sans-serif;
   -webkit-text-fill-color: transparent;
   letter-spacing: 2px;
   margin-bottom: 15px;
+  font-family: 'Funkie Retro', sans-serif;
 }
 
 .eventos-title::after {
@@ -770,89 +771,68 @@ font-family: 'Basaliation', sans-serif;
 ================================ */
 .footer {
   background-color: #ee70ae;
-  color: rgb(0, 0, 0);
-  padding: 60px 20px 30px;
-  text-align: center;
+  color: #000000;
+  padding: 20px 0; 
   font-family: 'Poppins', sans-serif;
-  margin-top: -60px;
 }
 
 .footer-contenedor {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
-  gap: 40px;
-  max-width: 1200px;
+  gap: 20px; 
+  max-width: 1100px;
   margin: 0 auto;
+  padding: 0 15px;
 }
 
 .footer-logo img {
-  width: 130px;
-  margin-bottom: 15px;
+  width: 140px; 
+  margin-bottom: 10px;
 }
 
 .footer-logo p {
-  font-size: 1rem;
-  line-height: 1.6;
-  max-width: 250px;
-  margin: 0 auto;
+  font-size: 0.9rem;
+  line-height: 1.3;
+  margin: 0;
 }
 
-.footer-enlaces h4,
+
+/* ===== CONTACTO ===== */
 .footer-contacto h4 {
-  font-size: 1.6rem;
-  margin-bottom: 15px;
-  color: #000000;
-}
-
-.footer-enlaces ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-enlaces li {
-  margin: 8px 0;
-}
-
-.footer-enlaces a {
-  color: white;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.footer-enlaces a:hover {
-  color: #2f0052;
+  font-size: 1.5rem;        /* ← cambia el tamaño del título “Contáctanos” */
+  font-weight: 600;
+  margin-bottom: 10px;
 }
 
 .footer-contacto p {
-  margin: 6px 0;
-  font-size: 0.95rem;
+  margin: 4px 0;
+  font-size: 1.4rem;          /* ← cambia el tamaño del texto general */
 }
 
-.footer-redes {
-  margin-top: 15px;
-  display: flex;
-  justify-content: center;
-  gap: 15px;
+.footer-contacto p:nth-of-type(1) { 
+  font-size: 1.4rem;          /* “📍 Lima, Perú” */
 }
 
-.footer-redes img {
-  width: 28px;
-  height: 28 px;
-  transition: transform 0.3s ease;
+.footer-contacto p:nth-of-type(2) { 
+  font-size: 1.4rem;        /* “📞 +51 919 283 481” */
+  font-weight: 500;
+  color: #000000;           /* Morado del branding */
 }
 
-.footer-redes img:hover {
-  transform: scale(1.15);
+/* ===== REDES SOCIALES ===== */
+.footer-redes a img {
+  width: 30px;              /* Puedes subir o bajar este valor también */
+  margin-right: 8px;
 }
 
+/* ===== DERECHOS ===== */
 .footer-derechos {
-  margin-top: 40px;
-  border-top: 1px solid rgba(255, 255, 255, 0.3);
-  padding-top: 15px;
-  font-size: 0.9rem;
-  opacity: 0.9;
+  text-align: center;
+  margin-top: 15px;
+  font-size: 0.9rem;        /* ← texto del copyright */
+  color: #000000;
 }
 
 /* 📱 Responsive */
@@ -866,6 +846,19 @@ font-family: 'Basaliation', sans-serif;
   .footer-logo p {
     max-width: 100%;
   }
+}
+
+
+.telefono-footer {
+  color: inherit;          
+  text-decoration: none;   
+  font-weight: 400;        
+  cursor: pointer;      
+}
+
+.telefono-footer:hover {
+  color: #000;             /* Puedes dejarlo igual o cambiarlo */
+  text-decoration: none;   /* Evita que vuelva la raya */
 }
 
 /* ==========================

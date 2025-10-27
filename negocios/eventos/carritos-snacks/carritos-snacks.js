@@ -1,25 +1,4 @@
-// ==========================
-//  CAMBIO DE IMÁGENES EN LA CABEZA
-// ==========================
-document.addEventListener("DOMContentLoaded", () => {
-  const menuItems = document.querySelectorAll(".menu-item");
 
-  menuItems.forEach(item => {
-    const img = item.querySelector("img");
-    const originalSrc = img.getAttribute("src");
-    const altSrc = img.getAttribute("data-alt");
-
-    item.addEventListener("mouseenter", () => {
-      img.setAttribute("src", altSrc);
-      item.classList.add("hovered"); // cambia color del texto
-    });
-
-    item.addEventListener("mouseleave", () => {
-      img.setAttribute("src", originalSrc);
-      item.classList.remove("hovered");
-    });
-  });
-});
 
 // ==========================
 //  CARRUSEL AUTOMÁTICO + CLIC MANUAL
@@ -50,14 +29,14 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Cambio automático cada 3 segundos
-  let intervalo = setInterval(siguienteSlide, 6000);
+  // Cambio automático cada 10 segundos
+  let intervalo = setInterval(siguienteSlide, 8000);
 
   // ✅ Cambio con clic en cualquier parte del carrusel
   contenedorCarrusel.addEventListener("click", () => {
     siguienteSlide();
     clearInterval(intervalo); // pausa el auto si clickea
-    intervalo = setInterval(siguienteSlide, 3000); // reinicia luego
+    intervalo = setInterval(siguienteSlide, 8000); // reinicia luego
   });
 });
 
@@ -78,5 +57,40 @@ document.addEventListener("DOMContentLoaded", () => {
     if (color) {
       card.style.setProperty("--overlay-color", `${color}cc`); // cc = 80% opacidad
     }
+  });
+});
+
+// ==========================
+//  CAMBIO DE IMÁGENES EN LA CABEZA + CAMBIO DE TEXTO SOLO EN CONTACTO
+// ==========================
+document.addEventListener("DOMContentLoaded", () => {
+  const menuItems = document.querySelectorAll(".menu-item");
+
+  menuItems.forEach(item => {
+    const img = item.querySelector("img");
+    const span = item.querySelector("span");
+    const originalSrc = img.getAttribute("src");
+    const altSrc = img.getAttribute("data-alt");
+    const originalText = span.textContent;
+
+    item.addEventListener("mouseenter", () => {
+      img.setAttribute("src", altSrc);
+      item.classList.add("hovered");
+
+      // 💬 Solo cambia el texto si es el menú de "Contacto"
+      if (originalText.trim().toLowerCase() === "contacto") {
+        span.textContent = "919 283 481";
+      }
+    });
+
+    item.addEventListener("mouseleave", () => {
+      img.setAttribute("src", originalSrc);
+      item.classList.remove("hovered");
+
+      // 💬 Regresa el texto original
+      if (originalText.trim().toLowerCase() === "contacto") {
+        span.textContent = originalText;
+      }
+    });
   });
 });

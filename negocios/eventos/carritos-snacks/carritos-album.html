@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+   <link href="https://fonts.cdnfonts.com/css/funkie-retro" rel="stylesheet">
   <title>Galería de Imágenes - Masonry 5 columnas</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -13,32 +14,156 @@
       line-height: 1.4;
     }
 
-    .hero {
-      position: relative;
-      width: 100%;
-      height: 60vh;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+    header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ee70ae;
+  color: white;
+  padding: 20px 40px;
+  position: relative;
+  box-shadow: none;
+  flex-wrap: nowrap;
+}
 
-    .hero img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      filter: brightness(0.65);
-      display: block;
-    }
 
-    .hero h1 {
-      position: absolute;
-      color: #fff;
-      font-size: clamp(1.6rem, 4vw, 3rem);
-      text-align: center;
-      padding: 0.5rem 1rem;
-      text-shadow: 0 6px 18px rgba(0,0,0,0.6);
-    }
+    .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+   margin-left: 50%;        
+  transform: translateX(-50%);
+}
+
+.logo img {
+  width: 120px;
+  height: auto;
+  transition: transform 0.3s ease; 
+  cursor: pointer; 
+}
+
+.logo img:hover {
+  transform: scale(1.1); 
+}
+
+.decorado-chocolate {
+  position: absolute;       
+  top: 0;                   
+  right: 0;                 
+  width: 150px;             
+  height: auto;
+  pointer-events: none;    
+  user-select: none;        
+}
+
+
+.cinta-derretida {
+  top: -1px; 
+  position: relative;
+  width: 100%;
+  height: 200px; 
+  margin-top: 0; 
+  background-image: url("../../../img/carritos-snacks-jjr/cinta-derretida.svg"); 
+  background-repeat: repeat-x;
+  background-position: top center;
+  background-size: auto 100%; 
+  margin-top: -1px; 
+}
+
+.decorado-izquierdo {
+  position: absolute;
+  top: -20;
+  left: 2;
+  display: inline-block;
+  z-index: 2; /* sobre el fondo, debajo del logo */
+}
+
+.decorado-izquierdo img {
+  width: 120px;          /* ajusta tamaño a gusto */
+  height: auto;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.decorado-izquierdo img:hover {
+  transform: scale(1.1); /* efecto “inflarse” igual que el logo */
+}
+
+
+@media (max-width: 600px) {
+
+  body {
+    background-size: 220px;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 10px;
+    position: relative;
+    text-align: center;
+  }
+
+  .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 100%;              
+  }
+
+  .logo img {
+    width: 95px;
+    display: block;
+    margin: 0 auto;           
+  }
+
+  .decorado-chocolate {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 120px;
+    height: auto;
+    pointer-events: none;
+  }
+
+  .gallery-title h1 {
+  font-size: 1.6rem;
+  margin-top: 10px;
+  }
+
+  .cinta-derretida {
+    height: 90px;
+    background-size: auto 100%;
+    background-position: center top;
+  }
+
+ .decorado-izquierdo  {
+    display: none;
+  }
+
+}
+
+.gallery-title {
+  text-align: center;
+  margin-top: 5px;     /* sube la frase más cerca de la cinta */
+  margin-bottom: 40px; /* separa más de las imágenes */
+  position: relative;
+  top: -30px;          /* súbelo visualmente aún más */
+}
+
+.gallery-title h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ee70ae;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+  font-family: 'Funkie Retro', sans-serif;
+}
+
 
   .gallery-wrap {
   max-width: 1800px; 
@@ -98,20 +223,69 @@
     }
   </style>
 </head>
+
+
+
 <body>
+<header>
+    <div class="logo">
+    <img src="../../../img/index/logo-carritos-snacks-jjr.svg" alt="Logo Carritos Snacks">
+</div>
+  <img 
+    src="../../../img/carritos-snacks-jjr/decorado-chocolate.svg" 
+    alt="Decorado Chocolate" 
+    class="decorado-chocolate">
 
-  <section class="hero">
-    <img src="../../img/bungalows-de-tomayquichua/vista-fondo.webp" alt="Imagen principal">
-    <h1>Increíbles imágenes</h1>
-  </section>
+ <a href="../carritos-snacks/carritos-snacks.html" class="decorado-izquierdo">
+  <img 
+    src="../../../img/carritos-snacks-jjr/album-flecha-atras.svg" 
+    alt="Decorado Izquierdo"
+  >
+</a>
 
+  </header>
+  <div class="cinta-derretida"></div>
   <div class="gallery-wrap">
+
+<section class="gallery-title">
+  <h1>Explora Nuestros Momentos</h1>
+</section>
+
+
     <section class="gallery">
-    <img src="../../img/bungalows-de-tomayquichua/foto-1.webp" alt="Foto 1" loading="lazy">
+    <img src="../../../img/carritos-snacks-jjr/foto-1.png" alt="Foto 1" loading="lazy">
+    <img src="../../../img/carritos-snacks-jjr/foto-2.png" alt="Foto 2" loading="lazy">
+    <img src="../../../img/carritos-snacks-jjr/foto-3.png" alt="Foto 3" loading="lazy">
+    <img src="../../../img/carritos-snacks-jjr/foto-4.png" alt="Foto 4" loading="lazy">
+    <img src="../../../img/carritos-snacks-jjr/foto-5.png" alt="Foto 5" loading="lazy">
+    <img src="../../../img/carritos-snacks-jjr/foto-6.png" alt="Foto 6" loading="lazy">
+    <img src="../../../img/carritos-snacks-jjr/foto-7.png" alt="Foto 7" loading="lazy">
+    <img src="../../../img/carritos-snacks-jjr/foto-8.png" alt="Foto 8" loading="lazy">
+    <img src="../../../img/carritos-snacks-jjr/foto-9.png" alt="Foto 9" loading="lazy">
+    <img src="../../../img/carritos-snacks-jjr/foto-10.png" alt="Foto 10" loading="lazy">
+    <img src="../../../img/carritos-snacks-jjr/foto-11.png" alt="Foto 11" loading="lazy">
+    <img src="../../../img/carritos-snacks-jjr/foto-12.png" alt="Foto 12" loading="lazy">
+    <img src="../../../img/carritos-snacks-jjr/foto-13.png" alt="Foto 13" loading="lazy">
+    <img src="../../../img/carritos-snacks-jjr/foto-14.png" alt="Foto 14" loading="lazy">
+    <img src="../../../img/carritos-snacks-jjr/foto-15.png" alt="Foto 15" loading="lazy">
+    <img src="../../../img/carritos-snacks-jjr/foto-16.jpg" alt="Foto 16" loading="lazy">
+    <img src="../../../img/carritos-snacks-jjr/Foto-17.jpg" alt="Foto 17" loading="lazy">
+    <img src="../../../img/carritos-snacks-jjr/foto-18.jpg" alt="Foto 18" loading="lazy">
+    <img src="../../../img/carritos-snacks-jjr/foto-19.jpeg" alt="Foto 19" loading="lazy">
+    <img src="../../../img/carritos-snacks-jjr/foto-20.jpeg" alt="Foto 20" loading="lazy">
+    <img src="../../../img/carritos-snacks-jjr/foto-21.jpeg" alt="Foto 21" loading="lazy">
+    <img src="../../../img/carritos-snacks-jjr/foto-22.jpg" alt="Foto 22" loading="lazy">
+    <img src="../../../img/carritos-snacks-jjr/foto-23.jpeg" alt="Foto 23" loading="lazy">
+    <img src="../../../img/carritos-snacks-jjr/foto-24.jpeg" alt="Foto 24" loading="lazy">
+    <img src="../../../img/carritos-snacks-jjr/foto-25.jpg" alt="Foto 25" loading="lazy">
+    <img src="../../../img/carritos-snacks-jjr/foto-26.jpeg" alt="Foto 26" loading="lazy">
+    <img src="../../../img/carritos-snacks-jjr/foto-27.jpeg" alt="Foto 27" loading="lazy">
+    <img src="../../../img/carritos-snacks-jjr/foto-28.jpeg" alt="Foto 28" loading="lazy">
+    <img src="../../../img/carritos-snacks-jjr/foto-29.png" alt="Foto 29" loading="lazy">
     </section>
   </div>
   <footer>
-    ©Bungalows-Tomaquichua
+    ©Carritos Snacks JJR
   </footer>
 </body>
 </html>
