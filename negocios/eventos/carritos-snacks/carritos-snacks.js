@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // 💬 Solo cambia el texto si es el menú de "Contacto"
       if (originalText.trim().toLowerCase() === "contacto") {
-        span.textContent = "919 283 481";
+        span.textContent = "919283481";
       }
     });
 
