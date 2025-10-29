@@ -924,3 +924,12 @@ font-family: 'Basaliation', sans-serif;
     right: 18px;
   }
 }
+
+@media (max-width: 600px) {
+  body {
+    background-image: none !important;
+    background-color: #fff !important;
+    background-repeat: no-repeat !important;
+    background-size: auto !important;
+  }
+}
