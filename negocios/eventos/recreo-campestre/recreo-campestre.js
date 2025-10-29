@@ -24,10 +24,8 @@ function updateCarousel() {
   const slideWidth = track.querySelector('img').offsetWidth + 25;
   track.style.transform = `translateX(-${index * slideWidth}px)`;
 
-  // 🔹 Limpia todos los dots
   dots.forEach(dot => dot.classList.remove('active'));
 
-  // 🔹 Activa los dots visibles
   for (let i = index; i < index + visibleImages; i++) {
     if (dots[i]) dots[i].classList.add('active');
   }

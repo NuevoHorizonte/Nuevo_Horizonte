@@ -15,7 +15,6 @@ menuItems.forEach(item => {
     img.setAttribute("src", altSrc);
     item.classList.add("hovered");
 
-      // 💬 Solo cambia el texto si es el menú de "Contacto"
     if (originalText.trim().toLowerCase() === "contacto") {
         span.textContent = "919283481";
     }
@@ -25,7 +24,7 @@ menuItems.forEach(item => {
     img.setAttribute("src", originalSrc);
     item.classList.remove("hovered");
 
-      // 💬 Regresa el texto original
+
     if (originalText.trim().toLowerCase() === "contacto") {
         span.textContent = originalText;
     }
