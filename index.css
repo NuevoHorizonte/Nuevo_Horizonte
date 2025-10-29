@@ -647,19 +647,26 @@ header a {
     align-items: center;
   }
 
+
+
+
   .servicios-row {
     display: flex;
     justify-content: center;
-    gap: 6rem; 
+    gap: 5rem; 
     flex-wrap: wrap; 
   }
+
+
+
+
 
   .servicio-item {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-decoration: none;
-    color: #333;
+    color: #0a0a0a;
     transition: transform 0.3s ease, color 0.3s ease;
   }
 
@@ -1516,6 +1523,14 @@ html {
 section[id] {
   scroll-margin-top: 90px; 
 }
+
+
+
+
+
+
+
+
 
 .site-footer {
   background-color: #000000;
