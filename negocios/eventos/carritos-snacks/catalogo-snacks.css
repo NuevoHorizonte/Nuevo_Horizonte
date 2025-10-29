@@ -1,110 +1,232 @@
 body {
-  background: #ffffff; 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
   margin: 0;
-}
+  font-family: "Poppins", sans-serif;
+  background-color: #fff7fb;
+  color: #333;
 
-.page {
-  width: 210mm;
-  min-height: 297mm; 
-  background: #ffeec8;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-  padding: 20mm;
-  box-sizing: border-box;
-  position: relative;
-  transition: transform 0.6s ease;
-  overflow: visible; 
+  background-image: url("../../../img/carritos-snacks-jjr/img-fondo.webp");
+  background-repeat: repeat;       
+  background-size: 400px;           
+  background-position: top left;    
 }
-
-.titulo {
-  text-align: center;
-  font-size: 120px;            
-  color: #ff0000;            
-  font-weight: 900;          
-  letter-spacing: 5px;        
-  text-shadow: 
-    -2px -2px 0 #fff,        
-    2px -2px 0 #fff,
-    -2px 2px 0 #fff,
-    2px 2px 0 #fff;
-  margin-top: 50px;
-  margin-bottom: 40px;
-  position: relative;
-  left: -20px;                
-  font-family: 'Sunrise Orange', sans-serif;
-}
-
-.nav {
-  position: fixed;
-  bottom: 20px;
+header {
   display: flex;
-  gap: 1rem;
-}
-
-/* ====== LOGO ====== */
-.logo {
-  display: block;
-  margin: 0 auto 40px auto;
-  width: 350px;          
-  transition: transform 0.3s ease-in-out;
-}
-
-.logo:hover {
-  transform: scale(1.15); 
-}
-
-.contacto-titulo {
-  text-align: center;
-  font-size: 60px;
-  color: #000000;
-  font-weight: bold;
-  margin-top: 40px;
-  margin-bottom: 20px;
-  text-shadow: 
-    -1px -1px 0 #fff,
-    1px -1px 0 #fff,
-    -1px 1px 0 #fff,
-    1px 1px 0 #fff;
-  font-family: 'Sunrise Orange', sans-serif;
-}
-
-.contacto {
-  display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 15px;
-  text-decoration: none;  
-  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  justify-content: space-between;
+  background-color: #ee70ae;
+  color: white;
+  padding: 20px 40px;
+  position: relative;
+  box-shadow: none;
+  flex-wrap: nowrap;
 }
 
-.contacto:hover {
-  transform: scale(1.2);  
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
 }
 
-.telefono {
-  font-size: 50px;
-  color: #f40000;
-  font-weight: bold;
+.logo img {
+  width: 120px;
+  height: auto;
+  transition: transform 0.3s ease; 
+  cursor: pointer; 
 }
 
-.contacto img {
-  width: 45px;
-  height: 45px;
+.logo img:hover {
+  transform: scale(1.1); 
 }
+
+.decorado-chocolate {
+  position: absolute;       
+  top: 0;                   
+  right: 0;                 
+  width: 150px;             
+  height: auto;
+  pointer-events: none;    
+  user-select: none;        
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  transition: transform 0.3s ease;
+  margin-left: -200px; 
+  transform: translateX(-200px); 
+  font-family: 'Funkie Retro', sans-serif;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-weight: 680;
+  font-size: 1.8rem;
+  transition: transform 0.25s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+.menu-item:hover {
+  transform: scale(1.12);
+  color: #2f0052;
+}
+
+.menu-item:nth-child(1) {
+  position: relative;
+  left: 10px;
+}
+
+.menu-item:nth-child(2) {
+  position: relative;
+  left: 30px; 
+}
+
+.menu-item:nth-child(3) {
+  position: relative;
+  left: 50px; 
+}
+
+.menu-item:nth-child(4) {
+  position: relative;
+  left: 70px; 
+}
+
+.menu-item img {
+  width: 50px;
+  height: auto;
+  vertical-align: middle;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+  cursor: pointer;
+}
+
+.menu-item:hover img {
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-weight: 680;
+  font-size: 1.8rem;
+  transition: transform 0.25s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+.menu-item.hovered {
+  transform: scale(1.1);
+  color: #690074; 
+}
+
+
+.menu-item img {
+  width: 50px;
+  height: auto;
+  vertical-align: middle;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.menu-item.hovered img {
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+
+.cinta-derretida {
+   top: -1px; 
+  position: relative;
+  width: 100%;
+  height: 200px; 
+   margin-top: 0; 
+  background-image: url("../../../img/carritos-snacks-jjr/cinta-derretida.svg"); 
+  background-repeat: repeat-x;
+  background-position: top center;
+  background-size: auto 100%; 
+  margin-top: -1px; 
+}
+
+@media (max-width: 600px) {
+
+  body {
+    background-size: 220px;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 10px;
+    position: relative;
+  }
+
+  .logo {
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .logo img {
+    width: 95px;
+  }
+
+
+  .decorado-chocolate {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 120px;
+    height: auto;
+    pointer-events: none;
+  }
+
+  .cinta-derretida {
+    height: 90px;
+    background-size: auto 100%;
+    background-position: center top;
+  }
+
+    .menu {
+    display: none;
+  }
+}
+
+
+@media (max-width: 1600px) {
+  .menu {
+    margin-left: 350px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .menu {
+    margin-left: 300px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .menu {
+    margin-left: 250px;
+  }
+}
+
 
 .productos {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 🟢 Dos columnas iguales */
+  gap: 25px; /* Espacio entre tarjetas */
   margin-top: 30px;
+  justify-items: center; /* Centra horizontalmente cada tarjeta */
 }
 
 .tarjeta {
-  width: 90%;              
+  width: 90%;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -116,6 +238,13 @@ body {
 
 .tarjeta:hover {
   transform: scale(1.05);
+}
+
+/* 📱 Responsive: 1 columna en pantallas pequeñas */
+@media (max-width: 800px) {
+  .productos {
+    grid-template-columns: 1fr;
+  }
 }
 
 .tarjeta img {
@@ -137,11 +266,284 @@ body {
 .info p {
   font-size: 18px;
   margin: 0;
-  color: #222;
+  color: #000000;
 }
 
 /* ====== COLORES ====== */
 .azul     { background: #8ee0ff; }
 .amarilla { background: #ffe68f; }
-.rosada   { background: #ffb7d5; }
+.rosada   { background: #fa9cc3; }
 .verde    { background: #b6ff9f; }
+.anaranjado { background: #ffb676; }
+
+.fondo-rosado {
+  background-color: rgba(238, 112, 174, 0.35); 
+  border-radius: 40px; 
+  padding: 80px 40px; 
+  margin: 40px auto; /* Centra y da un poco de aire */
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+  max-width: 1200px; /* 🟣 Limita el ancho total */
+  width: 90%;        /* Para que sea flexible en pantallas pequeñas */
+}
+
+.titulo-catalogo {
+  text-align: center;
+  font-size: 5rem;
+  color: #2f0052; /* tono fucsia oscuro que combina */
+  font-family: 'Gasoek One', sans-serif;
+  margin-top: 60px;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.15);
+  letter-spacing: 3px;
+}
+
+/* 🚫 Evitar desplazamiento lateral en móviles */
+html, body {
+  width: 100%;
+  overflow-x: hidden; /* 💥 Bloquea el scroll horizontal */
+  margin: 0;
+  padding: 0;
+}
+
+/* Ajustes finos para móviles */
+@media (max-width: 400px) {
+  body {
+    background-size: 250px; /* evita que el fondo cree overflow */
+  }
+
+  .fondo-rosado {
+    padding: 40px 10px;
+    width: 95%;
+    max-width: 100%;
+    box-sizing: border-box; /* asegura que padding no exceda el ancho */
+  }
+
+  .productos {
+    grid-template-columns: 1fr;
+    width: 100%;
+    margin: 0 auto;
+    gap: 15px;
+  }
+
+  .tarjeta {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+/* === Corrección de centrado general === */
+html, body {
+  width: 100%;
+  overflow-x: hidden; /* 💥 evita el scroll lateral */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; /* Asegura que el padding no rompa el ancho */
+}
+
+/* === Fondo rosado centrado perfectamente === */
+.fondo-rosado {
+  background-color: rgba(238, 112, 174, 0.35);
+  border-radius: 40px;
+  padding: 50px 20px;
+  margin: 0 auto 40px auto; /* centrado completo */
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+  max-width: 1100px;
+  width: 90%;
+  position: relative;
+  left: 0;
+  right: 0;
+}
+
+/* === Tarjetas perfectamente centradas === */
+.productos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  justify-items: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* === Vista móvil: todo centrado y vertical === */
+@media (max-width: 400px) {
+  .fondo-rosado {
+    width: 95%;
+    padding: 40px 10px;
+    border-radius: 25px;
+  }
+
+  .productos {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .tarjeta {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .tarjeta img {
+    width: 90px;
+    height: 90px;
+    margin: 0 0 10px 0;
+  }
+
+  .info h3 {
+    font-size: 20px;
+  }
+
+  .info p {
+    font-size: 16px;
+  }
+
+  .titulo-catalogo {
+    font-size: 1.8rem;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+}
+
+/* 🌸 Ajustes responsivos para pantallas hasta 600px */
+@media (max-width: 600px) {
+  html, body {
+    overflow-x: hidden;
+  }
+
+  .fondo-rosado {
+    width: 92%;
+    max-width: 100%;
+    padding: 50px 20px;
+    border-radius: 30px;
+    margin: 30px auto;
+  }
+
+  .titulo-catalogo {
+    font-size: 2.3rem;
+    margin-top: 40px;
+    margin-bottom: 25px;
+    text-align: center;
+  }
+
+  .productos {
+    grid-template-columns: 1fr; /* 📱 Una columna más cómoda */
+    gap: 25px;
+    justify-items: center;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .tarjeta {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 25px;
+    border-radius: 20px;
+  }
+
+  .tarjeta img {
+    width: 110px;
+    height: 110px;
+    margin: 0 0 15px 0;
+  }
+
+  .info h3 {
+    font-size: 22px;
+  }
+
+  .info p {
+    font-size: 17px;
+  }
+}
+
+/* ===============================
+  PIE DE PÁGINA
+================================ */
+.footer {
+  background-color: #ee70ae;
+  color: #000000;
+  padding: 20px 0; 
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-contenedor {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px; 
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.footer-logo img {
+  width: 140px; 
+  margin-bottom: 10px;
+}
+
+.footer-logo p {
+  font-size: 0.9rem;
+  line-height: 1.3;
+  margin: 0;
+}
+
+
+/* ===== CONTACTO ===== */
+.footer-contacto h4 {
+  font-size: 1.5rem;        /* ← cambia el tamaño del título “Contáctanos” */
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.footer-contacto p {
+  margin: 4px 0;
+  font-size: 1.4rem;          /* ← cambia el tamaño del texto general */
+}
+
+.footer-contacto p:nth-of-type(1) { 
+  font-size: 1.4rem;          /* “📍 Lima, Perú” */
+}
+
+.footer-contacto p:nth-of-type(2) { 
+  font-size: 1.4rem;        /* “📞 +51 919 283 481” */
+  font-weight: 500;
+  color: #000000;           /* Morado del branding */
+}
+
+/* ===== REDES SOCIALES ===== */
+.footer-redes a img {
+  width: 30px;              /* Puedes subir o bajar este valor también */
+  margin-right: 8px;
+}
+
+/* ===== DERECHOS ===== */
+.footer-derechos {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 0.9rem;        /* ← texto del copyright */
+  color: #000000;
+}
+
+/* 📱 Responsive */
+@media (max-width: 700px) {
+  .footer-contenedor {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-logo p {
+    max-width: 100%;
+  }
+}

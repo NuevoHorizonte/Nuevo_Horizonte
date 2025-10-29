@@ -1,852 +1,147 @@
 body {
+  background: #ffffff; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
   margin: 0;
-  font-family: "Poppins", sans-serif;
-  background-color: #fff7fb;
-  color: #333;
-
-  background-image: url("../../../img/carritos-snacks-jjr/img-fondo.png");
-  background-repeat: repeat;       
-  background-size: 400px;           
-  background-position: top left;    
 }
-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #ee70ae;
-  color: white;
-  padding: 20px 40px;
+
+.page {
+  width: 210mm;
+  min-height: 297mm; 
+  background: #ffeec8;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  padding: 20mm;
+  box-sizing: border-box;
   position: relative;
-  box-shadow: none;
-  flex-wrap: nowrap;
+  transition: transform 0.6s ease;
+  overflow: visible; 
 }
 
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  flex-shrink: 0;
-}
-
-.logo img {
-  width: 120px;
-  height: auto;
-  transition: transform 0.3s ease; 
-  cursor: pointer; 
-}
-
-.logo img:hover {
-  transform: scale(1.1); 
-}
-
-.decorado-chocolate {
-  position: absolute;       
-  top: 0;                   
-  right: 0;                 
-  width: 150px;             
-  height: auto;
-  pointer-events: none;    
-  user-select: none;        
-}
-
-.menu {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 60px;
-  transition: transform 0.3s ease;
-  margin-left: -200px; 
-  transform: translateX(-200px); 
-  font-family: 'Funkie Retro', sans-serif;
-}
-
-.menu-item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  text-decoration: none;
-  color: rgb(0, 0, 0);
-  font-weight: 680;
-  font-size: 1.8rem;
-  transition: transform 0.25s ease, color 0.3s ease;
-  cursor: pointer;
-}
-
-.menu-item:hover {
-  transform: scale(1.12);
-  color: #2f0052;
-}
-
-.menu-item:nth-child(1) {
-  position: relative;
-  left: 10px;
-}
-
-.menu-item:nth-child(2) {
-  position: relative;
-  left: 30px; 
-}
-
-.menu-item:nth-child(3) {
-  position: relative;
-  left: 50px; 
-}
-
-.menu-item:nth-child(4) {
-  position: relative;
-  left: 70px; 
-}
-
-.menu-item img {
-  width: 50px;
-  height: auto;
-  vertical-align: middle;
-  transition: transform 0.25s ease, opacity 0.25s ease;
-  cursor: pointer;
-}
-
-.menu-item:hover img {
-  transform: scale(1.1);
-  opacity: 0.9;
-}
-
-.menu-item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  text-decoration: none;
-  color: rgb(0, 0, 0);
-  font-weight: 680;
-  font-size: 1.8rem;
-  transition: transform 0.25s ease, color 0.3s ease;
-  cursor: pointer;
-}
-
-.menu-item.hovered {
-  transform: scale(1.1);
-  color: #690074; 
-}
-
-
-.menu-item img {
-  width: 50px;
-  height: auto;
-  vertical-align: middle;
-  transition: transform 0.25s ease, opacity 0.25s ease;
-}
-
-.menu-item.hovered img {
-  transform: scale(1.1);
-  opacity: 0.9;
-}
-
-.cinta-derretida {
-   top: -1px; 
-  position: relative;
-  width: 100%;
-  height: 200px; 
-   margin-top: 0; 
-  background-image: url("../../../img/carritos-snacks-jjr/cinta-derretida.svg"); 
-  background-repeat: repeat-x;
-  background-position: top center;
-  background-size: auto 100%; 
-  margin-top: -1px; 
-}
-
-@media (max-width: 600px) {
-
-  body {
-    background-size: 220px;
-  }
-
-  header {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 10px;
-    position: relative;
-  }
-
-  .logo {
-    justify-content: center;
-    margin-bottom: 10px;
-  }
-
-  .logo img {
-    width: 95px;
-  }
-
-
-  .decorado-chocolate {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 120px;
-    height: auto;
-    pointer-events: none;
-  }
-
-  .cinta-derretida {
-    height: 90px;
-    background-size: auto 100%;
-    background-position: center top;
-  }
-
-    .menu {
-    display: none;
-  }
-}
-
-
-@media (max-width: 1600px) {
-  .menu {
-    margin-left: 350px;
-  }
-}
-
-@media (max-width: 1400px) {
-  .menu {
-    margin-left: 300px;
-  }
-}
-
-@media (max-width: 1200px) {
-  .menu {
-    margin-left: 250px;
-  }
-}
-
-
-/* ===============================
-  SECCIÓN CARRUSEL
-================================ */
-.carrusel {
+.titulo {
   text-align: center;
-  padding: 60px 20px;
-  margin-top: -100px; 
-}
-
-.titulo-carrusel {
-  font-family: 'Funkie Retro', sans-serif;
-  font-size: 2.8rem;
-  color: #2f0052;
-  margin-bottom: 50px;
-}
-
-
-.contenedor-carrusel {
+  font-size: 120px;            
+  color: #ff0000;            
+  font-weight: 900;          
+  letter-spacing: 5px;        
+  text-shadow: 
+    -2px -2px 0 #fff,        
+    2px -2px 0 #fff,
+    -2px 2px 0 #fff,
+    2px 2px 0 #fff;
+  margin-top: 50px;
+  margin-bottom: 40px;
   position: relative;
-  overflow: hidden;
-  max-width: 1000px;
-  margin: 0 auto;
+  left: -20px;                
+  font-family: 'Sunrise Orange', sans-serif;
 }
 
+.nav {
+  position: fixed;
+  bottom: 20px;
+  display: flex;
+  gap: 1rem;
+}
 
-.slide {
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+/* ====== LOGO ====== */
+.logo {
+  display: block;
+  margin: 0 auto 40px auto;
+  width: 350px;          
+  transition: transform 0.3s ease-in-out;
+}
+
+.logo:hover {
+  transform: scale(1.15); 
+}
+
+.contacto-titulo {
+  text-align: center;
+  font-size: 60px;
+  color: #000000;
+  font-weight: bold;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  text-shadow: 
+    -1px -1px 0 #fff,
+    1px -1px 0 #fff,
+    -1px 1px 0 #fff,
+    1px 1px 0 #fff;
+  font-family: 'Sunrise Orange', sans-serif;
+}
+
+.contacto {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1px; 
-  transition: opacity 1s ease;
-  height: 450px;
-  border-radius: 20px;      
-  overflow: hidden;          
-  background-color: #fff;  
+  gap: 15px;
+  text-decoration: none;  
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-
-.slide.activo {
-  opacity: 1;
-  position: relative;
+.contacto:hover {
+  transform: scale(1.2);  
 }
 
-
-.imagen-carrusel {
-  width: 480px;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 20px 0 0 20px; 
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+.telefono {
+  font-size: 50px;
+  color: #f40000;
+  font-weight: bold;
 }
 
-.texto-carrusel {
-  background-color: #ee70ae;
-  color: white;
-  padding: 25px;
-  width: 440px;
-  height: 100%;
-  text-align: left;
+.contacto img {
+  width: 45px;
+  height: 45px;
+}
+
+.productos {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   justify-content: center;
-  border-radius: 0 20px 20px 0;
-}
-
-
-.texto-carrusel h3 {
-  font-family: 'Funkie Retro', sans-serif;
-  font-size: 1.9rem;
-  margin-bottom: 15px;
-}
-
-.texto-carrusel p {
-  font-size: 1rem;
-  line-height: 1.5;
-}
-
-
-.indicadores {
+  gap: 20px;
   margin-top: 30px;
 }
 
-.dot {
-  height: 12px;
-  width: 12px;
-  margin: 0 6px;
-  background-color: #dc85af;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.3s ease;
-}
-
-.dot.activo {
-  background-color: #000000;
-}
-
-
-@media (max-width: 800px) {
-  .slide {
-    flex-direction: column;
-    height: auto;
-    gap: 15px;
-  }
-
-  .imagen-carrusel {
-    width: 90%;
-    height: auto;
-  }
-
-  .texto-carrusel {
-    width: 90%;
-    height: auto;
-    text-align: center;
-  }
-}
-
-/* ===============================
-  SECCIÓN PRODUCTOS
-================================ */
-.productos {
-  text-align: center;
-  padding: 80px 20px;
-  position: relative;
-  z-index: 1;
-  margin-top: -100px; 
-}
-
-.titulo-productos {
-  font-family: 'Funkie Retro', sans-serif;
-  font-size: 3rem;
-  color: #2f0052;
-  margin-bottom: 50px;
-}
-
-
-.fondo-rosado {
-  background-color: rgba(238, 112, 174, 0.25); 
-  border-radius: 30px;
-  padding: 50px 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-}
-
-
-.grid-productos {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr); /* 6 columnas */
-  gap: 40px;
-  justify-items: center;
-}
-
-
-.producto {
+.tarjeta {
+  width: 90%;              
   display: flex;
-  flex-direction: column;
   align-items: center;
-  text-align: center;
-}
-
-.producto img {
-  width: 130px;
-  height: 130px;
-  object-fit: cover;
-  border-radius: 50%; 
-  border: 4px solid #ee70ae;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  background-color: #fff;
-}
-
-.producto img:hover {
-  transform: scale(1.1);
-  box-shadow: 0 6px 12px rgba(238, 112, 174, 0.4);
-}
-
-.producto p {
-  margin-top: 12px;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  color: #3a003f;
-  font-size: 1rem;
-}
-
-
-@media (max-width: 1100px) {
-  .grid-productos {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-@media (max-width: 800px) {
-  .grid-productos {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (max-width: 500px) {
-  .grid-productos {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
-  }
-
-  .producto img {
-    width: 100px;
-    height: 100px;
-  }
-}
-
-/* ============================
-   SECCIÓN: RAZONES / POR QUÉ ESCOGERNOS
-   ============================ */
-.razones-seccion {
-  padding: 100px 60px;
-  text-align: center;
-  margin-top: -100px; 
-}
-
-.razones-titulo {
-  font-size: 2.2rem;
-  font-weight: bold;
-  color: #3a003f;
-  margin-bottom: 60px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-family: 'Funkie Retro', sans-serif;
-}
-
-/* 🔹 Contenedor de las tres tarjetas */
-.razones-contenedor {
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-  gap: 40px;
-  flex-wrap: wrap;
-}
-
-/* 🔹 Estilo de cada tarjeta */
-.razon-card {
-  background-color: #ffffff;
-  width: 320px;
-  height: 460px; /* 🔧 Más alta que ancha */
-  padding: 30px 25px;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.razon-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
-}
-
-.razon-subtitulo {
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: #333;
-  margin-bottom: 15px;
-}
-
-.razon-texto {
-  font-size: 1rem;
-  color: #555;
-  line-height: 1.6;
-  text-align: justify;
-}
-
-/* ============================
-   RESPONSIVE
-   ============================ */
-@media (max-width: 800px) {
-  .razones-contenedor {
-    gap: 25px;
-  }
-
-  .razon-card {
-    width: 280px;
-    height: 420px;
-  }
-}
-
-@media (max-width: 500px) {
-  .razones-seccion {
-    padding: 60px 20px;
-  }
-
-  .razones-titulo {
-    font-size: 1.8rem;
-    margin-bottom: 40px;
-  }
-
-  .razones-contenedor {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .razon-card {
-    width: 90%;
-    height: auto;
-  }
-}
-
-/* === SECCIÓN EVENTOS === */
-.eventos {
-  padding: 40px 40px 100px 20px; 
-  text-align: center;
-  margin-top: -100px; 
-}
-
-.eventos-header {
-  margin-bottom: 70px;
-  text-align: center;
-  position: relative;
-}
-
-.eventos-title {
-  font-size: 46px;
-  font-weight: 800;
-  background: linear-gradient(90deg, #ff6600, #43a047);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  letter-spacing: 2px;
-  margin-bottom: 15px;
-}
-
-.eventos-title::after {
-  content: "";
-  display: block;
-  width: 120px;
-  height: 4px;
-  background: linear-gradient(90deg,#2f0052);
-  margin: 15px auto 0;
-  border-radius: 2px;
-}
-
-.eventos-subtitle-frase {
-  font-size: 20px;
-  color: #000000;
-  font-weight: 500;
-  max-width: 700px;
-  margin: 15px auto 0;
-  line-height: 1.6;
-}
-
-.eventos-grid {
-  display: flex;
-  justify-content: center;
-  gap: 33px;
-  flex-wrap: wrap;
-  max-width: 1300px;
-  margin: 0 auto;
-}
-
-.evento-card {
-  position: relative;
-  width: 300px;
-  height: 380px;
+  justify-content: flex-start;
   border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-  cursor: pointer;
-  transition: transform 0.4s ease;
-}
-
-.evento-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.6s ease;
-}
-
-.evento-card .overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  transform: translateX(-100%);
-  transition: transform 0.5s ease, background 0.5s ease;
-  text-align: center;
-  padding: 20px;
-}
-
-.evento-card .overlay img {
-  max-width: 160px;
-  margin-bottom: 15px;
-  opacity: 0;
-  transform: translateY(15px);
-  transition: opacity 0.4s ease, transform 0.4s ease;
-}
-
-.evento-card .overlay img {
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;    
-  object-fit: cover;       
-  opacity: 0;
-  transform: translateY(15px);
-  transition: opacity 0.4s ease, transform 0.4s ease;
-}
-
-.evento-card:hover img {
-  transform: scale(1.15);
-}
-
-.evento-card:hover .overlay {
-  transform: translateX(0);
-  background: rgba(0,0,0,0.5);
-}
-
-.evento-card:hover .overlay img,
-.evento-card:hover .overlay p {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.evento-card:hover .overlay {
-  background: var(--overlay-color, rgba(0,0,0,0.5));
-}
-
-.mobile-version {
-  display: none;
-}
-
-/* 📱 Versión móvil simplificada (355px aprox) */
-@media (max-width: 400px) {
-  .desktop-version {
-    display: none !important;
-  }
-
-  .mobile-version {
-    display: block;
-    padding: 30px 20px 60px;
-    text-align: center;
-  }
-
-  .mobile-version .eventos-subtitle {
-    font-size: 22px;
-    color: #ff0000;
-    letter-spacing: 3px;
-  }
-
-  .mobile-version .eventos-title {
-    font-size: 32px;
-    font-weight: 800;
-    background: linear-gradient(90deg, #2f0052);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-bottom: 25px;
-  }
-
-  .eventos-grid-simple {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* 🔹 Dos columnas */
-    gap: 10px;
-    justify-items: center;
-  }
-
-  .eventos-grid-simple img {
-    width: 100%;
-    border-radius: 12px;
-    object-fit: cover;
-    height: 150px;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
-  }
-}
-
-.eventos-grid-simple a {
-  display: block;
-  width: 100%;
-}
-
-.eventos-grid-simple a img {
-  width: 100%;
-  border-radius: 12px;
-  object-fit: cover;
-  height: 150px;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  padding: 25px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease;
 }
 
-.eventos-grid-simple a:active img,
-.eventos-grid-simple a:hover img {
-  transform: scale(1.03);
+.tarjeta:hover {
+  transform: scale(1.05);
 }
 
-/* ===============================
-   PIE DE PÁGINA
-================================ */
-.footer {
-  background-color: #ee70ae;
-  color: white;
-  padding: 60px 20px 30px;
-  text-align: center;
-  font-family: 'Poppins', sans-serif;
-  margin-top: -60px;
+.tarjeta img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-right: 20px;
+  background: white;
+  padding: 5px;
 }
 
-.footer-contenedor {
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 40px;
-  max-width: 1200px;
-  margin: 0 auto;
+.info h3 {
+  font-size: 26px;
+  margin: 0 0 10px 0;
+  font-family: 'Sunrise Orange', sans-serif;
 }
 
-.footer-logo img {
-  width: 130px;
-  margin-bottom: 15px;
+.info p {
+  font-size: 18px;
+  margin: 0;
+  color: #222;
 }
 
-.footer-logo p {
-  font-size: 1rem;
-  line-height: 1.6;
-  max-width: 250px;
-  margin: 0 auto;
-}
-
-.footer-enlaces h4,
-.footer-contacto h4 {
-  font-size: 1.6rem;
-  margin-bottom: 15px;
-  color: #fff;
-}
-
-.footer-enlaces ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-enlaces li {
-  margin: 8px 0;
-}
-
-.footer-enlaces a {
-  color: white;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.footer-enlaces a:hover {
-  color: #2f0052;
-}
-
-.footer-contacto p {
-  margin: 6px 0;
-  font-size: 0.95rem;
-}
-
-.footer-redes {
-  margin-top: 15px;
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-}
-
-.footer-redes img {
-  width: 28px;
-  height: 28 px;
-  transition: transform 0.3s ease;
-}
-
-.footer-redes img:hover {
-  transform: scale(1.15);
-}
-
-.footer-derechos {
-  margin-top: 40px;
-  border-top: 1px solid rgba(255, 255, 255, 0.3);
-  padding-top: 15px;
-  font-size: 0.9rem;
-  opacity: 0.9;
-}
-
-/* 📱 Responsive */
-@media (max-width: 700px) {
-  .footer-contenedor {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .footer-logo p {
-    max-width: 100%;
-  }
-}
-
-/* ==========================
-   Ícono flotante de WhatsApp (versión imagen pura)
-========================== */
-.whatsapp-float {
-  position: fixed;
-  bottom: 25px;
-  right: 25px;
-  z-index: 9999;
-  display: inline-block;
-  transition: transform 0.3s ease, filter 0.3s ease;
-}
-
-.whatsapp-float img {
-  width: 120px; /* ajusta según tamaño real de tu imagen */
-  height: auto;
-  cursor: pointer;
-  user-select: none;
-}
-
-.whatsapp-float:hover {
-  transform: scale(1.15);
-  filter: brightness(1.1);
-}
-
-/* Versión móvil (ligeramente más pequeña) */
-@media (max-width: 600px) {
-  .whatsapp-float img {
-    width: 100px;
-  }
-
-  .whatsapp-float {
-    bottom: 18px;
-    right: 18px;
-  }
-}
+/* ====== COLORES ====== */
+.azul     { background: #8ee0ff; }
+.amarilla { background: #ffe68f; }
+.rosada   { background: #ffb7d5; }
+.verde    { background: #b6ff9f; }
