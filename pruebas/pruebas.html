@@ -6,28 +6,75 @@
   <title>Catálogo Interactivo</title>
   <link rel="stylesheet" href="catalogo-snacks.css" />
   <link href="https://fonts.cdnfonts.com/css/sunrise-orange" rel="stylesheet">
+  <link rel="icon" href="../../../img/index/logo-carritos-snacks-jjr.svg" type="image/svg+xml">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/retro-morey" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/care-dairy" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/funkie-retro" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/faith-hope" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/basaliation" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/ikka-rounded" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/theola-kids" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/gasoek-one" rel="stylesheet">
+  <link rel="stylesheet" href="carritos-snacks.css" />
 </head>
-<body>
-  <div id="catalog">
-    <div class="page" id="page1">
-      <h1 class="titulo">CATÁLOGO</h1>
-       <!-- 👇 Tu logo -->
-      <img src="../../../img/index/logo-carritos-snacks-jjr.svg" alt="Logo de la marca" class="logo">
- <h2 class="contacto-titulo">CONTACTO</h2>
-<a 
-  href="https://wa.me/51919283481?text=Hola,%20quisiera%20información%20sobre%20los%20carritos%20snacks" 
-  target="_blank" 
-  class="contacto"
->
-  <span class="telefono">919283481</span>
-  <img src="../../../img/index/icon-wsp.svg" alt="WhatsApp">
+ 
+<!--===============================
+SECCION DE LA CABEZA
+================================ -->
+<header>
+  <div class="logo">
+  <img src="../../../img/index/logo-carritos-snacks-jjr.svg" alt="Logo Carritos Snacks">
+</div>
+<nav class="menu">
+<a href="../carritos-snacks/carritos-album.html" class="menu-item">
+<img 
+    src="../../../img/carritos-snacks-jjr/logo-album.svg"  
+    data-alt="../../../img/carritos-snacks-jjr/logo-album-2.svg" 
+    alt="Album">
+    <span>Album</span>
 </a>
 
-  <!-- 👇 Aquí empiezan las tarjetas directamente dentro de la página -->
-  <div class="productos">
+<a href="tel:919283481" class="menu-item">
+  <img 
+    src="../../../img/carritos-snacks-jjr/logo-contacto.svg"  
+    data-alt="../../../img/carritos-snacks-jjr/logo-contacto-2.svg" 
+    alt="Contacto">
+  <span>Contacto</span>
+</a>
 
+<a href="carritos-snacks.html" class="menu-item">
+    <img 
+    src="../../../img/carritos-snacks-jjr/logo-nosotros.svg"  
+    data-alt="../../../img/carritos-snacks-jjr/logo-nosotros-2.svg" 
+    alt="Nosotros">
+    <span>INICIO</span>
+  </a>
+
+<a href="../../../index.html" class="menu-item">
+    <img 
+    src="../../../img/carritos-snacks-jjr/logo-mas-servicios.svg"  
+    data-alt="../../../img/carritos-snacks-jjr/logo-mas-servicios-2.svg" 
+    alt="mas servicios">
+    <span>Mas Servicios</span>
+  </a>
+</nav>
+
+  <img 
+    src="../../../img/carritos-snacks-jjr/decorado-chocolate.svg" 
+    alt="Decorado Chocolate" 
+    class="decorado-chocolate">
+  </header>
+  <div class="cinta-derretida"></div>
+
+<!-- 👇 Título nuevo -->
+<h1 class="titulo-catalogo">CATÁLOGO</h1>
+ <!-- 👇 Aquí empiezan las tarjetas directamente dentro de la página -->
+  <section class="seccion-productos">
+    <div class="fondo-rosado">
+ <div class="productos">
     <div class="tarjeta azul">
-      <img src="img/popcorn.png" alt="Pop corn">
+      <img src="../../../img/carritos-snacks-jjr/producto-1.svg" alt="Pop corn">
       <div class="info">
         <h3>Pop corn</h3>
         <p>50 unidades — <strong>S/. 220</strong></p>
@@ -35,26 +82,26 @@
       </div>
     </div>
 
-    <div class="tarjeta amarilla">
-      <img src="img/algodon.png" alt="Algodón dulce">
+    <div class="tarjeta anaranjado">
+      <img src="../../../img/carritos-snacks-jjr/producto-2.svg" alt="Algodón dulce">
       <div class="info">
-        <h3>Algodón dulce</h3>
+        <h3>Algodón Dulce</h3>
         <p>50 unidades — <strong>S/. 230</strong></p>
         <p>100 unidades — <strong>S/. 350</strong></p>
       </div>
     </div>
 
-    <div class="tarjeta rosada">
-      <img src="img/manzana-acaramelada.png" alt="Manzana acaramelada">
+    <div class="tarjeta amarilla">
+      <img src="../../../img/carritos-snacks-jjr/producto-3.svg" alt="Algodón dulce">
       <div class="info">
         <h3>Manzana acaramelada</h3>
         <p>50 unidades — <strong>S/. 220</strong></p>
         <p>100 unidades — <strong>S/. 340</strong></p>
       </div>
     </div>
-
+    
     <div class="tarjeta verde">
-      <img src="img/manzana-achocolatada.png" alt="Manzana achocolatada">
+      <img src="../../../img/carritos-snacks-jjr/producto-4.svg" alt="Manzana achocolatada">
       <div class="info">
         <h3>Manzana achocolatada</h3>
         <p>50 unidades — <strong>S/. 230</strong></p>
@@ -62,8 +109,8 @@
       </div>
     </div>
 
-    <div class="tarjeta amarilla">
-      <img src="img/churros.png" alt="Churros">
+    <div class="tarjeta rosada">
+      <img src="../../../img/carritos-snacks-jjr/producto-5.svg" alt="Manzana acaramelada">
       <div class="info">
         <h3>Churros</h3>
         <p>50 unidades — <strong>S/. 230</strong></p>
@@ -71,133 +118,607 @@
       </div>
     </div>
 
-      <div class="tarjeta azul">
-      <img src="img/popcorn.png" alt="Pop corn">
+    <div class="tarjeta azul">
+      <img src="../../../img/carritos-snacks-jjr/producto-6.svg" alt="Manzana achocolatada">
       <div class="info">
         <h3>Donuts</h3>
+        <p>50 unidades — <strong>S/. 240</strong></p>
+        <p>100 unidades — <strong>S/. 410</strong></p>
+      </div>
+    </div>
+
+    <div class="tarjeta anaranjado">
+      <img src="../../../img/carritos-snacks-jjr/producto-7.svg" alt="Churros">
+      <div class="info">
+        <h3>Mazamorra morada</h3>
+        <p>50 unidades — <strong>S/. 280</strong></p>
+        <p>100 unidades — <strong>S/. 440</strong></p>
+      </div>
+    </div>
+
+      <div class="tarjeta amarilla">
+      <img src="../../../img/carritos-snacks-jjr/producto-8.svg" alt="Pop corn">
+      <div class="info">
+        <h3>Arroz con leche</h3>
+        <p>50 unidades — <strong>S/. 350</strong></p>
+        <p>100 unidades — <strong>S/. 480</strong></p>
+      </div>
+    </div>
+
+    <div class="tarjeta verde">
+      <img src="../../../img/carritos-snacks-jjr/producto-9.svg" alt="Algodón dulce">
+      <div class="info">
+        <h3>Combinado</h3>
+        <p>50 unidades — <strong>S/. 370</strong></p>
+        <p>100 unidades — <strong>S/. 500</strong></p>
+      </div>
+    </div>
+
+    <div class="tarjeta azul">
+      <img src="../../../img/carritos-snacks-jjr/producto-10.svg" alt="Convinado ">
+      <div class="info">
+        <h3>Helados</h3>
+        <p>100 unidades — <strong>S/. 430</strong></p>
+      </div>
+    </div>
+
+    <div class="tarjeta anaranjado">
+      <img src="../../../img/carritos-snacks-jjr/producto-11.svg" alt="Algodón dulce">
+      <div class="info">
+        <h3>Panchos</h3>
         <p>50 unidades — <strong>S/. 220</strong></p>
-        <p>100 unidades — <strong>S/. 280</strong></p>
+        <p>100 unidades — <strong>S/. 300</strong></p>
       </div>
     </div>
 
      <div class="tarjeta amarilla">
-      <img src="img/algodon.png" alt="Algodón dulce">
+      <img src="../../../img/carritos-snacks-jjr/producto-12.svg" alt="Pop corn">
       <div class="info">
-        <h3>Mazamorra Morada</h3>
-        <p>50 unidades — <strong>S/. 230</strong></p>
-        <p>100 unidades — <strong>S/. 350</strong></p>
-      </div>
-    </div>
-
-    <div class="tarjeta rosada">
-      <img src="img/manzana-acaramelada.png" alt="Manzana acaramelada">
-      <div class="info">
-        <h3>Arroz con leche</h3>
-        <p>50 unidades — <strong>S/. 220</strong></p>
-        <p>100 unidades — <strong>S/. 340</strong></p>
-      </div>
-    </div>
-
-  <div class="tarjeta verde">
-      <img src="img/manzana-achocolatada.png" alt="Convinado ">
-      <div class="info">
-        <h3>Manzana achocolatada</h3>
-        <p>50 unidades — <strong>S/. 230</strong></p>
-        <p>100 unidades — <strong>S/. 350</strong></p>
-      </div>
-    </div>
-
-    <div class="tarjeta amarilla">
-      <img src="img/algodon.png" alt="Algodón dulce">
-      <div class="info">
-        <h3>Helado</h3>
-        <p>50 unidades — <strong>S/. 230</strong></p>
-        <p>100 unidades — <strong>S/. 350</strong></p>
-      </div>
-    </div>
-
-     <div class="tarjeta azul">
-      <img src="img/popcorn.png" alt="Pop corn">
-      <div class="info">
-        <h3>Donuts</h3>
-        <p>50 unidades — <strong>S/. 220</strong></p>
-        <p>100 unidades — <strong>S/. 280</strong></p>
-      </div>
-    </div>
-
-      <div class="tarjeta amarilla">
-      <img src="img/algodon.png" alt="Algodón dulce">
-      <div class="info">
-        <h3>Mazamorra Morada</h3>
-        <p>50 unidades — <strong>S/. 230</strong></p>
-        <p>100 unidades — <strong>S/. 350</strong></p>
-      </div>
-    </div>
-
-    <div class="tarjeta rosada">
-      <img src="img/manzana-acaramelada.png" alt="Manzana acaramelada">
-      <div class="info">
-        <h3>Arroz con leche</h3>
-        <p>50 unidades — <strong>S/. 220</strong></p>
-        <p>100 unidades — <strong>S/. 340</strong></p>
-      </div>
-    </div>
-
-      <div class="tarjeta azul">
-      <img src="img/popcorn.png" alt="Pop corn">
-      <div class="info">
-        <h3>Donuts</h3>
-        <p>50 unidades — <strong>S/. 220</strong></p>
-        <p>100 unidades — <strong>S/. 280</strong></p>
-      </div>
-      </div>
-      
-      <div class="tarjeta amarilla">
-      <img src="img/algodon.png" alt="Algodón dulce">
-      <div class="info">
-        <h3>Mazamorra Morada</h3>
-        <p>50 unidades — <strong>S/. 230</strong></p>
-        <p>100 unidades — <strong>S/. 350</strong></p>
-      </div>
-    </div>
-      
-    <div class="tarjeta rosada">
-      <img src="img/manzana-acaramelada.png" alt="Manzana acaramelada">
-      <div class="info">
-        <h3>Arroz con leche</h3>
-        <p>50 unidades — <strong>S/. 220</strong></p>
-        <p>100 unidades — <strong>S/. 340</strong></p>
+        <h3>Pan con hot dog</h3>
+        <p>50 unidades — <strong>S/. 380</strong></p>
+        <p>100 unidades — <strong>S/. 580</strong></p>
       </div>
     </div>
 
       <div class="tarjeta verde">
-      <img src="img/manzana-achocolatada.png" alt="Convinado ">
+      <img src="../../../img/carritos-snacks-jjr/producto-13.svg" alt="Algodón dulce">
       <div class="info">
-        <h3>Manzana achocolatada</h3>
-        <p>50 unidades — <strong>S/. 230</strong></p>
-        <p>100 unidades — <strong>S/. 350</strong></p>
+        <h3>Hamburguesa</h3>
+        <p>50 unidades — <strong>S/. 450</strong></p>
+        <p>100 unidades — <strong>S/. 770</strong></p>
       </div>
-    </div> 
+    </div>
 
-       <div class="tarjeta amarilla">
-      <img src="img/algodon.png" alt="Algodón dulce">
+    <div class="tarjeta rosada">
+      <img src="../../../img/carritos-snacks-jjr/producto-14.svg" alt="Manzana acaramelada">
       <div class="info">
-        <h3>Mazamorra Morada</h3>
-        <p>50 unidades — <strong>S/. 230</strong></p>
-        <p>100 unidades — <strong>S/. 350</strong></p>
+        <h3>Brochetas</h3>
+        <p>50 unidades — <strong>S/. 540</strong></p>
+        <p>100 unidades — <strong>S/. 760</strong></p>
+      </div>
+    </div>
+
+      <div class="tarjeta azul">
+      <img src="../../../img/carritos-snacks-jjr/producto-15.svg" alt="Pop corn">
+      <div class="info">
+        <h3>Choripan</h3>
+        <p>50 unidades — <strong>S/. 410</strong></p>
+        <p>100 unidades — <strong>S/. 770</strong></p>
+      </div>
+      </div>
+      
+  
+    <div class="tarjeta anaranjado">
+      <img src="../../../img/carritos-snacks-jjr/producto-16.svg" alt="Algodón dulce">
+      <div class="info">
+        <h3>Mini sachipapa</h3>
+        <p>50 unidades — <strong>S/. 350</strong></p>
+        <p>100 unidades — <strong>S/. 550</strong></p>
       </div>
     </div>
       
+    <div class="tarjeta amarilla">
+      <img src="../../../img/carritos-snacks-jjr/producto-17.svg" alt="Manzana acaramelada">
+      <div class="info">
+        <h3>Mini pan hot dog</h3>
+        <p>50 unidades — <strong>S/. 320</strong></p>
+        <p>100 unidades — <strong>S/. 450</strong></p>
+      </div>
+    </div>
 
+      <div class="tarjeta verde">
+      <img src="../../../img/carritos-snacks-jjr/producto-18.svg" alt="Convinado ">
+      <div class="info">
+        <h3>Mini BURGER</h3>
+        <p>50 unidades — <strong>S/. 410</strong></p>
+        <p>100 unidades — <strong>S/. 530</strong></p>
+      </div>
+    </div> 
 
+        <div class="tarjeta rosada">
+        <img src="../../../img/carritos-snacks-jjr/producto-19.svg" alt="Algodón dulce">
+        <div class="info">
+          <h3>Mini choripan</h3>
+          <p>50 unidades — <strong>S/. 330</strong></p>
+          <p>100 unidades — <strong>S/. 480</strong></p>
+        </div>
+      </div>
 
+      <div class="tarjeta azul">
+      <img src="../../../img/carritos-snacks-jjr/producto-20.svg" alt="Pop corn">
+      <div class="info">
+        <h3>Wafles</h3>
+        <p>50 unidades — <strong>S/. 410</strong></p>
+        <p>100 unidades — <strong>S/. 600</strong></p>
+      </div>
+      </div>
 
+      <div class="tarjeta anaranjado">
+      <img src="../../../img/carritos-snacks-jjr/producto-21.svg" alt="Algodón dulce">
+      <div class="info">
+        <h3>Chicha morada</h3>
+        <p>50 unidades — <strong>S/. 250</strong></p>
+        <p>100 unidades — <strong>S/. 380</strong></p>
+      </div>
+    </div>
 
-  </div>
-</div>
-</div>
+    <div class="tarjeta amarilla">
+      <img src="../../../img/carritos-snacks-jjr/producto-22.svg" alt="Algodón dulce">
+      <div class="info">
+        <h3>Inka Kola 300 ml</h3>
+        <p>50 unidades — <strong>S/. 210</strong></p>
+        <p>100 unidades — <strong>S/. 320</strong></p>
+      </div>
+    </div>
+
+    <div class="tarjeta verde">
+      <img src="../../../img/carritos-snacks-jjr/producto-23.svg" alt="Algodón dulce">
+      <div class="info">
+        <h3>Coca Cola 300 ml</h3>
+        <p>50 unidades — <strong>S/. 210</strong></p>
+        <p>100 unidades — <strong>S/. 320</strong></p>
+      </div>
+    </div>
+
+      <div class="tarjeta rosada">
+      <img src="../../../img/carritos-snacks-jjr/producto-24.svg" alt="Algodón dulce">
+      <div class="info">
+        <h3>fanta 300 ml</h3>
+        <p>50 unidades — <strong>S/. 210</strong></p>
+        <p>100 unidades — <strong>S/. 320</strong></p>
+      </div>
+    </div>
+
+    <div class="tarjeta azul">
+      <img src="../../../img/carritos-snacks-jjr/producto-25.svg" alt="Algodón dulce">
+      <div class="info">
+        <h3>Agua cielo Kids</h3>
+        <p>50 unidades — <strong>S/. 170</strong></p>
+        <p>100 unidades — <strong>S/. 270</strong></p>
+      </div>
+    </div>
+</div> 
+  </section>
+
+  <!-- ===============================
+      SECCIÓN DE COMBOS
+================================ -->
+<h2 class="titulo-catalogo">COMBOS</h2>
+
+<section class="seccion-combos">
+  <div class="fondo-rosado">
+    <div class="combos">
+      <!-- COMBO 01 -->
+      <div class="combo">
+        <h3>COMBO 01</h3>
+        <table class="tabla-combo">
+          <thead>
+            <tr>
+              <th>IMAGEN REFERENCIAL</th>
+              <th>SNACK</th>
+              <th>100 UNIDADES</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><img src="../../../img/carritos-snacks-jjr/producto-1.svg" alt="Panchos"></td>
+              <td>Pop corn</td>
+              <td rowspan="3" class="precio">S/ 610.00</td>
+            </tr>
+            <tr>
+              <td><img src="../../../img/carritos-snacks-jjr/producto-2.svg" alt="Algodones"></td>
+              <td>ALGODONES</td>
+            </tr>
+            <tr>
+              <td><img src="../../../img/carritos-snacks-jjr/foto-1.png" alt="Carrito"></td>
+              <td><strong>2 CARRITOS</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- COMBO 02 -->
+      <div class="combo">
+        <h3>COMBO 03</h3>
+        <table class="tabla-combo">
+          <thead>
+            <tr>
+              <th>IMAGEN REFERENCIAL</th>
+              <th>SNACK</th>
+              <th>100 UNIDADES</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><img src="../../../img/carritos-snacks-jjr/combo03-pancho.jpg" alt="Panchos"></td>
+              <td>PANCHOS</td>
+              <td rowspan="3" class="precio">S/ 610.00</td>
+            </tr>
+            <tr>
+              <td><img src="../../../img/carritos-snacks-jjr/combo03-algodon.jpg" alt="Algodones"></td>
+              <td>ALGODONES</td>
+            </tr>
+            <tr>
+              <td><img src="../../../img/carritos-snacks-jjr/combo03-carrito.jpg" alt="Carrito"></td>
+              <td><strong>2 CARRITOS</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- COMBO 03 -->
+      <div class="combo">
+        <h3>COMBO 03</h3>
+        <table class="tabla-combo">
+          <thead>
+            <tr>
+              <th>IMAGEN REFERENCIAL</th>
+              <th>SNACK</th>
+              <th>100 UNIDADES</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><img src="../../../img/carritos-snacks-jjr/combo03-pancho.jpg" alt="Panchos"></td>
+              <td>PANCHOS</td>
+              <td rowspan="3" class="precio">S/ 610.00</td>
+            </tr>
+            <tr>
+              <td><img src="../../../img/carritos-snacks-jjr/combo03-algodon.jpg" alt="Algodones"></td>
+              <td>ALGODONES</td>
+            </tr>
+            <tr>
+              <td><img src="../../../img/carritos-snacks-jjr/combo03-carrito.jpg" alt="Carrito"></td>
+              <td><strong>2 CARRITOS</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- COMBO 04 -->
+      <div class="combo">
+        <h3>COMBO 04</h3>
+        <table class="tabla-combo">
+          <thead>
+            <tr>
+              <th>IMAGEN REFERENCIAL</th>
+              <th>SNACK</th>
+              <th>100 UNIDADES</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><img src="../../../img/carritos-snacks-jjr/combo04-popcorn.jpg" alt="Pop Corn"></td>
+              <td>POP CORN</td>
+              <td rowspan="3" class="precio">S/ 580.00</td>
+            </tr>
+            <tr>
+              <td><img src="../../../img/carritos-snacks-jjr/combo04-manzana.jpg" alt="Manzanas"></td>
+              <td>MANZANAS</td>
+            </tr>
+            <tr>
+              <td><img src="../../../img/carritos-snacks-jjr/combo04-carrito.jpg" alt="Carrito"></td>
+              <td><strong>1 CARRITO</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+         <!-- COMBO 03 -->
+      <div class="combo">
+        <h3>COMBO 03</h3>
+        <table class="tabla-combo">
+          <thead>
+            <tr>
+              <th>IMAGEN REFERENCIAL</th>
+              <th>SNACK</th>
+              <th>100 UNIDADES</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><img src="../../../img/carritos-snacks-jjr/combo03-pancho.jpg" alt="Panchos"></td>
+              <td>PANCHOS</td>
+              <td rowspan="3" class="precio">S/ 610.00</td>
+            </tr>
+            <tr>
+              <td><img src="../../../img/carritos-snacks-jjr/combo03-algodon.jpg" alt="Algodones"></td>
+              <td>ALGODONES</td>
+            </tr>
+            <tr>
+              <td><img src="../../../img/carritos-snacks-jjr/combo03-carrito.jpg" alt="Carrito"></td>
+              <td><strong>2 CARRITOS</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+         <!-- COMBO 03 -->
+      <div class="combo">
+        <h3>COMBO 03</h3>
+        <table class="tabla-combo">
+          <thead>
+            <tr>
+              <th>IMAGEN REFERENCIAL</th>
+              <th>SNACK</th>
+              <th>100 UNIDADES</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><img src="../../../img/carritos-snacks-jjr/combo03-pancho.jpg" alt="Panchos"></td>
+              <td>PANCHOS</td>
+              <td rowspan="3" class="precio">S/ 610.00</td>
+            </tr>
+            <tr>
+              <td><img src="../../../img/carritos-snacks-jjr/combo03-algodon.jpg" alt="Algodones"></td>
+              <td>ALGODONES</td>
+            </tr>
+            <tr>
+              <td><img src="../../../img/carritos-snacks-jjr/combo03-carrito.jpg" alt="Carrito"></td>
+              <td><strong>2 CARRITOS</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+         <!-- COMBO 03 -->
+      <div class="combo">
+        <h3>COMBO 03</h3>
+        <table class="tabla-combo">
+          <thead>
+            <tr>
+              <th>IMAGEN REFERENCIAL</th>
+              <th>SNACK</th>
+              <th>100 UNIDADES</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><img src="../../../img/carritos-snacks-jjr/combo03-pancho.jpg" alt="Panchos"></td>
+              <td>PANCHOS</td>
+              <td rowspan="3" class="precio">S/ 610.00</td>
+            </tr>
+            <tr>
+              <td><img src="../../../img/carritos-snacks-jjr/combo03-algodon.jpg" alt="Algodones"></td>
+              <td>ALGODONES</td>
+            </tr>
+            <tr>
+              <td><img src="../../../img/carritos-snacks-jjr/combo03-carrito.jpg" alt="Carrito"></td>
+              <td><strong>2 CARRITOS</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+         <!-- COMBO 03 -->
+      <div class="combo">
+        <h3>COMBO 03</h3>
+        <table class="tabla-combo">
+          <thead>
+            <tr>
+              <th>IMAGEN REFERENCIAL</th>
+              <th>SNACK</th>
+              <th>100 UNIDADES</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><img src="../../../img/carritos-snacks-jjr/combo03-pancho.jpg" alt="Panchos"></td>
+              <td>PANCHOS</td>
+              <td rowspan="3" class="precio">S/ 610.00</td>
+            </tr>
+            <tr>
+              <td><img src="../../../img/carritos-snacks-jjr/combo03-algodon.jpg" alt="Algodones"></td>
+              <td>ALGODONES</td>
+            </tr>
+            <tr>
+              <td><img src="../../../img/carritos-snacks-jjr/combo03-carrito.jpg" alt="Carrito"></td>
+              <td><strong>2 CARRITOS</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+         <!-- COMBO 03 -->
+      <div class="combo">
+        <h3>COMBO 03</h3>
+        <table class="tabla-combo">
+          <thead>
+            <tr>
+              <th>IMAGEN REFERENCIAL</th>
+              <th>SNACK</th>
+              <th>100 UNIDADES</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><img src="../../../img/carritos-snacks-jjr/combo03-pancho.jpg" alt="Panchos"></td>
+              <td>PANCHOS</td>
+              <td rowspan="3" class="precio">S/ 610.00</td>
+            </tr>
+            <tr>
+              <td><img src="../../../img/carritos-snacks-jjr/combo03-algodon.jpg" alt="Algodones"></td>
+              <td>ALGODONES</td>
+            </tr>
+            <tr>
+              <td><img src="../../../img/carritos-snacks-jjr/combo03-carrito.jpg" alt="Carrito"></td>
+              <td><strong>2 CARRITOS</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+         <!-- COMBO 03 -->
+      <div class="combo">
+        <h3>COMBO 03</h3>
+        <table class="tabla-combo">
+          <thead>
+            <tr>
+              <th>IMAGEN REFERENCIAL</th>
+              <th>SNACK</th>
+              <th>100 UNIDADES</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><img src="../../../img/carritos-snacks-jjr/combo03-pancho.jpg" alt="Panchos"></td>
+              <td>PANCHOS</td>
+              <td rowspan="3" class="precio">S/ 610.00</td>
+            </tr>
+            <tr>
+              <td><img src="../../../img/carritos-snacks-jjr/combo03-algodon.jpg" alt="Algodones"></td>
+              <td>ALGODONES</td>
+            </tr>
+            <tr>
+              <td><img src="../../../img/carritos-snacks-jjr/combo03-carrito.jpg" alt="Carrito"></td>
+              <td><strong>2 CARRITOS</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+         <!-- COMBO 03 -->
+      <div class="combo">
+        <h3>COMBO 03</h3>
+        <table class="tabla-combo">
+          <thead>
+            <tr>
+              <th>IMAGEN REFERENCIAL</th>
+              <th>SNACK</th>
+              <th>100 UNIDADES</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><img src="../../../img/carritos-snacks-jjr/combo03-pancho.jpg" alt="Panchos"></td>
+              <td>PANCHOS</td>
+              <td rowspan="3" class="precio">S/ 610.00</td>
+            </tr>
+            <tr>
+              <td><img src="../../../img/carritos-snacks-jjr/combo03-algodon.jpg" alt="Algodones"></td>
+              <td>ALGODONES</td>
+            </tr>
+            <tr>
+              <td><img src="../../../img/carritos-snacks-jjr/combo03-carrito.jpg" alt="Carrito"></td>
+              <td><strong>2 CARRITOS</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+         <!-- COMBO 03 -->
+      <div class="combo">
+        <h3>COMBO 03</h3>
+        <table class="tabla-combo">
+          <thead>
+            <tr>
+              <th>IMAGEN REFERENCIAL</th>
+              <th>SNACK</th>
+              <th>100 UNIDADES</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><img src="../../../img/carritos-snacks-jjr/combo03-pancho.jpg" alt="Panchos"></td>
+              <td>PANCHOS</td>
+              <td rowspan="3" class="precio">S/ 610.00</td>
+            </tr>
+            <tr>
+              <td><img src="../../../img/carritos-snacks-jjr/combo03-algodon.jpg" alt="Algodones"></td>
+              <td>ALGODONES</td>
+            </tr>
+            <tr>
+              <td><img src="../../../img/carritos-snacks-jjr/combo03-carrito.jpg" alt="Carrito"></td>
+              <td><strong>2 CARRITOS</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+         <!-- COMBO 03 -->
+      <div class="combo">
+        <h3>COMBO 03</h3>
+        <table class="tabla-combo">
+          <thead>
+            <tr>
+              <th>IMAGEN REFERENCIAL</th>
+              <th>SNACK</th>
+              <th>100 UNIDADES</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><img src="../../../img/carritos-snacks-jjr/combo03-pancho.jpg" alt="Panchos"></td>
+              <td>PANCHOS</td>
+              <td rowspan="3" class="precio">S/ 610.00</td>
+            </tr>
+            <tr>
+              <td><img src="../../../img/carritos-snacks-jjr/combo03-algodon.jpg" alt="Algodones"></td>
+              <td>ALGODONES</td>
+            </tr>
+            <tr>
+              <td><img src="../../../img/carritos-snacks-jjr/combo03-carrito.jpg" alt="Carrito"></td>
+              <td><strong>2 CARRITOS</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+         <!-- COMBO 03 -->
+      <div class="combo">
+        <h3>COMBO 03</h3>
+        <table class="tabla-combo">
+          <thead>
+            <tr>
+              <th>IMAGEN REFERENCIAL</th>
+              <th>SNACK</th>
+              <th>100 UNIDADES</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><img src="../../../img/carritos-snacks-jjr/combo03-pancho.jpg" alt="Panchos"></td>
+              <td>PANCHOS</td>
+              <td rowspan="3" class="precio">S/ 610.00</td>
+            </tr>
+            <tr>
+              <td><img src="../../../img/carritos-snacks-jjr/combo03-algodon.jpg" alt="Algodones"></td>
+              <td>ALGODONES</td>
+            </tr>
+            <tr>
+              <td><img src="../../../img/carritos-snacks-jjr/combo03-carrito.jpg" alt="Carrito"></td>
+              <td><strong>2 CARRITOS</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
     </div>
   </div>
+</section>
+
+
   <script src="catalogo-snacks.js"></script>
 </body>
 </html>

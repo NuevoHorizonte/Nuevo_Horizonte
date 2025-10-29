@@ -216,13 +216,21 @@ header {
   }
 }
 
+/* Agrupa toda la zona del catálogo */
+.seccion-productos {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+  width: 100%;
+}
 
+/* Productos dentro */
 .productos {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); 
-  gap: 25px; 
-  margin-top: 30px;
-  justify-items: center; 
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  justify-items: center;
+  width: 100%;
 }
 
 .tarjeta {
@@ -250,24 +258,37 @@ header {
   width: 120px;
   height: 120px;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 30px;
   margin-right: 10px;
-  background: rgb(255, 255, 255);
-  padding: 5px;
+  background: #ffffff;
+  padding: 1px; /* 🔹 borde blanco casi imperceptible */
 }
 
 .info h3 {
   font-size: 26px;
   margin: 0 0 10px 0;
   font-family: 'Sunrise Orange', sans-serif;
-  color: #000000;
+  font-weight: bold;
+  color: #000; /* texto principal */
+  text-shadow:
+    -1px -1px 0 #fff,  /* borde arriba-izquierda */
+     1px -1px 0 #fff,  /* borde arriba-derecha */
+    -1px  1px 0 #fff,  /* borde abajo-izquierda */
+     1px  1px 0 #fff;  /* borde abajo-derecha */
 }
 
 .info p {
   font-size: 18px;
   margin: 0;
-  color: #000000;
+  color: #171616;
+  font-weight: 600; /* semi-negrita */
+  text-shadow:
+    -0.8px -0.8px 0 #fff,
+     0.8px -0.8px 0 #fff,
+    -0.8px  0.8px 0 #fff,
+     0.8px  0.8px 0 #fff;
 }
+
 
 .azul     { background: #8ee0ff; }
 .amarilla { background: #ffe68f; }
@@ -276,14 +297,18 @@ header {
 .anaranjado { background: #ffb676; }
 
 .fondo-rosado {
-  background-color: rgba(238, 112, 174, 0.35); 
-  border-radius: 40px; 
-  padding: 80px 40px; 
-  margin: 40px auto; 
+  background-color: rgba(238, 112, 174, 0.35);
+  border-radius: 25px;
+  padding: 40px 30px; /* 🔹 Menos espacio */
+  margin: 60px auto; /* Centrado verticalmente */
   box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
-  max-width: 1200px; 
-  width: 90%;       
+  max-width: 950px; /* 🔹 Se ajusta al contenido de productos */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra los productos dentro */
 }
+
 
 .titulo-catalogo {
   text-align: center;
@@ -344,25 +369,24 @@ html, body {
 
 .fondo-rosado {
   background-color: rgba(238, 112, 174, 0.35);
-  border-radius: 40px;
-  padding: 50px 20px;
-  margin: 0 auto 40px auto; 
+  border-radius: 25px;
+  padding: 60px 60px; /* 🔹 más aire horizontal */
   box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
-  max-width: 1100px;
-  width: 90%;
-  position: relative;
-  left: 0;
-  right: 0;
+  max-width: 1200px; /* 🔹 más ancho total */
+  width: 90%; 
+  margin: 0 auto 60px auto;
+  display: flex;
+  justify-content: center;
 }
 
 .productos {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 25px;
-  justify-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* 💡 más ancho mínimo */
+  gap: 40px; /* un poco más de espacio entre ellas */
+  justify-items: stretch; /* 🟢 esto hace que las tarjetas se estiren */
   width: 100%;
-  margin: 0 auto;
 }
+
 
 @media (max-width: 400px) {
   .fondo-rosado {
@@ -377,12 +401,16 @@ html, body {
   }
 
   .tarjeta {
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-  }
+  width: 100%; /* ✅ se estira hasta el ancho asignado */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 20px;
+  padding: 35px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+  box-sizing: border-box;
+}
 
   .tarjeta img {
     width: 90px;
@@ -455,5 +483,229 @@ html, body {
 
   .info p {
     font-size: 17px;
+  }
+}
+
+/* =====================================
+   🧩 Ajuste final responsive 400–800px
+   ===================================== */
+
+@media (max-width: 800px) {
+  html, body {
+    overflow-x: hidden !important;
+  }
+
+  /* Corrige alineación del header y decoración */
+  header {
+    width: 100%;
+    overflow: hidden;
+    padding: 15px 15px;
+    box-sizing: border-box;
+  }
+
+  .decorado-chocolate {
+    right: 0;
+    width: 100px;
+  }
+
+  /* Ajuste fino del título */
+  .titulo-catalogo {
+    text-align: center;
+    font-size: clamp(2rem, 6vw, 3rem);
+    margin-top: 35px;
+    margin-bottom: 20px;
+  }
+
+  /* Fondo rosado centrado sin desbordar */
+  .fondo-rosado {
+    width: 94%;
+    max-width: 100%;
+    margin: 0 auto 40px auto;
+    padding: 50px 20px;
+    border-radius: 28px;
+    box-sizing: border-box;
+  }
+
+  /* Grilla flexible */
+  .productos {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 25px;
+    width: 100%;
+  }
+
+  /* Tarjetas limpias y centradas */
+  .tarjeta {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 25px 20px;
+    border-radius: 20px;
+    box-sizing: border-box;
+  }
+
+  .tarjeta img {
+    width: 100px;
+    height: 100px;
+    margin: 0 0 10px 0;
+  }
+
+  .info h3 {
+    font-size: 22px;
+  }
+
+  .info p {
+    font-size: 17px;
+  }
+
+  .fondo-rosado,
+  .productos,
+  .tarjeta {
+    overflow: hidden;
+  }
+}
+
+
+/* ===============================
+   SECCIÓN DE COMBOS
+=============================== */
+.seccion-combos {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 80px;
+  width: 100%;
+}
+
+.combos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 60px;
+  width: 100%;
+  max-width: 1200px;
+  align-items: flex-start;
+  justify-items: center;
+}
+
+.combo {
+  width: 90%;
+  max-width: 550px;
+  transition: transform 0.3s ease;
+}
+
+.combo:hover {
+  transform: scale(1.02);
+}
+
+.combo h3 {
+  font-size: 2.4rem;
+  color: #2f0052;
+  font-family: 'Gasoek One', sans-serif;
+  text-align: center;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+.tabla-combo {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.tabla-combo th {
+  background-color: #ff00a6;
+  color: white;
+  text-align: center;
+  padding: 10px 5px;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.tabla-combo td {
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #222;
+  padding: 15px;
+  border-bottom: 2px solid #f7b4da;
+  background: rgba(255,255,255,0.9);
+}
+
+.tabla-combo img {
+  width: 90px;
+  height: 90px;
+  border-radius: 12px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.tabla-combo img:hover {
+  transform: scale(1.08);
+}
+
+.tabla-combo .precio {
+  font-size: 1.6rem;
+  color: #2f0052;
+  font-weight: 800;
+  background-color: #ffe0f0;
+}
+
+.combo strong {
+  color: #d6007f;
+}
+
+/* ===============================
+   📱 Responsive: 900 px o menos
+   (Se convierte a 1 columna)
+=============================== */
+@media (max-width: 900px) {
+  .combos {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .combo {
+    max-width: 500px;
+  }
+
+  .combo h3 {
+    font-size: 2rem;
+  }
+
+  .tabla-combo td {
+    font-size: 1rem;
+  }
+}
+
+/* ===============================
+   📱 Responsive: 400 px o menos
+=============================== */
+@media (max-width: 400px) {
+  .combo h3 {
+    font-size: 1.6rem;
+  }
+
+  .tabla-combo th {
+    font-size: 0.8rem;
+    padding: 6px;
+  }
+
+  .tabla-combo td {
+    font-size: 0.85rem;
+    padding: 8px;
+  }
+
+  .tabla-combo img {
+    width: 65px;
+    height: 65px;
+  }
+
+  .tabla-combo .precio {
+    font-size: 1.1rem;
+    padding: 5px;
   }
 }
