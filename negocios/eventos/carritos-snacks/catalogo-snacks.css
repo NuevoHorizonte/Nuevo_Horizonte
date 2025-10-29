@@ -709,3 +709,39 @@ html, body {
     padding: 5px;
   }
 }
+
+
+/* ==========================
+  Ícono flotante de WhatsApp
+========================== */
+.whatsapp-float {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 9999;
+  display: inline-block;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.whatsapp-float img {
+  width: 120px; 
+  height: auto;
+  cursor: pointer;
+  user-select: none;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.15);
+  filter: brightness(1.1);
+}
+
+@media (max-width: 600px) {
+  .whatsapp-float img {
+    width: 100px;
+  }
+
+  .whatsapp-float {
+    bottom: 18px;
+    right: 18px;
+  }
+}
