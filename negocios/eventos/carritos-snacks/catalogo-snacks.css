@@ -313,8 +313,9 @@ header {
 .titulo-catalogo {
   text-align: center;
   font-size: 5rem;
-  color: #2f0052; 
-  font-family: 'Gasoek One', sans-serif;
+  color: #a3058e; 
+ font-family: 'Rastano', sans-serif;
+ 
   margin-top: 60px;
   margin-bottom: 20px;
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.15);
