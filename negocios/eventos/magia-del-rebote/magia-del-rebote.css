@@ -142,7 +142,7 @@
 
     /* 🔽 Nuevo: centrado vertical y desplazado a la izquierda */
     align-self: flex-start; /* lo lleva a la izquierda */
-    margin-left: 25px; /* ajusta cuánto a la izquierda lo querés */
+    margin-left: 90px; /* ajusta cuánto a la izquierda lo querés */
   }
 
   .cta-btn {
