@@ -1,34 +1,16 @@
-// ==========================
-//  CAMBIO DE IMÁGENES EN LA CABEZA + CAMBIO DE TEXTO SOLO EN CONTACTO
-// ==========================
 document.addEventListener("DOMContentLoaded", () => {
-  const menuItems = document.querySelectorAll(".menu-item");
+  const menuToggle = document.getElementById("menu-toggle");
+  const mainNav = document.getElementById("main-nav");
 
-  menuItems.forEach(item => {
-    const img = item.querySelector("img");
-    const span = item.querySelector("span");
-    const originalSrc = img.getAttribute("src");
-    const altSrc = img.getAttribute("data-alt");
-    const originalText = span.textContent;
+  menuToggle.addEventListener("click", () => {
+    mainNav.classList.toggle("active");
+  });
 
-    item.addEventListener("mouseenter", () => {
-      img.setAttribute("src", altSrc);
-      item.classList.add("hovered");
-
-      // 💬 Solo cambia el texto si es el menú de "Contacto"
-      if (originalText.trim().toLowerCase() === "contacto") {
-        span.textContent = "919283481";
-      }
-    });
-
-    item.addEventListener("mouseleave", () => {
-      img.setAttribute("src", originalSrc);
-      item.classList.remove("hovered");
-
-      // 💬 Regresa el texto original
-      if (originalText.trim().toLowerCase() === "contacto") {
-        span.textContent = originalText;
-      }
+  // 🔹 cerrar menú al hacer clic en un link
+  const navLinks = mainNav.querySelectorAll(".nav-link");
+  navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      mainNav.classList.remove("active");
     });
   });
 });

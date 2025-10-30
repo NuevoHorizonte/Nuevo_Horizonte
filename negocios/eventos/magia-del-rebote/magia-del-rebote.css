@@ -1,0 +1,202 @@
+  /* ======== ESTILOS GENERALES ======== */
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+  }
+
+  /* ======== CABECERA ======== */
+  .header {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px; /* más alto para que no corte el logo */
+    position: relative;
+    min-height: 130px; /* asegura suficiente espacio para el logo */
+  }
+
+  /* ======== LOGO ======== */
+  .logo-container {
+    position: absolute;
+    top: 55%; /* un poco más abajo que el centro visual */
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .logo {
+    width: 120px;
+    height: auto;
+    transition: transform 0.4s ease-in-out, filter 0.3s ease-in-out;
+    cursor: pointer;
+  }
+
+  .logo:hover {
+    transform: scale(1.1);
+  }
+
+  /* ======== BOTÓN DE WHATSAPP ======== */
+  .cta-container {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+
+  .cta-btn {
+    background-color: #ebdf5e;
+    color: #2d2c2c;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 0px;
+    border: 2px solid transparent;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease;
+  }
+
+  .cta-btn:hover {
+    background-color: #e2cf00;
+    transform: scale(1.05);
+  }
+
+  /* ======== REDES SOCIALES ======== */
+  .social-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .social-link {
+    text-decoration: none;
+  }
+
+  .social-icon {
+    width: 28px;
+    height: 28px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    cursor: pointer;
+  }
+
+  .social-icon:hover {
+    transform: scale(1.1);
+  }
+
+  /* ======== MENÚ PRINCIPAL DEBAJO DEL LOGO ======== */
+  .main-nav {
+    position: absolute;
+    top: 100%; /* justo debajo del logo */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 40px;
+    margin-top: 10px;
+  }
+
+  .nav-link {
+    text-decoration: none;
+    color: #2d2c2c;
+    font-weight: 600;
+    font-size: 15px;
+    transition: color 0.3s ease, transform 0.2s ease;
+  }
+
+  .nav-link:hover {
+    color: #e2cf00;
+    transform: scale(1.1);
+  }
+
+  /* Ocultar el botón hamburguesa por defecto (solo visible en móvil) */
+.menu-toggle {
+  display: none;
+}
+
+ @media (max-width: 400px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    min-height: auto;
+    position: relative;
+  }
+
+  /* Ocultamos redes */
+  .social-container {
+    display: none;
+  }
+
+  /* Centrar logo */
+  .logo-container {
+    position: static;
+    transform: none;
+    margin-top: 40px;
+  }
+
+  .logo {
+    width: 100px;
+  }
+
+  /* 📍 Ajuste del botón de cotización */
+  .cta-container {
+    order: 3;
+    margin-top: 15px;
+
+    /* 🔽 Nuevo: centrado vertical y desplazado a la izquierda */
+    align-self: flex-start; /* lo lleva a la izquierda */
+    margin-left: 25px; /* ajusta cuánto a la izquierda lo querés */
+  }
+
+  .cta-btn {
+    font-size: 14px;
+    padding: 10px 22px;
+  }
+
+  /* Botón hamburguesa */
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #2d2c2c;
+    z-index: 2000;
+  }
+
+  /* Menú hamburguesa */
+  .main-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    transform: translateY(-100%);
+    transition: transform 0.4s ease;
+    z-index: 1500;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .main-nav.active {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .nav-link {
+    font-size: 20px;
+    font-weight: bold;
+    color: #2d2c2c;
+  }
+
+  .nav-link:hover {
+    color: #e2cf00;
+  }
+}
