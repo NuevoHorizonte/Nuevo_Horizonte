@@ -1,5 +1,3 @@
-
-
 // ==========================
 //  CARRUSEL AUTOMÁTICO + CLIC MANUAL
 // ==========================
@@ -21,7 +19,6 @@ document.addEventListener("DOMContentLoaded", () => {
     mostrarSlide(indice);
   }
 
-  // Cambio con los dots (manual)
   dots.forEach((dot, i) => {
     dot.addEventListener("click", () => {
       indice = i;
@@ -29,17 +26,14 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Cambio automático cada 10 segundos
   let intervalo = setInterval(siguienteSlide, 8000);
 
-  // ✅ Cambio con clic en cualquier parte del carrusel
   contenedorCarrusel.addEventListener("click", () => {
     siguienteSlide();
     clearInterval(intervalo); // pausa el auto si clickea
     intervalo = setInterval(siguienteSlide, 8000); // reinicia luego
   });
 });
-
 
 // ======= EFECTO HOVER EN IMÁGENES DE SERVICIOS =======
 document.querySelectorAll('.servicio-item img').forEach(img => {
@@ -92,5 +86,24 @@ document.addEventListener("DOMContentLoaded", () => {
         span.textContent = originalText;
       }
     });
+  });
+});
+
+// ======= EFECTO HOVER EN IMÁGENES DE SERVICIOS =======
+document.querySelectorAll('.servicio-item img').forEach(img => {
+  const original = img.src;
+  const hover = img.dataset.hover;
+
+  img.addEventListener('mouseenter', () => img.src = hover);
+  img.addEventListener('mouseleave', () => img.src = original);
+});
+
+// ======= EVENTOS: COLOR DE OVERLAY DINÁMICO =======
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".evento-card").forEach(card => {
+    const color = card.dataset.color;
+    if (color) {
+      card.style.setProperty("--overlay-color", `${color}cc`); // cc = 80% opacidad
+    }
   });
 });

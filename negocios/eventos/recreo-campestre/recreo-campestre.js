@@ -41,3 +41,5 @@ setInterval(() => {
 window.addEventListener('resize', updateCarousel);
 
 updateCarousel();
+
+

@@ -331,7 +331,7 @@ header a {
 
 /* Cada bloque de línea del título */
 .hero-title .line-group {
-   display: block;
+  display: block;
   margin-bottom: 25px;
 }
 
@@ -428,7 +428,7 @@ header a {
     overflow: hidden;
   }
 
-   .hero img.hero-bg {
+  .hero img.hero-bg {
     width: 100%;
     height: 120%; /* un poquito más alto para cubrir posibles huecos */
     object-fit: cover;
@@ -473,7 +473,7 @@ header a {
     bottom: -80px;         /* 🔹 posición desde abajo */
     left: 50%;
     transform: translateX(-50%) scale(0.3);
-     animation: floatDownUp 0.3s ease-in-out infinite;
+    animation: floatDownUp 0.3s ease-in-out infinite;
   }
 }
 
@@ -623,16 +623,14 @@ header a {
     }
   }
 
-
-  
-  .servicios {
+    .servicios {
     min-height: 80vh;   
     text-align: center;
     padding: 6rem 2rem; 
     background-color: #ffffff; 
   }
 
-  .servicios-title {
+    .servicios-title {
     font-family: "Poppins", sans-serif;
     font-size: 3rem;    
     font-weight: 600;
@@ -640,17 +638,14 @@ header a {
     color: #222;
   }
 
-  .servicios-grid {
+    .servicios-grid {
     display: flex;
     flex-direction: column;
     gap: 3rem; 
     align-items: center;
   }
 
-
-
-
-  .servicios-row {
+    .servicios-row {
     display: flex;
     justify-content: center;
     gap: 5rem; 
@@ -714,7 +709,7 @@ header a {
   
   @media (max-width: 400px) {
   .servicios {
-    display: none !important; /* 🔹 oculta toda la sección */
+    display: none !important; 
   }
 }
 
@@ -796,7 +791,6 @@ header a {
   max-width: 1200px;
   margin: 0 auto;
 }
-
 
 .bungalows-info {
   display: flex;
@@ -916,7 +910,7 @@ header a {
 @media (max-width: 400px) {
   .bungalows {
   position: relative; 
-     padding: 60px 15px 180px; 
+    padding: 60px 15px 180px; 
     background: #f0ffeb;
   }
 
@@ -943,7 +937,6 @@ header a {
     height: auto;
   }
 
- 
   .bungalows-img {
   position: relative;
   width: 100%;
@@ -952,7 +945,7 @@ header a {
   align-items: center;
   min-height: 300px;
 }
-  
+
 .bungalows-img img {
   position: relative; 
   width: 90%;
@@ -972,7 +965,7 @@ header a {
 
 
   .bungalows-opciones {
-   position: absolute;  
+  position: absolute;  
   top: 410px;          
   left: 70%;          
   transform: translateX(-50%);
@@ -992,7 +985,7 @@ header a {
   }
 
   .bungalows-opciones .opcion img {
-     width: 60px;         
+  width: 60px;         
   height: 60px;
   margin-bottom: 6px;
   }
@@ -1001,7 +994,7 @@ header a {
   display: none !important;
 }
 
- .bungalows-boton {
+.bungalows-boton {
     position: absolute;    
     bottom: 15px;        
     left: 50%;
@@ -1033,8 +1026,8 @@ header a {
     transform: none !important;
   }
 
-  
- .bungalows-frase {
+
+.bungalows-frase {
   position: absolute;  
   top: 265px;        
   left: 5%;             
@@ -1284,19 +1277,15 @@ font-family: 'Chekharda', sans-serif;
   transform: scale(1.05);
 }
 
-
-  /* === ACADEMIA EN PANTALLAS GRANDES === */
 .academia-grid {
-  display: flex; /* 👈 cambiamos a flex para más control */
-  justify-content: center; /* centra los círculos */
+  display: flex; 
+  justify-content: center;
   align-items: center;
-  flex-wrap: nowrap; /* 👈 evita que bajen a otra línea */
-  gap: 80px; /* 🔹 aumenta el espacio entre círculos */
+  flex-wrap: nowrap; 
+  gap: 80px;
   margin-top: 40px;
 }
 
-
-/* Cada tarjeta circular */
 .academia-item {
   display: flex;
   flex-direction: column;
@@ -1309,7 +1298,6 @@ font-family: 'Chekharda', sans-serif;
   transform: translateY(-8px);
 }
 
-/* Círculo */
 .academia-item img {
   width: 350px;
   height: 350px;
@@ -1325,7 +1313,6 @@ font-family: 'Chekharda', sans-serif;
   transform: scale(1.05);
 }
 
-/* Texto */
 .academia-item span {
   font-weight: 600;
   font-size: 16px;
@@ -1523,14 +1510,6 @@ html {
 section[id] {
   scroll-margin-top: 90px; 
 }
-
-
-
-
-
-
-
-
 
 .site-footer {
   background-color: #000000;

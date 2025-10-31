@@ -11,7 +11,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #fdecd4;
+  background-color: #fffcf4;
   color: white;
   padding: 20px 40px;
   position: relative;
@@ -139,7 +139,7 @@ header {
 }
 
 .cinta-derretida {
-   top:-1px; 
+  top:-1px; 
   position: relative;
   width: 100%;
   height: 200px; 
@@ -288,7 +288,7 @@ header {
   font-family: 'Funkie Retro', sans-serif;
   font-size: 1.9rem;
   margin-bottom: 15px;
-   color: rgb(123, 0, 0);
+  color: rgb(123, 0, 0);
 }
 
 .texto-carrusel p {
@@ -307,14 +307,14 @@ header {
   height: 12px;
   width: 12px;
   margin: 0 6px;
-  background-color: #dc85af;
+  background-color: #000000;
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.3s ease;
 }
 
 .dot.activo {
-  background-color: #000000;
+  background-color: #ff0000;
 }
 
 
@@ -334,101 +334,6 @@ header {
     width: 90%;
     height: auto;
     text-align: center;
-  }
-}
-
-/* ===============================
-  SECCIÓN PRODUCTOS
-================================ */
-.productos {
-  text-align: center;
-  padding: 120px 20px;
-  position: relative;
-  z-index: 1;
-  margin-top: -100px; 
-}
-
-.titulo-productos {
-  font-family: 'Funkie Retro', sans-serif;
-  font-size: 3.4rem;
-  color: #520000;
-  margin-bottom: 50px;
-}
-
-
-.fondo-rosado {
-  background-color: rgba(238, 112, 174, 0.35); 
-  border-radius: 40px; 
-  padding: 80px 40px; 
-  margin: 0 auto;
-  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
-}
-
-
-
-.grid-productos {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 60px; 
-  justify-items: center;
-}
-
-
-.producto {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.producto img {
-  width: 160px;  
-  height: 160px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 5px solid #ee70ae;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  background-color: #fff;
-}
-
-.producto img:hover {
-  transform: scale(1.1);
-  box-shadow: 0 6px 12px rgba(238, 112, 174, 0.4);
-}
-
-.producto p {
-  margin-top: 15px;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  color: #3a003f;
-  font-size: 1.15rem; 
-  font-family: 'Theola Kids', sans-serif;
-}
-
-
-@media (max-width: 1100px) {
-  .grid-productos {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-@media (max-width: 800px) {
-  .grid-productos {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
-  }
-
-  .producto img {
-    width: 130px;
-    height: 130px;
-  }
-
-  .producto p {
-    font-size: 1rem;
-  }
-
-  .fondo-rosado {
-    padding: 60px 25px;
   }
 }
 
@@ -485,8 +390,8 @@ header {
 }
 
 /* ============================
-   SECCIÓN: RAZONES / POR QUÉ ESCOGERNOS
-   ============================ */
+  SECCIÓN: RAZONES / POR QUÉ ESCOGERNOS
+============================ */
 .razones-seccion {
   padding: 100px 60px;
   text-align: center;
@@ -567,8 +472,8 @@ font-family: 'Basaliation', sans-serif;
 }
 
 /* ============================
-   RESPONSIVE
-   ============================ */
+RESPONSIVE
+============================ */
 @media (max-width: 800px) {
   .razones-contenedor {
     gap: 25px;
@@ -579,7 +484,7 @@ font-family: 'Basaliation', sans-serif;
     height: 420px;
   }
 
-   .razon-card .razon-imagen {
+  .razon-card .razon-imagen {
     display: none;
   }
 }
@@ -603,34 +508,47 @@ font-family: 'Basaliation', sans-serif;
     width: 90%;
     height: auto;
   }
-   .razon-card .razon-imagen {
+  .razon-card .razon-imagen {
     display: none;
   }
 }
 
+
 /* === SECCIÓN EVENTOS === */
 .eventos {
   padding: 40px 40px 100px 20px; 
+  background: #fffcf4;
   text-align: center;
-  margin-top: -100px; 
+  font-family: 'Inter', sans-serif;
 }
 
 .eventos-header {
   margin-bottom: 70px;
   text-align: center;
   position: relative;
+font-family: 'Rangile', sans-serif;
+}
+
+.eventos-subtitle {
+  display: block;
+  font-size: 26px;        
+  font-weight: 800;       
+  color: #ff0000;         
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin-bottom: 18px;
+font-family: 'Chekharda', sans-serif;
 }
 
 .eventos-title {
   font-size: 46px;
   font-weight: 800;
-  background: linear-gradient(90deg, #5d0404, #8d0303);
+  background: linear-gradient(90deg, #ff6600, #43a047);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   letter-spacing: 2px;
   margin-bottom: 15px;
-  font-family: 'Funkie Retro', sans-serif;
 }
 
 .eventos-title::after {
@@ -638,7 +556,7 @@ font-family: 'Basaliation', sans-serif;
   display: block;
   width: 120px;
   height: 4px;
-  background: linear-gradient(90deg,#2f0052);
+  background: linear-gradient(90deg, #ff6600, #43a047);
   margin: 15px auto 0;
   border-radius: 2px;
 }
@@ -735,6 +653,7 @@ font-family: 'Basaliation', sans-serif;
   display: none;
 }
 
+/* 📱 Versión móvil simplificada (355px aprox) */
 @media (max-width: 400px) {
   .desktop-version {
     display: none !important;
@@ -743,13 +662,21 @@ font-family: 'Basaliation', sans-serif;
   .mobile-version {
     display: block;
     padding: 30px 20px 60px;
+    background: #ffebeb;
     text-align: center;
+  }
+
+  .mobile-version .eventos-subtitle {
+    font-size: 22px;
+    color: #ff0000;
+    letter-spacing: 3px;
+    font-family: 'Chekharda', sans-serif;
   }
 
   .mobile-version .eventos-title {
     font-size: 32px;
     font-weight: 800;
-    background: linear-gradient(90deg, #2f0052);
+    background: linear-gradient(90deg, #ff6600, #43a047);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -795,7 +722,7 @@ font-family: 'Basaliation', sans-serif;
   PIE DE PÁGINA
 ================================ */
 .footer {
-  background-color: #ee70ae;
+  background-color: #f99289;
   color: #000000;
   padding: 20px 0; 
   font-family: 'Poppins', sans-serif;
@@ -822,7 +749,6 @@ font-family: 'Basaliation', sans-serif;
   line-height: 1.3;
   margin: 0;
 }
-
 
 /* ===== CONTACTO ===== */
 .footer-contacto h4 {
@@ -929,3 +855,4 @@ font-family: 'Basaliation', sans-serif;
     background-size: auto !important;
   }
 }
+
