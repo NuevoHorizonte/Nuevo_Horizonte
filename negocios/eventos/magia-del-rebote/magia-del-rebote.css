@@ -337,57 +337,75 @@ header {
   }
 }
 
-/* 🔹 Versión optimizada para pantallas muy pequeñas (≤ 400px) */
-@media (max-width: 400px) {
-  .productos {
-    padding: 80px 10px;
+/* ===============================
+  SECCIÓN CATÁLOGO
+================================ */
+.catalogo {
+  background: rgba(255, 0, 0, 0.1); /* 🔴 rojo claro transparente */
+  padding: 80px 40px;
+  text-align: center;
+  border-radius: 25px;
+  max-width: 1100px;
+  margin: 80px auto; /* centra la sección */
+  box-shadow: 0 0 25px rgba(255, 0, 0, 0.2);
+}
+
+.catalogo-titulo {
+  font-size: 2.8rem;
+  font-family: 'Funkie Retro', sans-serif;
+  color: #a00000;
+  margin-bottom: 50px;
+  letter-spacing: 2px;
+}
+
+.catalogo-contenedor {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* ✅ 2 columnas */
+  gap: 40px;
+  justify-items: center;
+}
+
+.catalogo-item {
+  background: rgba(255, 0, 0, 0.05); /* un poco más claro */
+  padding: 25px;
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 420px;
+}
+
+.catalogo-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(255, 0, 0, 0.25);
+}
+
+.catalogo-item img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.catalogo-item p {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #8b0000;
+  margin: 0;
+  font-family: 'Ikka Rounded', sans-serif;
+}
+
+/* 🔹 Responsivo */
+@media (max-width: 700px) {
+  .catalogo-contenedor {
+    grid-template-columns: 1fr; /* una sola columna */
   }
 
-  .titulo-productos {
-    font-size: 2.2rem;
-    margin-bottom: 30px;
-  }
-
-  .fondo-rosado {
-    border-radius: 25px;
-    padding: 50px 15px;
-  }
-
-  .grid-productos {
-    grid-template-columns: 1fr 1fr; /* ✅ dos columnas seguras */
-    gap: 20px;
-  }
-
-  .producto img {
-    width: 110px;
-    height: 110px;
-  }
-
-  .producto p {
-    font-size: 0.9rem;
+  .catalogo-item img {
+    height: 220px;
   }
 }
 
-/* 🔹 Ajuste extra para celulares muy pequeños (≤ 340px, opcional) */
-@media (max-width: 340px) {
-  .grid-productos {
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
-  }
-
-  .producto img {
-    width: 95px;
-    height: 95px;
-  }
-
-  .producto p {
-    font-size: 0.85rem;
-  }
-
-  .fondo-rosado {
-    padding: 40px 10px;
-  }
-}
 
 /* ============================
   SECCIÓN: RAZONES / POR QUÉ ESCOGERNOS
@@ -717,6 +735,7 @@ font-family: 'Chekharda', sans-serif;
 .eventos-grid-simple a:hover img {
   transform: scale(1.03);
 }
+
 
 /* ===============================
   PIE DE PÁGINA

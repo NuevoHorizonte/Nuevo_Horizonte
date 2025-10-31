@@ -321,7 +321,6 @@ header {
   background-color: #000000;
 }
 
-
 @media (max-width: 800px) {
   .slide {
     flex-direction: column;
@@ -402,11 +401,10 @@ header {
 
 .producto p {
   margin-top: 15px;
-  font-family: 'Poppins', sans-serif;
   font-weight: 600;
   color: #3a003f;
-  font-size: 1.15rem; 
-  font-family: 'Theola Kids', sans-serif;
+  font-size: 1.50rem; 
+  font-family: 'Faith Hope', sans-serif;
 }
 
 
@@ -433,6 +431,68 @@ header {
 
   .fondo-rosado {
     padding: 60px 25px;
+  }
+}
+
+/* 🔹 Versión optimizada para pantallas muy pequeñas (≤ 400px) */
+@media (max-width: 600px) {
+  .productos {
+    padding: 80px 10px;
+  }
+
+  .titulo-productos {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+  }
+
+  .fondo-rosado {
+    border-radius: 25px;
+    padding: 50px 15px;
+  }
+
+  .grid-productos {
+    grid-template-columns: 1fr 1fr; /* ✅ dos columnas seguras */
+    gap: 20px;
+  }
+
+  .producto img {
+    width: 110px;
+    height: 110px;
+  }
+
+  .producto p {
+    font-size: 0.9rem;
+  }
+}
+
+/* 🔹 Versión optimizada para pantallas muy pequeñas (≤ 400px) */
+@media (max-width: 500px) {
+  .productos {
+    padding: 80px 10px;
+  }
+
+  .titulo-productos {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+  }
+
+  .fondo-rosado {
+    border-radius: 25px;
+    padding: 50px 15px;
+  }
+
+  .grid-productos {
+    grid-template-columns: 1fr 1fr; /* ✅ dos columnas seguras */
+    gap: 20px;
+  }
+
+  .producto img {
+    width: 110px;
+    height: 110px;
+  }
+
+  .producto p {
+    font-size: 0.9rem;
   }
 }
 
@@ -739,6 +799,62 @@ font-family: 'Basaliation', sans-serif;
   display: none;
 }
 
+@media (max-width: 600px) {
+  .desktop-version {
+    display: none !important;
+  }
+
+  .mobile-version {
+    display: block;
+    padding: 30px 20px 60px;
+    text-align: center;
+  }
+
+  .mobile-version .eventos-title {
+    font-size: 32px;
+    font-weight: 800;
+    background: linear-gradient(90deg, #2f0052);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 25px;
+  }
+
+  .eventos-grid-simple {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 🔹 Dos columnas */
+    gap: 10px;
+    justify-items: center;
+  }
+
+  .eventos-grid-simple img {
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+    height: 150px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  }
+}
+
+.eventos-grid-simple a {
+  display: block;
+  width: 100%;
+}
+
+.eventos-grid-simple a img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  height: 150px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.eventos-grid-simple a:active img,
+.eventos-grid-simple a:hover img {
+  transform: scale(1.03);
+}
+
 @media (max-width: 400px) {
   .desktop-version {
     display: none !important;
@@ -933,3 +1049,4 @@ font-family: 'Basaliation', sans-serif;
     background-size: auto !important;
   }
 }
+

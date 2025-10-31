@@ -1,5 +1,3 @@
-
-
 // ==========================
 //  CARRUSEL AUTOMÁTICO + CLIC MANUAL
 // ==========================
@@ -20,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
     indice = (indice + 1) % slides.length;
     mostrarSlide(indice);
   }
-
+  
   // Cambio con los dots (manual)
   dots.forEach((dot, i) => {
     dot.addEventListener("click", () => {
@@ -29,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Cambio automático cada 10 segundos
+  // Cambio automático cada 8 segundos
   let intervalo = setInterval(siguienteSlide, 8000);
 
   // ✅ Cambio con clic en cualquier parte del carrusel
@@ -94,3 +92,4 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+

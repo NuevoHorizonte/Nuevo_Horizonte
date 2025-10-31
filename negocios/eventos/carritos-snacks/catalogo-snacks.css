@@ -685,6 +685,34 @@ html, body {
 /* ===============================
    📱 Responsive: 400 px o menos
 =============================== */
+
+@media (max-width: 500px) {
+  .combo h3 {
+    font-size: 1.6rem;
+  }
+
+  .tabla-combo th {
+    font-size: 0.8rem;
+    padding: 6px;
+  }
+
+  .tabla-combo td {
+    font-size: 0.85rem;
+    padding: 8px;
+  }
+
+  .tabla-combo img {
+    width: 65px;
+    height: 65px;
+  }
+
+  .tabla-combo .precio {
+    font-size: 1.1rem;
+    padding: 5px;
+  }
+}
+
+
 @media (max-width: 400px) {
   .combo h3 {
     font-size: 1.6rem;
@@ -746,6 +774,18 @@ html, body {
     right: 18px;
   }
 }
+
+@media (max-width: 500px) {
+  .whatsapp-float img {
+    width: 100px;
+  }
+
+  .whatsapp-float {
+    bottom: 18px;
+    right: 18px;
+  }
+}
+
 
 @media (max-width: 600px) {
   body {
