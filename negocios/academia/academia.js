@@ -11,7 +11,6 @@ document.addEventListener("DOMContentLoaded", () => {
   initHeroStats();
   initMainCarousel();
   initGalleryFilterAndLightbox();
-  initSedesCarousel();
   initFAQAccordion();
   initFooterYear();
 });
@@ -320,40 +319,7 @@ function initGalleryFilterAndLightbox() {
 }
 
 /* --------------------------------------------------------------------------
-   5. SEDES CAROUSEL
-   -------------------------------------------------------------------------- */
-function initSedesCarousel() {
-  const sedes = document.querySelectorAll(".sede");
-
-  sedes.forEach(sede => {
-    const images = sede.querySelectorAll(".sede-carousel-container img");
-    const prevBtn = sede.querySelector(".sede-prev");
-    const nextBtn = sede.querySelector(".sede-next");
-
-    if (images.length === 0 || !prevBtn || !nextBtn) return;
-
-    let index = 0;
-
-    const showImage = (i) => {
-      images.forEach((img, idx) => {
-        img.classList.toggle("active", idx === i);
-      });
-    };
-
-    prevBtn.addEventListener("click", () => {
-      index = (index - 1 + images.length) % images.length;
-      showImage(index);
-    });
-
-    nextBtn.addEventListener("click", () => {
-      index = (index + 1) % images.length;
-      showImage(index);
-    });
-  });
-}
-
-/* --------------------------------------------------------------------------
-   6. FAQ ACCORDION
+   5. FAQ ACCORDION
    -------------------------------------------------------------------------- */
 function initFAQAccordion() {
   const faqItems = document.querySelectorAll(".faq-item");
