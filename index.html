@@ -5,26 +5,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nuevo Horizonte S.R.L</title>
+  <title>Nuevo Horizonte S.R.L - Recreo, Deporte, Eventos e Importaciones</title>
   <meta name="description" content="Nuevo Horizonte S.R.L. - Recreo campestre, bungalows, academia de fútbol, canchas sintéticas, importaciones y eventos en Huaral, Carabayllo y Huánuco.">
   <meta name="keywords" content="nuevo horizonte, recreo campestre huando, bungalows tomayquichua, sport victoria carabayllo, canchas las brisas, academia de futbol">
+  <meta name="theme-color" content="#0f0f0f">
   
+  <!-- Preload de imagen principal hero -->
+  <link rel="preload" href="img/index/fondo-principal-pc.webp" as="image">
+
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://dirdhl.github.io/Nuevo_Horizonte/index.html">
-  <meta property="og:title" content="Nuevo Horizonte S.R.L">
+  <meta property="og:title" content="Nuevo Horizonte S.R.L - Deporte, Recreación y Eventos">
   <meta property="og:description" content="Recreo campestre, bungalows, academia de fútbol, canchas sintéticas, importaciones y eventos en Huaral, Carabayllo y Huánuco.">
   <meta property="og:image" content="https://dirdhl.github.io/Nuevo_Horizonte/img/index/nuevo-horizonte-favicon.png">
   <meta property="og:site_name" content="Nuevo Horizonte S.R.L">
 
-  <!-- Datos Estructurados JSON-LD para el Nombre del Sitio en Google Search -->
+  <!-- Datos Estructurados JSON-LD -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Nuevo Horizonte",
-    "alternateName": ["Nuevo Horizonte S.R.L", "Nuevo Horizonte SRL"],
-    "url": "https://dirdhl.github.io/Nuevo_Horizonte/"
+    "@type": "Organization",
+    "name": "Nuevo Horizonte S.R.L",
+    "alternateName": ["Nuevo Horizonte", "Nuevo Horizonte SRL"],
+    "url": "https://dirdhl.github.io/Nuevo_Horizonte/",
+    "logo": "https://dirdhl.github.io/Nuevo_Horizonte/img/index/logo-nuevo-horizonte-completo-horizontal.svg",
+    "description": "Grupo empresarial dedicado al deporte, recreación, bungalows, eventos e importaciones."
   }
   </script>
 
@@ -36,293 +42,474 @@
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
   <link rel="stylesheet" href="index.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <link href="https://fonts.cdnfonts.com/css/asket-condensed" rel="stylesheet">
-  <link href="https://fonts.cdnfonts.com/css/take-me-on" rel="stylesheet">
-  <link href="https://fonts.cdnfonts.com/css/chekharda" rel="stylesheet">
-  <link href="https://fonts.cdnfonts.com/css/rangile" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-<!-- Menú de navegación y logo -->
-<header class="main-header">
-  <div class="logo-container">
-    <a href="index.html">
-      <img src="img/index/logo-nuevo-horizonte-completo-horizontal.svg"
-          alt="Logo Nuevo Horizonte" class="logo-img">
-    </a>
-  </div>
+  <!-- HEADER NAVEGACIÓN -->
+  <header class="main-header">
+    <div class="logo-container">
+      <a href="index.html">
+        <img src="img/index/logo-nuevo-horizonte-completo-horizontal.svg"
+            alt="Logo Nuevo Horizonte" class="logo-img">
+      </a>
+    </div>
 
-  <!-- Botón Hamburguesa (solo móvil) -->
-<div class="hamburger" id="hamburgerBtn">
-  <span></span>
-  <span></span>
-  <span></span>
-</div>
+    <!-- Botón Hamburguesa (solo móvil) -->
+    <div class="hamburger" id="hamburgerBtn" aria-label="Abrir menú">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
 
-<!-- Menú principal -->
+    <!-- Menú principal -->
     <nav class="nav-container" id="mobileMenu">
+      <a href="#servicios" class="nav-link">SERVICIOS</a>
+      <a href="#sedes" class="nav-link">SEDES</a>
+      
       <div class="dropdown mega-dropdown">
-      <a class="dropdown-toggle">CONTACTO<span class="arrow">▼</span></a>
+        <a class="dropdown-toggle">CONTACTO <span class="arrow">▼</span></a>
         <div class="mega-menu">
-        <a href="https://wa.me/51983406127" target="_blank" rel="noopener noreferrer">
-  TELF. DE BUNGALOWS
-
-</a>
-    <a href="https://wa.me/51983406127" target="_blank" rel="noopener noreferrer">
-  TELF. ALQUILER DE LOCAL CARABAYLLO
-</a>
-
-<a href="https://wa.me/51905448644" target="_blank" rel="noopener noreferrer">
-  TELF. ALQUILER DE LOCAL HUARAL
-</a>
-
-    <a href="https://wa.me/51963666205" target="_blank" rel="noopener noreferrer">
-  TELF. ACADEMIA SPORT VICTORIA
-</a>
-
-    <a href="https://wa.me/51963666205" target="_blank" rel="noopener noreferrer">
-  TELF. DE CANCHAS SINTETICAS
-</a>
-
-  <a href="https://wa.me/51905448644" target="_blank" rel="noopener noreferrer">
-  TELF. IMPORTACIONES
-</a>
-        </div>
-</div>
-
-        <div class="dropdown mega-dropdown">
-        <a class="dropdown-toggle">
-          UBICACIÓN<span class="arrow">▼</span>
-        </a>
-        <div class="mega-menu">
-          <a href="https://maps.app.goo.gl/1pjAMAGk6vwk4Rqc8" target="_blank" rel="noopener noreferrer">
-    CANCHAS SINTÉTICAS LAS BRISAS
-  </a>
-
-  <a href="https://maps.app.goo.gl/i42NZzVMNbg3stEc9" target="_blank" rel="noopener noreferrer">
-    ACADEMIA SPORT VICTORIA
-  </a>
-
-  <a href="https://maps.app.goo.gl/awoYn4f4h1JrsjmCA" target="_blank" rel="noopener noreferrer">
-    CANCHAS SINTÉTICAS LOS PINOS
-  </a>
-
-  <a href="https://maps.app.goo.gl/1pjAMAGk6vwk4Rqc8" target="_blank" rel="noopener noreferrer">
-    POLIDEPORTIVO HACIENDA HUANDO
-  </a>
+          <a href="https://wa.me/51983406127" target="_blank" rel="noopener noreferrer">TELF. BUNGALOWS</a>
+          <a href="https://wa.me/51983406127" target="_blank" rel="noopener noreferrer">TELF. CARABAYLLO</a>
+          <a href="https://wa.me/51905448644" target="_blank" rel="noopener noreferrer">TELF. HUARAL</a>
+          <a href="https://wa.me/51963666205" target="_blank" rel="noopener noreferrer">TELF. ACADEMIA FÚTBOL</a>
+          <a href="https://wa.me/51963666205" target="_blank" rel="noopener noreferrer">TELF. CANCHAS SINTÉTICAS</a>
+          <a href="https://wa.me/51905448644" target="_blank" rel="noopener noreferrer">TELF. IMPORTACIONES</a>
         </div>
       </div>
 
       <div class="dropdown mega-dropdown">
-      <a  class="dropdown-toggle">REDES<span class="arrow">▼</span></a>
+        <a class="dropdown-toggle">UBICACIÓN <span class="arrow">▼</span></a>
+        <div class="mega-menu">
+          <a href="https://maps.app.goo.gl/1pjAMAGk6vwk4Rqc8" target="_blank" rel="noopener noreferrer">CANCHAS SINTÉTICAS LAS BRISAS</a>
+          <a href="https://maps.app.goo.gl/i42NZzVMNbg3stEc9" target="_blank" rel="noopener noreferrer">ACADEMIA SPORT VICTORIA</a>
+          <a href="https://maps.app.goo.gl/awoYn4f4h1JrsjmCA" target="_blank" rel="noopener noreferrer">CANCHAS SINTÉTICAS LOS PINOS</a>
+          <a href="https://maps.app.goo.gl/1pjAMAGk6vwk4Rqc8" target="_blank" rel="noopener noreferrer">POLIDEPORTIVO HACIENDA HUANDO</a>
+        </div>
       </div>
-</nav>
 
-<!-- Enlace de contacto -->
+      <div class="dropdown mega-dropdown">
+        <a class="dropdown-toggle">REDES <span class="arrow">▼</span></a>
+        <div class="mega-menu">
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">FACEBOOK OFICIAL</a>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">INSTAGRAM</a>
+          <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer">TIKTOK</a>
+          <a href="https://wa.me/51983406127" target="_blank" rel="noopener noreferrer">WHATSAPP DIRECTO</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Enlace de contacto -->
     <div class="right-container">
-      <a href="datos/nosotros.html" class="contacto-link">NOSOTROS</a>
+      <a href="#nosotros" class="contacto-link">NOSOTROS</a>
     </div>
   </header>
 
-<section class="hero hero-pc">
+  <!-- SECCIÓN HERO DINÁMICO CON TETRIS Y BANNER -->
+  <section class="hero hero-pc">
     <picture>
-        <img src="img/index/fondo-principal-pc.webp" alt="Fondo principal" class="hero-bg">
+      <img src="img/index/fondo-principal-pc.webp" alt="Fondo principal Nuevo Horizonte" class="hero-bg">
     </picture>
 
-<div class="tetris-container">
-        <div class="pieza">
-        <img src="img/index/pieza-1.webp" data-hover="img/index/pieza-1b.webp" data-link="negocios/bungalows/bungalows.html">
-    </div>
-    <div class="pieza">
-        <img src="img/index/pieza-2.webp" data-hover="img/index/pieza-2b.webp" data-link="negocios/eventos/recreo-campestre/recreo-campestre.html">
-    </div>
-    
-    <div class="pieza">
-        <img src="img/index/pieza-3.webp" data-hover="img/index/pieza-3b.webp" data-link="negocios/eventos/carritos-snacks/carritos-snacks.html">
-    </div>
-
-    <div class="pieza">
-        <img src="img/index/pieza-4.webp" data-hover="img/index/pieza-4b.webp" data-link="negocios/eventos/magia-del-rebote/magia-del-rebote.html" >
-    </div>
-
-    <div class="pieza">
-        <img src="img/index/pieza-5.webp" data-hover="img/index/pieza-5b.webp" data-link="negocios/cancha-sintetica/polideportivo/polideportivo.html">
-    </div>
-
-    <div class="pieza">
-        <img src="img/index/pieza-6.webp" data-hover="img/index/pieza-6b.webp" data-link="negocios/academia/academia.html">
-    </div>
-
-    <div class="pieza"> 
-        <img src="img/index/pieza-7.webp" data-hover="img/index/pieza-7b.webp" data-link="rifas/rifas.html">
-      
-    </div>
-
-    <div class="pieza">
-        <img src="img/index/pieza-8.webp" data-hover="img/index/pieza-8b.webp" data-link="negocios/cancha-sintetica/carabayllo/canchas-carabayllo.html">
-    </div>
-</div>
-</section>
-
-<!-- HERO PARA MÓVIL/TABLET -->
-<section class="hero-mobile">
-    <img src="img/index/fondo-principal-pc.webp" alt="Fondo móvil" class="hero-mobile-bg">
-</section>
-
-<!-- SECCIÓN DE IMÁGENES SIMPLIFICADAS (SOLO MÓVIL) -->
-<section class="acordeon-imagenes-mobile">
-
-  <!-- Item 1 -->
-  <div class="acordeon-img-item">
-    <div class="acordeon-img-box">
-      <a href="negocios/bungalows/bungalows.html" target="_blank" rel="noopener noreferrer">
-        <img src="img/index/pieza-1b-movil.webp" alt="Item 1">
-      </a>
-    </div>
-  </div>
-
-  <!-- Item 2 -->
-  <div class="acordeon-img-item">
-    <div class="acordeon-img-box">
-      <a href="negocios/eventos/recreo-campestre/recreo-campestre.html" target="_blank" rel="noopener noreferrer">
-        <img src="img/index/pieza-2b-movil.webp" alt="Item 2">
-      </a>
-    </div>
-  </div>
-
-  <!-- Item 3 -->
-  <div class="acordeon-img-item">
-    <div class="acordeon-img-box">
-      <a href="negocios/eventos/carritos-snacks/carritos-snacks.html" target="_blank" rel="noopener noreferrer">
-        <img src="img/index/pieza-3b-movil.webp" alt="Item 3">
-      </a>
-    </div>
-  </div>
-
-  <!-- Item 4 -->
-  <div class="acordeon-img-item">
-    <div class="acordeon-img-box">
-      <a href="negocios/eventos/magia-del-rebote/magia-del-rebote.html" target="_blank" rel="noopener noreferrer">
-        <img src="img/index/pieza-4b-movil.webp" alt="Item 4">
-      </a>
-    </div>
-  </div>
-
-  <!-- Item 5 -->
-  <div class="acordeon-img-item">
-    <div class="acordeon-img-box">
-      <a href="negocios/cancha-sintetica/polideportivo/polideportivo.html" target="_blank" rel="noopener noreferrer">
-        <img src="img/index/pieza-5b-movil.webp" alt="Item 5">
-      </a>
-    </div>
-  </div>
-
-  <!-- Item 6 -->
-  <div class="acordeon-img-item">
-    <div class="acordeon-img-box">
-      <a href="negocios/academia/academia.html" target="_blank" rel="noopener noreferrer">
-        <img src="img/index/pieza-6b-movil.webp" alt="Item 6">
-      </a>
-    </div>
-  </div>
-
-  <!-- Item 7 -->
-  <div class="acordeon-img-item">
-    <div class="acordeon-img-box">
-      <a href="negocios/cancha-sintetica/carabayllo/canchas-carabayllo.html" target="_blank" rel="noopener noreferrer">
-        <img src="img/index/pieza-7b-movil.webp" alt="Item 7">
-      </a>
-    </div>
-  </div>
-
-  <!-- Item 8 -->
-  <div class="acordeon-img-item">
-    <div class="acordeon-img-box">
-      <a href="negocios/importaciones/importaciones.html" target="_blank" rel="noopener noreferrer">
-        <img src="img/index/pieza-8b-movil.webp" alt="Item 8">
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ========================== -->
-<!--  SECCIÓN IMAGEN FULL-WIDTH -->
-<!-- ========================== -->
-<section class="imagen-full">
-  <!-- Imagen para PC -->
-  <img src="img/index/quienes-somos-pc.webp" 
-      alt="Sección especial" 
-      class="img-pc">
-
-  <!-- Imagen para MÓVIL -->
-  <img src="img/index/quienes-somos-movil.webp" 
-      alt="Sección especial móvil" 
-      class="img-movil">
-</section>
-
-<!-- ================================ -->
-<!--  SECCIÓN DOBLE IMAGEN RESPONSIVE -->
-<!-- ================================ -->
-<section class="seccion-doble-img">
-  <!-- Imagen para PC -->
-  <img 
-    src="img/index/nosotros-pc.webp" 
-    alt="Imagen solo PC" 
-    class="img-pc">
-
-<!-- Imagen para móviles -->
-  <img 
-    src="img/index/nosotros-movil.webp" 
-    alt="Imagen solo móviles" 
-    class="img-movil">
-</section>
-</body>
-
-<!-- ======================= -->
-<!--        FOOTER           -->
-<!-- ======================= -->
-<footer class="main-footer">
-
-  <div class="footer-container">
-
-    <!-- COLUMNA 1: LOGO -->
-    <div class="footer-col footer-logo">
-      <img src="img/index/logo-nuevo-horizonte-completo-horizontal.svg" alt="Nuevo Horizonte Logo">
-      <p>
-        Grupo empresarial dedicado al desarrollo de
-        <strong>deporte, recreación, eventos e importaciones</strong>.
-      </p>
-    </div>
-
-    <!-- COLUMNA 2: ENLACES -->
-    <div class="footer-col">
-      <h4>EMPRESA</h4>
-      <a href="datos/nosotros.html">Nosotros</a>
-      <a href="/negocios/academia/academia-album.html">Servicios</a>
-      <a href="/contacto/">Ubicación</a>
-      <a href="#">Contacto</a>
-    </div>
-
-    <!-- COLUMNA 4: REDES -->
-    <div class="footer-col">
-      <h4>SÍGUENOS</h4>
-      <div class="footer-social">
-        <a href="#" aria-label="Facebook">🌐 Facebook</a>
-        <a href="#" aria-label="Instagram">📸 Instagram</a>
-        <a href="#" aria-label="WhatsApp">💬 WhatsApp</a>
+    <!-- Banner Superior Elegante -->
+    <div class="tetris-hero-bar">
+      <div class="tetris-bar-info">
+        <span class="hero-badge">✨ GRUPO EMPRESARIAL NUEVO HORIZONTE</span>
+        <h1 class="hero-bar-title">Selecciona una unidad de negocio para explorar</h1>
+      </div>
+      <div class="hero-actions">
+        <a href="#servicios" class="btn-hero primary">Ver Servicios ➔</a>
+        <a href="#sedes" class="btn-hero secondary">Ver Sedes</a>
       </div>
     </div>
+
+    <!-- Rompecabezas Tetris Interactivo (8 piezas completas) -->
+    <div class="tetris-container">
+      <div class="pieza">
+        <span class="pieza-badge">Bungalows ➔</span>
+        <img src="img/index/pieza-1.webp" data-hover="img/index/pieza-1b.webp" data-link="negocios/bungalows/bungalows.html" alt="Bungalows Tomayquichua">
+      </div>
+      <div class="pieza">
+        <span class="pieza-badge">Recreo Campestre ➔</span>
+        <img src="img/index/pieza-2.webp" data-hover="img/index/pieza-2b.webp" data-link="negocios/eventos/recreo-campestre/recreo-campestre.html" alt="Recreo Campestre Huando">
+      </div>
+      <div class="pieza">
+        <span class="pieza-badge">Carritos Snacks ➔</span>
+        <img src="img/index/pieza-3.webp" data-hover="img/index/pieza-3b.webp" data-link="negocios/eventos/carritos-snacks/carritos-snacks.html" alt="Carritos Snacks y Eventos">
+      </div>
+      <div class="pieza">
+        <span class="pieza-badge">Magia del Rebote ➔</span>
+        <img src="img/index/pieza-4.webp" data-hover="img/index/pieza-4b.webp" data-link="negocios/eventos/magia-del-rebote/magia-del-rebote.html" alt="Magia del Rebote">
+      </div>
+      <div class="pieza">
+        <span class="pieza-badge">Polideportivo ➔</span>
+        <img src="img/index/pieza-5.webp" data-hover="img/index/pieza-5b.webp" data-link="negocios/cancha-sintetica/polideportivo/polideportivo.html" alt="Polideportivo Hacienda Huando">
+      </div>
+      <div class="pieza">
+        <span class="pieza-badge">Academia ➔</span>
+        <img src="img/index/pieza-6.webp" data-hover="img/index/pieza-6b.webp" data-link="negocios/academia/academia.html" alt="Academia Sport Victoria">
+      </div>
+      <div class="pieza">
+        <span class="pieza-badge">Grandes Rifas ➔</span>
+        <img src="img/index/pieza-7.webp" data-hover="img/index/pieza-7b.webp" data-link="rifas/rifas.html" alt="Grandes Rifas Nuevo Horizonte">
+      </div>
+      <div class="pieza">
+        <span class="pieza-badge">Canchas Carabayllo ➔</span>
+        <img src="img/index/pieza-8.webp" data-hover="img/index/pieza-8b.webp" data-link="negocios/cancha-sintetica/carabayllo/canchas-carabayllo.html" alt="Canchas Sintéticas Carabayllo">
+      </div>
+    </div>
+  </section>
+
+
+  <!-- HERO PARA MÓVIL/TABLET -->
+  <section class="hero-mobile">
+    <img src="img/index/fondo-principal-pc.webp" alt="Fondo móvil Nuevo Horizonte" class="hero-mobile-bg">
+    <div class="hero-mobile-card">
+      <span class="hero-badge">NUEVO HORIZONTE S.R.L</span>
+      <h2>Deporte, Recreación y Eventos Inolvidables</h2>
+      <p>Espacios familiares, canchas deportivas, academia y alojamientos campestres.</p>
+      <a href="#servicios" class="btn-hero primary">Ver Todos los Servicios</a>
+    </div>
+  </section>
+
+  <!-- SECCIÓN DE ESTADÍSTICAS CORPORATIVAS -->
+  <section class="stats-section">
+    <div class="stats-container">
+      <div class="stat-card">
+        <div class="stat-icon">🏆</div>
+        <div class="stat-number">+10 Años</div>
+        <div class="stat-label">De Trayectoria y Excelencia</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">📍</div>
+        <div class="stat-number">5 Sedes</div>
+        <div class="stat-label">Huaral, Carabayllo y Huánuco</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">⚽</div>
+        <div class="stat-number">+50,000</div>
+        <div class="stat-label">Deportistas y Clientes Satisfechos</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">⭐</div>
+        <div class="stat-number">100%</div>
+        <div class="stat-label">Compromiso con la Familia</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN DE CUADRÍCULA DE SERVICIOS (INTERACTIVA) -->
+  <section id="servicios" class="services-section">
+    <div class="section-header">
+      <span class="section-tag">UNIDADES DE NEGOCIO</span>
+      <h2 class="section-title">Explora Nuestros Servicios</h2>
+      <p class="section-subtitle">Descubre todo lo que Nuevo Horizonte tiene para ti y tu familia en nuestras diferentes sedes.</p>
+    </div>
+
+    <div class="services-grid">
+      <!-- Card 1: Bungalows -->
+      <div class="service-card">
+        <div class="card-image-wrap">
+          <img src="img/index/ai-bungalows.jpg" alt="Bungalows Tomayquichua" loading="lazy">
+          <span class="card-badge">Huánuco | Hospedaje</span>
+        </div>
+        <div class="card-content">
+          <h3>🏡 Bungalows Tomayquichua</h3>
+          <p>Disfruta de la tranquilidad campestre en bungalows totalmente equipados con áreas verdes y piscinas en Huánuco.</p>
+          <a href="negocios/bungalows/bungalows.html" class="btn-card">Conocer Bungalows ➔</a>
+        </div>
+      </div>
+
+      <!-- Card 2: Recreo Campestre -->
+      <div class="service-card">
+        <div class="card-image-wrap">
+          <img src="img/index/ai-recreo.jpg" alt="Recreo Campestre Huando" loading="lazy">
+          <span class="card-badge">Huaral | Recreación</span>
+        </div>
+        <div class="card-content">
+          <h3>🌴 Recreo Campestre Huando</h3>
+          <p>Un oasis natural para compartir en familia con gastronomía típica, áreas de esparcimiento y actividades al aire libre.</p>
+          <a href="negocios/eventos/recreo-campestre/recreo-campestre.html" class="btn-card">Explorar Recreo ➔</a>
+        </div>
+      </div>
+
+      <!-- Card 3: Carritos Snacks -->
+      <div class="service-card">
+        <div class="card-image-wrap">
+          <img src="img/index/ai-snacks.jpg" alt="Carritos Snacks" loading="lazy">
+          <span class="card-badge">Eventos | Alquiler</span>
+        </div>
+        <div class="card-content">
+          <h3>🍿 Carritos Snacks</h3>
+          <p>Servicio de pop corn, algodón de azúcar, manzanas acarameladas y bocaditos para fiestas y eventos corporativos.</p>
+          <a href="negocios/eventos/carritos-snacks/carritos-snacks.html" class="btn-card">Ver Catálogo ➔</a>
+        </div>
+      </div>
+
+      <!-- Card 4: Magia del Rebote -->
+      <div class="service-card">
+        <div class="card-image-wrap">
+          <img src="img/index/ai-rebote.jpg" alt="Magia del Rebote" loading="lazy">
+          <span class="card-badge">Eventos | Inflables</span>
+        </div>
+        <div class="card-content">
+          <h3>🎈 Magia del Rebote</h3>
+          <p>Alquiler de juegos inflables temáticos gigantes, seguridad y diversión garantizada para cumpleaños e hitos infantiles.</p>
+          <a href="negocios/eventos/magia-del-rebote/magia-del-rebote.html" class="btn-card">Ver Inflables ➔</a>
+        </div>
+      </div>
+
+      <!-- Card 5: Polideportivo -->
+      <div class="service-card">
+        <div class="card-image-wrap">
+          <img src="img/index/ai-canchas.jpg" alt="Polideportivo Hacienda Huando" loading="lazy">
+          <span class="card-badge">Huaral | Deporte</span>
+        </div>
+        <div class="card-content">
+          <h3>⚽ Polideportivo Hacienda Huando</h3>
+          <p>Canchas de césped sintético profesional de última generación con iluminación LED nocturna y estacionamiento amplio.</p>
+          <a href="negocios/cancha-sintetica/polideportivo/polideportivo.html" class="btn-card">Reservar Cancha ➔</a>
+        </div>
+      </div>
+
+      <!-- Card 6: Academia -->
+      <div class="service-card">
+        <div class="card-image-wrap">
+          <img src="img/index/ai-academia.jpg" alt="Academia Sport Victoria" loading="lazy">
+          <span class="card-badge">Carabayllo | Academia</span>
+        </div>
+        <div class="card-content">
+          <h3>🏆 Academia Sport Victoria</h3>
+          <p>Formación futbolística integral con profesores calificados, torneos competitivos y desarrollo de valores para niños.</p>
+          <a href="negocios/academia/academia.html" class="btn-card">Ver Inscripciones ➔</a>
+        </div>
+      </div>
+
+      <!-- Card 7: Canchas Carabayllo -->
+      <div class="service-card">
+        <div class="card-image-wrap">
+          <img src="img/index/ai-canchas.jpg" alt="Canchas Carabayllo" loading="lazy">
+          <span class="card-badge">Carabayllo | Deporte</span>
+        </div>
+        <div class="card-content">
+          <h3>🏟️ Canchas Sintéticas Carabayllo</h3>
+          <p>El mejor césped sintético de Carabayllo para tus pichangas, torneos relámpago y reuniones deportivas con amigos.</p>
+          <a href="negocios/cancha-sintetica/carabayllo/canchas-carabayllo.html" class="btn-card">Ver Canchas ➔</a>
+        </div>
+      </div>
+
+      <!-- Card 8: Importaciones & Rifas -->
+      <div class="service-card">
+        <div class="card-image-wrap">
+          <img src="img/index/ai-importaciones.jpg" alt="Importaciones Nuevo Horizonte" loading="lazy">
+          <span class="card-badge">Comercio & Sorteos</span>
+        </div>
+        <div class="card-content">
+          <h3>🏬 Importaciones & Rifas</h3>
+          <p>Importación directa de productos de alta calidad y participación en grandes sorteos corporativos con premios fabulosos.</p>
+          <a href="negocios/importaciones/importaciones.html" class="btn-card">Más Información ➔</a>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- SECCIÓN DE SEDES Y UBICACIONES -->
+  <section id="sedes" class="locations-section">
+    <div class="section-header">
+      <span class="section-tag">NUESTRAS SEDES</span>
+      <h2 class="section-title">Encuéntranos en tu Ciudad</h2>
+      <p class="section-subtitle">Estamos presentes en ubicaciones estratégicas para brindarte la mejor experiencia.</p>
+    </div>
+
+    <div class="locations-grid">
+      <!-- Sede 1 -->
+      <div class="location-card">
+        <div class="location-icon">📍</div>
+        <h3>Canchas Las Brisas</h3>
+        <p class="location-city">Huaral, Perú</p>
+        <p class="location-desc">Complejo deportivo con césped sintético de alta durabilidad e iluminación nocturna.</p>
+        <div class="location-actions">
+          <a href="https://maps.app.goo.gl/1pjAMAGk6vwk4Rqc8" target="_blank" rel="noopener noreferrer" class="btn-loc maps">🗺️ Google Maps</a>
+          <a href="https://wa.me/51963666205" target="_blank" rel="noopener noreferrer" class="btn-loc ws">💬 WhatsApp</a>
+        </div>
+      </div>
+
+      <!-- Sede 2 -->
+      <div class="location-card">
+        <div class="location-icon">📍</div>
+        <h3>Academia Sport Victoria</h3>
+        <p class="location-city">Carabayllo, Lima</p>
+        <p class="location-desc">Sede principal de formación futbolística juvenil y alquiler de campo sintético.</p>
+        <div class="location-actions">
+          <a href="https://maps.app.goo.gl/i42NZzVMNbg3stEc9" target="_blank" rel="noopener noreferrer" class="btn-loc maps">🗺️ Google Maps</a>
+          <a href="https://wa.me/51963666205" target="_blank" rel="noopener noreferrer" class="btn-loc ws">💬 WhatsApp</a>
+        </div>
+      </div>
+
+      <!-- Sede 3 -->
+      <div class="location-card">
+        <div class="location-icon">📍</div>
+        <h3>Polideportivo Hacienda Huando</h3>
+        <p class="location-city">Huaral, Perú</p>
+        <p class="location-desc">Espacio multiusos recreativo y deportivo rodeado de naturaleza en Huaral.</p>
+        <div class="location-actions">
+          <a href="https://maps.app.goo.gl/1pjAMAGk6vwk4Rqc8" target="_blank" rel="noopener noreferrer" class="btn-loc maps">🗺️ Google Maps</a>
+          <a href="https://wa.me/51905448644" target="_blank" rel="noopener noreferrer" class="btn-loc ws">💬 WhatsApp</a>
+        </div>
+      </div>
+
+      <!-- Sede 4 -->
+      <div class="location-card">
+        <div class="location-icon">📍</div>
+        <h3>Bungalows Tomayquichua</h3>
+        <p class="location-city">Tomayquichua, Huánuco</p>
+        <p class="location-desc">Bungalows campestres de descanso equipados para toda la familia.</p>
+        <div class="location-actions">
+          <a href="https://wa.me/51983406127" target="_blank" rel="noopener noreferrer" class="btn-loc ws full-width">💬 Consultar Disponibilidad</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN CORPORATIVA (QUIÉNES SOMOS & PILARES) -->
+  <section id="nosotros" class="about-section">
+    <div class="section-header">
+      <span class="section-tag">QUIÉNES SOMOS</span>
+      <h2 class="section-title">Grupo Empresarial Nuevo Horizonte</h2>
+      <p class="section-subtitle">Más de una década promoviendo el bienestar, el deporte y momentos inolvidables.</p>
+    </div>
+
+    <!-- Pilares Corporativos -->
+    <div class="pillars-grid">
+      <div class="pillar-card">
+        <div class="pillar-icon">⚽</div>
+        <h3>Fomento del Deporte</h3>
+        <p>Impulsamos el talento de niños y jóvenes a través de infraestructura deportiva de calidad y entrenadores dedicados.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-icon">🌿</div>
+        <h3>Recreación Familiar</h3>
+        <p>Creamos entornos acogedores en el campo donde las familias se conectan con la naturaleza y la tranquilidad.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-icon">🎉</div>
+        <h3>Eventos Inolvidables</h3>
+        <p>Brindamos soluciones integrales de entretenimiento como inflables, carritos de snacks y espacios temáticos.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-icon">💼</div>
+        <h3>Visión e Innovación</h3>
+        <p>Diversificamos constantemente nuestras ofertas con productos importados seleccionados y servicios corporativos.</p>
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- SECCIÓN PREGUNTAS FRECUENTES (FAQ) -->
+  <section class="faq-section">
+    <div class="section-header">
+      <span class="section-tag">DUDAS Y CONSULTAS</span>
+      <h2 class="section-title">Preguntas Frecuentes</h2>
+    </div>
+
+    <div class="faq-accordion">
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>¿Cómo puedo hacer la reserva de una cancha sintética o bungalow?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Puedes realizar tus reservas directamente haciendo clic en el botón de WhatsApp correspondiente a la sede o llamando al teléfono directo de contacto disponible en nuestro menú principal.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>¿Qué servicios incluyen los bungalows en Tomayquichua?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Nuestros bungalows están totalmente amoblados y cuentan con zonas de parrilla, piscinas, jardines amplios, estacionamiento privado y vistas panorámicas a la naturaleza de Huánuco.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>¿Cómo inscribir a mi hijo en la Academia Sport Victoria?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Las inscripciones están abiertas durante todo el año en la sede de Carabayllo. Contamos con turnos mañana y tarde organizados según las edades de los niños.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACCIONES FLOTANTES (WHATSAPP Y VOLVER ARRIBA) -->
+  <div class="floating-actions">
+    <button id="scrollToTop" class="floating-btn btn-top" aria-label="Volver arriba">▲</button>
+    <a href="https://wa.me/51983406127" target="_blank" rel="noopener noreferrer" class="floating-btn btn-whatsapp" aria-label="Contacto WhatsApp">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.51 1.037 3.531l-.679 2.479 2.544-.667c.974.532 2.087.824 3.267.824 3.18 0 5.767-2.586 5.768-5.766.001-3.18-2.585-5.767-5.769-5.767zm7.564 5.766c-.001 4.174-3.396 7.569-7.569 7.569-1.344 0-2.603-.353-3.696-.968l-4.089 1.072 1.091-3.985c-.714-1.144-1.127-2.493-1.127-3.935.001-4.174 3.397-7.569 7.57-7.569 4.173.001 7.568 3.396 7.568 7.569z"/>
+      </svg>
+    </a>
   </div>
 
-  <!-- BARRA INFERIOR -->
-  <div class="footer-bottom">
-    © <span id="year"></span> Nuevo Horizonte S.R.L — Todos los derechos reservados
-  </div>
-</footer>
+  <!-- FOOTER PRINCIPAL -->
+  <footer class="main-footer">
+    <div class="footer-container">
+      <!-- COLUMNA 1: LOGO -->
+      <div class="footer-col footer-logo">
+        <img src="img/index/logo-nuevo-horizonte-completo-horizontal.svg" alt="Nuevo Horizonte Logo">
+        <p>
+          Grupo empresarial dedicado al desarrollo de
+          <strong>deporte, recreación, eventos e importaciones</strong>.
+        </p>
+      </div>
 
-<!-- JS  -->
-    <script src="index.js"></script>
-    </body>
-  </html>
+      <!-- COLUMNA 2: EMPRESA -->
+      <div class="footer-col">
+        <h4>EMPRESA</h4>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#sedes">Ubicaciones</a>
+        <a href="contacto/contacto.html">Contacto</a>
+      </div>
+
+      <!-- COLUMNA 3: SERVICIOS -->
+      <div class="footer-col">
+        <h4>UNIDADES</h4>
+        <a href="negocios/bungalows/bungalows.html">Bungalows</a>
+        <a href="negocios/eventos/recreo-campestre/recreo-campestre.html">Recreo Campestre</a>
+        <a href="negocios/cancha-sintetica/polideportivo/polideportivo.html">Polideportivo</a>
+        <a href="negocios/academia/academia.html">Academia Sport Victoria</a>
+      </div>
+
+      <!-- COLUMNA 4: REDES -->
+      <div class="footer-col">
+        <h4>SÍGUENOS</h4>
+        <div class="footer-social">
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">🌐 Facebook</a>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">📸 Instagram</a>
+          <a href="https://wa.me/51983406127" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">💬 WhatsApp</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- BARRA INFERIOR -->
+    <div class="footer-bottom">
+      © <span id="year"></span> Nuevo Horizonte S.R.L — Todos los derechos reservados
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="index.js"></script>
+</body>
+</html>
+
+
