@@ -87,46 +87,102 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // === ROMPECABEZAS (HERO DESKTOP) ===
-  const piezas = document.querySelectorAll(".pieza");
-  const imagenes = document.querySelectorAll(".pieza img");
+  // === CONCEPTO REVOLUCIONARIO 1: ÓRBITA FUTURO 360° ===
+  const orbitNodes = document.querySelectorAll(".orbit-node");
+  const bgMain = document.getElementById("orbit-bg-main");
+  const bgDynamic = document.getElementById("orbit-bg-dynamic");
+  const hudBadge = document.getElementById("hud-badge");
+  const hudTitle = document.getElementById("hud-title");
+  const hudDesc = document.getElementById("hud-desc");
+  const hudBtn = document.getElementById("hud-btn");
+  const hudAutoToggle = document.getElementById("hud-auto-toggle");
 
-  // Pre-carga inmediata de imágenes hover para cero latencia
-  imagenes.forEach((img) => {
-    const hoverUrl = img.getAttribute("data-hover");
-    if (hoverUrl) {
-      const preloadImg = new Image();
-      preloadImg.src = hoverUrl;
+  let activeIndex = 0;
+  let autoOrbitActive = true;
+  let autoOrbitInterval = null;
+
+  // Posicionar geométricamente los 9 nodos alrededor de la órbita (elipse 3D)
+  function positionOrbitNodes() {
+    if (orbitNodes.length === 0) return;
+    const totalNodes = orbitNodes.length;
+    const radiusX = 260; // radio horizontal
+    const radiusY = 170; // radio vertical
+
+    orbitNodes.forEach((node, i) => {
+      // Ajustar desfase de ángulo para centrar el primer nodo arriba
+      const angle = (i / totalNodes) * Math.PI * 2 - Math.PI / 2;
+      const x = Math.cos(angle) * radiusX;
+      const y = Math.sin(angle) * radiusY;
+
+      node.style.transform = `translate(-50%, -50%) translate(${x}px, ${y}px)`;
+    });
+  }
+
+  // Activar nodo seleccionado
+  function activateOrbitNode(index) {
+    if (orbitNodes.length === 0) return;
+    activeIndex = (index + orbitNodes.length) % orbitNodes.length;
+
+    orbitNodes.forEach((n, idx) => {
+      n.classList.toggle("active", idx === activeIndex);
+    });
+
+    const activeNode = orbitNodes[activeIndex];
+    const bgUrl = activeNode.getAttribute("data-bg");
+    const title = activeNode.getAttribute("data-title");
+    const cat = activeNode.getAttribute("data-cat");
+    const desc = activeNode.getAttribute("data-desc");
+    const link = activeNode.getAttribute("data-link");
+    const badgeColor = activeNode.getAttribute("data-badge");
+
+    // Cambiar fondo dinámico con suavidad
+    if (bgDynamic && bgUrl) {
+      bgDynamic.src = bgUrl;
+      bgDynamic.classList.add("active");
+      if (bgMain) bgMain.style.opacity = "0";
     }
-  });
 
-  /* === ANIMACIÓN DE ENTRADA E INTERACTIVIDAD INSTANTÁNEA === */
-  piezas.forEach((pieza, index) => {
-    pieza.classList.add("hover-enabled");
-    pieza.style.pointerEvents = "auto";
-    setTimeout(() => {
-      pieza.classList.add("activo");
-    }, index * 150);
-  });
+    // Actualizar HUD
+    if (hudTitle) hudTitle.textContent = title;
+    if (hudDesc) hudDesc.textContent = desc;
+    if (hudBadge) {
+      hudBadge.textContent = cat;
+      hudBadge.className = `hud-badge ${badgeColor}`;
+    }
+    if (hudBtn) hudBtn.href = link;
+  }
 
-  /* === CAMBIO SUAVE DE IMAGEN Y NAVEGACIÓN === */
-  imagenes.forEach((img) => {
-    const original = img.src;
-    const hoverImg = img.getAttribute("data-hover");
+  // Hover & Click events en los nodos
+  if (orbitNodes.length > 0) {
+    orbitNodes.forEach((node, index) => {
+      node.addEventListener("mouseenter", () => {
+        activateOrbitNode(index);
+      });
 
-    img.addEventListener("mouseenter", () => {
-      if (hoverImg) img.src = hoverImg;
+      node.addEventListener("click", () => {
+        const link = node.getAttribute("data-link");
+        if (link) window.location.href = link;
+      });
     });
 
-    img.addEventListener("mouseleave", () => {
-      img.src = original;
-    });
+    // Auto-rotación de la órbita
+    autoOrbitInterval = setInterval(() => {
+      if (autoOrbitActive) {
+        activateOrbitNode(activeIndex + 1);
+      }
+    }, 4000);
 
-    img.addEventListener("click", () => {
-      const link = img.getAttribute("data-link");
-      if (link) window.location.href = link;
-    });
-  });
+    if (hudAutoToggle) {
+      hudAutoToggle.addEventListener("click", () => {
+        autoOrbitActive = !autoOrbitActive;
+        hudAutoToggle.textContent = autoOrbitActive ? "⏸️ Auto-Orbit" : "▶️ Auto-Orbit";
+      });
+    }
+
+    // Inicialización
+    positionOrbitNodes();
+    activateOrbitNode(0);
+  }
 
 
   // === PREGUNTAS FRECUENTES (FAQ ACCORDION) ===
