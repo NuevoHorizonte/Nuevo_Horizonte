@@ -1,279 +1,339 @@
-  <!DOCTYPE html>
-  <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-      <!-- Icono -->
-    <link rel="icon" href="../../../img/polideportivo-huaral-eventos/logo-polideportivo.svg" type="image/svg+xml">
-    <title>Galería de Imágenes- Academia</title>
-    <style>
-      * { box-sizing: border-box; margin: 0; padding: 0; }
+<!DOCTYPE html>
+<html lang="es">
 
-      body {
-        font-family: Arial, Helvetica, sans-serif;
-        background: #fafafa;
-        color: #333;
-        line-height: 1.4;
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Icono -->
+  <title>Galería de Fotos - Polideportivo Recreacional Hacienda Huando | Huaral</title>
+  <meta name="description" content="Álbum completo de fotos del Polideportivo Recreacional Hacienda Huando en Huaral. Canchas de grass sintético, vóley, eventos y atracciones recreativas.">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #fafafa;
+      color: #333;
+      line-height: 1.4;
+    }
+
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 60vh;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.65);
+      display: block;
+    }
+
+    .hero h1 {
+      position: absolute;
+      color: #fff;
+      font-size: clamp(1.6rem, 4vw, 3rem);
+      text-align: center;
+      padding: 0.5rem 1rem;
+      text-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+    }
+
+    .gallery-wrap {
+      max-width: 1800px;
+      margin: 22px auto;
+      padding: 0 16px;
+    }
+
+    .gallery {
+      column-count: 4;
+      column-gap: 16px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin-bottom: 14px;
+      border-radius: 8px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+      break-inside: avoid;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .gallery img:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+    }
+
+    @media (max-width: 1200px) {
+      .gallery {
+        column-count: 4;
       }
+    }
 
+    @media (max-width: 900px) {
+      .gallery {
+        column-count: 3;
+      }
+    }
+
+    @media (max-width: 600px) {
       .hero {
-        position: relative;
-        width: 100%;
-        height: 60vh;
-        overflow: hidden;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        height: 40vh;
       }
 
-      .hero img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        filter: brightness(0.65);
-        display: block;
+      .gallery {
+        column-count: 2;
+      }
+    }
+
+    @media (max-width: 300px) {
+      .hero h1 {
+        font-size: 1.8rem;
+        padding: 0 12px;
+      }
+    }
+
+    @media (max-width: 450px) {
+      .gallery {
+        column-count: 2;
       }
 
       .hero h1 {
-        position: absolute;
-        color: #fff;
-        font-size: clamp(1.6rem, 4vw, 3rem);
-        text-align: center;
-        padding: 0.5rem 1rem;
-        text-shadow: 0 6px 18px rgba(0,0,0,0.6);
+        font-size: 1.6rem;
+        padding: 0 8px;
       }
+    }
 
-    .gallery-wrap {
-    max-width: 1800px; 
-    margin: 22px auto;
-    padding: 0 16px;
-  }
+    footer {
+      text-align: center;
+      padding: 20px 0 40px;
+      color: #666;
+      font-size: 0.95rem;
+    }
 
-      .gallery {
-    column-count: 4; 
-    column-gap: 16px;
-  }
+    /* === LIGHTBOX === */
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.85);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      padding: 20px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .25s ease;
+    }
 
-      .gallery img {
-        width: 100%;
-        height: auto;
-        display: block;
-        margin-bottom: 14px;
-        border-radius: 8px;
-        box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-        break-inside: avoid;
-        transition: transform 0.25s ease, box-shadow 0.25s ease;
-      }
+    .lightbox.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
 
-      .gallery img:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 28px rgba(0,0,0,0.12);
-      }
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
+      transform: scale(0.8);
+      transition: transform .25s ease;
+    }
 
-      @media (max-width: 1200px) {
-        .gallery { column-count: 4; }
-      }
+    .lightbox.active img {
+      transform: scale(1);
+    }
 
-      @media (max-width: 900px) {
-        .gallery { column-count: 3; }
-      }
+    /* Cursor */
+    .gallery img {
+      cursor: pointer;
+    }
 
-      @media (max-width: 600px) {
-        .hero { height: 40vh; }
-        .gallery { column-count: 2; }
-      }
-      
-      
-      @media (max-width: 300px) {
-        .hero h1 { font-size: 1.8rem; padding: 0 12px; }
-      }
+    .lightbox {
+      cursor: zoom-out;
+    }
 
-      @media (max-width: 450px) {
-        .gallery { column-count: 2; }
-        .hero h1 { font-size: 1.6rem; padding: 0 8px; }
-      }
+    .pagination {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin: 30px 0;
+    }
 
-      footer {
-        text-align: center;
-        padding: 20px 0 40px;
-        color: #666;
-        font-size: 0.95rem;
-      }
+    .pagination button {
+      background: #038f1f;
+      color: #ffffff;
+      border: none;
+      padding: 10px 16px;
+      margin: 0 4px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background .2s;
+    }
 
-      /* === LIGHTBOX === */
-  .lightbox {
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.85);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 9999;
-    padding: 20px;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity .25s ease;
-  }
+    .pagination button:hover {
+      background: #04b916;
+    }
 
-  .lightbox.active {
-    opacity: 1;
-    pointer-events: auto;
-  }
+    .pagination button.active {
+      background: #037f1e;
+    }
 
-  .lightbox img {
-    max-width: 90%;
-    max-height: 90%;
-    border-radius: 10px;
-    box-shadow: 0 0 25px rgba(255,255,255,0.2);
-    transform: scale(0.8);
-    transition: transform .25s ease;
-  }
+    .categories {
+      text-align: center;
+      margin: 25px 0;
+    }
 
-  .lightbox.active img {
-    transform: scale(1);
-  }
+    .categories button {
+      padding: 10px 16px;
+      margin: 6px;
+      border: none;
+      border-radius: 6px;
+      background: #088f03;
+      color: #fff;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background .2s;
+    }
 
-  /* Cursor */
-  .gallery img { cursor: pointer; }
-  .lightbox { cursor: zoom-out; }
+    .categories button:hover {
+      background: #04b9379e;
+    }
 
-.pagination {
-  display: flex;
-  justify-content: center;
-  gap: 10px;             /* espacio entre botones */
-  flex-wrap: wrap;       /* los números pueden bajar de línea si no entran */
-  margin: 30px 0;
-}
+    .categories button.active {
+      background: #127f03;
+    }
 
-  .pagination button {
-    background: #038f1f;
-    color: #ffffff;
-    border: none;
-    padding: 10px 16px;
-    margin: 0 4px;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background .2s;
-  }
+    .header {
+      height: 100px;
+      padding: 0 25px;
+      background-color: #003e0a;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
 
-  .pagination button:hover {
-    background: #04b916;
-  }
+    .logo {
+      height: 70px;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
 
-  .pagination button.active {
-    background: #037f1e;
-  }
+    .logo:hover {
+      transform: scale(1.08);
+    }
 
-  .categories {
-    text-align: center;
-    margin: 25px 0;
-  }
+    .btn-volver-header {
+      background: #deff15;
+      color: #003e0a;
+      padding: 10px 20px;
+      border-radius: 20px;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 14px;
+      transition: all 0.25s ease;
+    }
 
-  .categories button {
-    padding: 10px 16px;
-    margin: 6px;
-    border: none;
-    border-radius: 6px;
-    background: #088f03;
-    color: #fff;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background .2s;
-  }
+    .btn-volver-header:hover {
+      background: #ffffff;
+      transform: translateY(-2px);
+    }
 
-  .categories button:hover {
-    background: #04b9379e;
-  }
-
-  .categories button.active {
-    background: #127f03;
-  }
-
-  .header {
-    height: 120px; 
-    padding: 0 25px;
-    background-color: #fafafa;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .logo {
-    height: 100px; 
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-  }
-  .logo:hover {
-    transform: scale(1.10); 
-  }
-
-  .header {
-    display: flex;
-    justify-content: center; 
-    align-items: center;   
-  }
-
-  /* ======================
+    /* ======================
     VIDEOS VIMEO
   ====================== */
-  .videos-wrap {
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 0 16px;
-  }
+    .videos-wrap {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 16px;
+    }
 
-  .videos-title {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: #03548f;
-  }
+    .video-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 15px;
+      margin-bottom: 25px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
 
-  .videos {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 25px;
-  }
+    .video-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      color: #111;
+    }
 
-.video-container {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 16 / 9; /* valor inicial, pero se adapta si le agregamos otro */
-  background: #000;
-  overflow: hidden;
-  border-radius: 12px;
-  box-shadow: 0px 8px 20px rgba(0,0,0,0.15);
-}
+    .videos-title {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #03548f;
+    }
 
-.video-container.vertical {
-  aspect-ratio: 9 / 16; /* videos verticales */
-}
+    .videos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 25px;
+    }
 
-.video-container.square {
-  aspect-ratio: 1 / 1; /* videos cuadrados */
-}
+    .video-container {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: #000;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+    }
 
-.video-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
-}
+    .video-container.vertical {
+      aspect-ratio: 9 / 16;
+    }
 
+    .video-container.square {
+      aspect-ratio: 1 / 1;
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
   </style>
-  </head>
-  <header class="header">
-      <a href="academia.html" class="logo-link">
-        <img src="../../../img/polideportivo-huaral-eventos/logo-polideportivo.svg" alt="Logo de la Academia" class="logo" />
-      </a>
-    </header>
+  <!-- Favicons -->
+  <link rel="icon" href="../../../img/polideportivo-huaral-eventos/logo-polideportivo.svg?v=1.3" type="image/svg+xml">
+  <link rel="shortcut icon" href="../../../img/polideportivo-huaral-eventos/logo-polideportivo.svg?v=1.3"
+    type="image/svg+xml">
+</head>
 
-  <body>
-    <div class="gallery-wrap">
-        <!-- BOTONES DE CATEGORÍAS -->
+<header class="header">
+  <a href="polideportivo.html" class="logo-link" title="Volver al Polideportivo">
+    <img src="../../../img/polideportivo-huaral-eventos/logo-polideportivo.svg" alt="Logo Polideportivo Recreacional Hacienda Huando"
+      class="logo" />
+  </a>
+  <a href="polideportivo.html" class="btn-volver-header">
+    ⬅ Volver al Polideportivo
+  </a>
+</header>
+
+<body>
+  <div class="gallery-wrap">
+    <!-- BOTONES DE CATEGORÍAS -->
     <div class="categories">
       <button data-filter="todo" class="active">🖼️ Todo</button>
       <button data-filter="evento">🌊 Evento</button>
@@ -282,60 +342,110 @@
       <button data-filter="local">📍 Local</button>
     </div>
 
-      <section class="gallery">
-      <img src="../../../img/polideportivo-huaral-eventos/album-1.webp" alt="Foto 1" loading="lazy" data-category="futbol">
-      <img src="../../../img/polideportivo-huaral-eventos/album-2.webp" alt="Foto 2" loading="lazy" data-category="evento">
-      <img src="../../../img/polideportivo-huaral-eventos/album-3.webp" alt="Foto 3" loading="lazy" data-category="evento">
-      <img src="../../../img/polideportivo-huaral-eventos/album-4.webp" alt="Foto 4" loading="lazy" data-category="evento">
-      <img src="../../../img/polideportivo-huaral-eventos/album-5.webp" alt="Foto 5" loading="lazy" data-category="evento">
-      <img src="../../../img/polideportivo-huaral-eventos/album-6.webp" alt="Foto 6" loading="lazy" data-category="evento">
-      <img src="../../../img/polideportivo-huaral-eventos/album-7.webp" alt="Foto 7" loading="lazy" data-category="evento">
-      <img src="../../../img/polideportivo-huaral-eventos/album-8.webp" alt="Foto 8" loading="lazy" data-category="evento">
-      <img src="../../../img/polideportivo-huaral-eventos/album-9.webp" alt="Foto 9" loading="lazy" data-category="futbol">
-      <img src="../../../img/polideportivo-huaral-eventos/album-10.webp" alt="Foto 10" loading="lazy" data-category="evento">
-      <img src="../../../img/polideportivo-huaral-eventos/album-11.webp" alt="Foto 11" loading="lazy" data-category="evento">
-      <img src="../../../img/polideportivo-huaral-eventos/album-12.webp" alt="Foto 12" loading="lazy" data-category="evento">
-      <img src="../../../img/polideportivo-huaral-eventos/album-13.webp" alt="Foto 13" loading="lazy" data-category="evento">
-      <img src="../../../img/polideportivo-huaral-eventos/album-14.webp" alt="Foto 14" loading="lazy" data-category="evento">
-      <img src="../../../img/polideportivo-huaral-eventos/album-15.webp" alt="Foto 15" loading="lazy" data-category="evento">
-      <img src="../../../img/polideportivo-huaral-eventos/album-16.webp" alt="Foto 16" loading="lazy" data-category="local">
-      <img src="../../../img/polideportivo-huaral-eventos/album-17.webp" alt="Foto 17" loading="lazy" data-category="evento">
-      <img src="../../../img/polideportivo-huaral-eventos/album-18.webp" alt="Foto 18" loading="lazy" data-category="evento">
-      <img src="../../../img/polideportivo-huaral-eventos/album-19.webp" alt="Foto 19" loading="lazy" data-category="evento">
-      <img src="../../../img/polideportivo-huaral-eventos/album-20.webp" alt="Foto 20" loading="lazy" data-category="evento">
-      <img src="../../../img/polideportivo-huaral-eventos/album-21.webp" alt="Foto 21" loading="lazy" data-category="evento">
-      <img src="../../../img/polideportivo-huaral-eventos/album-22.webp" alt="Foto 22" loading="lazy" data-category="evento">
-      <img src="../../../img/polideportivo-huaral-eventos/album-23.webp" alt="Foto 23" loading="lazy" data-category="evento">
-      <img src="../../../img/polideportivo-huaral-eventos/album-24.webp" alt="Foto 24" loading="lazy" data-category="evento">
-      <img src="../../../img/polideportivo-huaral-eventos/album-25.webp" alt="Foto 25" loading="lazy" data-category="evento">
-      <img src="../../../img/polideportivo-huaral-eventos/album-26.webp" alt="Foto 26" loading="lazy" data-category="voley">
-      <img src="../../../img/polideportivo-huaral-eventos/album-27.webp" alt="Foto 27" loading="lazy" data-category="evento">
-      <img src="../../../img/polideportivo-huaral-eventos/album-28.webp" alt="Foto 28" loading="lazy" data-category="evento">
-      <img src="../../../img/polideportivo-huaral-eventos/album-29.webp" alt="Foto 29" loading="lazy" data-category="voley">
-      <img src="../../../img/polideportivo-huaral-eventos/album-30.webp" alt="Foto 30" loading="lazy" data-category="evento">
-      <img src="../../../img/polideportivo-huaral-eventos/album-31.webp" alt="Foto 31" loading="lazy" data-category="evento">
-      <img src="../../../img/polideportivo-huaral-eventos/album-32.webp" alt="Foto 32" loading="lazy" data-category="evento">
-      <img src="../../../img/polideportivo-huaral-eventos/album-33.webp" alt="Foto 33" loading="lazy" data-category="evento">
-      <img src="../../../img/polideportivo-huaral-eventos/album-34.webp" alt="Foto 34" loading="lazy" data-category="evento">
-      <img src="../../../img/polideportivo-huaral-eventos/album-35.webp" alt="Foto 35" loading="lazy" data-category="evento">
-      <img src="../../../img/polideportivo-huaral-eventos/album-36.webp" alt="Foto 36" loading="lazy" data-category="evento">
-      <img src="../../../img/polideportivo-huaral-eventos/album-37.webp" alt="Foto 37" loading="lazy" data-category="futbol">
-      <img src="../../../img/polideportivo-huaral-eventos/album-38.webp" alt="Foto 38" loading="lazy" data-category="evento">
-      <img src="../../../img/polideportivo-huaral-eventos/album-39.webp" alt="Foto 39" loading="lazy" data-category="evento">
-      <img src="../../../img/polideportivo-huaral-eventos/album-40.webp" alt="Foto 40" loading="lazy" data-category="evento">
-      <img src="../../../img/polideportivo-huaral-eventos/album-41.webp" alt="Foto 41" loading="lazy" data-category="evento">
-      <img src="../../../img/polideportivo-huaral-eventos/album-42.webp" alt="Foto 42" loading="lazy" data-category="evento">
-      <img src="../../../img/polideportivo-huaral-eventos/album-43.webp" alt="Foto 43" loading="lazy" data-category="evento">
-      <img src="../../../img/polideportivo-huaral-eventos/album-44.webp" alt="Foto 44" loading="lazy" data-category="evento">
-      <img src="../../../img/polideportivo-huaral-eventos/album-45.webp" alt="Foto 45" loading="lazy" data-category="evento">
-      <img src="../../../img/polideportivo-huaral-eventos/album-46.webp" alt="Foto 46" loading="lazy" data-category="evento">
-      <img src="../../../img/polideportivo-huaral-eventos/album-47.webp" alt="Foto 47" loading="lazy" data-category="evento">
-      <img src="../../../img/polideportivo-huaral-eventos/album-48.webp" alt="Foto 48" loading="lazy" data-category="evento">
-      <img src="../../../img/polideportivo-huaral-eventos/album-49.webp" alt="Foto 49" loading="lazy" data-category="evento">
-      <img src="../../../img/polideportivo-huaral-eventos/album-50.webp" alt="Foto 50" loading="lazy" data-category="evento">
-      </section>
-    </div>
-    <div class="pagination" id="pagination"></div>
+    <section class="gallery">
+      <img src="../../../img/polideportivo-huaral-eventos/album-1.webp" alt="Foto 1" loading="lazy"
+        data-category="futbol">
+      <img src="../../../img/polideportivo-huaral-eventos/album-2.webp" alt="Foto 2" loading="lazy"
+        data-category="evento">
+      <img src="../../../img/polideportivo-huaral-eventos/album-3.webp" alt="Foto 3" loading="lazy"
+        data-category="evento">
+      <img src="../../../img/polideportivo-huaral-eventos/album-4.webp" alt="Foto 4" loading="lazy"
+        data-category="evento">
+      <img src="../../../img/polideportivo-huaral-eventos/album-5.webp" alt="Foto 5" loading="lazy"
+        data-category="evento">
+      <img src="../../../img/polideportivo-huaral-eventos/album-6.webp" alt="Foto 6" loading="lazy"
+        data-category="evento">
+      <img src="../../../img/polideportivo-huaral-eventos/album-7.webp" alt="Foto 7" loading="lazy"
+        data-category="evento">
+      <img src="../../../img/polideportivo-huaral-eventos/album-8.webp" alt="Foto 8" loading="lazy"
+        data-category="evento">
+      <img src="../../../img/polideportivo-huaral-eventos/album-9.webp" alt="Foto 9" loading="lazy"
+        data-category="futbol">
+      <img src="../../../img/polideportivo-huaral-eventos/album-10.webp" alt="Foto 10" loading="lazy"
+        data-category="evento">
+      <img src="../../../img/polideportivo-huaral-eventos/album-11.webp" alt="Foto 11" loading="lazy"
+        data-category="evento">
+      <img src="../../../img/polideportivo-huaral-eventos/album-12.webp" alt="Foto 12" loading="lazy"
+        data-category="evento">
+      <img src="../../../img/polideportivo-huaral-eventos/album-13.webp" alt="Foto 13" loading="lazy"
+        data-category="evento">
+      <img src="../../../img/polideportivo-huaral-eventos/album-14.webp" alt="Foto 14" loading="lazy"
+        data-category="evento">
+      <img src="../../../img/polideportivo-huaral-eventos/album-15.webp" alt="Foto 15" loading="lazy"
+        data-category="evento">
+      <img src="../../../img/polideportivo-huaral-eventos/album-16.webp" alt="Foto 16" loading="lazy"
+        data-category="local">
+      <img src="../../../img/polideportivo-huaral-eventos/album-17.webp" alt="Foto 17" loading="lazy"
+        data-category="evento">
+      <img src="../../../img/polideportivo-huaral-eventos/album-18.webp" alt="Foto 18" loading="lazy"
+        data-category="evento">
+      <img src="../../../img/polideportivo-huaral-eventos/album-19.webp" alt="Foto 19" loading="lazy"
+        data-category="evento">
+      <img src="../../../img/polideportivo-huaral-eventos/album-20.webp" alt="Foto 20" loading="lazy"
+        data-category="evento">
+      <img src="../../../img/polideportivo-huaral-eventos/album-21.webp" alt="Foto 21" loading="lazy"
+        data-category="evento">
+      <img src="../../../img/polideportivo-huaral-eventos/album-22.webp" alt="Foto 22" loading="lazy"
+        data-category="evento">
+      <img src="../../../img/polideportivo-huaral-eventos/album-23.webp" alt="Foto 23" loading="lazy"
+        data-category="evento">
+      <img src="../../../img/polideportivo-huaral-eventos/album-24.webp" alt="Foto 24" loading="lazy"
+        data-category="evento">
+      <img src="../../../img/polideportivo-huaral-eventos/album-25.webp" alt="Foto 25" loading="lazy"
+        data-category="evento">
+      <img src="../../../img/polideportivo-huaral-eventos/album-26.webp" alt="Foto 26" loading="lazy"
+        data-category="voley">
+      <img src="../../../img/polideportivo-huaral-eventos/album-27.webp" alt="Foto 27" loading="lazy"
+        data-category="evento">
+      <img src="../../../img/polideportivo-huaral-eventos/album-28.webp" alt="Foto 28" loading="lazy"
+        data-category="evento">
+      <img src="../../../img/polideportivo-huaral-eventos/album-29.webp" alt="Foto 29" loading="lazy"
+        data-category="voley">
+      <img src="../../../img/polideportivo-huaral-eventos/album-30.webp" alt="Foto 30" loading="lazy"
+        data-category="evento">
+      <img src="../../../img/polideportivo-huaral-eventos/album-31.webp" alt="Foto 31" loading="lazy"
+        data-category="evento">
+      <img src="../../../img/polideportivo-huaral-eventos/album-32.webp" alt="Foto 32" loading="lazy"
+        data-category="evento">
+      <img src="../../../img/polideportivo-huaral-eventos/album-33.webp" alt="Foto 33" loading="lazy"
+        data-category="evento">
+      <img src="../../../img/polideportivo-huaral-eventos/album-34.webp" alt="Foto 34" loading="lazy"
+        data-category="evento">
+      <img src="../../../img/polideportivo-huaral-eventos/album-35.webp" alt="Foto 35" loading="lazy"
+        data-category="evento">
+      <img src="../../../img/polideportivo-huaral-eventos/album-36.webp" alt="Foto 36" loading="lazy"
+        data-category="evento">
+      <img src="../../../img/polideportivo-huaral-eventos/album-37.webp" alt="Foto 37" loading="lazy"
+        data-category="futbol">
+      <img src="../../../img/polideportivo-huaral-eventos/album-38.webp" alt="Foto 38" loading="lazy"
+        data-category="evento">
+      <img src="../../../img/polideportivo-huaral-eventos/album-39.webp" alt="Foto 39" loading="lazy"
+        data-category="evento">
+      <img src="../../../img/polideportivo-huaral-eventos/album-40.webp" alt="Foto 40" loading="lazy"
+        data-category="evento">
+      <img src="../../../img/polideportivo-huaral-eventos/album-41.webp" alt="Foto 41" loading="lazy"
+        data-category="evento">
+      <img src="../../../img/polideportivo-huaral-eventos/album-42.webp" alt="Foto 42" loading="lazy"
+        data-category="evento">
+      <img src="../../../img/polideportivo-huaral-eventos/album-43.webp" alt="Foto 43" loading="lazy"
+        data-category="evento">
+      <img src="../../../img/polideportivo-huaral-eventos/album-44.webp" alt="Foto 44" loading="lazy"
+        data-category="evento">
+      <img src="../../../img/polideportivo-huaral-eventos/album-45.webp" alt="Foto 45" loading="lazy"
+        data-category="evento">
+      <img src="../../../img/polideportivo-huaral-eventos/album-46.webp" alt="Foto 46" loading="lazy"
+        data-category="evento">
+      <img src="../../../img/polideportivo-huaral-eventos/album-47.webp" alt="Foto 47" loading="lazy"
+        data-category="evento">
+      <img src="../../../img/polideportivo-huaral-eventos/album-48.webp" alt="Foto 48" loading="lazy"
+        data-category="evento">
+      <img src="../../../img/polideportivo-huaral-eventos/album-49.webp" alt="Foto 49" loading="lazy"
+        data-category="evento">
+      <img src="../../../img/polideportivo-huaral-eventos/album-50.webp" alt="Foto 50" loading="lazy"
+        data-category="evento">
+    </section>
+  </div>
+  <div class="pagination" id="pagination"></div>
 
   <!-- =======================
       SECCIÓN DE VIDEOS (VIMEO)
@@ -344,125 +454,121 @@
     <h2 class="videos-title">🎬 Videos</h2>
 
     <section class="videos">
-
       <div class="video-container vertical">
-        <div style="padding:177.78% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1144135029?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;loop=1" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="SPORT VICTORIA REEL V01 BAJA"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+        <div style="padding:177.78% 0 0 0;position:relative;"><iframe
+            src="https://player.vimeo.com/video/1144135029?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;loop=1"
+            frameborder="0"
+            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            style="position:absolute;top:0;left:0;width:100%;height:100%;"
+            title="SPORT VICTORIA REEL V01 BAJA"></iframe></div>
+        <script src="https://player.vimeo.com/api/player.js"></script>
       </div>
 
       <div class="video-container">
-        <iframe
-          src="https://player.vimeo.com/video/987654321"
-          frameborder="0"
-          allow="autoplay; fullscreen; picture-in-picture"
-          allowfullscreen
-        ></iframe>
+        <iframe src="https://player.vimeo.com/video/987654321" frameborder="0"
+          allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
       </div>
 
       <div class="video-container">
-        <iframe
-          src="https://player.vimeo.com/video/555444333"
-          frameborder="0"
-          allow="autoplay; fullscreen; picture-in-picture"
-          allowfullscreen
-        ></iframe>
+        <iframe src="https://player.vimeo.com/video/555444333" frameborder="0"
+          allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
       </div>
 
     </section>
   </div>
 
-    <footer>
-      ©Academia-Sport Victoria
-    </footer>
-    <div class="lightbox" id="lightbox">
+  <footer>
+    ©Academia-Sport Victoria
+  </footer>
+  <div class="lightbox" id="lightbox">
     <img id="lightbox-img" src="" alt="imagen ampliada">
   </div>
 
   <script>
-  // =======================
-  // LIGHTBOX
-  // =======================
-  const lightbox = document.getElementById("lightbox");
-  const lightboxImg = document.getElementById("lightbox-img");
+    // =======================
+    // LIGHTBOX
+    // =======================
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
 
-  // Delegación de eventos (abre cualquier imagen aunque se mueva en la paginación)
-  document.querySelector(".gallery").addEventListener("click", (e) => {
-    if (e.target.tagName === "IMG") {
-      lightboxImg.src = e.target.src;
-      lightbox.classList.add("active");
-    }
-  });
-
-  // Cerrar lightbox
-  lightbox.addEventListener("click", () => lightbox.classList.remove("active"));
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") lightbox.classList.remove("active");
-  });
-
-  // =======================
-  // GALERÍA + PAGINACIÓN + FILTROS
-  // =======================
-  const gallery = document.querySelector(".gallery");
-  const pagination = document.getElementById("pagination");
-  const filterBtns = document.querySelectorAll(".categories button");
-
-  let images = Array.from(document.querySelectorAll(".gallery img"));
-  let filteredImages = images;
-
-  let itemsPerPage = 20;
-  let currentPage = 1;
-  let totalPages = Math.ceil(images.length / itemsPerPage);
-
-  // FILTRAR CATEGORÍAS
-  function filterGallery(category) {
-    filteredImages = (category === "todo")
-      ? images
-      : images.filter(img => img.dataset.category === category);
-
-    totalPages = Math.ceil(filteredImages.length / itemsPerPage);
-    currentPage = 1;
-    showPage(currentPage);
-  }
-
-  // MOSTRAR PÁGINAS
-  function showPage(page) {
-    currentPage = page;
-    gallery.innerHTML = "";
-
-    let start = (page - 1) * itemsPerPage;
-    let end = start + itemsPerPage;
-
-    filteredImages.slice(start, end).forEach(img => gallery.appendChild(img));
-
-    updatePaginationButtons();
-    // Si tienes lazy loading aquí debe ir
-    if (typeof applyLazyLoading === "function") applyLazyLoading();
-  }
-
-  // BOTONES DE PAGINACIÓN
-  function updatePaginationButtons() {
-    pagination.innerHTML = "";
-
-    for (let i = 1; i <= totalPages; i++) {
-      const btn = document.createElement("button");
-      btn.textContent = i;
-      if (i === currentPage) btn.classList.add("active");
-
-      btn.onclick = () => showPage(i);
-      pagination.appendChild(btn);
-    }
-  }
-
-  // EVENTOS DE LOS BOTONES DE FILTRO
-  filterBtns.forEach(btn => {
-    btn.addEventListener("click", () => {
-      filterBtns.forEach(b => b.classList.remove("active"));
-      btn.classList.add("active");
-      filterGallery(btn.dataset.filter);
+    // Delegación de eventos (abre cualquier imagen aunque se mueva en la paginación)
+    document.querySelector(".gallery").addEventListener("click", (e) => {
+      if (e.target.tagName === "IMG") {
+        lightboxImg.src = e.target.src;
+        lightbox.classList.add("active");
+      }
     });
-  });
 
-  // Mostrar primera página al cargar
-  showPage(1);
+    // Cerrar lightbox
+    lightbox.addEventListener("click", () => lightbox.classList.remove("active"));
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") lightbox.classList.remove("active");
+    });
+
+    // =======================
+    // GALERÍA + PAGINACIÓN + FILTROS
+    // =======================
+    const gallery = document.querySelector(".gallery");
+    const pagination = document.getElementById("pagination");
+    const filterBtns = document.querySelectorAll(".categories button");
+    let images = Array.from(document.querySelectorAll(".gallery img"));
+    let filteredImages = images;
+    let itemsPerPage = 20;
+    let currentPage = 1;
+    let totalPages = Math.ceil(images.length / itemsPerPage);
+
+    // FILTRAR CATEGORÍAS
+    function filterGallery(category) {
+      filteredImages = (category === "todo")
+        ? images
+        : images.filter(img => img.dataset.category === category);
+
+      totalPages = Math.ceil(filteredImages.length / itemsPerPage);
+      currentPage = 1;
+      showPage(currentPage);
+    }
+    // MOSTRAR PÁGINAS
+    function showPage(page) {
+      currentPage = page;
+      gallery.innerHTML = "";
+
+      let start = (page - 1) * itemsPerPage;
+      let end = start + itemsPerPage;
+
+      filteredImages.slice(start, end).forEach(img => gallery.appendChild(img));
+
+      updatePaginationButtons();
+      // Si tienes lazy loading aquí debe ir
+      if (typeof applyLazyLoading === "function") applyLazyLoading();
+    }
+
+    // BOTONES DE PAGINACIÓN
+    function updatePaginationButtons() {
+      pagination.innerHTML = "";
+
+      for (let i = 1; i <= totalPages; i++) {
+        const btn = document.createElement("button");
+        btn.textContent = i;
+        if (i === currentPage) btn.classList.add("active");
+
+        btn.onclick = () => showPage(i);
+        pagination.appendChild(btn);
+      }
+    }
+
+    // EVENTOS DE LOS BOTONES DE FILTRO
+    filterBtns.forEach(btn => {
+      btn.addEventListener("click", () => {
+        filterBtns.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        filterGallery(btn.dataset.filter);
+      });
+    });
+
+    // Mostrar primera página al cargar
+    showPage(1);
   </script>
-  </body>
-  </html>
+</body>
+
+</html>

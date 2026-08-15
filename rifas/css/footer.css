@@ -280,6 +280,7 @@
 .sponsors-logos {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     gap: 15px;
     margin-top: 2px;
 }

@@ -2,11 +2,46 @@
 <html lang="es">
 
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-W9LN6QBK02"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-W9LN6QBK02');
+  </script>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bungalows Tomayquichua</title>
+  <title>Bungalows en Tomayquichua | Casa de Campo en Huánuco</title>
+  <meta name="description" content="Disfruta de los mejores bungalows y casa de campo en Tomayquichua, Huánuco. Hospedaje campestre con piscina, amplios jardines y comodidad total. ¡Reserva hoy!">
+  <meta name="keywords" content="bungalows tomayquichua, bungalows de tomayquichua, casa de campo tomayquichua, casa campo huanuco, hospedaje huanuco">
+  
+  <!-- Datos Estructurados JSON-LD para Google Search -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LodgingBusiness",
+    "name": "Bungalows de Tomayquichua",
+    "alternateName": "Casa de Campo en Huánuco",
+    "description": "Ofrecemos los mejores bungalows y casa de campo en Tomayquichua, Huánuco, con piscina, áreas verdes y zona de relax.",
+    "url": "https://dirdhl.github.io/Nuevo_Horizonte/negocios/bungalows/bungalows.html",
+    "telephone": "+51983406127",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Tomayquichua",
+      "addressRegion": "Huánuco",
+      "addressCountry": "PE"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "-10.0722335",
+      "longitude": "-76.2160504"
+    }
+  }
+  </script>
   <!-- Favicon -->
-  <link rel="icon" href="../../img/bungalows-de-tomayquichua/logo-bungalows.svg" type="image/svg+xml">
   <!-- Stylesheets -->
   <link rel="stylesheet" href="bungalows.css">
   <!-- Google Fonts -->
@@ -15,6 +50,10 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cinzel:wght@500;700;800&family=Montserrat:wght@400;600;700&display=swap"
     rel="stylesheet">
+
+  <!-- Favicons -->
+  <link rel="icon" href="../../img/bungalows-de-tomayquichua/logo-bungalows.svg?v=1.3" type="image/svg+xml">
+  <link rel="shortcut icon" href="../../img/bungalows-de-tomayquichua/logo-bungalows.svg?v=1.3" type="image/svg+xml">
 </head>
 
 <body>
@@ -242,7 +281,7 @@
                 </div>
                 <div class="card-text">
                   <h3 class="card-title">ZONA DE PARRILLA Y PACHAMANCA</h3>
-                  <p class="card-desc">Espacios perfectos para compartir un almerso delicido.</p>
+                  <p class="card-desc">Espacios perfectos para compartir un almuerzo delicioso.</p>
                 </div>
               </div>
             </div>
@@ -308,16 +347,16 @@
                 </div>
               </div>
             </div>
-            <!-- Botón inferior para contraer -->
-            <div class="collapse-footer">
-              <button class="btn-collapse-bottom" data-target="exteriores-wrapper"
-                aria-label="Contraer sección Exteriores">
-                <svg class="collapse-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                  <polyline points="18 15 12 9 6 15"></polyline>
-                </svg>
-                <span>Contraer sección</span>
-              </button>
-            </div>
+          </div>
+          <!-- Botón inferior para contraer -->
+          <div class="collapse-footer">
+            <button class="btn-collapse-bottom" data-target="exteriores-wrapper"
+              aria-label="Contraer sección Exteriores">
+              <svg class="collapse-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="18 15 12 9 6 15"></polyline>
+              </svg>
+              <span>Contraer sección</span>
+            </button>
           </div>
         </div>
       </div>
@@ -379,10 +418,10 @@
             </div>
 
             <!-- Card 3: Dormitorio -->
-            <div class="service-card card-brown">
+            <div class="service-card card-brown" id="dormitorio-card">
               <div class="card-image-wrapper">
-                <img src="../../img/bungalows-de-tomayquichua/servicios-dormitorio.png" alt="Dormitorio"
-                  class="card-image">
+                <img src="../../img/bungalows-de-tomayquichua/servicios-dormitorio-1.png" alt="Dormitorio Opción 1 - Cama matrimonial y camarotes" class="card-image dormitorio-img active" id="dormitorio-img-1">
+                <img src="../../img/bungalows-de-tomayquichua/servicios-dormitorio-2.png" alt="Dormitorio Opción 2 - 2 Camas matrimoniales" class="card-image dormitorio-img" id="dormitorio-img-2">
               </div>
               <div class="card-body">
                 <div class="card-icon-container">
@@ -392,8 +431,12 @@
                   </svg>
                 </div>
                 <div class="card-text">
-                  <h3 class="card-title">DORMITORIO</h3>
-                  <p class="card-desc">Ambientes acogedores para un descanso reparador.</p>
+                  <div class="bedroom-switcher">
+                    <button type="button" class="btn-switch active" data-option="1">Opción 1</button>
+                    <button type="button" class="btn-switch" data-option="2">Opción 2</button>
+                  </div>
+                  <h3 class="card-title" id="dormitorio-title">DORMITORIO (OPCIÓN 1)</h3>
+                  <p class="card-desc" id="dormitorio-desc">Cama matrimonial y camarotes, ideal para familias.</p>
                 </div>
               </div>
             </div>
@@ -420,16 +463,16 @@
                 </div>
               </div>
             </div>
-            <!-- Botón inferior para contraer -->
-            <div class="collapse-footer">
-              <button class="btn-collapse-bottom" data-target="interior-wrapper"
-                aria-label="Contraer sección Bungalows">
-                <svg class="collapse-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                  <polyline points="18 15 12 9 6 15"></polyline>
-                </svg>
-                <span>Contraer sección</span>
-              </button>
-            </div>
+          </div>
+          <!-- Botón inferior para contraer -->
+          <div class="collapse-footer">
+            <button class="btn-collapse-bottom" data-target="interior-wrapper"
+              aria-label="Contraer sección Bungalows">
+              <svg class="collapse-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="18 15 12 9 6 15"></polyline>
+              </svg>
+              <span>Contraer sección</span>
+            </button>
           </div>
         </div>
       </div>

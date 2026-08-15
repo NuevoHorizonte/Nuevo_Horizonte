@@ -144,4 +144,40 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // ==========================================
+  // CONMUTADOR DE OPCIONES EN DORMITORIOS
+  // ==========================================
+  const switchButtons = document.querySelectorAll('.bedroom-switcher .btn-switch');
+  const dormitorioImg1 = document.getElementById('dormitorio-img-1');
+  const dormitorioImg2 = document.getElementById('dormitorio-img-2');
+  const dormitorioTitle = document.getElementById('dormitorio-title');
+  const dormitorioDesc = document.getElementById('dormitorio-desc');
+
+  if (switchButtons.length > 0 && dormitorioImg1 && dormitorioImg2) {
+    switchButtons.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation(); // Evitar clics no deseados
+
+        // Quitar clase activa de todos los botones de este conmutador
+        switchButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const option = btn.getAttribute('data-option');
+        if (option === '1') {
+          dormitorioImg1.classList.add('active');
+          dormitorioImg2.classList.remove('active');
+
+          if (dormitorioTitle) dormitorioTitle.textContent = 'DORMITORIO (OPCIÓN 1)';
+          if (dormitorioDesc) dormitorioDesc.innerHTML = 'Cama matrimonial y camarotes, ideal para familias.';
+        } else {
+          dormitorioImg1.classList.remove('active');
+          dormitorioImg2.classList.add('active');
+
+          if (dormitorioTitle) dormitorioTitle.textContent = 'DORMITORIO (OPCIÓN 2)';
+          if (dormitorioDesc) dormitorioDesc.innerHTML = '2 Camas matrimoniales, perfecto para un descanso espacioso.';
+        }
+      });
+    });
+  }
 });

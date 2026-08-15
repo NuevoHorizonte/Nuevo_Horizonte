@@ -1,576 +1,576 @@
-/* =======================================================
-   SECCION PREMIOS
-======================================================= */
-.premios-section {
-    position: relative;
-    width: 100%;
-    min-height: 92vh;
-    overflow: hidden;
-    background: transparent;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    padding-top: 100px;
-    /* Compensa el transform: translateY(-100px) del hero-content */
-    margin-top: -100px;
-}
-
-/* =======================================================
-   OVERLAY OSCURO
-======================================================= */
-.premios-overlay {
-    display: none;
-}
-
-/* =======================================================
-   CONTENIDO PREMIOS
-======================================================= */
-.premios-content {
-    position: relative;
-    z-index: 2;
-    width: 100%;
-    max-width: 1400px;
-    padding: 80px 80px 80px 80px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    min-height: 92vh;
-}
-
-/* Anchor invisible para scroll personalizado */
-.scroll-anchor-premios {
-    position: absolute;
-    top: 280px;
-    left: 50%;
-    transform: translateX(-50%);
-    visibility: hidden;
-    pointer-events: none;
-}
-
-/* =======================================================
-   HEADER PREMIOS
-======================================================= */
-.premios-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    z-index: 2;
-    width: 100%;
-}
-
-/* =======================================================
-   TITULO
-======================================================= */
-.premios-title {
-    position: relative;
-    display: flex;
-    align-items: center;
-    gap: 28px;
-    font-size: 6.5rem;
-    font-weight: 900;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    line-height: 1;
-    margin-bottom: 18px;
-    background: linear-gradient(to bottom,
-            #ffffff 0%,
-            #fff4cf 20%,
-            #ffd86b 45%,
-            #ffb300 70%,
-            #ff8a00 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 0 2px 0 rgba(255, 255, 255, 0.2),
-        0 5px 12px rgba(255, 170, 0, 0.18),
-        0 10px 25px rgba(0, 0, 0, 0.35);
-}
-
-/* =======================================================
-   ESTRELLAS
-======================================================= */
-.star-left,
-.star-right {
-    font-size: 2.2rem;
-    color: #ffb300;
-    -webkit-text-fill-color: #ffb300;
-    text-shadow: 0 0 10px rgba(255, 170, 0, 0.45),
-        0 0 20px rgba(255, 140, 0, 0.22);
-    animation: starGlow 2.5s ease-in-out infinite;
-}
-
-/* Delay */
-.star-right {
-    animation-delay: 1.2s;
-}
-
-/* =======================================================
-   LINEA DECORATIVA
-======================================================= */
-.premios-line {
-    width: 320px;
-    height: 4px;
-    border-radius: 999px;
-    margin-bottom: 22px;
-    background: linear-gradient(90deg,
-            transparent 0%,
-            #ff7b00 20%,
-            #ffffff 50%,
-            #ff7b00 80%,
-            transparent 100%);
-    box-shadow: 0 0 10px rgba(255, 170, 0, 0.28);
-}
-
-/* =======================================================
-   SUBTITULO
-======================================================= */
-.premios-subtitle {
-    color: rgba(255, 255, 255, 0.95);
-    font-size: 1.4rem;
-    font-weight: 800;
-    letter-spacing: 2px;
-    text-align: center;
-    text-transform: uppercase;
-    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
-}
-
-/* =======================================================
-   ANIMACION ESTRELLAS
-======================================================= */
-@keyframes starGlow {
-    0% {
-        transform: scale(1);
-        opacity: 0.85;
-    }
-
-    50% {
-        transform: scale(1.12);
-        opacity: 1;
-    }
-
-    100% {
-        transform: scale(1);
-        opacity: 0.85;
-    }
-}
-
-/* =======================================================
-   PREMIOS RESPONSIVE - IMÁGENES
-======================================================= */
-@media (max-width: 1100px) {
+    /* =======================================================
+    SECCION PREMIOS
+    ======================================================= */
     .premios-section {
-        min-height: 85vh;
+        position: relative;
+        width: 100%;
+        min-height: 92vh;
+        overflow: hidden;
+        background: transparent;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        padding-top: 100px;
+        /* Compensa el transform: translateY(-100px) del hero-content */
+        margin-top: -100px;
     }
-}
 
-@media (max-width: 800px) {
-    .premios-section {
-        min-height: 78vh;
+    /* =======================================================
+    OVERLAY OSCURO
+    ======================================================= */
+    .premios-overlay {
+        display: none;
     }
-}
 
-@media (max-width: 600px) {
-    .premios-section {
-        min-height: 70vh;
-    }
-}
-
-@media (max-width: 400px) {
-    .premios-section {
-        min-height: 62vh;
-    }
-}
-
-@media (max-width: 300px) {
-    .premios-section {
-        min-height: 55vh;
-    }
-}
-
-/* =======================================================
-   PREMIOS RESPONSIVE - CONTENIDO LAPTOPS PEQUEÑAS
-======================================================= */
-@media (max-width: 1400px) {
+    /* =======================================================
+    CONTENIDO PREMIOS
+    ======================================================= */
     .premios-content {
-        padding: 60px 50px;
-        padding-top: 70px;
-    }
-
-    .scroll-anchor-premios {
-        top: 230px;
-    }
-
-    .premios-title {
-        font-size: 5.5rem;
-        letter-spacing: 2px;
-    }
-
-    .star-left,
-    .star-right {
-        font-size: 2rem;
-    }
-
-    .premios-subtitle {
-        font-size: 1.2rem;
-        letter-spacing: 1.5px;
-    }
-}
-
-/* =======================================================
-   PREMIOS RESPONSIVE - TABLET
-======================================================= */
-@media (max-width: 1100px) {
-    .premios-content {
-        padding: 60px 40px;
-        padding-top: 80px;
-        min-height: 85vh;
-    }
-
-    .scroll-anchor-premios {
-        top: 200px;
-    }
-
-    .premios-title {
-        font-size: 4.5rem;
-    }
-
-    .star-left,
-    .star-right {
-        font-size: 1.8rem;
-    }
-
-    .premios-line {
-        width: 260px;
-    }
-
-    .premios-subtitle {
-        font-size: 1.1rem;
-        letter-spacing: 1px;
-    }
-}
-
-/* =======================================================
-   PREMIOS RESPONSIVE - TABLET PEQUEÑA
-======================================================= */
-@media (max-width: 800px) {
-    .premios-content {
-        padding: 50px 30px;
-        padding-top: 50px;
-        min-height: 78vh;
-    }
-
-    .scroll-anchor-premios {
-        top: 150px;
-    }
-
-    .premios-title {
-        font-size: 3.5rem;
-        gap: 18px;
-    }
-
-    .star-left,
-    .star-right {
-        font-size: 1.5rem;
-    }
-
-    .premios-line {
-        width: 200px;
-    }
-
-    .premios-subtitle {
-        font-size: 1rem;
-        letter-spacing: 0.5px;
-    }
-}
-
-/* =======================================================
-   PREMIOS RESPONSIVE - CELULAR
-======================================================= */
-@media (max-width: 480px) {
-
-    /* El hero-content tiene translateY(-120px) en móvil,
-       20px más que en desktop, así que ajustamos el margen */
-    .premios-section {
-        margin-top: -120px;
-        padding-top: 40px;
-    }
-
-    .premios-content {
-        padding: 30px 22px;
-        padding-top: 20px;
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        max-width: 1400px;
+        padding: 80px 80px 80px 80px;
+        display: flex;
+        flex-direction: column;
         align-items: center;
-        min-height: auto;
+        justify-content: flex-start;
+        min-height: 92vh;
     }
 
+    /* Anchor invisible para scroll personalizado */
     .scroll-anchor-premios {
-        top: 120px;
+        position: absolute;
+        top: 280px;
+        left: 50%;
+        transform: translateX(-50%);
+        visibility: hidden;
+        pointer-events: none;
     }
 
+    /* =======================================================
+    HEADER PREMIOS
+    ======================================================= */
+    .premios-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: 2;
+        width: 100%;
+    }
+
+    /* =======================================================
+    TITULO
+    ======================================================= */
     .premios-title {
-        font-size: 2.8rem;
-        gap: 14px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 28px;
+        font-size: 6.5rem;
+        font-weight: 900;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        line-height: 1;
+        margin-bottom: 18px;
+        background: linear-gradient(to bottom,
+                #ffffff 0%,
+                #fff4cf 20%,
+                #ffd86b 45%,
+                #ffb300 70%,
+                #ff8a00 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: 0 2px 0 rgba(255, 255, 255, 0.2),
+            0 5px 12px rgba(255, 170, 0, 0.18),
+            0 10px 25px rgba(0, 0, 0, 0.35);
+    }
+
+    /* =======================================================
+    ESTRELLAS
+    ======================================================= */
+    .star-left,
+    .star-right {
+        font-size: 2.2rem;
+        color: #ffb300;
+        -webkit-text-fill-color: #ffb300;
+        text-shadow: 0 0 10px rgba(255, 170, 0, 0.45),
+            0 0 20px rgba(255, 140, 0, 0.22);
+        animation: starGlow 2.5s ease-in-out infinite;
+    }
+
+    /* Delay */
+    .star-right {
+        animation-delay: 1.2s;
+    }
+
+    /* =======================================================
+    LINEA DECORATIVA
+    ======================================================= */
+    .premios-line {
+        width: 320px;
+        height: 4px;
+        border-radius: 999px;
+        margin-bottom: 22px;
+        background: linear-gradient(90deg,
+                transparent 0%,
+                #ff7b00 20%,
+                #ffffff 50%,
+                #ff7b00 80%,
+                transparent 100%);
+        box-shadow: 0 0 10px rgba(255, 170, 0, 0.28);
+    }
+
+    /* =======================================================
+    SUBTITULO
+    ======================================================= */
+    .premios-subtitle {
+        color: rgba(255, 255, 255, 0.95);
+        font-size: 1.4rem;
+        font-weight: 800;
         letter-spacing: 2px;
         text-align: center;
+        text-transform: uppercase;
+        text-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
     }
 
-    .star-left,
-    .star-right {
-        font-size: 1.3rem;
+    /* =======================================================
+    ANIMACION ESTRELLAS
+    ======================================================= */
+    @keyframes starGlow {
+        0% {
+            transform: scale(1);
+            opacity: 0.85;
+        }
+
+        50% {
+            transform: scale(1.12);
+            opacity: 1;
+        }
+
+        100% {
+            transform: scale(1);
+            opacity: 0.85;
+        }
     }
 
-    .premios-line {
-        width: 160px;
+    /* =======================================================
+    PREMIOS RESPONSIVE - IMÁGENES
+    ======================================================= */
+    @media (max-width: 1100px) {
+        .premios-section {
+            min-height: 85vh;
+        }
     }
 
-    .premios-subtitle {
-        font-size: 0.85rem;
-        letter-spacing: 0px;
-        text-align: center;
-    }
-}
-
-/* =======================================================
-   PREMIOS RESPONSIVE - CELULAR PEQUEÑO (400px)
-======================================================= */
-@media (max-width: 400px) {
-    .premios-content {
-        padding: 24px 16px;
-        padding-top: 50px;
-        min-height: 62vh;
+    @media (max-width: 800px) {
+        .premios-section {
+            min-height: 78vh;
+        }
     }
 
-    .premios-title {
-        font-size: 2.2rem;
-        gap: 10px;
+    @media (max-width: 600px) {
+        .premios-section {
+            min-height: 70vh;
+        }
     }
 
-    .premios-line {
-        width: 130px;
-        height: 3px;
+    @media (max-width: 400px) {
+        .premios-section {
+            min-height: 62vh;
+        }
     }
 
-    .premios-subtitle {
-        font-size: 0.78rem;
-    }
-}
-
-/* =======================================================
-   PREMIOS RESPONSIVE - PANTALLA MUY PEQUEÑA (300px)
-======================================================= */
-@media (max-width: 300px) {
-    .premios-content {
-        padding: 18px 12px;
-        padding-top: 40px;
-        min-height: 55vh;
+    @media (max-width: 300px) {
+        .premios-section {
+            min-height: 55vh;
+        }
     }
 
-    .premios-title {
-        font-size: 1.7rem;
-        gap: 8px;
-        letter-spacing: 1px;
+    /* =======================================================
+    PREMIOS RESPONSIVE - CONTENIDO LAPTOPS PEQUEÑAS
+    ======================================================= */
+    @media (max-width: 1400px) {
+        .premios-content {
+            padding: 60px 50px;
+            padding-top: 70px;
+        }
+
+        .scroll-anchor-premios {
+            top: 230px;
+        }
+
+        .premios-title {
+            font-size: 5.5rem;
+            letter-spacing: 2px;
+        }
+
+        .star-left,
+        .star-right {
+            font-size: 2rem;
+        }
+
+        .premios-subtitle {
+            font-size: 1.2rem;
+            letter-spacing: 1.5px;
+        }
     }
 
-    .star-left,
-    .star-right {
-        font-size: 1rem;
+    /* =======================================================
+    PREMIOS RESPONSIVE - TABLET
+    ======================================================= */
+    @media (max-width: 1100px) {
+        .premios-content {
+            padding: 60px 40px;
+            padding-top: 80px;
+            min-height: 85vh;
+        }
+
+        .scroll-anchor-premios {
+            top: 200px;
+        }
+
+        .premios-title {
+            font-size: 4.5rem;
+        }
+
+        .star-left,
+        .star-right {
+            font-size: 1.8rem;
+        }
+
+        .premios-line {
+            width: 260px;
+        }
+
+        .premios-subtitle {
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+        }
     }
 
-    .premios-line {
-        width: 100px;
-        height: 3px;
+    /* =======================================================
+    PREMIOS RESPONSIVE - TABLET PEQUEÑA
+    ======================================================= */
+    @media (max-width: 800px) {
+        .premios-content {
+            padding: 50px 30px;
+            padding-top: 50px;
+            min-height: 78vh;
+        }
+
+        .scroll-anchor-premios {
+            top: 150px;
+        }
+
+        .premios-title {
+            font-size: 3.5rem;
+            gap: 18px;
+        }
+
+        .star-left,
+        .star-right {
+            font-size: 1.5rem;
+        }
+
+        .premios-line {
+            width: 200px;
+        }
+
+        .premios-subtitle {
+            font-size: 1rem;
+            letter-spacing: 0.5px;
+        }
     }
 
-    .premios-subtitle {
-        font-size: 0.68rem;
+    /* =======================================================
+    PREMIOS RESPONSIVE - CELULAR
+    ======================================================= */
+    @media (max-width: 480px) {
+
+        /* El hero-content tiene translateY(-120px) en móvil,
+        20px más que en desktop, así que ajustamos el margen */
+        .premios-section {
+            margin-top: -120px;
+            padding-top: 40px;
+        }
+
+        .premios-content {
+            padding: 30px 22px;
+            padding-top: 20px;
+            align-items: center;
+            min-height: auto;
+        }
+
+        .scroll-anchor-premios {
+            top: 120px;
+        }
+
+        .premios-title {
+            font-size: 2.8rem;
+            gap: 14px;
+            letter-spacing: 2px;
+            text-align: center;
+        }
+
+        .star-left,
+        .star-right {
+            font-size: 1.3rem;
+        }
+
+        .premios-line {
+            width: 160px;
+        }
+
+        .premios-subtitle {
+            font-size: 0.85rem;
+            letter-spacing: 0px;
+            text-align: center;
+        }
     }
-}
 
-/* =======================================================
-   GRILLA DE CUADROS DE PREMIOS
-======================================================= */
-.premios-grid {
-    width: 100%;
-    max-width: 1100px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
-    margin-top: 60px;
-}
+    /* =======================================================
+    PREMIOS RESPONSIVE - CELULAR PEQUEÑO (400px)
+    ======================================================= */
+    @media (max-width: 400px) {
+        .premios-content {
+            padding: 24px 16px;
+            padding-top: 50px;
+            min-height: 62vh;
+        }
 
-/* =======================================================
-   CUADRO BASE
-======================================================= */
-.premio-card {
-    flex: 1;
-    min-height: 420px;
-    border-radius: 24px;
-    position: relative;
-    background: transparent;
-    transition: transform 0.35s ease, box-shadow 0.35s ease;
-}
+        .premios-title {
+            font-size: 2.2rem;
+            gap: 10px;
+        }
 
-.premio-card:hover {
-    transform: translateY(-8px);
-}
+        .premios-line {
+            width: 130px;
+            height: 3px;
+        }
 
-/* =======================================================
-   IMAGEN DENTRO DEL CUADRO
-======================================================= */
-.premio-img-wrapper {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 16px;
-}
+        .premios-subtitle {
+            font-size: 0.78rem;
+        }
+    }
 
-.premio-img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    display: block;
-    /* Tamaño máximo recomendado: 800x500px */
-    max-width: 800px;
-    max-height: 500px;
-}
+    /* =======================================================
+    PREMIOS RESPONSIVE - PANTALLA MUY PEQUEÑA (300px)
+    ======================================================= */
+    @media (max-width: 300px) {
+        .premios-content {
+            padding: 18px 12px;
+            padding-top: 40px;
+            min-height: 55vh;
+        }
 
-.premio-img-picture {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+        .premios-title {
+            font-size: 1.7rem;
+            gap: 8px;
+            letter-spacing: 1px;
+        }
 
-/* =======================================================
-   CUADRO NARANJA FLUORESCENTE
-======================================================= */
-.premio-card--naranja {
-    border: 2px solid #ff6a00;
-    box-shadow:
-        0 0 18px rgba(255, 106, 0, 0.65),
-        0 0 40px rgba(255, 106, 0, 0.35),
-        inset 0 0 20px rgba(255, 106, 0, 0.08);
-}
+        .star-left,
+        .star-right {
+            font-size: 1rem;
+        }
 
-.premio-card--naranja:hover {
-    box-shadow:
-        0 0 28px rgba(255, 106, 0, 0.85),
-        0 0 60px rgba(255, 106, 0, 0.45),
-        inset 0 0 30px rgba(255, 106, 0, 0.12);
-}
+        .premios-line {
+            width: 100px;
+            height: 3px;
+        }
 
-/* =======================================================
-   CUADRO ROJO FLUORESCENTE
-======================================================= */
-.premio-card--rojo {
-    border: 2px solid #ff0033;
-    box-shadow:
-        0 0 18px rgba(255, 0, 51, 0.65),
-        0 0 40px rgba(255, 0, 51, 0.35),
-        inset 0 0 20px rgba(255, 0, 51, 0.08);
-}
+        .premios-subtitle {
+            font-size: 0.68rem;
+        }
+    }
 
-.premio-card--rojo:hover {
-    box-shadow:
-        0 0 28px rgba(255, 0, 51, 0.85),
-        0 0 60px rgba(255, 0, 51, 0.45),
-        inset 0 0 30px rgba(255, 0, 51, 0.12);
-}
-
-/* =======================================================
-   CUADRO VERDE FLUORESCENTE
-   ======================================================= */
-.premio-card--verde {
-    grid-column: 1 / -1;
-    border: 2px solid #00ff66;
-    box-shadow:
-        0 0 18px rgba(0, 255, 102, 0.65),
-        0 0 40px rgba(0, 255, 102, 0.35),
-        inset 0 0 20px rgba(0, 255, 102, 0.08);
-}
-
-.premio-card--verde:hover {
-    box-shadow:
-        0 0 28px rgba(0, 255, 102, 0.85),
-        0 0 60px rgba(0, 255, 102, 0.45),
-        inset 0 0 30px rgba(0, 255, 102, 0.12);
-}
-
-.premio-card--verde .premio-img-wrapper {
-    padding: 0;
-}
-
-.premio-card--verde .premio-img {
-    max-width: 100%;
-    max-height: 100%;
-}
-
-
-/* =======================================================
-   GRILLA RESPONSIVE - TABLET
-======================================================= */
-@media (max-width: 1100px) {
+    /* =======================================================
+    GRILLA DE CUADROS DE PREMIOS
+    ======================================================= */
     .premios-grid {
-        gap: 28px;
-        margin-top: 48px;
+        width: 100%;
+        max-width: 1100px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+        margin-top: 60px;
     }
 
+    /* =======================================================
+    CUADRO BASE
+    ======================================================= */
     .premio-card {
-        min-height: 360px;
-    }
-}
-
-@media (max-width: 800px) {
-    .premios-grid {
-        gap: 22px;
-        margin-top: 36px;
+        flex: 1;
+        min-height: 420px;
+        border-radius: 24px;
+        position: relative;
+        background: transparent;
+        transition: transform 0.35s ease, box-shadow 0.35s ease;
     }
 
-    .premio-card {
-        min-height: 300px;
-    }
-}
-
-/* =======================================================
-   GRILLA RESPONSIVE - CELULAR (apilados)
-======================================================= */
-@media (max-width: 600px) {
-    .premios-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-        margin-top: 28px;
+    .premio-card:hover {
+        transform: translateY(-8px);
     }
 
-    .premio-card {
-        min-height: 260px;
-        border-radius: 18px;
-    }
-}
-
-@media (max-width: 400px) {
-    .premios-grid {
-        gap: 16px;
-        margin-top: 22px;
-    }
-
-    .premio-card {
-        min-height: 220px;
-        border-radius: 14px;
-    }
-}
-
-@media (max-width: 300px) {
-    .premios-grid {
-        gap: 12px;
-        margin-top: 16px;
+    /* =======================================================
+    IMAGEN DENTRO DEL CUADRO
+    ======================================================= */
+    .premio-img-wrapper {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 16px;
     }
 
-    .premio-card {
-        min-height: 180px;
-        border-radius: 10px;
+    .premio-img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        display: block;
+        /* Tamaño máximo recomendado: 800x500px */
+        max-width: 800px;
+        max-height: 500px;
     }
-}
+
+    .premio-img-picture {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* =======================================================
+    CUADRO NARANJA FLUORESCENTE
+    ======================================================= */
+    .premio-card--naranja {
+        border: 2px solid #ff6a00;
+        box-shadow:
+            0 0 18px rgba(255, 106, 0, 0.65),
+            0 0 40px rgba(255, 106, 0, 0.35),
+            inset 0 0 20px rgba(255, 106, 0, 0.08);
+    }
+
+    .premio-card--naranja:hover {
+        box-shadow:
+            0 0 28px rgba(255, 106, 0, 0.85),
+            0 0 60px rgba(255, 106, 0, 0.45),
+            inset 0 0 30px rgba(255, 106, 0, 0.12);
+    }
+
+    /* =======================================================
+    CUADRO ROJO FLUORESCENTE
+    ======================================================= */
+    .premio-card--rojo {
+        border: 2px solid #ff0033;
+        box-shadow:
+            0 0 18px rgba(255, 0, 51, 0.65),
+            0 0 40px rgba(255, 0, 51, 0.35),
+            inset 0 0 20px rgba(255, 0, 51, 0.08);
+    }
+
+    .premio-card--rojo:hover {
+        box-shadow:
+            0 0 28px rgba(255, 0, 51, 0.85),
+            0 0 60px rgba(255, 0, 51, 0.45),
+            inset 0 0 30px rgba(255, 0, 51, 0.12);
+    }
+
+    /* =======================================================
+    CUADRO VERDE FLUORESCENTE
+    ======================================================= */
+    .premio-card--verde {
+        grid-column: 1 / -1;
+        border: 2px solid #00ff66;
+        box-shadow:
+            0 0 18px rgba(0, 255, 102, 0.65),
+            0 0 40px rgba(0, 255, 102, 0.35),
+            inset 0 0 20px rgba(0, 255, 102, 0.08);
+    }
+
+    .premio-card--verde:hover {
+        box-shadow:
+            0 0 28px rgba(0, 255, 102, 0.85),
+            0 0 60px rgba(0, 255, 102, 0.45),
+            inset 0 0 30px rgba(0, 255, 102, 0.12);
+    }
+
+    .premio-card--verde .premio-img-wrapper {
+        padding: 0;
+    }
+
+    .premio-card--verde .premio-img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+
+    /* =======================================================
+    GRILLA RESPONSIVE - TABLET
+    ======================================================= */
+    @media (max-width: 1100px) {
+        .premios-grid {
+            gap: 28px;
+            margin-top: 48px;
+        }
+
+        .premio-card {
+            min-height: 360px;
+        }
+    }
+
+    @media (max-width: 800px) {
+        .premios-grid {
+            gap: 22px;
+            margin-top: 36px;
+        }
+
+        .premio-card {
+            min-height: 300px;
+        }
+    }
+
+    /* =======================================================
+    GRILLA RESPONSIVE - CELULAR (apilados)
+    ======================================================= */
+    @media (max-width: 600px) {
+        .premios-grid {
+            grid-template-columns: 1fr;
+            gap: 20px;
+            margin-top: 28px;
+        }
+
+        .premio-card {
+            min-height: 260px;
+            border-radius: 18px;
+        }
+    }
+
+    @media (max-width: 400px) {
+        .premios-grid {
+            gap: 16px;
+            margin-top: 22px;
+        }
+
+        .premio-card {
+            min-height: 220px;
+            border-radius: 14px;
+        }
+    }
+
+    @media (max-width: 300px) {
+        .premios-grid {
+            gap: 12px;
+            margin-top: 16px;
+        }
+
+        .premio-card {
+            min-height: 180px;
+            border-radius: 10px;
+        }
+    }

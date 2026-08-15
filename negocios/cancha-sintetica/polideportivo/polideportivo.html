@@ -1,116 +1,177 @@
 <!DOCTYPE html>
 <html lang="es">
- <head>
- <meta charset="UTF-8">
- <title>Polideportivo</title>
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <link rel="stylesheet" href="polideportivo.css">
- <link href="https://fonts.cdnfonts.com/css/young-serif" rel="stylesheet">
- <link href="https://fonts.cdnfonts.com/css/sofia-sans"  rel="stylesheet"><!-- .bloque-izquierdo h3,.bloque-derecho h3-->
- <link href="https://fonts.cdnfonts.com/css/young-serif" rel="stylesheet"><!-- .titulo-nosotros-->
- <link href="https://fonts.cdnfonts.com/css/noto-serif-gurmukhi" rel="stylesheet">
- <link rel="icon" href="../../../img/polideportivo-huaral-eventos/logo-polideportivo.svg" type="image/svg+xml">
- </head>
- <body> 
-<div class="header-wrapper">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Polideportivo Recreacional Hacienda Huando | Alquiler de Canchas y Local de Eventos en Huaral</title>
+  <meta name="description" content="Alquiler de canchas de grass sintético (fútbol y vóley), bumperballs, cuatrimotos y alquiler de local campestre para eventos y recepciones en Hacienda Huando, Huaral. ¡Reserva hoy!">
+  <meta name="keywords" content="polideportivo huaral, canchas sinteticas huaral, hacienda huando eventos, alquiler local huaral, grass sintetico huando, bumperballs huaral, cuatrimotos huaral, pichangas huaral">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / Redes Sociales -->
+  <meta property="og:title" content="Polideportivo Recreacional Hacienda Huando - Canchas & Eventos en Huaral">
+  <meta property="og:description" content="Campos de grass sintético, paseos recreativos y amplio local campestre para todo tipo de celebraciones en Huaral. ¡Contáctanos!">
+  <meta property="og:image" content="https://nuevohorizonte.github.io/img/polideportivo-huaral-eventos/croquis.webp">
+  <meta property="og:url" content="https://nuevohorizonte.github.io/Nuevo_Horizonte/negocios/cancha-sintetica/polideportivo/polideportivo.html">
+  <meta property="og:type" content="website">
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["SportsActivityLocation", "EventVenue"],
+    "name": "Polideportivo Recreacional Hacienda Huando",
+    "url": "https://nuevohorizonte.github.io/Nuevo_Horizonte/negocios/cancha-sintetica/polideportivo/polideportivo.html",
+    "logo": "https://nuevohorizonte.github.io/img/polideportivo-huaral-eventos/logo-polideportivo.svg",
+    "image": "https://nuevohorizonte.github.io/img/polideportivo-huaral-eventos/croquis.webp",
+    "description": "Alquiler de canchas de grass sintético para fútbol y vóley, bumperballs, cuatrimotos y local campestre para eventos en Hacienda Huando, Huaral.",
+    "telephone": "+51905448644",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Huaral",
+      "addressRegion": "Lima",
+      "addressCountry": "PE",
+      "streetAddress": "Hacienda Huando"
+    },
+    "openingHours": "Mo-Su 07:00-24:00"
+  }
+  </script>
+
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800&family=Roboto+Serif:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/young-serif" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/sofia-sans" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/noto-serif-gurmukhi" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="polideportivo.css">
+
+  <!-- Favicons -->
+  <link rel="icon" href="../../../img/polideportivo-huaral-eventos/logo-polideportivo.svg?v=1.3" type="image/svg+xml">
+  <link rel="shortcut icon" href="../../../img/polideportivo-huaral-eventos/logo-polideportivo.svg?v=1.3" type="image/svg+xml">
+</head>
+<body> 
+
+<!-- ==============================================
+     HEADER PRINCIPAL INTERACTIVO & EXPANDIBLE
+=============================================== -->
+<header class="header-wrapper" id="main-header">
   <div class="contenedor-barra">
 
-    <!-- 🔶 HEADER PRINCIPAL -->
-    <div class="rectangulo-superior">
-    <div class="barra-top">
-        <button class="btn-izquierda">
-        <span class="icono-menu"></span>
-        <span class="texto-menu">MENÚ</span>
+    <!-- 🔶 RECTÁNGULO HEADER -->
+    <div class="rectangulo-superior" id="header-rect">
+      <div class="barra-top">
+        <button class="btn-izquierda" id="btn-menu" aria-label="Abrir o cerrar menú">
+          <span class="icono-menu"></span>
+          <span class="texto-menu">MENÚ</span>
         </button>
-        <img src="../../../img/polideportivo-huaral-eventos/logo-polideportivo.svg"
-            class="logo" alt="Polideportivo">
-        <a class="cuadro-derecha" href="tel:905448644">
-        <span class="texto contacto">CONTACTO</span>
-        <span class="texto telefono">905-448-644</span>
-        </a>
-    </div>
 
-    <div class="linea-separadora"></div>
-    <!-- CONTENIDO EXPANDIDO -->
-    <div class="contenido-expandido">
+        <a href="#inicio" class="logo-link" aria-label="Ir al inicio">
+          <img src="../../../img/polideportivo-huaral-eventos/logo-polideportivo.svg" class="logo" alt="Polideportivo Recreacional Hacienda Huando">
+        </a>
+
+        <a class="cuadro-derecha" href="tel:905448644" aria-label="Llamar al Polideportivo">
+          <span class="texto contacto">CONTACTO</span>
+          <span class="texto telefono">905-448-644</span>
+        </a>
+      </div>
+
+      <div class="linea-separadora"></div>
+
+      <!-- CONTENIDO EXPANDIDO -->
+      <div class="contenido-expandido">
         <!-- IZQUIERDA -->
         <div class="bloque bloque-izquierdo">
-        <h3>SERVICIOS</h3>
-        <ul class="lista-servicios">
-            <li><a href="#alquiler-local">Alquiler de Local</a></li>
-            <li><a href="#organizar-eventos">Organizar Evento</a></li>
-            <li><a href="#cancha-futbol">Cancha para Fútbol</a></li>
-            <li><a href="#cancha-voley">Cancha para Vóley</a></li>
-        </ul>
+          <h3>SERVICIOS</h3>
+          <ul class="lista-servicios">
+            <li><a href="#alquiler-local" class="menu-nav-link">Alquiler de Local</a></li>
+            <li><a href="#organizar-eventos" class="menu-nav-link">Organizar Evento</a></li>
+            <li><a href="#cancha-futbol" class="menu-nav-link">Cancha para Fútbol</a></li>
+            <li><a href="#cancha-voley" class="menu-nav-link">Cancha para Vóley</a></li>
+          </ul>
         </div>
 
         <!-- MOBILE -->
-    <div class="accesos-mobile">
-        <a href="#galeria" class="acceso acceso-galeria">Galería</a>
-        <a href="../../../index.html" class="acceso acceso-nosotros">Nosotros</a>
-    </div>
+        <div class="accesos-mobile">
+          <a href="#galeria" class="acceso acceso-galeria menu-nav-link">🖼️ Galería</a>
+          <a href="#ubicacion" class="acceso acceso-ubicacion menu-nav-link">📍 Ubicación</a>
+          <a href="#preguntas" class="acceso acceso-faq menu-nav-link">❓ Preguntas</a>
+          <a href="../../../index.html" class="acceso acceso-nosotros">🌟 Portal Principal</a>
+        </div>
 
         <!-- CENTRO -->
-    <div class="bloque bloque-centro">
-        <a href="../../../index.html" target="_blank" rel="noopener">
+        <div class="bloque bloque-centro">
+          <a href="../../../index.html" target="_blank" rel="noopener">
             <h2 class="titulo-nosotros">NOSOTROS</h2>
-        </a>
-        <div class="redes-sociales">
-            <a href="https://www.facebook.com/PolideportivoRecreacionalHaciendaHuando1"
-            target="_blank" rel="noopener">
-            <img src="../../../img/polideportivo-huaral-eventos/facebook.svg" alt="Facebook">
+          </a>
+          <div class="redes-sociales">
+            <a href="https://www.facebook.com/PolideportivoRecreacionalHaciendaHuando1" target="_blank" rel="noopener" aria-label="Facebook">
+              <img src="../../../img/polideportivo-huaral-eventos/facebook.svg" alt="Facebook">
             </a>
-            <a href="https://www.tiktok.com/@deportvorecreativ"
-            target="_blank" rel="noopener">
-            <img src="../../../img/polideportivo-huaral-eventos/tiktok.svg" alt="TikTok">
+            <a href="https://www.tiktok.com/@deportvorecreativ" target="_blank" rel="noopener" aria-label="TikTok">
+              <img src="../../../img/polideportivo-huaral-eventos/tiktok.svg" alt="TikTok">
             </a>
-            <a href="https://www.instagram.com/"
-                target="_blank" rel="noopener">
-            <img src="../../../img/polideportivo-huaral-eventos/instagram.svg" alt="Instagram">
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
+              <img src="../../../img/polideportivo-huaral-eventos/instagram.svg" alt="Instagram">
             </a>
-        </div>
+          </div>
         </div>
 
         <!-- DERECHA -->
         <div class="bloque bloque-derecho">
-        <h3>INFORMACIÓN</h3>
-        <ul class="lista-servicios lista-info">
-            <li><a href="#galeria">Galería</a></li>
-            <li><a href="#croquis">Croquis</a></li>
-            <li><a href="#ubicacion">Ubicación</a></li>
-            <li><a href="#preguntas">Preguntas</a></li>
-        </ul>
-        </div>
-    </div>
-</div>
-
-<!-- CINTA INFERIOR (FUERA DEL HEADER) -->
-    <div class="linea-inferior">
-    <div class="cinta">
-        <div class="cinta-track">
-        <span class="item">ALQUILER DE LOCAL</span>
-        <span class="sep">&</span>
-        <span class="item">CANCHA DE FÚTBOL</span>
-        <span class="sep">&</span>
-        <span class="item">CANCHA DE VÓLEY</span>
-        <span class="sep">&</span>
-        <span class="item">EVENTOS</span>
-        <span class="sep">&</span>
-        <!-- DUPLICADO PARA LOOP -->
-        <span class="item">ALQUILER DE LOCAL</span>
-        <span class="sep">&</span>
-        <span class="item">CANCHA DE FÚTBOL</span>
-        <span class="sep">&</span>
-        <span class="item">CANCHA DE VÓLEY</span>
-        <span class="sep">&</span>
-        <span class="item">EVENTOS</span>
-        <span class="sep">&</span>
+          <h3>INFORMACIÓN</h3>
+          <ul class="lista-servicios lista-info">
+            <li><a href="#galeria" class="menu-nav-link">Galería</a></li>
+            <li><a href="#croquis" class="menu-nav-link">Croquis</a></li>
+            <li><a href="#ubicacion" class="menu-nav-link">Ubicación</a></li>
+            <li><a href="#preguntas" class="menu-nav-link">Preguntas Frecuentes</a></li>
+          </ul>
         </div>
       </div>
     </div>
-</div>
 
-<section class="seccion-eslogan">
+    <!-- CINTA INFERIOR MARQUEE -->
+    <div class="linea-inferior">
+      <div class="cinta">
+        <div class="cinta-track">
+          <span class="item">ALQUILER DE LOCAL</span>
+          <span class="sep">&</span>
+          <span class="item">CANCHA DE FÚTBOL</span>
+          <span class="sep">&</span>
+          <span class="item">CANCHA DE VÓLEY</span>
+          <span class="sep">&</span>
+          <span class="item">EVENTOS CAMPESETRES</span>
+          <span class="sep">&</span>
+          <span class="item">BUMPERBALLS</span>
+          <span class="sep">&</span>
+          <span class="item">CUATRIMOTOS</span>
+          <span class="sep">&</span>
+          <!-- DUPLICADO PARA LOOP CONTINUO -->
+          <span class="item">ALQUILER DE LOCAL</span>
+          <span class="sep">&</span>
+          <span class="item">CANCHA DE FÚTBOL</span>
+          <span class="sep">&</span>
+          <span class="item">CANCHA DE VÓLEY</span>
+          <span class="sep">&</span>
+          <span class="item">EVENTOS CAMPESTRES</span>
+          <span class="sep">&</span>
+          <span class="item">BUMPERBALLS</span>
+          <span class="sep">&</span>
+          <span class="item">CUATRIMOTOS</span>
+          <span class="sep">&</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</header>
+
+<!-- ==============================================
+     SECCIÓN HERO / ESLOGAN
+=============================================== -->
+<section class="seccion-eslogan" id="inicio">
   <div class="eslogan-grid">
     <span class="palabra verde a">LOCAL PARA</span>
     <span class="palabra amp">&</span>
@@ -121,276 +182,558 @@
   </div>
 </section>
 
-<section class="seccion-imagenes">
+<!-- ==============================================
+     SECCIÓN CARRUSEL 3D & CROQUIS INTERACTIVO
+=============================================== -->
+<section class="seccion-imagenes" id="croquis">
+  <!-- CARRUSEL 3D EN ARCO -->
   <div class="carousel">
     <div class="carousel-track">
-      <div class="img-box"><img src="../../../img/polideportivo-huaral-eventos/carrusel-img1.webp"></div>
-      <div class="img-box"><img src="../../../img/polideportivo-huaral-eventos/carrusel-img2.webp"></div>
-      <div class="img-box"><img src="../../../img/polideportivo-huaral-eventos/carrusel-img3.webp"></div>
-      <div class="img-box"><img src="../../../img/polideportivo-huaral-eventos/carrusel-img4.webp"></div>
-      <div class="img-box"><img src="../../../img/polideportivo-huaral-eventos/carrusel-img5.webp"></div>
-      <div class="img-box"><img src="../../../img/polideportivo-huaral-eventos/carrusel-img6.webp"></div>
-      <div class="img-box"><img src="../../../img/polideportivo-huaral-eventos/carrusel-img1.webp"></div>
-      <div class="img-box"><img src="../../../img/polideportivo-huaral-eventos/carrusel-img2.webp"></div>
-      <div class="img-box"><img src="../../../img/polideportivo-huaral-eventos/carrusel-img3.webp"></div>
-      <div class="img-box"><img src="../../../img/polideportivo-huaral-eventos/carrusel-img4.webp"></div>
-      <div class="img-box"><img src="../../../img/polideportivo-huaral-eventos/carrusel-img5.webp"></div>
-      <div class="img-box"><img src="../../../img/polideportivo-huaral-eventos/carrusel-img6.webp"></div>
-      <div class="img-box"><img src="../../../img/polideportivo-huaral-eventos/carrusel-img1.webp"></div>
-      <div class="img-box"><img src="../../../img/polideportivo-huaral-eventos/carrusel-img2.webp"></div>
-      <div class="img-box"><img src="../../../img/polideportivo-huaral-eventos/carrusel-img3.webp"></div>
-      <div class="img-box"><img src="../../../img/polideportivo-huaral-eventos/carrusel-img4.webp"></div>
-      <div class="img-box"><img src="../../../img/polideportivo-huaral-eventos/carrusel-img5.webp"></div>
-      <div class="img-box"><img src="../../../img/polideportivo-huaral-eventos/carrusel-img6.webp"></div>
+      <div class="img-box"><img src="../../../img/polideportivo-huaral-eventos/carrusel-img1.webp" alt="Instalaciones Polideportivo 1"></div>
+      <div class="img-box"><img src="../../../img/polideportivo-huaral-eventos/carrusel-img2.webp" alt="Instalaciones Polideportivo 2"></div>
+      <div class="img-box"><img src="../../../img/polideportivo-huaral-eventos/carrusel-img3.webp" alt="Instalaciones Polideportivo 3"></div>
+      <div class="img-box"><img src="../../../img/polideportivo-huaral-eventos/carrusel-img4.webp" alt="Instalaciones Polideportivo 4"></div>
+      <div class="img-box"><img src="../../../img/polideportivo-huaral-eventos/carrusel-img5.webp" alt="Instalaciones Polideportivo 5"></div>
+      <div class="img-box"><img src="../../../img/polideportivo-huaral-eventos/carrusel-img6.webp" alt="Instalaciones Polideportivo 6"></div>
+      <div class="img-box"><img src="../../../img/polideportivo-huaral-eventos/carrusel-img1.webp" alt="Instalaciones Polideportivo 1"></div>
+      <div class="img-box"><img src="../../../img/polideportivo-huaral-eventos/carrusel-img2.webp" alt="Instalaciones Polideportivo 2"></div>
+      <div class="img-box"><img src="../../../img/polideportivo-huaral-eventos/carrusel-img3.webp" alt="Instalaciones Polideportivo 3"></div>
+      <div class="img-box"><img src="../../../img/polideportivo-huaral-eventos/carrusel-img4.webp" alt="Instalaciones Polideportivo 4"></div>
+      <div class="img-box"><img src="../../../img/polideportivo-huaral-eventos/carrusel-img5.webp" alt="Instalaciones Polideportivo 5"></div>
+      <div class="img-box"><img src="../../../img/polideportivo-huaral-eventos/carrusel-img6.webp" alt="Instalaciones Polideportivo 6"></div>
+    </div>
+  </div>
+
+  <!-- CROQUIS INTERACTIVO CON PINES & TOOLTIPS -->
+  <div class="croquis-container">
+    <img src="../../../img/polideportivo-huaral-eventos/croquis.webp" alt="Croquis del Polideportivo Hacienda Huando" class="croquis-base-img">
+
+    <!-- Flechas interactivas con metadata -->
+    <div class="flecha-wrapper f1" data-spot="cancha-grande" data-title="⚽ Cancha Grande de Fútbol" data-desc="Cancha sintética para Fútbol 11 y campeonatos oficiales con iluminación LED.">
+      <img src="../../../img/polideportivo-huaral-eventos/flecha-cancha-grande-futbol.svg" class="flecha-img" alt="Cancha Grande de Fútbol">
     </div>
 
-<div class="croquis-container">
-<img src="../../../img/polideportivo-huaral-eventos/croquis.webp" alt="Croquis">
+    <div class="flecha-wrapper f2" data-spot="cancha-voley" data-title="🏐 Cancha de Vóley" data-desc="Espacio acondicionado para partidos de vóley recreativo y competitivo.">
+      <img src="../../../img/polideportivo-huaral-eventos/flecha-voley.svg" class="flecha-img" alt="Cancha de Vóley">
+    </div>
 
-<!-- Flechas como imágenes -->
-<img src="../../../img/polideportivo-huaral-eventos/flecha-cancha-grande-futbol.svg" class="flecha-img f1" alt="">
-<img src="../../../img/polideportivo-huaral-eventos/flecha-voley.svg"  class="flecha-img f2" alt="">
-<img src="../../../img/polideportivo-huaral-eventos/flecha-cancha-pequeña-futbol.svg" class="flecha-img f3" alt="">
-<img src="../../../img/polideportivo-huaral-eventos/flecha-baños.svg" class="flecha-img f4" alt="">
-<img src="../../../img/polideportivo-huaral-eventos/flecha-estacionamiento.svg" class="flecha-img f5" alt="">
-<img src="../../../img/polideportivo-huaral-eventos/flecha-lugar-para-eventos.svg" class="flecha-img f6" alt="">
-<img src="../../../img/polideportivo-huaral-eventos/flecha-restaurante.svg" class="flecha-img f7" alt="">
-</div>
+    <div class="flecha-wrapper f3" data-spot="cancha-pequena" data-title="⚽ Cancha Pequeña de Fútbol" data-desc="Ideal para Fútbol 6, pichangas rápidas y academias deportivas.">
+      <img src="../../../img/polideportivo-huaral-eventos/flecha-cancha-pequeña-futbol.svg" class="flecha-img" alt="Cancha Pequeña de Fútbol">
+    </div>
 
-<div class="croquis-titulo">
-  <span class="linea"></span>
-  <span class="texto">CROQUIS</span>
-  <span class="linea"></span>
-</div>
+    <div class="flecha-wrapper f4" data-spot="banos" data-title="🚻 Servicios Higiénicos" data-desc="Baños limpios, modernos y separados para damas y caballeros.">
+      <img src="../../../img/polideportivo-huaral-eventos/flecha-baños.svg" class="flecha-img" alt="Baños">
+    </div>
+
+    <div class="flecha-wrapper f5" data-spot="estacionamiento" data-title="🚗 Estacionamiento Privado" data-desc="Amplio parqueo seguro y controlado para todos los visitantes.">
+      <img src="../../../img/polideportivo-huaral-eventos/flecha-estacionamiento.svg" class="flecha-img" alt="Estacionamiento">
+    </div>
+
+    <div class="flecha-wrapper f6" data-spot="eventos" data-title="🎪 Zona de Eventos" data-desc="Explanada campestre para bodas, 15 años, conciertos y eventos corporativos.">
+      <img src="../../../img/polideportivo-huaral-eventos/flecha-lugar-para-eventos.svg" class="flecha-img" alt="Lugar para Eventos">
+    </div>
+
+    <div class="flecha-wrapper f7" data-spot="restaurante" data-title="🍽️ Restaurante & Parrillas" data-desc="Área gastronómica con zona de parrillas, descanso y bebidas refrescantes.">
+      <img src="../../../img/polideportivo-huaral-eventos/flecha-restaurante.svg" class="flecha-img" alt="Restaurante">
+    </div>
+
+    <!-- TARJETA TOOLTIP FLOTANTE DEL CROQUIS -->
+    <div class="croquis-tooltip-card" id="croquis-tooltip">
+      <div class="tooltip-badge">ZONA SELECCIONADA</div>
+      <h4 class="tooltip-title">Toca o pasa el mouse por un pin</h4>
+      <p class="tooltip-desc">Descubre cada una de las instalaciones de nuestro polideportivo recreacional.</p>
+    </div>
+  </div>
+
+  <div class="croquis-titulo">
+    <span class="linea"></span>
+    <span class="texto">CROQUIS</span>
+    <span class="linea"></span>
+  </div>
 </section>
 
-<section class="seccion-alquiler">
-<div class="alquiler-wrapper">
+<!-- ==============================================
+     SECCIÓN ALQUILER DE CANCHAS & ATRACCIONES
+=============================================== -->
+<section class="seccion-alquiler" id="alquiler-local">
+  <!-- Anclas para menú -->
+  <div id="cancha-futbol" style="position: relative; top: -100px; visibility: hidden;"></div>
+  <div id="cancha-voley" style="position: relative; top: -100px; visibility: hidden;"></div>
+
+  <div class="alquiler-wrapper">
     <!-- Flecha izquierda -->
-    <img
-        src="../../../img/polideportivo-huaral-eventos/flecha-ubicacion.svg"
-        class="flecha-alquiler flecha-izquierda"
-        alt="">
+    <img src="../../../img/polideportivo-huaral-eventos/flecha-ubicacion.svg" class="flecha-alquiler flecha-izquierda" alt="Ubicación">
+    
     <div class="alquiler-contenedor">
-    <a
-        href="https://maps.app.goo.gl/izSvexem8h81KAQy9"
-        target="_blank"
-        rel="noopener"
-        class="alquiler-box box-izquierda">
-        HUARAL-HUANDO
-        </a>
-        <a
-        href="https://wa.me/51905448644"
-        target="_blank"
-        rel="noopener"
-        class="alquiler-box box-derecha">
-        905-448-644
-        </a>
+      <a href="https://maps.app.goo.gl/izSvexem8h81KAQy9" target="_blank" rel="noopener" class="alquiler-box box-izquierda">
+        📍 HUARAL-HUANDO
+      </a>
+      <a href="https://wa.me/51905448644?text=Hola,%20quisiera%20consultar%20disponibilidad%20para%20alquilar%20una%20cancha%20en%20el%20Polideportivo%20Huando" target="_blank" rel="noopener" class="alquiler-box box-derecha">
+        📞 905-448-644
+      </a>
     </div>
 
     <!-- Flecha derecha -->
-  <img
-      src="../../../img/polideportivo-huaral-eventos/flecha-reserva.svg"
-      class="flecha-alquiler flecha-derecha"
-      alt="">
+    <img src="../../../img/polideportivo-huaral-eventos/flecha-reserva.svg" class="flecha-alquiler flecha-derecha" alt="Reserva">
   </div>
 
   <h2 class="titulo-alquiler">
-  <span class="verde">ALQUILER</span>
-  <span class="negro">DE CANCHA</span>
-  <span class="verde">SINTÉTICA</span>
+    <span class="verde">ALQUILER</span>
+    <span class="negro">DE CANCHA</span>
+    <span class="verde">SINTÉTICA</span>
   </h2>
 
-<!-- CONTENEDOR HORIZONTAL -->
-<div class="alquiler-layout">
+  <!-- CONTENEDOR HORIZONTAL DEL SLIDER -->
+  <div class="alquiler-layout">
 
-  <!-- ÓVALO VERDE -->
-  <div class="cuadro-verde-alquiler">
-    <div class="slider-wrapper"> 
-      <div class="circulo-slider">
-        <img src="../../../img/polideportivo-huaral-eventos/circulo-1.webp" class="slide active">
-        <img src="../../../img/polideportivo-huaral-eventos/circulo-2.webp" class="slide">
-        <img src="../../../img/polideportivo-huaral-eventos/circulo-3.webp" class="slide">
-        <img src="../../../img/polideportivo-huaral-eventos/circulo-4.webp" class="slide">
-        <img src="../../../img/polideportivo-huaral-eventos/circulo-5.webp" class="slide">
-      </div> 
-      <div class="progress-ring">
+    <!-- ÓVALO VERDE CON PROGRESS RING & CONTROLES -->
+    <div class="cuadro-verde-alquiler">
+      <div class="slider-wrapper"> 
+        <div class="circulo-slider" id="circuloSlider">
+          <img src="../../../img/polideportivo-huaral-eventos/circulo-1.webp" class="slide active" alt="Cancha Grande de Fútbol" data-index="0">
+          <img src="../../../img/polideportivo-huaral-eventos/circulo-2.webp" class="slide" alt="Cancha Pequeña de Fútbol" data-index="1">
+          <img src="../../../img/polideportivo-huaral-eventos/circulo-3.webp" class="slide" alt="Cancha de Vóley" data-index="2">
+          <img src="../../../img/polideportivo-huaral-eventos/circulo-4.webp" class="slide" alt="Bumperballs" data-index="3">
+          <img src="../../../img/polideportivo-huaral-eventos/circulo-5.webp" class="slide" alt="Cuatrimotos" data-index="4">
+        </div> 
+        <div class="progress-ring"></div>
+      </div>
+
+      <!-- BOTONES PREV/NEXT DEL SLIDER -->
+      <button class="slider-nav-btn btn-prev-slide" id="btnPrevSlide" aria-label="Servicio anterior">‹</button>
+      <button class="slider-nav-btn btn-next-slide" id="btnNextSlide" aria-label="Servicio siguiente">›</button>
+    </div>
+
+    <!-- INFO AL COSTADO CON CTA DINÁMICO DE WHATSAPP -->
+    <div class="info-alquiler activo">
+      <!-- SELECTOR DIRECTO DE SERVICIOS -->
+      <div class="slider-pills" id="sliderPills">
+        <button class="pill-btn active" data-slide="0">Fútbol 11</button>
+        <button class="pill-btn" data-slide="1">Fútbol 6</button>
+        <button class="pill-btn" data-slide="2">Vóley</button>
+        <button class="pill-btn" data-slide="3">Bumperballs</button>
+        <button class="pill-btn" data-slide="4">Cuatrimotos</button>
+      </div>
+
+      <h3 class="info-titulo">CANCHA GRANDE DE FÚTBOL</h3>
+      <p class="info-texto">Cancha sintética para partidos completos.<br><br>Capacidad: 11 vs 11 jugadores<br>Área: 25 × 25 m²</p>
+      
+      <div class="info-cta-box">
+        <a href="https://wa.me/51905448644?text=Hola,%20quisiera%20reservar%20la%20Cancha%20Grande%20de%20Fútbol%20en%20el%20Polideportivo%20Huando" target="_blank" rel="noopener noreferrer" class="btn-reserva-cancha" id="btnReservaDinamico">
+          <span class="btn-icon">⚽</span>
+          <span class="btn-text">¡Reservar Cancha Grande!</span>
+        </a>
       </div>
     </div>
   </div>
-
-  <!-- INFO AL COSTADO -->
-  <div class="info-alquiler">
-    <h3 class="info-titulo"></h3>
-    <p class="info-texto"></p>
-  </div>
-  </div> <!-- ESTE CIERRE ES CLAVE -->
-</div>
 </section>
 
-<!-- Alquiler de eventos-->
-<section class="seccion-eventos">
+<!-- ==============================================
+     SECCIÓN ALQUILER DE LOCAL PARA EVENTOS
+=============================================== -->
+<section class="seccion-eventos" id="organizar-eventos">
   <h2 class="titulo-eventos">
     <span class="verde">ALQUILER</span>
     <span class="negro">DE LOCAL</span>
     <span class="verde">PARA EVENTOS</span>
-    </h2>
+  </h2>
 
-<div class="sticky-spacer"></div>
+  <div class="sticky-spacer"></div>
+
   <div class="eventos-info">
+    <!-- ITEM 01 -->
     <div class="evento-item">
       <h3 class="evento-titulo">
-        <span class="evento-numero">01.</span> ÁREA GRANDE
-      </h3>
-
-      <div class="evento-contenido">
-        <div class="evento-texto">
-          <ul>
-            <li>Espacio amplio para eventos sociales y corporativos</li>
-            <li>Capacidad adaptable según el tipo de evento</li>
-          </ul>
-        </div>
-        <div class="evento-imagen">
-          <img src="../../../img/polideportivo-huaral-eventos/eventos-1.png" alt="Área grande">
-        </div>
-      </div>
-    </div>
-    <div class="evento-item">
-      <h3 class="evento-titulo">
-        <span class="evento-numero">02.</span> ESTACIONAMIENTO
+        <span class="evento-numero">01.</span> ÁREA GRANDE Y EXPLANADA
       </h3>
       <div class="evento-contenido">
         <div class="evento-texto">
+          <div class="evento-badges">
+            <span class="badge-tag">🎪 Gran Capacidad</span>
+            <span class="badge-tag">🌳 Ambiente Campestre</span>
+          </div>
           <ul>
-            <li>Amplio espacio para vehículos</li>
-            <li>Acceso seguro y organizado</li>
+            <li>Espacio amplio para matrimonios, 15 años, fiestas corporativas y aniversarios.</li>
+            <li>Capacidad adaptable desde 50 hasta más de 500 personas en entorno natural.</li>
+            <li>Iluminación perimétrica potente para celebraciones nocturnas inolvidables.</li>
           </ul>
-      </div>
+        </div>
         <div class="evento-imagen">
-          <img src="../../../img/polideportivo-huaral-eventos/eventos-2.png" alt="Estacionamiento">
+          <img src="../../../img/polideportivo-huaral-eventos/eventos-1.png" alt="Área grande para eventos en Hacienda Huando">
         </div>
       </div>
     </div>
 
+    <!-- ITEM 02 -->
     <div class="evento-item">
       <h3 class="evento-titulo">
-        <span class="evento-numero">03.</span> COCINA
+        <span class="evento-numero">02.</span> ESTACIONAMIENTO PRIVADO
       </h3>
-
       <div class="evento-contenido">
         <div class="evento-texto">
+          <div class="evento-badges">
+            <span class="badge-tag">🚗 Parqueo Exclusivo</span>
+            <span class="badge-tag">🔒 Vigilancia Segura</span>
+          </div>
           <ul>
-            <li>Área equipada para preparación de alimentos</li>
-            <li>Ideal para eventos y celebraciones</li>
+            <li>Amplio patio de estacionamiento para vehículos particulares, camionetas y buses.</li>
+            <li>Acceso directo, seguro y organizado para el ingreso fluido de tus invitados.</li>
+            <li>Control de acceso permanente para la tranquilidad de tu celebración.</li>
           </ul>
         </div>
         <div class="evento-imagen">
-          <img src="../../../img/polideportivo-huaral-eventos/eventos-1.png" alt="Cocina">
+          <img src="../../../img/polideportivo-huaral-eventos/eventos-2.png" alt="Estacionamiento privado del local">
         </div>
       </div>
     </div>
 
+    <!-- ITEM 03 -->
     <div class="evento-item">
       <h3 class="evento-titulo">
-        <span class="evento-numero">04.</span> BAÑOS
+        <span class="evento-numero">03.</span> COCINA Y ZONA DE PARRILLAS
       </h3>
       <div class="evento-contenido">
         <div class="evento-texto">
+          <div class="evento-badges">
+            <span class="badge-tag">🔥 Zona de Parrilla</span>
+            <span class="badge-tag">🍽️ Área de Catering</span>
+          </div>
           <ul>
-            <li>Servicios higiénicos limpios y accesibles</li>
-            <li>Separados para damas y caballeros</li>
+            <li>Espacio acondicionado para preparación de alimentos, barras y servicio de catering.</li>
+            <li>Ideal para chancho al palo huaralino, pachamancas, parrilladas y banquetes.</li>
+            <li>Puntos de agua y tomas de corriente dedicadas para el equipo de cocina.</li>
           </ul>
         </div>
         <div class="evento-imagen">
-          <img src="../../../img/polideportivo-huaral-eventos/eventos-1.png" alt="Baños">
+          <img src="../../../img/polideportivo-huaral-eventos/eventos-1.png" alt="Cocina y zona de catering para eventos">
+        </div>
+      </div>
+    </div>
+
+    <!-- ITEM 04 -->
+    <div class="evento-item">
+      <h3 class="evento-titulo">
+        <span class="evento-numero">04.</span> SERVICIOS HIGIÉNICOS
+      </h3>
+      <div class="evento-contenido">
+        <div class="evento-texto">
+          <div class="evento-badges">
+            <span class="badge-tag">🚻 Sanitarios Modernos</span>
+            <span class="badge-tag">✨ Limpieza Continua</span>
+          </div>
+          <ul>
+            <li>Servicios higiénicos completos, limpios y accesibles durante todo el evento.</li>
+            <li>Módulos diferenciados e independientes para damas y caballeros.</li>
+            <li>Mantenimiento y abastecimiento constante durante toda tu reunión.</li>
+          </ul>
+        </div>
+        <div class="evento-imagen">
+          <img src="../../../img/polideportivo-huaral-eventos/eventos-2.png" alt="Servicios higiénicos del polideportivo">
         </div>
       </div>
     </div>
   </div>
+
+  <!-- BANNER CTA DE EVENTOS -->
+  <div class="eventos-cta-banner">
+    <div class="cta-banner-content">
+      <h3>¿Planeas un matrimonio, cumpleaños o evento corporativo en Huaral?</h3>
+      <p>Disfruta de la mejor ubicación en Hacienda Huando con instalaciones campestres de primer nivel.</p>
+      <a href="https://wa.me/51905448644?text=Hola,%20quisiera%20cotizar%20el%20alquiler%20del%20local%20para%20un%20evento%20en%20Hacienda%20Huando" target="_blank" rel="noopener noreferrer" class="btn-cotizar-evento">
+        🎉 ¡Cotizar Alquiler de Local para mi Evento!
+      </a>
+    </div>
+  </div>
 </section>
 
-<!-- =========================
-SECCIÓN GALERÍA DE ACADEMIAS 
-========================= -->
+<!-- ==============================================
+     SECCIÓN GALERÍA
+=============================================== -->
 <section id="galeria" class="galeria-section">
-<div class="galeria-filtros">
+  <div class="galeria-header">
+    <h2 class="galeria-titulo-principal">Nuestra Galería de Fotos</h2>
+    <p class="galeria-subtitulo">Revive la emoción deportiva y los momentos especiales en Hacienda Huando</p>
+  </div>
+
+  <div class="galeria-filtros">
     <button class="activo" data-filter="todo">TODO</button>
     <button data-filter="evento">EVENTOS</button>
     <button data-filter="canchas">CANCHAS</button>
-    </div>
-    <div class="galeria-grid-wrapper">
-    <div class="galeria-grid">
-        <div class="galeria-item evento"><img src="../../../img/polideportivo-huaral-eventos/gal-prueba-3.png" alt=""></div>
-        <div class="galeria-item canchas"><img src="../../../img/polideportivo-huaral-eventos/gal-prueba-1.png" alt=""></div>
-        <div class="galeria-item canchas"><img src="../../../img/polideportivo-huaral-eventos/gal-prueba-2.png" alt=""></div>
-        <div class="galeria-item evento"><img src="../../../img/polideportivo-huaral-eventos/gal-prueba-5.png" alt=""></div>
-        <div class="galeria-item evento"><img src="../../../img/polideportivo-huaral-eventos/gal-prueba-6.png" alt=""></div>
-        <div class="galeria-item canchas"><img src="../../../img/polideportivo-huaral-eventos/gal-prueba-4.png" alt=""></div>
-        <div class="galeria-item canchas"><img src="../../../img/polideportivo-huaral-eventos/gal-prueba-9.png" alt=""></div>
-        <div class="galeria-item evento"><img src="../../../img/polideportivo-huaral-eventos/gal-prueba-7.png"alt=""></div>
-    </div>
-</div>
+  </div>
 
-<!-- BOTÓN / CUADRO HACIA GALERÍA COMPLETA -->
-<div class="galeria-ver-mas">
-  <a href="../../../negocios/cancha-sintetica/polideportivo/polideportivo-album.html" 
-    class="galeria-boton"
-    target="_blank"
-    rel="noopener noreferrer">
-    GALERÍA COMPLETA
-  </a>
-</div>
+  <div class="galeria-grid-wrapper">
+    <div class="galeria-grid">
+      <div class="galeria-item evento" data-full="../../../img/polideportivo-huaral-eventos/gal-prueba-3.png" data-caption="Celebración y fiesta en la explanada de eventos">
+        <img src="../../../img/polideportivo-huaral-eventos/gal-prueba-3.png" alt="Evento campestre en Hacienda Huando">
+        <div class="galeria-overlay"><span class="zoom-icon">🔍 Ver Foto</span></div>
+      </div>
+      <div class="galeria-item canchas" data-full="../../../img/polideportivo-huaral-eventos/gal-prueba-1.png" data-caption="Cancha de grass sintético lista para el juego">
+        <img src="../../../img/polideportivo-huaral-eventos/gal-prueba-1.png" alt="Cancha sintética de fútbol">
+        <div class="galeria-overlay"><span class="zoom-icon">🔍 Ver Foto</span></div>
+      </div>
+      <div class="galeria-item canchas" data-full="../../../img/polideportivo-huaral-eventos/gal-prueba-2.png" data-caption="Partido de fútbol nocturno con iluminación LED">
+        <img src="../../../img/polideportivo-huaral-eventos/gal-prueba-2.png" alt="Fútbol nocturno en polideportivo">
+        <div class="galeria-overlay"><span class="zoom-icon">🔍 Ver Foto</span></div>
+      </div>
+      <div class="galeria-item evento" data-full="../../../img/polideportivo-huaral-eventos/gal-prueba-5.png" data-caption="Montaje de mesas y decoración campestre">
+        <img src="../../../img/polideportivo-huaral-eventos/gal-prueba-5.png" alt="Decoración de evento social">
+        <div class="galeria-overlay"><span class="zoom-icon">🔍 Ver Foto</span></div>
+      </div>
+      <div class="galeria-item evento" data-full="../../../img/polideportivo-huaral-eventos/gal-prueba-6.png" data-caption="Recepción y festejo al aire libre">
+        <img src="../../../img/polideportivo-huaral-eventos/gal-prueba-6.png" alt="Recepción campestre">
+        <div class="galeria-overlay"><span class="zoom-icon">🔍 Ver Foto</span></div>
+      </div>
+      <div class="galeria-item canchas" data-full="../../../img/polideportivo-huaral-eventos/gal-prueba-4.png" data-caption="Cancha sintética con excelente amortiguación">
+        <img src="../../../img/polideportivo-huaral-eventos/gal-prueba-4.png" alt="Grass sintético acolchado">
+        <div class="galeria-overlay"><span class="zoom-icon">🔍 Ver Foto</span></div>
+      </div>
+      <div class="galeria-item canchas" data-full="../../../img/polideportivo-huaral-eventos/gal-prueba-9.png" data-caption="Torneos y campeonatos de fútbol y vóley">
+        <img src="../../../img/polideportivo-huaral-eventos/gal-prueba-9.png" alt="Torneo deportivo en Huando">
+        <div class="galeria-overlay"><span class="zoom-icon">🔍 Ver Foto</span></div>
+      </div>
+      <div class="galeria-item evento" data-full="../../../img/polideportivo-huaral-eventos/gal-prueba-7.png" data-caption="Ambiente acogedor para banquetes familiares">
+        <img src="../../../img/polideportivo-huaral-eventos/gal-prueba-7.png" alt="Banquete en Hacienda Huando">
+        <div class="galeria-overlay"><span class="zoom-icon">🔍 Ver Foto</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BOTÓN HACIA GALERÍA COMPLETA -->
+  <div class="galeria-ver-mas">
+    <a href="polideportivo-album.html" class="galeria-boton" target="_blank" rel="noopener noreferrer">
+      📸 VER ÁLBUM COMPLETO (MÁS DE 50 FOTOS)
+    </a>
+  </div>
 </section>
+
+<!-- ==============================================
+     SECCIÓN PREGUNTAS FRECUENTES (FAQ)
+=============================================== -->
+<section id="preguntas" class="seccion-faq">
+  <div class="faq-container">
+    <div class="faq-badge">RESOLVEMOS TUS DUDAS</div>
+    <h2 class="faq-titulo">Preguntas Frecuentes</h2>
+    <p class="faq-subtitulo">Todo lo que necesitas saber para tu reserva de cancha o evento en Hacienda Huando</p>
+
+    <div class="faq-grid">
+      <!-- FAQ 1 -->
+      <div class="faq-card">
+        <button class="faq-question" aria-expanded="false">
+          <span class="faq-q-text">¿Cómo puedo reservar una cancha o el local para eventos?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Puedes reservar de forma rápida comunicándote a nuestro WhatsApp oficial al <strong><a href="https://wa.me/51905448644" target="_blank">905 448 644</a></strong> o llamándonos directamente. Te indicaremos la disponibilidad horaria al instante para asegurar tu fecha.</p>
+        </div>
+      </div>
+
+      <!-- FAQ 2 -->
+      <div class="faq-card">
+        <button class="faq-question" aria-expanded="false">
+          <span class="faq-q-text">¿Qué incluye el alquiler de cancha sintética?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>El alquiler incluye uso de la cancha de grass sintético de alto impacto, potentes reflectores LED para juegos nocturnos, chalecos deportivos distintivos, balón en óptimas condiciones y acceso al estacionamiento privado.</p>
+        </div>
+      </div>
+
+      <!-- FAQ 3 -->
+      <div class="faq-card">
+        <button class="faq-question" aria-expanded="false">
+          <span class="faq-q-text">¿Con cuánta anticipación debo separar fecha para un evento social?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Recomendamos separar la fecha con <strong>al menos 2 a 4 semanas de anticipación</strong> para eventos sociales, matrimonios, 15 años o eventos corporativos, a fin de garantizar la exclusividad total del local.</p>
+        </div>
+      </div>
+
+      <!-- FAQ 4 -->
+      <div class="faq-card">
+        <button class="faq-question" aria-expanded="false">
+          <span class="faq-q-text">¿Se permite el ingreso de alimentos, bebidas o empresas de catering externas?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>¡Sí! Al alquilar nuestro local para eventos tienes total libertad de contratar tu propia empresa de catering, decoración, música y traer los alimentos y bebidas que prefieras. Además, dispones de la zona de cocina y parrilla.</p>
+        </div>
+      </div>
+
+      <!-- FAQ 5 -->
+      <div class="faq-card">
+        <button class="faq-question" aria-expanded="false">
+          <span class="faq-q-text">¿Cuáles son las atracciones recreativas disponibles?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Además de fútbol y vóley, contamos con divertidos <strong>Bumperballs</strong> (fútbol burbuja para todas las edades) y circuito para <strong>Cuatrimotos</strong>, perfectos para cumpleaños infantiles o actividades de integración.</p>
+        </div>
+      </div>
+
+      <!-- FAQ 6 -->
+      <div class="faq-card">
+        <button class="faq-question" aria-expanded="false">
+          <span class="faq-q-text">¿Cuáles son los métodos de pago aceptados?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Aceptamos pagos en efectivo, transferencias bancarias (BCP, BBVA, Interbank) y billeteras digitales (Yape y Plin) para tu mayor comodidad.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==============================================
+     SECCIÓN UBICACIÓN & CONTACTO
+=============================================== -->
+<section id="ubicacion" class="seccion-ubicacion">
+  <div class="ubicacion-container">
+    <div class="ubicacion-header">
+      <div class="ubicacion-badge">📍 VEN A VISITARNOS</div>
+      <h2 class="ubicacion-titulo">Ubicación & Contacto</h2>
+      <p class="ubicacion-subtitulo">Estamos ubicados en el corazón campestre de Hacienda Huando, Huaral</p>
+    </div>
+
+    <div class="ubicacion-grid">
+      <!-- TARJETAS DE INFORMACIÓN -->
+      <div class="ubicacion-cards">
+        <div class="info-card-item">
+          <div class="card-icon">📍</div>
+          <div class="card-body">
+            <h4>Dirección</h4>
+            <p>Hacienda Huando, Huaral – Lima, Perú</p>
+            <span class="card-sub">A pocos minutos del centro de Huaral</span>
+          </div>
+        </div>
+
+        <div class="info-card-item">
+          <div class="card-icon">🕒</div>
+          <div class="card-body">
+            <h4>Horario de Atención</h4>
+            <p>Lunes a Domingo</p>
+            <span class="card-sub">07:00 a.m. – 12:00 a.m. (Medianoche)</span>
+          </div>
+        </div>
+
+        <div class="info-card-item">
+          <div class="card-icon">📞</div>
+          <div class="card-body">
+            <h4>Teléfono & WhatsApp</h4>
+            <p><a href="tel:905448644">905 448 644</a></p>
+            <span class="card-sub">Atención rápida para reservas y cotizaciones</span>
+          </div>
+        </div>
+
+        <!-- BOTÓN RUTA EN MAPS -->
+        <a href="https://maps.app.goo.gl/izSvexem8h81KAQy9" target="_blank" rel="noopener noreferrer" class="btn-como-llegar">
+          🚗 Cómo llegar con Google Maps / Waze
+        </a>
+      </div>
+
+      <!-- MAPA INTERACTIVO GOOGLE MAPS -->
+      <div class="ubicacion-mapa-wrapper">
+        <iframe 
+          title="Mapa de ubicación Polideportivo Recreacional Hacienda Huando"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3908.4371485607316!2d-77.20235332415174!3d-11.493976588707165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105d15c1e089201%3A0xe5eb47d06ee25ea2!2sPolideportivo%20Recreacional%20Hacienda%20Huando!5e0!3m2!1ses!2spe!4v1716000000000!5m2!1ses!2spe" 
+          width="100%" 
+          height="100%" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==============================================
+     FOOTER PROFESIONAL
+=============================================== -->
 <footer class="footer">
   <div class="footer-contenedor">
 
-    <!-- LOGO -->
+    <!-- LOGO & DESCRIPCIÓN -->
     <div class="footer-bloque footer-logo">
-      <img src="../../../img/polideportivo-huaral-eventos/logo-polideportivo.svg" alt="Polideportivo">
-      <p>Polideportivo Recreacional<br>Hacienda Huando</p>
+      <img src="../../../img/polideportivo-huaral-eventos/logo-polideportivo.svg" alt="Logo Polideportivo Hacienda Huando">
+      <p>Polideportivo Recreacional<br><strong>Hacienda Huando · Huaral</strong></p>
+      <p class="footer-slogan">El mejor espacio para tu pasión deportiva y momentos inolvidables.</p>
     </div>
 
-    <!-- ENLACES -->
+    <!-- ENLACES RÁPIDOS -->
     <div class="footer-bloque">
-      <h4>ENLACES</h4>
+      <h4>NAVEGACIÓN</h4>
       <ul>
-        <li><a href="#galeria">Galería</a></li>
-        <li><a href="#croquis">Croquis</a></li>
-        <li><a href="#ubicacion">Ubicación</a></li>
-        <li><a href="#preguntas">Preguntas</a></li>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#alquiler-local">Canchas Sintéticas</a></li>
+        <li><a href="#organizar-eventos">Local para Eventos</a></li>
+        <li><a href="#croquis">Croquis de Instalaciones</a></li>
+        <li><a href="#galeria">Galería de Fotos</a></li>
+        <li><a href="#preguntas">Preguntas Frecuentes</a></li>
+        <li><a href="#ubicacion">Ubicación & Horarios</a></li>
       </ul>
     </div>
 
-    <!-- CONTACTO -->
+    <!-- CONTACTO DIRECTO -->
     <div class="footer-bloque">
       <h4>CONTACTO</h4>
-      <p>📍 Huando – Huaral</p>
-      <p>📞 <a href="tel:905448644">905 448 644</a></p>
-      <p>💬 <a href="https://wa.me/51905448644" target="_blank">WhatsApp</a></p>
+      <p>📍 Hacienda Huando – Huaral, Lima</p>
+      <p>📞 Tel: <a href="tel:905448644">905 448 644</a></p>
+      <p>💬 WhatsApp: <a href="https://wa.me/51905448644" target="_blank" rel="noopener">905 448 644</a></p>
+      <p>🕒 Atención: Lun - Dom 7:00 am - 12:00 am</p>
     </div>
 
-    <!-- REDES -->
+    <!-- REDES SOCIALES -->
     <div class="footer-bloque">
-      <h4>REDES</h4>
+      <h4>SÍGUENOS</h4>
       <div class="footer-redes">
-        <a href="https://www.facebook.com/PolideportivoRecreacionalHaciendaHuando1" target="_blank">
-          <img src="../../../img/polideportivo-huaral-eventos/facebook.svg" alt="">
+        <a href="https://www.facebook.com/PolideportivoRecreacionalHaciendaHuando1" target="_blank" rel="noopener" aria-label="Facebook">
+          <img src="../../../img/polideportivo-huaral-eventos/facebook.svg" alt="Facebook">
         </a>
-        <a href="https://www.tiktok.com/@deportvorecreativ" target="_blank">
-          <img src="../../../img/polideportivo-huaral-eventos/tiktok.svg" alt="">
+        <a href="https://www.tiktok.com/@deportvorecreativ" target="_blank" rel="noopener" aria-label="TikTok">
+          <img src="../../../img/polideportivo-huaral-eventos/tiktok.svg" alt="TikTok">
         </a>
-        <a href="https://www.instagram.com/" target="_blank">
-          <img src="../../../img/polideportivo-huaral-eventos/instagram.svg" alt="">
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
+          <img src="../../../img/polideportivo-huaral-eventos/instagram.svg" alt="Instagram">
         </a>
       </div>
+      <a href="https://wa.me/51905448644?text=Hola,%20quisiera%20información%20general%20del%20Polideportivo" target="_blank" rel="noopener" class="footer-cta-btn">
+        💬 Escribir al WhatsApp
+      </a>
     </div>
   </div>   
 
-<!-- BARRA INFERIOR -->
+  <!-- BARRA INFERIOR DE COPYRIGHT -->
   <div class="footer-copy">
-    © <span id="year"></span> Polideportivo Huando · Todos los derechos reservados
+    © <span id="year">2026</span> Polideportivo Recreacional Hacienda Huando · Todos los derechos reservados
   </div>
 </footer>
+
+<!-- ==============================================
+     MODAL LIGHTBOX DE FOTOS
+=============================================== -->
+<div class="lightbox-modal" id="lightboxModal" role="dialog" aria-modal="true" aria-hidden="true">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Cerrar visor">✕</button>
+  <button class="lightbox-arrow lightbox-prev" id="lightboxPrev" aria-label="Foto anterior">‹</button>
+  <button class="lightbox-arrow lightbox-next" id="lightboxNext" aria-label="Foto siguiente">›</button>
+  <div class="lightbox-content">
+    <img src="" alt="Imagen ampliada" id="lightboxImg" class="lightbox-img">
+    <p class="lightbox-caption" id="lightboxCaption"></p>
+  </div>
+</div>
+
+<!-- ==============================================
+     BOTÓN FLOTANTE DE WHATSAPP
+=============================================== -->
+<a href="https://wa.me/51905448644?text=Hola,%20quisiera%20reservar%20una%20cancha%20o%20consultar%20sobre%20el%20local%20para%20eventos" class="floating-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+  <span class="whatsapp-tooltip">💬 ¡Reserva tu Cancha o Evento aquí!</span>
+  <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.634.044-1.817-.442-.816-.337-1.425-.794-1.984-1.353-.559-.56-1.016-1.168-1.354-1.984-.486-1.183-.487-1.505-.442-1.817.05-.333.419-1.026.824-1.17.133-.047.288-.073.424-.073.109 0 .216.005.316.015.228.022.368.125.461.348.118.281.405.987.441 1.06.036.073.06.159.012.256-.048.097-.073.158-.146.244-.073.085-.153.19-.219.255-.073.073-.149.153-.064.299.085.146.377.621.808 1.006.556.495 1.025.648 1.171.721.146.073.232.061.317-.037.085-.098.366-.427.464-.573.097-.146.195-.122.329-.073.134.049.853.402 1.001.475.146.073.244.11.28.171.037.061.037.353-.107.758zM12 2C6.477 2 2 6.477 2 12c0 1.891.528 3.659 1.442 5.176L2 22l4.981-1.306A9.957 9.957 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/>
+  </svg>
+  <span class="whatsapp-pulse"></span>
+</a>
 
 <script src="polideportivo.js"></script>
 </body>

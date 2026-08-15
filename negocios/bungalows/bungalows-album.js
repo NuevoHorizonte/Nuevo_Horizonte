@@ -3,7 +3,8 @@
    ========================================================================== */
 
 // --- CONFIGURACIÓN DE IMÁGENES ---
-const TOTAL_IMAGES = 63;
+const IMAGE_INDEXES = Array.from({ length: 62 }, (_, i) => i + 1);
+const TOTAL_IMAGES = IMAGE_INDEXES.length;
 const IMAGES_PER_PAGE = 15;
 let currentPage = 1;
 
@@ -89,7 +90,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const fragment = document.createDocumentFragment();
 
-    for (let i = startIndex + 1; i <= endIndex; i++) {
+    for (let idx = startIndex; idx < endIndex; idx++) {
+      const i = IMAGE_INDEXES[idx];
       const numStr = String(i).padStart(2, '0');
       const filename = `img_${numStr}`;
       const src = `../../img/bungalows-de-tomayquichua/${filename}.png`;

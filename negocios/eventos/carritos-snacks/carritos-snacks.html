@@ -1,292 +1,607 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8" />
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://fonts.cdnfonts.com/css/domyniq-crush" rel="stylesheet">
-  <link rel="icon" href="../../../img/index/logo-carritos-snacks-jjr.svg" type="image/svg+xml">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.cdnfonts.com/css/retro-morey" rel="stylesheet">
-  <link href="https://fonts.cdnfonts.com/css/care-dairy" rel="stylesheet">
+  <title>Alquiler de Carritos de Snacks para Eventos y Cumpleaños en Lima - Carritos Snacks JJR</title>
+  <meta name="description" content="Alquiler de carritos de snacks temáticos en Lima. Popcorn, algodón de azúcar, manzanas acarameladas, hamburguesitas, hot dogs y bebidas para cumpleaños y fiestas infantiles.">
+  <meta name="keywords" content="carritos snacks Lima, alquiler de carritos snacks, carritos de algodon de azucar, carritos de popcorn, carritos de comida para fiestas, snacks para eventos infantiles">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / Redes Sociales -->
+  <meta property="og:title" content="Carritos Snacks JJR - Endulzamos tus Eventos en Lima">
+  <meta property="og:description" content="Carritos temáticos de snacks para cumpleaños y fiestas infantiles. Popcorn, algodón dulce, hamburguesas y más. ¡Cotiza hoy!">
+  <meta property="og:image" content="https://nuevohorizonte.github.io/img/index/logo-carritos-snacks-jjr.svg">
+  <meta property="og:type" content="website">
+
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800&family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
   <link href="https://fonts.cdnfonts.com/css/funkie-retro" rel="stylesheet">
-  <link href="https://fonts.cdnfonts.com/css/faith-hope" rel="stylesheet">
-  <link href="https://fonts.cdnfonts.com/css/basaliation" rel="stylesheet">
-  <link href="https://fonts.cdnfonts.com/css/ikka-rounded" rel="stylesheet">
-  <link href="https://fonts.cdnfonts.com/css/theola-kids" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/domyniq-crush" rel="stylesheet">
+
+  <!-- CSS Principal -->
   <link rel="stylesheet" href="carritos-snacks.css" />
-  <title>Carritos Snacks</title>
+
+  <!-- Favicons -->
+  <link rel="icon" href="../../../img/index/logo-carritos-snacks-jjr.svg?v=1.3" type="image/svg+xml">
+  <link rel="shortcut icon" href="../../../img/index/logo-carritos-snacks-jjr.svg?v=1.3" type="image/svg+xml">
 </head>
 <body>
 
-<!-- ===============================
-SECCION DE LA CABEZA
-================================ -->
-<header class="header">
-  <div class="logo">
-  <img src="../../../img/index/logo-carritos-snacks-jjr.svg" alt="Logo Carritos Snacks">
-</div>
-<nav class="menu">
-<a href="../carritos-snacks/carritos-album.html" class="menu-item">
-<img 
-  src="../../../img/carritos-snacks-jjr/logo-album.svg"
-  data-alt="../../../img/carritos-snacks-jjr/logo-album-2.svg" 
-  alt="Album">
-  <span>Album</span>
-</a>
+  <!-- ===============================
+       HEADER TEMÁTICO FESTIVO
+  ================================ -->
+  <header class="header" id="main-header">
+    <div class="header-inner">
+      <div class="logo">
+        <a href="carritos-snacks.html" aria-label="Inicio Carritos Snacks">
+          <img src="../../../img/index/logo-carritos-snacks-jjr.svg" alt="Logo Carritos Snacks JJR">
+        </a>
+      </div>
 
-<a href="tel:919283481" class="menu-item">
-  <img src="../../../img/carritos-snacks-jjr/logo-contacto.svg"
-    data-alt="../../../img/carritos-snacks-jjr/logo-contacto-2.svg" 
-    alt="Contacto">
-  <span>Contacto</span>
-</a>
+      <nav class="menu" id="nav-menu">
+        <a href="carritos-album.html" class="menu-item">
+          <img src="../../../img/carritos-snacks-jjr/logo-album.svg" data-alt="../../../img/carritos-snacks-jjr/logo-album-2.svg" alt="Álbum">
+          <span>Álbum</span>
+        </a>
 
-<a href="#nosotros" class="menu-item">
-    <img 
-    src="../../../img/carritos-snacks-jjr/logo-nosotros.svg"  
-    data-alt="../../../img/carritos-snacks-jjr/logo-nosotros-2.svg" 
-    alt="Nosotros">
-    <span>Nosotros</span>
-  </a>
+        <a href="catalogo-snacks.html" class="menu-item">
+          <img src="../../../img/carritos-snacks-jjr/logo-mas-servicios.svg" data-alt="../../../img/carritos-snacks-jjr/logo-mas-servicios-2.svg" alt="Catálogo">
+          <span>Catálogo</span>
+        </a>
 
-<a href="../../../index.html" class="menu-item">
-    <img 
-    src="../../../img/carritos-snacks-jjr/logo-mas-servicios.svg"  
-    data-alt="../../../img/carritos-snacks-jjr/logo-mas-servicios-2.svg" 
-    alt="mas servicios">
-    <span>Mas Servicios</span>
-  </a>
-</nav>
+        <a href="#nosotros" class="menu-item">
+          <img src="../../../img/carritos-snacks-jjr/logo-nosotros.svg" data-alt="../../../img/carritos-snacks-jjr/logo-nosotros-2.svg" alt="Nosotros">
+          <span>Nosotros</span>
+        </a>
 
-  <img 
-    src="../../../img/carritos-snacks-jjr/decorado-chocolate.svg" 
-    alt="Decorado Chocolate" 
-    class="decorado-chocolate">
+        <a href="tel:919283481" class="menu-item menu-contacto">
+          <img src="../../../img/carritos-snacks-jjr/logo-contacto.svg" data-alt="../../../img/carritos-snacks-jjr/logo-contacto-2.svg" alt="Contacto">
+          <span>Contacto</span>
+        </a>
+
+        <a href="https://wa.me/51919283481?text=Hola,%20quisiera%20cotizar%20carritos%20snacks%20para%20un%20evento" target="_blank" rel="noopener noreferrer" class="btn-cotizar-header">
+          <span>🎉 ¡Cotizar Fiesta!</span>
+        </a>
+      </nav>
+
+      <button class="hamburger-btn" id="hamburger-btn" aria-label="Abrir menú de navegación">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <img src="../../../img/carritos-snacks-jjr/decorado-chocolate.svg" alt="Decorado Chocolate" class="decorado-chocolate">
+    </div>
   </header>
   <div class="cinta-derretida"></div>
 
-<!-- ===============================
-    SECCIÓN CARRUSEL
-================================ -->
-<section class="carrusel">
-  <h2 class="titulo-carrusel">ALQUILER DE CARRITOS SNACKS</h2>
+  <!-- ===============================
+       SECCIÓN HERO / CARRUSEL PRINCIPAL
+  ================================ -->
+  <section class="carrusel-section" id="inicio">
+    <div class="hero-top-badge">
+      <span>🍭 ¡Llevamos magia y sabor a tu celebración! 🍿</span>
+    </div>
 
-  <div class="contenedor-carrusel">
+    <h1 class="titulo-principal">
+      Alquiler de Carritos de Snacks <br>
+      <span class="titulo-destacado">CARRITOS SNACKS JJR</span>
+    </h1>
 
-    <div class="slide activo">
-      <img src="../../../img/carritos-snacks-jjr/carrusel-1.png" alt="Carrito Algodón de Azúcar" class="imagen-carrusel">
-      <div class="texto-carrusel">
-        <h3>Endulzamos tus momentos más especiales</h3>
-        <p>En Carritos Snacks JJR, llevamos diversión, sabor y alegría a cada evento con nuestros carritos temáticos.¡Haz que tu fiesta sea inolvidable con nuestros irresistibles snacks!</p>
+    <div class="carrusel-container">
+      <button class="carrusel-arrow prev-arrow" id="prevSlide" aria-label="Anterior diapositiva">‹</button>
+
+      <div class="contenedor-carrusel" id="carruselTrack">
+        <!-- Slide 1 -->
+        <div class="slide activo">
+          <div class="slide-media">
+            <img src="../../../img/carritos-snacks-jjr/carrusel-1.png" alt="Carrito de Algodón de Azúcar JJR" class="imagen-carrusel">
+          </div>
+          <div class="texto-carrusel">
+            <span class="slide-tag">✨ Sabor Inolvidable</span>
+            <h2>Endulzamos tus momentos más especiales</h2>
+            <p>Llevamos diversión, sabor y alegría a cada evento con nuestros carritos temáticos listos para atender a todos tus invitados.</p>
+            <a href="https://wa.me/51919283481?text=Hola,%20deseo%20cotizar%20el%20carrito%20de%20algodón%20de%20azúcar%20y%20snacks" target="_blank" rel="noopener noreferrer" class="btn-carrusel-cta">
+              <span>💬 Cotizar por WhatsApp</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="slide">
+          <div class="slide-media">
+            <img src="../../../img/carritos-snacks-jjr/carrusel-2.png" alt="Carrito de Popcorn JJR" class="imagen-carrusel">
+          </div>
+          <div class="texto-carrusel">
+            <span class="slide-tag">🍿 Calidad & Puntualidad</span>
+            <h2>El toque dulce y crujiente que tu fiesta merece</h2>
+            <p>Ofrecemos una experiencia única con carritos de snacks dulces, salados y bebidas para cumpleaños, colegios y empresas.</p>
+            <a href="https://wa.me/51919283481?text=Hola,%20deseo%20información%20para%20un%20evento%20infantil" target="_blank" rel="noopener noreferrer" class="btn-carrusel-cta">
+              <span>💬 Solicitar Presupuesto</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="slide">
+          <div class="slide-media">
+            <img src="../../../img/carritos-snacks-jjr/carrusel-3.png" alt="Carrito de Snacks Dulces JJR" class="imagen-carrusel">
+          </div>
+          <div class="texto-carrusel">
+            <span class="slide-tag">🎉 Recuerdos Inolvidables</span>
+            <h2>Donde cada sonrisa tiene sabor y alegría</h2>
+            <p>Más que snacks, creamos momentos mágicos para los engreídos de la casa. Carritos decorados y personal uniformado.</p>
+            <a href="https://wa.me/51919283481?text=Hola,%20quisiera%20ver%20paquetes%20de%20carritos%20para%20cumpleaños" target="_blank" rel="noopener noreferrer" class="btn-carrusel-cta">
+              <span>💬 ¡Reservar Mi Fecha!</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <button class="carrusel-arrow next-arrow" id="nextSlide" aria-label="Siguiente diapositiva">›</button>
+    </div>
+
+    <!-- Indicadores -->
+    <div class="indicadores" id="carruselDots">
+      <span class="dot activo" data-index="0"></span>
+      <span class="dot" data-index="1"></span>
+      <span class="dot" data-index="2"></span>
+    </div>
+  </section>
+
+  <!-- ===============================
+       SECCIÓN PRODUCTOS / SNACKS FILTRABLES
+  ================================ -->
+  <section class="productos" id="productos">
+    <div class="section-header">
+      <span class="section-subtitle">DULCES, SALADOS Y BEBIDAS</span>
+      <h2 class="titulo-productos">NUESTROS DELICIOSOS SNACKS</h2>
+      <p class="section-desc">Selecciona tu categoría favorita y descubre la gran variedad de delicias que preparamos al instante.</p>
+    </div>
+
+    <!-- Filtros por Categoría -->
+    <div class="filtros-snacks">
+      <button class="btn-filtro activo" data-filter="todos">✨ TODOS (25)</button>
+      <button class="btn-filtro" data-filter="dulces">🍭 DULCES Y POSTRES</button>
+      <button class="btn-filtro" data-filter="salados">🌭 SNACKS SALADOS</button>
+      <button class="btn-filtro" data-filter="bebidas">🥤 BEBIDAS REFRESCANTES</button>
+    </div>
+
+    <div class="fondo-rosado">
+      <div class="grid-productos" id="gridSnacks">
+
+        <!-- DULCES -->
+        <div class="producto item-snack dulces" data-nombre="Pop Corn">
+          <div class="producto-img-box"><img src="../../../img/carritos-snacks-jjr/producto-1.svg" alt="Pop corn calientito"></div>
+          <p>Pop Corn</p>
+          <span class="badge-cat bg-dulce">Dulce / Salado</span>
+        </div>
+
+        <div class="producto item-snack dulces" data-nombre="Algodón Dulce">
+          <div class="producto-img-box"><img src="../../../img/carritos-snacks-jjr/producto-2.svg" alt="Algodón dulce en cono"></div>
+          <p>Algodón Dulce</p>
+          <span class="badge-cat bg-dulce">Algodón</span>
+        </div>
+
+        <div class="producto item-snack dulces" data-nombre="Manzana Acaramelada">
+          <div class="producto-img-box"><img src="../../../img/carritos-snacks-jjr/producto-3.svg" alt="Manzana acaramelada"></div>
+          <p>Manzana Acaramelada</p>
+          <span class="badge-cat bg-dulce">Postre</span>
+        </div>
+
+        <div class="producto item-snack dulces" data-nombre="Manzana Achocolatada">
+          <div class="producto-img-box"><img src="../../../img/carritos-snacks-jjr/producto-4.svg" alt="Manzana achocolatada"></div>
+          <p>Manzana Achocolatada</p>
+          <span class="badge-cat bg-dulce">Chocolate</span>
+        </div>
+
+        <div class="producto item-snack dulces" data-nombre="Churro">
+          <div class="producto-img-box"><img src="../../../img/carritos-snacks-jjr/producto-5.svg" alt="Churro relleno"></div>
+          <p>Churro</p>
+          <span class="badge-cat bg-dulce">Relleno</span>
+        </div>
+
+        <div class="producto item-snack dulces" data-nombre="Donuts">
+          <div class="producto-img-box"><img src="../../../img/carritos-snacks-jjr/producto-6.svg" alt="Donuts decoradas"></div>
+          <p>Donuts</p>
+          <span class="badge-cat bg-dulce">Glaseadas</span>
+        </div>
+
+        <div class="producto item-snack dulces" data-nombre="Mazamorra Morada">
+          <div class="producto-img-box"><img src="../../../img/carritos-snacks-jjr/producto-7.svg" alt="Mazamorra morada"></div>
+          <p>Mazamorra Morada</p>
+          <span class="badge-cat bg-dulce">Postre Típico</span>
+        </div>
+
+        <div class="producto item-snack dulces" data-nombre="Arroz con Leche">
+          <div class="producto-img-box"><img src="../../../img/carritos-snacks-jjr/producto-8.svg" alt="Arroz con leche"></div>
+          <p>Arroz con Leche</p>
+          <span class="badge-cat bg-dulce">Postre Casero</span>
+        </div>
+
+        <div class="producto item-snack dulces" data-nombre="Combinado">
+          <div class="producto-img-box"><img src="../../../img/carritos-snacks-jjr/producto-9.svg" alt="Combinado tradicional"></div>
+          <p>Combinado Clásico</p>
+          <span class="badge-cat bg-dulce">Mazamorra + Arroz</span>
+        </div>
+
+        <div class="producto item-snack dulces" data-nombre="Helado">
+          <div class="producto-img-box"><img src="../../../img/carritos-snacks-jjr/producto-10.svg" alt="Helado artesanal"></div>
+          <p>Helados Variados</p>
+          <span class="badge-cat bg-dulce">Heladería</span>
+        </div>
+
+        <div class="producto item-snack dulces" data-nombre="Wafles">
+          <div class="producto-img-box"><img src="../../../img/carritos-snacks-jjr/producto-20.svg" alt="Wafles con miel"></div>
+          <p>Wafles Belgas</p>
+          <span class="badge-cat bg-dulce">Con Toppings</span>
+        </div>
+
+        <!-- SALADOS -->
+        <div class="producto item-snack salados" data-nombre="Panchos">
+          <div class="producto-img-box"><img src="../../../img/carritos-snacks-jjr/producto-11.svg" alt="Panchos"></div>
+          <p>Panchos / Corn Dogs</p>
+          <span class="badge-cat bg-salado">Salado</span>
+        </div>
+
+        <div class="producto item-snack salados" data-nombre="Pan con Hot Dog">
+          <div class="producto-img-box"><img src="../../../img/carritos-snacks-jjr/producto-12.svg" alt="Pan con hot dog"></div>
+          <p>Pan con Hot Dog</p>
+          <span class="badge-cat bg-salado">Clásico</span>
+        </div>
+
+        <div class="producto item-snack salados" data-nombre="Hamburguesa">
+          <div class="producto-img-box"><img src="../../../img/carritos-snacks-jjr/producto-13.svg" alt="Hamburguesa a la parrilla"></div>
+          <p>Hamburguesa</p>
+          <span class="badge-cat bg-salado">A la Plancha</span>
+        </div>
+
+        <div class="producto item-snack salados" data-nombre="Brochetas">
+          <div class="producto-img-box"><img src="../../../img/carritos-snacks-jjr/producto-14.svg" alt="Brochetas"></div>
+          <p>Brochetas</p>
+          <span class="badge-cat bg-salado">Parrilleras</span>
+        </div>
+
+        <div class="producto item-snack salados" data-nombre="Choripan">
+          <div class="producto-img-box"><img src="../../../img/carritos-snacks-jjr/producto-15.svg" alt="Choripan"></div>
+          <p>Choripán</p>
+          <span class="badge-cat bg-salado">Chorizo Parrillero</span>
+        </div>
+
+        <div class="producto item-snack salados" data-nombre="Mini Salchipapa">
+          <div class="producto-img-box"><img src="../../../img/carritos-snacks-jjr/producto-16.svg" alt="Mini salchipapa"></div>
+          <p>Mini Salchipapa</p>
+          <span class="badge-cat bg-salado">Con Cremas</span>
+        </div>
+
+        <div class="producto item-snack salados" data-nombre="Mini Pan Hot Dog">
+          <div class="producto-img-box"><img src="../../../img/carritos-snacks-jjr/producto-17.svg" alt="Mini pan hot dog"></div>
+          <p>Mini Hot Dog</p>
+          <span class="badge-cat bg-salado">Bocaditos</span>
+        </div>
+
+        <div class="producto item-snack salados" data-nombre="Mini Burger">
+          <div class="producto-img-box"><img src="../../../img/carritos-snacks-jjr/producto-18.svg" alt="Mini burger"></div>
+          <p>Mini Burger</p>
+          <span class="badge-cat bg-salado">Bocadito</span>
+        </div>
+
+        <div class="producto item-snack salados" data-nombre="Mini Choripan">
+          <div class="producto-img-box"><img src="../../../img/carritos-snacks-jjr/producto-19.svg" alt="Mini choripan"></div>
+          <p>Mini Choripán</p>
+          <span class="badge-cat bg-salado">Bocaditos</span>
+        </div>
+
+        <!-- BEBIDAS -->
+        <div class="producto item-snack bebidas" data-nombre="Chicha Morada">
+          <div class="producto-img-box"><img src="../../../img/carritos-snacks-jjr/producto-21.svg" alt="Chicha morada natural"></div>
+          <p>Chicha Morada</p>
+          <span class="badge-cat bg-bebida">Refresco Casero</span>
+        </div>
+
+        <div class="producto item-snack bebidas" data-nombre="Inca Kola 300 ml">
+          <div class="producto-img-box"><img src="../../../img/carritos-snacks-jjr/producto-22.svg" alt="Inca Kola 300 ml"></div>
+          <p>Inca Kola 300 ml</p>
+          <span class="badge-cat bg-bebida">Gaseosa</span>
+        </div>
+
+        <div class="producto item-snack bebidas" data-nombre="Coca Cola 300 ml">
+          <div class="producto-img-box"><img src="../../../img/carritos-snacks-jjr/producto-23.svg" alt="Coca Cola 300 ml"></div>
+          <p>Coca Cola 300 ml</p>
+          <span class="badge-cat bg-bebida">Gaseosa</span>
+        </div>
+
+        <div class="producto item-snack bebidas" data-nombre="Fanta 300 ml">
+          <div class="producto-img-box"><img src="../../../img/carritos-snacks-jjr/producto-24.svg" alt="Fanta 300 ml"></div>
+          <p>Fanta 300 ml</p>
+          <span class="badge-cat bg-bebida">Gaseosa</span>
+        </div>
+
+        <div class="producto item-snack bebidas" data-nombre="Agua Cielo Kids">
+          <div class="producto-img-box"><img src="../../../img/carritos-snacks-jjr/producto-25.svg" alt="Agua cielo kids"></div>
+          <p>Agua Cielo Kids</p>
+          <span class="badge-cat bg-bebida">Agua Mineral</span>
+        </div>
+
+      </div>
+
+      <!-- BOTÓN HACIA EL CATÁLOGO COMPLETO -->
+      <div class="catalogo-cta-box">
+        <a href="catalogo-snacks.html" class="btn-catalogo-principal">
+          <span>📖 VER CATÁLOGO COMPLETO DE PRECIOS Y COMBOS</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===============================
+       SECCIÓN COMBOS DESTACADOS PARA EVENTOS
+  ================================ -->
+  <section class="combos-section" id="combos">
+    <div class="section-header">
+      <span class="section-subtitle">AHORRA CON NUESTROS PAQUETES</span>
+      <h2 class="section-title">COMBOS POPULARES PARA EVENTOS</h2>
+      <p class="section-desc">Paquetes armados especialmente para cumpleaños y fiestas infantiles con carritos y operarios incluidos.</p>
+    </div>
+
+    <div class="combos-grid">
+      <!-- Combo 1 -->
+      <div class="combo-card">
+        <div class="combo-header">
+          <span class="combo-badge">🎈 Pack Infantil</span>
+          <h3>Combo Dulce Sonrisa</h3>
+          <p class="combo-desc">100 Algodones de Azúcar + 100 Pop Corn + 2 Carritos Temáticos</p>
+        </div>
+        <ul class="combo-items">
+          <li>🍭 100 Algodones dulces recién hechos</li>
+          <li>🍿 100 Porciones de Popcorn calientito</li>
+          <li>🎪 2 Carritos decorados para tu temática</li>
+          <li>👩‍🍳 2 Operarios uniformados por 2 horas</li>
+        </ul>
+        <a href="https://wa.me/51919283481?text=Hola,%20quisiera%20cotizar%20el%20Combo%20Dulce%20Sonrisa" target="_blank" rel="noopener noreferrer" class="btn-combo">
+          <span>¡Cotizar Este Combo!</span>
+        </a>
+      </div>
+
+      <!-- Combo 2 (Destacado) -->
+      <div class="combo-card combo-destacado">
+        <div class="combo-popular-tag">🔥 EL MÁS PEDIDO</div>
+        <div class="combo-header">
+          <span class="combo-badge badge-destacado">🎂 Pack Cumpleaños</span>
+          <h3>Combo Fiesta Total</h3>
+          <p class="combo-desc">Pop Corn + Algodón Dulce + 100 Hamburguesitas + 3 Carritos</p>
+        </div>
+        <ul class="combo-items">
+          <li>🍔 100 Hamburguesitas a la plancha</li>
+          <li>🍿 100 Porciones de Pop Corn crujiente</li>
+          <li>🍭 100 Algodones de azúcar de colores</li>
+          <li>🎪 3 Carritos temáticos con operarios</li>
+        </ul>
+        <a href="https://wa.me/51919283481?text=Hola,%20quisiera%20cotizar%20el%20Combo%20Fiesta%20Total%20de%203%20carritos" target="_blank" rel="noopener noreferrer" class="btn-combo btn-combo-destacado">
+          <span>¡Quiero Este Combo!</span>
+        </a>
+      </div>
+
+      <!-- Combo 3 -->
+      <div class="combo-card">
+        <div class="combo-header">
+          <span class="combo-badge">🌭 Pack Salado</span>
+          <h3>Combo Snack & Hot Dog</h3>
+          <p class="combo-desc">100 Hot Dogs + 100 Porciones de Pop Corn + Bebidas</p>
+        </div>
+        <ul class="combo-items">
+          <li>🌭 100 Panes con Hot Dog y cremas</li>
+          <li>🍿 100 Porciones de Pop Corn</li>
+          <li>🥤 100 Vasos de Chicha Morada heladita</li>
+          <li>🎪 Carritos temáticos y atención completa</li>
+        </ul>
+        <a href="https://wa.me/51919283481?text=Hola,%20quisiera%20cotizar%20el%20Combo%20Snack%20y%20Hot%20Dog" target="_blank" rel="noopener noreferrer" class="btn-combo">
+          <span>¡Cotizar Este Combo!</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===============================
+       SECCIÓN ¿POR QUÉ ELEGIRNOS?
+  ================================ -->
+  <section class="razones-seccion" id="nosotros">
+    <div class="section-header">
+      <span class="section-subtitle">NUESTRO COMPROMISO</span>
+      <h2 class="razones-titulo">¿POR QUÉ ELEGIR CARRITOS SNACKS JJR?</h2>
+      <p class="section-desc">Garantizamos una experiencia impecable, divertida y deliciosa para todos tus invitados.</p>
+    </div>
+
+    <div class="razones-contenedor">
+      <div class="razon-card">
+        <div class="razon-icon-box">
+          <img src="../../../img/carritos-snacks-jjr/razon-tiempo.svg" alt="Puntualidad y Responsabilidad" class="razon-imagen">
+        </div>
+        <h3 class="razon-subtitulo">Puntualidad y Responsabilidad</h3>
+        <p class="razon-texto">
+          Llegamos con anticipación y todo listo antes de que empiece tu fiesta. Servicio organizado, limpio y sin contratiempos.
+        </p>
+      </div>
+
+      <div class="razon-card">
+        <div class="razon-icon-box">
+          <img src="../../../img/carritos-snacks-jjr/razon-precios.svg" alt="Precios Accesibles" class="razon-imagen">
+        </div>
+        <h3 class="razon-subtitulo">Precios Accesibles y Combos</h3>
+        <p class="razon-texto">
+          Disfruta de nuestros carritos a precios competitivos con insumos de primera calidad. ¡Diversión al alcance de tu presupuesto!
+        </p>
+      </div>
+
+      <div class="razon-card">
+        <div class="razon-icon-box">
+          <img src="../../../img/carritos-snacks-jjr/razon-amabilidad.svg" alt="Personal Amable y Experto" class="razon-imagen">
+        </div>
+        <h3 class="razon-subtitulo">Personal Amable y Capacitado</h3>
+        <p class="razon-texto">
+          Nuestro equipo atiende con alegría, uniforme impecable y la mejor actitud para consentir a grandes y pequeños.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===============================
+       EVENTOS Y ALQUILER DE LOCALES COMPLEMENTARIOS
+  ================================ -->
+  <section id="eventos" class="eventos">
+    <div class="eventos-header">
+      <span class="section-subtitle">COMPLEMENTA TU CELEBRACIÓN</span>
+      <h2 class="eventos-title">¿QUIERES MEJORAR AÚN MÁS TU EVENTO?</h2>
+      <p class="eventos-subtitle-frase">¡Conoce nuestros locales campestres y juegos inflables en Lima!</p>
+    </div>
+
+    <div class="eventos-grid">
+      <!-- RECREO CAMPESTRE -->
+      <a href="../recreo-campestre/recreo-campestre.html" class="evento-card" data-color="#ff6600">
+        <img src="../../../img/recreo-campestre/foto-1.png" alt="Recreo Campestre Carabayllo">
+        <div class="overlay">
+          <img src="../../../img/index/logo-recreo-campestre.svg" alt="Logo Recreo Campestre">
+          <p>ALQUILER DE LOCAL CAMPESTRE EN CARABAYLLO</p>
+        </div>
+      </a>
+
+      <!-- MAGIA DEL REBOTE -->
+      <a href="../../eventos/magia-del-rebote/rebote.html" class="evento-card" data-color="#e53935">
+        <img src="../../../img/magia-del-rebote/foto-1.png" alt="Magia del Rebote Juegos Inflables">
+        <div class="overlay">
+          <img src="../../../img/index/logo-magia-del-rebote.svg" alt="Logo Magia del Rebote">
+          <p>ALQUILER DE JUEGOS INFLABLES</p>
+        </div>
+      </a>
+
+      <!-- HACIENDA HUANDO -->
+      <a href="../../cancha-sintetica/polideportivo/polideportivo.html" class="evento-card" data-color="#43a047">
+        <img src="../../../img/polideportivo-huaral-eventos/foto-1.png" alt="Hacienda Huando Huaral">
+        <div class="overlay">
+          <img src="../../../img/index/logo-polideportivo.svg" alt="Logo Hacienda Huando">
+          <p>LOCAL PARA EVENTOS EN HUARAL-HUANDO</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===============================
+       PREGUNTAS FRECUENTES (FAQ)
+  ================================ -->
+  <section class="faq-section" id="faq">
+    <div class="section-header">
+      <span class="section-subtitle">RESOLVEMOS TUS DUDAS</span>
+      <h2 class="section-title">PREGUNTAS FRECUENTES</h2>
+      <p class="section-desc">Todo lo que necesitas saber para contratar tus carritos snacks.</p>
+    </div>
+
+    <div class="faq-container">
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>¿Con cuánta anticipación debo reservar los carritos?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Recomendamos separar tu fecha con al menos <strong>3 a 7 días de anticipación</strong> para asegurar la disponibilidad de los carritos y el personal en el horario que deseas.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>¿El servicio incluye personal para preparar y servir los snacks?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>¡Sí! Todos nuestros paquetes incluyen operarios uniformados que se encargan de preparar los snacks al instante y atender a tus invitados de forma higiénica y amable.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>¿Qué requerimientos técnicos necesitan en el local?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Solo necesitamos un punto de tomacorriente cercano estándar (220V) para las máquinas eléctricas (como algodón de azúcar o popcorn) y un espacio plano de aproximadamente 1.5 x 1.5 metros por carrito.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>¿Atienden en todo Lima y distritos?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Sí, cubrimos eventos en Carabayllo, Comas, Los Olivos, San Martín de Porres, San Isidro, Surco, Miraflores y todo Lima Metropolitana. Consultar costo de movilidad según tu zona.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===============================
+       PIE DE PÁGINA (FOOTER)
+  ================================ -->
+  <footer class="footer">
+    <div class="footer-contenedor">
+      <div class="footer-col footer-brand">
+        <div class="footer-logo">
+          <img src="../../../img/index/logo-carritos-snacks-jjr.svg" alt="Logo Carritos Snacks">
+        </div>
+        <p class="brand-text">
+          Llevamos dulzura, alegría y los mejores carritos de snacks temáticos para tus fiestas infantiles y eventos corporativos en Lima.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navegación</h4>
+        <ul class="footer-links">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="carritos-album.html">Álbum de Fotos</a></li>
+          <li><a href="catalogo-snacks.html">Catálogo de Precios</a></li>
+          <li><a href="#productos">Nuestros Snacks</a></li>
+          <li><a href="#combos">Combos de Fiesta</a></li>
+          <li><a href="#faq">Preguntas Frecuentes</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-contacto">
+        <h4>Contacto Rápido</h4>
+        <p>📍 Lima Metropolitana, Perú</p>
+        <p>📞 <a href="tel:+51919283481" class="telefono-footer">+51 919-283-481</a></p>
+        
+        <div class="footer-redes">
+          <a href="https://www.facebook.com/snacks.jr.carritos/" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+            <img src="../../../img/index/icon-face.svg" alt="Facebook">
+          </a>
+          <a href="https://wa.me/51919283481?text=Hola,%20quisiera%20información%20sobre%20los%20carritos%20snacks" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">
+            <img src="../../../img/index/icon-wsp.svg" alt="WhatsApp">
+          </a>
+          <a href="https://www.tiktok.com/@carritos.snacks.j?lang=es-419" aria-label="TikTok" target="_blank" rel="noopener noreferrer">
+            <img src="../../../img/carritos-snacks-jjr/tik-tok-carritos.svg" alt="TikTok">
+          </a>
+        </div>
       </div>
     </div>
 
-    <div class="slide">
-      <img src="../../../img/carritos-snacks-jjr/carrusel-2.png" alt="Carrito de Popcorn" class="imagen-carrusel">
-      <div class="texto-carrusel">
-        <h3>El toque dulce que tu evento merece</h3>
-        <p>Ofrecemos una experiencia única con carritos de snacks, postres y bebidas para todo tipo de celebración.
-Calidad, puntualidad y un servicio que encanta a grandes y chicos.</p>
-      </div>
+    <div class="footer-derechos">
+      <p>© <span id="year"></span> Carritos Snacks JJR — Todos los derechos reservados.</p>
     </div>
+  </footer>
 
-    <div class="slide">
-      <img src="../../../img/carritos-snacks-jjr/carrusel-3.png" alt="Carrito de Chocolate" class="imagen-carrusel">
-      <div class="texto-carrusel">
-        <h3>Donde cada sonrisa tiene sabor</h3>
-        <p>Más que snacks, creamos recuerdos.
-            Nuestros carritos llenan tus celebraciones de dulzura, color y momentos felices.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="indicadores">
-    <span class="dot activo"></span>
-    <span class="dot"></span>
-    <span class="dot"></span>
-  </div>
-</section>
-
-<!-- ===============================
-  SECCIÓN PRODUCTOS
-================================ -->
-<section class="productos" id="productos">
-  <h2 class="titulo-productos">Conoce todos nuestros productos</h2>
-
-  <div class="fondo-rosado">
-    <div class="grid-productos">
-      <div class="producto">
-        <img src="../../../img/carritos-snacks-jjr/producto-1.svg" alt="Pop corn">
-        <p>Pop corn</p>
-      </div>
-      <div class="producto">
-        <img src="../../../img/carritos-snacks-jjr/producto-2.svg" alt="Algodón dulce">
-        <p>Algodón dulce</p>
-      </div>
-      <div class="producto">
-        <img src="../../../img/carritos-snacks-jjr/producto-3.svg" alt="Manzana acaramelada">
-        <p>Manzana acaramelada</p>
-      </div>
-      <div class="producto"><img src="../../../img/carritos-snacks-jjr/producto-4.svg" alt="Manzana achocolatada"><p>Manzana achocolatada</p></div>
-      <div class="producto"><img src="../../../img/carritos-snacks-jjr/producto-5.svg" alt="Churro"><p>Churro</p></div>
-      <div class="producto"><img src="../../../img/carritos-snacks-jjr/producto-6.svg" alt="Donuts"><p>Donuts</p></div>
-      <div class="producto"><img src="../../../img/carritos-snacks-jjr/producto-7.svg" alt="Mazamorra morada"><p> Mazamorra morada</p></div>
-      <div class="producto"><img src="../../../img/carritos-snacks-jjr/producto-8.svg" alt="Arroz con leche"><p>Arroz con leche</p></div>
-      <div class="producto"><img src="../../../img/carritos-snacks-jjr/producto-9.svg" alt="Combinado"><p>Combinado</p></div>
-      <div class="producto"><img src="../../../img/carritos-snacks-jjr/producto-10.svg"alt="Helado"><p>Helado</p></div>
-      <div class="producto"><img src="../../../img/carritos-snacks-jjr/producto-11.svg" alt="Panchos"><p>Panchos</p></div>
-      <div class="producto"><img src="../../../img/carritos-snacks-jjr/producto-12.svg" alt="Pan con hot dog"><p>Pan con hot dog</p></div>
-      <div class="producto"><img src="../../../img/carritos-snacks-jjr/producto-13.svg" alt="Hamburguesa"><p> Hamburguesa</p></div>
-      <div class="producto"><img src="../../../img/carritos-snacks-jjr/producto-14.svg" alt="Brochetas"><p>Brochetas</p></div>
-      <div class="producto"><img src="../../../img/carritos-snacks-jjr/producto-15.svg" alt="Choripan"><p>Choripan</p></div>
-      <div class="producto"><img src="../../../img/carritos-snacks-jjr/producto-16.svg" alt="Mini salchipapa"><p>Mini salchipapa</p></div>
-      <div class="producto"><img src="../../../img/carritos-snacks-jjr/producto-17.svg" alt="Mini pan hot dog"><p>Mini pan hot dog</p></div>
-      <div class="producto"><img src="../../../img/carritos-snacks-jjr/producto-18.svg" alt="Mini Burger"><p>Mini Burger</p></div>
-      <div class="producto"><img src="../../../img/carritos-snacks-jjr/producto-19.svg" alt="Mini choripan"><p>Mini choripan</p></div>
-      <div class="producto"><img src="../../../img/carritos-snacks-jjr/producto-20.svg" alt="Wafles"><p>Wafles</p></div>
-      <div class="producto"><img src="../../../img/carritos-snacks-jjr/producto-21.svg" alt="Chicha morada"><p>Chicha morada</p></div>
-      <div class="producto"><img src="../../../img/carritos-snacks-jjr/producto-22.svg" alt=" Inca Kola 300 ml"><p> Inca Kola 300 ml</p></div>
-      <div class="producto"><img src="../../../img/carritos-snacks-jjr/producto-23.svg" alt=" Coca Cola 300 ml"><p>Coca Cola 300 ml</p></div>
-      <div class="producto"><img src="../../../img/carritos-snacks-jjr/producto-24.svg" alt="Fanta 300 ml"><p>Fanta 300 ml</p></div>
-      <div class="producto"><img src="../../../img/carritos-snacks-jjr/producto-25.svg" alt="Agua cielo kids"><p>Agua cielo kids</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="razones-seccion">
-  <h2 class="razones-titulo">¿POR QUÉ ELEGIR CARRITOS SNACKS JJR?</h2>
-
-  <div class="razones-contenedor">
-    <div class="razon-card">
-      <h3 class="razon-subtitulo">Puntualidad y Responsabilidad</h3>
-      <p class="razon-texto">
-        Llegamos a tiempo y con todo listo. Sabemos que tu evento es importante, por eso garantizamos un servicio puntual, organizado y sin contratiempos.
-      </p>
-      <img src="../../../img/carritos-snacks-jjr/razon-tiempo.svg" alt="Puntualidad y Responsabilidad" class="razon-imagen">
-    </div>
-
-    <div class="razon-card">
-      <h3 class="razon-subtitulo">Precios Accesibles</h3>
-      <p class="razon-texto">
-        Disfruta de nuestros carritos a precios que se ajustan a tu presupuesto sin perder calidad. ¡Diversión y sabor al alcance de todos!
-      </p>
-      <img src="../../../img/carritos-snacks-jjr/razon-precios.svg" alt="Precios Accesibles" class="razon-imagen">
-    </div>
-
-    <div class="razon-card">
-      <h3 class="razon-subtitulo">Personal Amable y Experto</h3>
-      <p class="razon-texto">
-        Nuestro equipo está preparado para atender con una sonrisa, brindar un trato cordial y asegurarse de que cada invitado viva una experiencia deliciosa.
-      </p>
-      <img src="../../../img/carritos-snacks-jjr/razon-amabilidad.svg" alt="Personal Amable y Experto" class="razon-imagen">
-    </div>
-  </div>
-</section>
-
-<!-- EVENTOS Y ALQUILER DE LOCAL -->
-<section id="eventos" class="eventos desktop-version">
-  <div class="eventos-header">
-  <h2 class="eventos-title">¿QUIERES MEJORAR MAS TU EVENTO?</h2>
-  <p class="eventos-subtitle-frase">¡Mira los diferentes servicios que tenemos para ti!</p>
-</div>
-<div class="eventos-grid">
-
-<!-- RECREO CAMPESTRE -->
-    <a href="negocios/eventos/recreo-campestre/recreo-campestre.html" class="evento-card" data-color="#ff6600">
-      <img src="../../../img/recreo-campestre/foto-1.png" alt="Recreo Campestre">
-      <div class="overlay">
-        <img src="../../../img/index/logo-recreo-campestre.svg" alt="Logo Recreo Campestre">
-        <p>ALQUILER DE LOCAL EN CARABAYLLO</p>
-      </div>
-    </a>
-
-    <!-- MAGIA DEL REBOTE -->
-    <a href="rebote.html" class="evento-card" data-color="#e53935">
-      <img src="../../../img/magia-del-rebote/foto-1.png" alt="Magia del Rebote">
-      <div class="overlay">
-        <img src="../../../img/index/logo-magia-del-rebote.svg" alt="Logo Magia del Rebote">
-        <p>ALQUILER DE JUEGOS INFLABLES</p>
-      </div>
-    </a>
-
-    <!-- HACIENDA HUANDO -->
-    <a href="huando.html" class="evento-card" data-color="#43a047">
-      <img src="../../../img/polideportivo-huaral-eventos/foto-1.png" alt="Hacienda Huando">
-      <div class="overlay">
-        <img src="../../../img/index/logo-polideportivo.svg" alt="Logo Hacienda Huando">
-        <p>ALQUILER DE LOCAL EN HUARAL-HUANDO</p>
-      </div>
-    </a>
-  </div>
-</section>
-
-<section id="eventos-movil" class="eventos mobile-version">
-  <div class="eventos-header">
-    <h2 class="eventos-title">¡Mira los diferentes servicios que tenemos para ti!</h2>
-  </div>
-
-  <div class="eventos-grid-simple">
-    <a href="../../negocios/eventos/recreo-campestre/recreo-campestre.html">
-      <img src="../../../img/index/evento-recreo-campestre-celular.png" alt="Recreo Campestre">
-    </a>
-    <a href="rebote.html">
-      <img src="../../../img/index/evento-magia-del-rebote-celular.png" alt="Magia del Rebote">
-    </a>
-    <a href="huando.html">
-      <img src="../../../img/index/evento-huaral-huando-celular.png" alt="Hacienda Huando">
-    </a>
-  </div>
-</section>
-
-<!-- ===============================
-  PIE DE PÁGINA / FOOTER
-================================ -->
-<footer class="footer">
-  <div class="footer-contenedor">
-    <div class="footer-logo">
-      <img src="../../../img/index/logo-carritos-snacks-jjr.svg" alt="Logo Carritos Snacks">
-    </div>
-
-    <div class="footer-contacto">
-      <h4>Contáctanos</h4>
-      <p>📍 Lima, Perú</p>
-      <p>📞 <a href="tel:+51919283481" class="telefono-footer">919-283-481</a></p>
-      <div class="footer-redes">
-  <a href="https://www.facebook.com/snacks.jr.carritos/" 
-    aria-label="Facebook" 
-    target="_blank" 
-    rel="noopener noreferrer">
-    <img src="../../../img/index/icon-face.svg" alt="Facebook">
+  <!-- BOTÓN FLOTANTE DE WHATSAPP -->
+  <a href="https://wa.me/51919283481?text=Hola,%20quisiera%20cotizar%20carritos%20snacks%20para%20mi%20evento" 
+     class="whatsapp-float" 
+     target="_blank" 
+     rel="noopener noreferrer" 
+     aria-label="Contactar por WhatsApp">
+    <div class="whatsapp-tooltip">🍿 ¡Cotiza tus carritos aquí!</div>
+    <img src="../../../img/carritos-snacks-jjr/whatsap-carritos-icon.svg" alt="WhatsApp Carritos Snacks">
   </a>
 
-  <a href="https://wa.me/51919283481?text=Hola,%20quisiera%20información%20sobre%20los%20carritos%20snacks" 
-    aria-label="WhatsApp" 
-    target="_blank" 
-    rel="noopener noreferrer">
-    <img src="../../../img/index/icon-wsp.svg" alt="WhatsApp">
-  </a>
-
-  <a href="https://www.tiktok.com/@carritos.snacks.j?lang=es-419" 
-    aria-label="Tiktok" 
-    target="_blank" 
-    rel="noopener noreferrer">
-    <img src="../../../img/carritos-snacks-jjr/tik-tok-carritos.svg" alt="Tiktok">
-  </a>
-</div>
-    </div>
-  </div>
-
-  <div class="footer-derechos">
-    <p>© 2025 Carritos Snacks JJR. Todos los derechos reservados.</p>
-  </div>
-</footer>
-
-<a href="https://wa.me/51919283481?text=Hola,%20quisiera%20información%20sobre%20los%20carritos%20snacks" 
-  class="whatsapp-float" 
-  target="_blank" 
-  aria-label="Contactar por WhatsApp">
-  <img src="../../../img/carritos-snacks-jjr/whatsap-carritos-icon.svg" alt="WhatsApp">
-</a>
+  <!-- SCRIPT JS -->
   <script src="carritos-snacks.js"></script>
 </body>
 </html>
