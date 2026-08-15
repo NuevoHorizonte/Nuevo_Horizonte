@@ -5,7 +5,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- Icono -->
-  <title>Galería de Imágenes- Academia</title>
+  <title>Galería de Fotos - Polideportivo Recreacional Hacienda Huando | Huaral</title>
+  <meta name="description" content="Álbum completo de fotos del Polideportivo Recreacional Hacienda Huando en Huaral. Canchas de grass sintético, vóley, eventos y atracciones recreativas.">
   <style>
     * {
       box-sizing: border-box;
@@ -167,9 +168,7 @@
       display: flex;
       justify-content: center;
       gap: 10px;
-      /* espacio entre botones */
       flex-wrap: wrap;
-      /* los números pueden bajar de línea si no entran */
       margin: 30px 0;
     }
 
@@ -219,28 +218,38 @@
     }
 
     .header {
-      height: 120px;
+      height: 100px;
       padding: 0 25px;
-      background-color: #fafafa;
+      background-color: #003e0a;
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
 
     .logo {
-      height: 100px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      height: 70px;
+      transition: transform 0.3s ease;
       cursor: pointer;
     }
 
     .logo:hover {
-      transform: scale(1.10);
+      transform: scale(1.08);
     }
 
-    .header {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    .btn-volver-header {
+      background: #deff15;
+      color: #003e0a;
+      padding: 10px 20px;
+      border-radius: 20px;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 14px;
+      transition: all 0.25s ease;
+    }
+
+    .btn-volver-header:hover {
+      background: #ffffff;
+      transform: translateY(-2px);
     }
 
     /* ======================
@@ -250,6 +259,20 @@
       max-width: 1200px;
       margin: 40px auto;
       padding: 0 16px;
+    }
+
+    .video-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 15px;
+      margin-bottom: 25px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .video-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      color: #111;
     }
 
     .videos-title {
@@ -269,7 +292,6 @@
       position: relative;
       width: 100%;
       aspect-ratio: 16 / 9;
-      /* valor inicial, pero se adapta si le agregamos otro */
       background: #000;
       overflow: hidden;
       border-radius: 12px;
@@ -278,12 +300,10 @@
 
     .video-container.vertical {
       aspect-ratio: 9 / 16;
-      /* videos verticales */
     }
 
     .video-container.square {
       aspect-ratio: 1 / 1;
-      /* videos cuadrados */
     }
 
     .video-container iframe {
@@ -302,9 +322,12 @@
 </head>
 
 <header class="header">
-  <a href="academia.html" class="logo-link">
-    <img src="../../../img/polideportivo-huaral-eventos/logo-polideportivo.svg" alt="Logo de la Academia"
+  <a href="polideportivo.html" class="logo-link" title="Volver al Polideportivo">
+    <img src="../../../img/polideportivo-huaral-eventos/logo-polideportivo.svg" alt="Logo Polideportivo Recreacional Hacienda Huando"
       class="logo" />
+  </a>
+  <a href="polideportivo.html" class="btn-volver-header">
+    ⬅ Volver al Polideportivo
   </a>
 </header>
 
